@@ -14,7 +14,7 @@
     <context:property-placeholder properties-ref="appProperties"/>
     <util:properties id="appProperties" location="classpath:properties/pblog-local.properties" />
 
-    <context:component-scan base-package="com.pblog" />
+    <context:component-scan base-package="com.pblog.service" />
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -52,11 +52,11 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="classpath:com/pblog/dao/mapping/*.xml" />
+       <!-- <property name="mapperLocations" value="classpath:com/pblog/dao/mapping/*.xml" />-->
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.pblog.dao" />
+        <property name="basePackage" value="com.pblog.dao.mapping" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
 
