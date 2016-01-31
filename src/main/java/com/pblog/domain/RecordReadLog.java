@@ -3,7 +3,6 @@ package com.pblog.domain;
 import java.util.Date;
 
 public class RecordReadLog {
-
     private Long id;
 
     private Integer recordId;
@@ -33,7 +32,7 @@ public class RecordReadLog {
     }
 
     public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+        this.ipAddress = ipAddress == null ? null : ipAddress.trim();
     }
 
     public Date getCreateTime() {

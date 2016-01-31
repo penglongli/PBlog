@@ -3,8 +3,7 @@ package com.pblog.domain;
 import java.util.Date;
 
 public class BookInfo {
-
-    private int id;
+    private Integer id;
 
     private String title;
 
@@ -20,12 +19,11 @@ public class BookInfo {
 
     private String content;
 
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -34,7 +32,7 @@ public class BookInfo {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public Date getCreateTime() {
@@ -58,7 +56,7 @@ public class BookInfo {
     }
 
     public void setBanner(String banner) {
-        this.banner = banner;
+        this.banner = banner == null ? null : banner.trim();
     }
 
     public Integer getThumb() {
@@ -74,7 +72,7 @@ public class BookInfo {
     }
 
     public void setIntroduction(String introduction) {
-        this.introduction = introduction;
+        this.introduction = introduction == null ? null : introduction.trim();
     }
 
     public String getContent() {
@@ -82,6 +80,6 @@ public class BookInfo {
     }
 
     public void setContent(String content) {
-        this.content = content;
+        this.content = content == null ? null : content.trim();
     }
 }

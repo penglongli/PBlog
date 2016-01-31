@@ -3,7 +3,6 @@ package com.pblog.domain;
 import java.util.Date;
 
 public class BookReadLog {
-
     private Long id;
 
     private Integer bookId;
@@ -12,7 +11,7 @@ public class BookReadLog {
 
     private Date createTime;
 
-    private Integer type = 1; //1为浏览，2为点赞
+    private Integer type;
 
     public Long getId() {
         return id;
@@ -35,7 +34,7 @@ public class BookReadLog {
     }
 
     public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+        this.ipAddress = ipAddress == null ? null : ipAddress.trim();
     }
 
     public Date getCreateTime() {

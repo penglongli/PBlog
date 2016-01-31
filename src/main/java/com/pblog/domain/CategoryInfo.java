@@ -3,8 +3,7 @@ package com.pblog.domain;
 import java.util.Date;
 
 public class CategoryInfo {
-
-    private int id;
+    private Integer id;
 
     private Date createTime;
 
@@ -12,11 +11,11 @@ public class CategoryInfo {
 
     private Long slug;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -33,7 +32,7 @@ public class CategoryInfo {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public Long getSlug() {

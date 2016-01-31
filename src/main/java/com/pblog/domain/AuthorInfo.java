@@ -1,8 +1,7 @@
 package com.pblog.domain;
 
 public class AuthorInfo {
-
-    private int id;
+    private Integer id;
 
     private String name;
 
@@ -20,11 +19,11 @@ public class AuthorInfo {
 
     private String headImage;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -33,7 +32,7 @@ public class AuthorInfo {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getMotto() {
@@ -41,7 +40,7 @@ public class AuthorInfo {
     }
 
     public void setMotto(String motto) {
-        this.motto = motto;
+        this.motto = motto == null ? null : motto.trim();
     }
 
     public String getEmail() {
@@ -49,7 +48,7 @@ public class AuthorInfo {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email == null ? null : email.trim();
     }
 
     public String getAddress() {
@@ -57,7 +56,7 @@ public class AuthorInfo {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address = address == null ? null : address.trim();
     }
 
     public String getGithub() {
@@ -65,7 +64,7 @@ public class AuthorInfo {
     }
 
     public void setGithub(String github) {
-        this.github = github;
+        this.github = github == null ? null : github.trim();
     }
 
     public String getZhihu() {
@@ -73,7 +72,7 @@ public class AuthorInfo {
     }
 
     public void setZhihu(String zhihu) {
-        this.zhihu = zhihu;
+        this.zhihu = zhihu == null ? null : zhihu.trim();
     }
 
     public String getCsdn() {
@@ -81,7 +80,7 @@ public class AuthorInfo {
     }
 
     public void setCsdn(String csdn) {
-        this.csdn = csdn;
+        this.csdn = csdn == null ? null : csdn.trim();
     }
 
     public String getHeadImage() {
@@ -89,6 +88,6 @@ public class AuthorInfo {
     }
 
     public void setHeadImage(String headImage) {
-        this.headImage = headImage;
+        this.headImage = headImage == null ? null : headImage.trim();
     }
 }

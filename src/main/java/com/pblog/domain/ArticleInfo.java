@@ -1,15 +1,11 @@
 package com.pblog.domain;
 
-
 import java.util.Date;
 
 public class ArticleInfo {
-
-    private int id;
+    private Integer id;
 
     private String title;
-
-    private String content;
 
     private Long slug;
 
@@ -23,13 +19,15 @@ public class ArticleInfo {
 
     private Integer thumb;
 
-    private boolean enabled;
+    private Byte enabled;
 
-    public int getId() {
+    private String content;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,15 +36,7 @@ public class ArticleInfo {
     }
 
     public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+        this.title = title == null ? null : title.trim();
     }
 
     public Long getSlug() {
@@ -86,7 +76,7 @@ public class ArticleInfo {
     }
 
     public void setTagId(String tagId) {
-        this.tagId = tagId;
+        this.tagId = tagId == null ? null : tagId.trim();
     }
 
     public Integer getThumb() {
@@ -97,11 +87,19 @@ public class ArticleInfo {
         this.thumb = thumb;
     }
 
-    public boolean isEnabled() {
+    public Byte getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(Byte enabled) {
         this.enabled = enabled;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
     }
 }
