@@ -9,6 +9,7 @@
   <link href="${styleDomain}/article_add.less" type="text/less" rel="stylesheet/less"  />
   <link href="${cssDomain}/font-awesome.min.css" rel="stylesheet"/>
   <script src="${jsDomain}/less.min.js"></script>
+  <script src="${jsDomain}/jquery.min.js"></script>
 </head>
 <body>
   <c:set var="active_line" value="2" />
@@ -26,7 +27,8 @@
          </div>
          <div class="article-body">
             <div class="article-body-theme">文章正文</div>
-            <div class="editor" contenteditable></div>
+            <%--<div class="editor" contenteditable></div>--%>
+             <textarea class="editor"></textarea>
          </div>
          <div class="article-category">
             文章分类：<select>
@@ -51,6 +53,30 @@
 </body>
 
 <script type="text/javascript">
+    $(function(){
+        $(".preview-article").click(function(){
+            alert($(".editor").val());
+            $.ajax({
+                async: false,
+                url: '${pageContext.request.contextPath}/preview/markdown',
+                type: "POST",
+                dataType: "json",
+                context: $(this),
+                beforeSend: function(xhr){
+                    xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");
+                },
+                data: {
+                    content: $(".editor").val()
+                },
+                success: function(obj){
+                    $(".view").html(obj.html);
+                },
+                error: function(status){
+                    alert("请求失败");
+                }
 
+            });
+        });
+    })
 </script>
 </html>
