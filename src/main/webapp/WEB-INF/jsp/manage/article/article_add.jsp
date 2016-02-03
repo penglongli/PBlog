@@ -26,18 +26,31 @@
          </div>
          <div class="article-body">
             <div class="article-body-theme">文章正文</div>
-            <div class="editor" contenteditable>
-
-            </div>
+            <div class="editor" contenteditable></div>
          </div>
          <div class="article-category">
-
+            文章分类：<select>
+                        <option>全部</option>
+                        <option>测试1</option>
+                        <option>测试1123123</option>
+                        <option>测试1打发斯蒂芬</option>
+                        <option>测试1123</option>
+                        <option>测试1</option>
+                    </select>
          </div>
          <div class="article-operate">
-
+             <button class="preview-article">预览文章</button>
+             <button class="publish-article">发布文章</button>
+             <div style="clear: both;"></div>
          </div>
+
+         <div class="view"></div>
       </div>
     </div>
   </div>
 </body>
+
+<script type="text/javascript">
+
+</script>
 </html>
