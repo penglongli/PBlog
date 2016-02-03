@@ -9,7 +9,7 @@
 <c:choose>
     <c:when test="${ENV == 'local'}">
         <c:set var="staticDomain" value="${pageContext.request.contextPath}"/>
-        <c:set var="styleDomain" value="${staticDomain}/less"/>
+        <c:set var="styleDomain" value="${staticDomain}/resources/less"/>
     </c:when>
     <c:when test="${ENV == 'portal'}">
 

@@ -6,12 +6,12 @@
     <title>文章管理</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="${styleDomain}/index_man.less" type="text/less" rel="stylesheet/less"  />
+    <link href="${styleDomain}/article_list.less" type="text/less" rel="stylesheet/less"  />
     <link href="${cssDomain}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsDomain}/less.min.js"></script>
 </head>
 <body>
-    <c:set var="active_line" value="1" />
+    <c:set var="active_line" value="2" />
     <div id="wrapper">
         <%@ include file="../include/index_man_header.jsp"%>
         <div class="content">
@@ -32,7 +32,7 @@
                     </select>
                 </div>
                 <div class="add-article">
-                    <a href="">添加文章</a>
+                    <a href="${pageContext.request.contextPath}/add">添加文章</a>
                 </div>
                 <div style="clear: both;"></div>
             </div>
@@ -75,25 +75,8 @@
                         </tr>
                     </tbody>
                 </table>
-<%--
-                <div class="article-head">
-                    <span class="slug">编号</span>
-                    <span class="title">标题</span>
-                    <span class="createTime">创建时间</span>
-                    <span class="viewNum">浏览量</span>
-                    <span class="thumbNum">点赞数</span>
-                    <span class="status">状态</span>
-                </div>
---%>
-                <%--<div class="article-body">
-                    <span class="slug">93478371</span>
-                    <span class="title">【MyBatis】MyBatis+SpringMVC+EasyUI整合分页</span>
-                    <span class="createTime">2015-08-05 10:30</span>
-                    <span class="viewNum">120</span>
-                    <span class="thumbNum">0</span>
-                    <span class="status">是</span>
-                </div>--%>
             </div>
+
         </div>
     </div>
 </body>

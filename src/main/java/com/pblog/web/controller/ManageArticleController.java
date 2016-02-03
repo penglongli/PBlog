@@ -4,12 +4,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller(value = "manageIndexController")
-public class ManageIndexController {
+@Controller
+public class ManageArticleController {
 
     @RequestMapping("/")
     public String index(Model model){
-        System.out.println("测试");
-        return "manage/index/index";
+        return "manage/article/article_list";
+    }
+
+    @RequestMapping("/add")
+    public String add(Model model){
+
+        return "manage/article/article_add";
     }
 }

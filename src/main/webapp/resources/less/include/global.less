@@ -1,0 +1,44 @@
+
+#wrapper {
+  padding-left: 217px;
+  padding-top: 43px;
+  margin-right: 0;
+
+  .content {
+    width: inherit;
+    margin-right: 0;
+    padding: 4px 0px 4px 25px;
+    background: #FFFFFF; // #E2E2E2
+
+    .content-second-nav {
+      width: 99%;
+      background: #F5F5F5;
+
+      ol {
+        padding: 12px 0px 30px 8px;
+        font-size: 15px;
+
+        li {
+          float: left;
+          list-style: none;
+          color: #337AB7;
+
+          i {
+            margin-right: 3px;
+            font-size: 14px;
+            color: black;
+          }
+        }
+        .active {
+          color: #9E7777;
+
+          &:before {
+            color: #ccc;
+            padding: 0 7px;
+            content: "/\00a0";
+          }
+        }
+      }
+    }
+  }
+}
