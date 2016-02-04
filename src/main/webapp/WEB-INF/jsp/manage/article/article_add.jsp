@@ -27,8 +27,7 @@
          </div>
          <div class="article-body">
             <div class="article-body-theme">文章正文</div>
-            <%--<div class="editor" contenteditable></div>--%>
-             <textarea class="editor"></textarea>
+            <textarea class="editor"></textarea>
          </div>
          <div class="article-category">
             文章分类：<select>
@@ -41,8 +40,10 @@
                     </select>
          </div>
          <div class="article-operate">
+             <i class="icon-eye-open" id="pre"></i>
              <button class="preview-article">预览文章</button>
              <button class="publish-article">发布文章</button>
+             <i class="icon-fighter-jet" id="publish"></i>
              <div style="clear: both;"></div>
          </div>
 
