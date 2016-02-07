@@ -7,14 +7,172 @@
     top: 0px;
     left: 0px;
     bottom: 0px;
-    width: 230px;
+    width: 320px;
     background: #2B333D;
-    border-right: 1px solid #444;
+    text-align: center;
+
+    .author_info{
+      background: #24272D;
+      margin-top: -10px;
+      padding-top: 10px;
+
+      img{
+        display: block;
+        margin: 10px auto;
+        max-width: 76px;
+        padding: 2px;
+        border: none;
+      }
+      p{
+        text-align: center;
+        color: white;
+      }
+
+      .motto{
+        text-align: left;
+        font-size: 13px;
+        padding: 0px 30px 15px 20px;
+        color: #777777;
+      }
+    }
+
+    .site-state{
+      width: 243px;
+      margin: 15px auto;
+
+      a{
+        color: #999;
+        text-decoration: none;
+
+        &:hover{
+          color: white;
+        }
+      }
+
+      .site-state-item-count{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+      }
+      .site-state-item-name{
+        font-size: 13px;
+      }
+
+      .site-state-blog{
+        float: left;
+        width: 60px;
+      }
+      .site-state-category{
+        float: left;
+        border-left: 1px solid #F5F5F5;
+        width: 60px;
+      }
+      .site-state-book{
+        float: left;
+        border-left: 1px solid #F5F5F5;
+        width: 60px;
+      }
+      .site-state-record{
+        float: left;
+        border-left: 1px solid #F5F5F5;
+        width: 60px;
+      }
+    }
+
+    .btn-link{
+
+      .btn-link-title{
+        color: #C5D0DE;
+        font-size: 18px;
+      }
+
+      .btn-link-list{
+        margin-top: 10px;
+        color: #999999;
+        font-size: 14px;
+
+        ul{
+          list-style: none;
+          li{
+            float: left;
+            margin-left: 13px;
+            a{
+              color: #999;
+              text-decoration: none;
+              img, svg{
+                max-width: 20px;
+                margin-right: 5px;
+              }
+              img{
+                vertical-align: -20%;
+                margin-top: 4px;
+              }
+              svg{
+                vertical-align: -44%;
+              }
+
+              &:hover{
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-me{
+      margin-top: 30px;
+      .contact-me-title{
+        color: #C5D0DE;
+        font-size: 18px;
+      }
+      .contact-me-info{
+        font-size: 14px;
+        color: #999;
+        text-align: left;
+
+         ul{
+           list-style: none;
+           letter-spacing: 1px;
+           li{
+             margin-top: 5px;
+            a{
+              color: white;
+              margin-left: 2px;
+            }
+           }
+         }
+      }
+    }
+
+    .website-info{
+      margin-top: 30px;
+      .website-info-title{
+        color: #C5D0DE;
+        font-size: 18px;
+      }
+      .website-info-list{
+        text-align: left;
+        color: #999;
+        font-size: 14px;
+
+        ul{
+          li{
+            margin-left: 13px;
+            
+            span{
+              color: white;
+            }
+          }
+        }
+      }
+
+    }
   }
 
   .wrapper-header{
     position: fixed;
-    left: 230px;
+    left: 320px;
     top: 0px;
     right: 0px;
     background: #000000;

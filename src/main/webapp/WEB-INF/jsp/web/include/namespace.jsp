@@ -20,3 +20,4 @@
 <c:set var="imageDomain" value="${staticDomain}/resources/image"/>
 <c:set var="cssDomain" value="${staticDomain}/resources/css"/>
 <c:set var="fontDomain" value="${staticDomain}/resources/font-awesome" />
+<c:set var="imageDomain" value="${staticDomain}/resources/image" />
