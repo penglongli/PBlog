@@ -9,11 +9,12 @@ CREATE TABLE `article_info` (
   `createTime` datetime DEFAULT NULL,
   `lastModifyTime` datetime DEFAULT NULL,
   `categorySlug` bigint(20) DEFAULT NULL,
-  `tagId` int(11) DEFAULT NULL,
+  `tagId` varchar(100) DEFAULT NULL,
   `thumb` int(11) DEFAULT '0',
   `enabled` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 DROP TABLE IF EXISTS `article_read_log`;
 CREATE TABLE `article_read_log` (
@@ -39,6 +40,7 @@ CREATE TABLE `author_info` (
   `headImage` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 DROP TABLE IF EXISTS `book_info`;
 CREATE TABLE `book_info` (
