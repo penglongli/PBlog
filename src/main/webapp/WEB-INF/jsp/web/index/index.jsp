@@ -34,9 +34,10 @@
                  <span>SpringMVC</span>
                </div>
                <div class="article-info">
-                 <div class="create-tiem"></div>
-                 <div class="read-num"></div>
-                 <div class="like-num"></div>
+                 <div class="create-time">2015-08-05 10:30</div>
+                 <div class="read-num"><i class="icon-eye-open"></i><span class="icon-title">阅读</span><span>(322)</span></div>
+                 <div class="like-num"><i class="icon-heart-empty"></i><!-- icon-heart --><span class="icon-title">喜欢</span><span>(0)</span></div>
+                 <div style="clear: both;"></div>
                </div>
                <div style="clear: both;"></div>
             </div>
