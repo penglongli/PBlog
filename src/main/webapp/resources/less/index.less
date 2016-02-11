@@ -1,99 +1,108 @@
 @import "include/index_global";
 
 .content{
-  margin: 57px -8px 20px 305px;
   background: #EEEEEE;
+  position: absolute;
+  z-index: 100;
+  top: 57px;
+  right: 0px;
+  bottom: 0px;
+  left: 312px;
 
-  .article-item{
-    width: 920px;
-    background: #FFF;
-    border: 1px solid #DDDDDD;
-    box-shadow: 1px 1px 3px #DEDEDE;
-    margin: auto;
+  .article-list{
+    background: #EEE;
+    .article-item{
+      width: 920px;
+      background: #FFF;
+      border: 1px solid #DDDDDD;
+      box-shadow: 1px 1px 3px #DEDEDE;
+      margin: auto;
 
-    .article-item-title{
+      .article-item-title{
 
-      .article-item-category{
-        float: left;
-        font-size: 18px;
-        margin: 0px;
+        .article-item-category{
+          float: left;
+          font-size: 18px;
+          margin: 0px;
+          a{
+            color: #8e2013;
+          }
+        }
+        h1{
+          font-size: 18px;
+          margin-left: 5px;
+        }
         a{
-          color: #8e2013;
+          text-decoration: none;
+          margin-left: 10px;
+
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
-      h1{
-        font-size: 18px;
-        margin-left: 5px;
-      }
-      a{
-        text-decoration: none;
-        margin-left: 10px;
+      .article-item-content{
+        padding: 0px 12px 20px 12px;
 
-        &:hover{
-          text-decoration: underline;
+        .read-more{
+          display: inline-block;
+          margin-top: 15px;
+          padding: 5px 15px;
+          background: #EEEEEE;
+          color: #999999;
+          text-decoration: none;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+
+          &:hover{
+            background: #258fb8;
+            color: white;
+          }
         }
       }
-    }
-    .article-item-content{
-      padding: 0px 12px 20px 12px;
+      .article-item-footer{
+        border-top: 1px solid #DDDDDD;
+        margin: 0px 20px;
+        padding: 20px 0px;
 
-      .read-more{
-        display: inline-block;
-        margin-top: 15px;
-        padding: 5px 15px;
-        background: #EEEEEE;
-        color: #999999;
-        text-decoration: none;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        border-radius: 15px;
+        .article-tag-list{
+          float: left;
 
-        &:hover{
-          background: #258fb8;
-          color: white;
+          span{
+            padding: 3px 10px;
+            background: #EEEEEE;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #62649A;
+          }
+        }
+        .article-info{
+          float: right;
+          color: #999;
+          font-size: 13px;
+
+          .create-time{
+            float: left;
+            margin-left: 15px;
+          }
+          .read-num{
+            float: left;
+            margin-left: 15px;
+          }
+          .like-num{
+            float: left;
+            margin-left: 15px;
+          }
+          .icon-title{
+            color: #c88326;
+            margin-left: 5px;
+          }
         }
       }
-    }
-    .article-item-footer{
-      border-top: 1px solid #DDDDDD;
-      margin: 0px 20px;
-      padding: 20px 0px;
-
-       .article-tag-list{
-         float: left;
-
-         span{
-           padding: 3px 10px;
-           background: #EEEEEE;
-           -webkit-border-radius: 15px;
-           -moz-border-radius: 15px;
-           border-radius: 15px;
-           font-size: 12px;
-           color: #62649A;
-         }
-       }
-       .article-info{
-         float: right;
-         color: #999;
-         font-size: 13px;
-         
-         .create-time{
-           float: left;
-           margin-left: 15px;
-         }
-         .read-num{
-           float: left;
-           margin-left: 15px;
-         }
-         .like-num{
-           float: left;
-           margin-left: 15px;
-         }
-         .icon-title{
-           color: #c88326;
-           margin-left: 5px;
-         }
-       }
     }
   }
+
 }

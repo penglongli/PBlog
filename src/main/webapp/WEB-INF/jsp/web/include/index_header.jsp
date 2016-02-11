@@ -3,7 +3,7 @@
   <ul class="navbar">
     <li <c:if test="${active_line == 1}">class="active"</c:if>><a href="${staticDomain}/">Home</a></li>
     <li <c:if test="${active_line == 2}">class="active"</c:if>><a href="${staticDomain}/archives">Archives</a></li>
-    <li <c:if test="${active_line == 3}">class="active"</c:if>><a href="">Category</a></li>
+    <li <c:if test="${active_line == 3}">class="active"</c:if>><a href="${staticDomain}/category">Category</a></li>
     <li <c:if test="${active_line == 4}">class="active"</c:if>><a href="">Book Review</a></li>
     <li <c:if test="${active_line == 5}">class="active"</c:if>><a href="">Record</a></li>
     <li <c:if test="${active_line == 6}">class="active"</c:if>><a href="">Contact Me</a></li>
