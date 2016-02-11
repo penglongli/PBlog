@@ -1,0 +1,51 @@
+@import "../include/index_global";
+
+.content{
+  margin: 57px -8px 20px 305px;
+  background: #EEEEEE;
+
+  .archive-list{
+    width: 100%;
+    height: 1000px;
+
+    .archive-title{
+      font-size: 20px;
+      margin-left: 5%;
+      i{
+        font-size: 40px;
+        margin-right: 20px;
+      }
+    }
+
+    .archive-item{
+      width: 50%;
+      margin-left: 5%;
+      margin-top: 30px;
+
+      .year{
+        &:after{
+          content: '年';
+        }
+      }
+      .month{
+        
+        &:after{
+          content: '月';
+        }
+      }
+    }
+
+    ul{
+      margin-left: 10%;
+
+      li{
+        margin-top: 10px;
+        .day:after{
+          content: '日';
+        }
+      }
+    }
+  }
+
+}
+

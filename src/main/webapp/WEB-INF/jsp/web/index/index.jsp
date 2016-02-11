@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>PBlog-个人博客</title>
+    <title>Home | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
     <link href="${styleDomain}/index.less" type="text/less" rel="stylesheet/less"  />
     <link href="${cssDomain}/font-awesome.min.css" rel="stylesheet"/>
