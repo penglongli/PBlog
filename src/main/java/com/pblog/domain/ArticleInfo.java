@@ -7,6 +7,8 @@ public class ArticleInfo {
 
     private String title;
 
+    private String content;
+
     private Long slug;
 
     private Date createTime;
@@ -21,7 +23,7 @@ public class ArticleInfo {
 
     private Byte enabled;
 
-    private String content;
+    private String markdown;
 
     public Integer getId() {
         return id;
@@ -37,6 +39,14 @@ public class ArticleInfo {
 
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
     }
 
     public Long getSlug() {
@@ -95,11 +105,11 @@ public class ArticleInfo {
         this.enabled = enabled;
     }
 
-    public String getContent() {
-        return content;
+    public String getMarkdown() {
+        return markdown;
     }
 
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
+    public void setMarkdown(String markdown) {
+        this.markdown = markdown == null ? null : markdown.trim();
     }
 }

@@ -33,6 +33,8 @@
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
         <table tableName="article_info" domainObjectName="ArticleInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
+            <columnOverride column="content" jdbcType="LONGTEXT" javaType="java.lang.String" />
+            <columnOverride column="markdown" jdbcType="LONGTEXT" javaType="java.lang.String" />
         </table>
         <table tableName="article_read_log" domainObjectName="ArticleReadLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
@@ -51,6 +53,7 @@
         </table>
         <table tableName="record_info" domainObjectName="RecordInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
+            <columnOverride column="content" jdbcType="LONGTEXT" javaType="java.lang.String" />
         </table>
         <table tableName="record_read_log" domainObjectName="RecordReadLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
