@@ -17,13 +17,15 @@ public class ArticleInfo {
 
     private Long categorySlug;
 
-    private String tagId;
+    private String tag;
 
     private Integer thumb;
 
     private Byte enabled;
 
     private String markdown;
+
+    private String description;
 
     public Integer getId() {
         return id;
@@ -81,12 +83,12 @@ public class ArticleInfo {
         this.categorySlug = categorySlug;
     }
 
-    public String getTagId() {
-        return tagId;
+    public String getTag() {
+        return tag;
     }
 
-    public void setTagId(String tagId) {
-        this.tagId = tagId == null ? null : tagId.trim();
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public Integer getThumb() {
@@ -111,5 +113,13 @@ public class ArticleInfo {
 
     public void setMarkdown(String markdown) {
         this.markdown = markdown == null ? null : markdown.trim();
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

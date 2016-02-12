@@ -11,6 +11,7 @@
   <sql id="Base_Column_List" >
     id, articleId, ipAddress, createTime, type
   </sql>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />

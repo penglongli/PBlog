@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="content" property="content" jdbcType="LONGTEXT" />
+    <result column="content" property="content" />
     <result column="slug" property="slug" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -25,7 +25,7 @@
     insert into record_info (id, title, createTime, 
       content, slug)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{content,jdbcType=LONGTEXT}, #{slug,jdbcType=BIGINT})
+      #{content}, #{slug,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.pblog.domain.RecordInfo" >
     insert into record_info
@@ -57,7 +57,7 @@
         #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="content != null" >
-        #{content,jdbcType=LONGTEXT},
+        #{content},
       </if>
       <if test="slug != null" >
         #{slug,jdbcType=BIGINT},
@@ -74,7 +74,7 @@
         createTime = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="content != null" >
-        content = #{content,jdbcType=LONGTEXT},
+        content = #{content},
       </if>
       <if test="slug != null" >
         slug = #{slug,jdbcType=BIGINT},
@@ -86,7 +86,7 @@
     update record_info
     set title = #{title,jdbcType=VARCHAR},
       createTime = #{createTime,jdbcType=TIMESTAMP},
-      content = #{content,jdbcType=LONGTEXT},
+      content = #{content},
       slug = #{slug,jdbcType=BIGINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
