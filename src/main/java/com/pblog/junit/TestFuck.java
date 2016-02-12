@@ -17,6 +17,9 @@ public class TestFuck extends TestCase {
 
         ArticleInfo articleInfo = new ArticleInfo();
 
-        articleInfoService.insert(articleInfo);
+        int a = articleInfoService.insert(articleInfo);
+
+        System.out.println(a);
+        System.out.println(articleInfo.getId());
     }
 }

@@ -14,7 +14,7 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     @Resource
     private ArticleInfoMapper articleInfoMapper;
 
-    public void insert(ArticleInfo articleInfo) {
-        articleInfoMapper.insert(articleInfo);
+    public int insert(ArticleInfo articleInfo) {
+       return articleInfoMapper.insert(articleInfo);
     }
 }
