@@ -1,7 +1,6 @@
 package com.pblog.junit;
 
-import com.pblog.domain.ArticleInfo;
-import com.pblog.service.ArticleInfoService;
+import com.pblog.service.ManageArticleInfoService;
 import junit.framework.TestCase;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,13 +12,18 @@ public class TestFuck extends TestCase {
     }
 
     public void testOne(){
-        ArticleInfoService articleInfoService = (ArticleInfoService) applicationContext.getBean("articleInfoService");
+        Long categorySlug = null;
+        ManageArticleInfoService manageArticleInfoService = (ManageArticleInfoService) applicationContext.getBean("manageArticleInfoService");
+        manageArticleInfoService.findListByCategorySlug(categorySlug);
+
+
+       /* ArticleInfoService articleInfoService = (ArticleInfoService) applicationContext.getBean("articleInfoService");
 
         ArticleInfo articleInfo = new ArticleInfo();
 
         int a = articleInfoService.insert(articleInfo);
 
         System.out.println(a);
-        System.out.println(articleInfo.getId());
+        System.out.println(articleInfo.getId());*/
     }
 }

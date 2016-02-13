@@ -21,7 +21,7 @@ public class ArticleInfo {
 
     private Integer thumb;
 
-    private Byte enabled;
+    private Boolean enabled = true;
 
     private String markdown;
 
@@ -99,11 +99,11 @@ public class ArticleInfo {
         this.thumb = thumb;
     }
 
-    public Byte getEnabled() {
+    public Boolean getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(Byte enabled) {
+    public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
 

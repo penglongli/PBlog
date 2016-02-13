@@ -46,8 +46,11 @@
              <i class="icon-fighter-jet" id="publish"></i>
              <div style="clear: both;"></div>
          </div>
-
          <div class="view"></div>
+
+         <div class="description">
+
+         </div>
       </div>
     </div>
   </div>

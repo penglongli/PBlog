@@ -12,5 +12,21 @@
                 #{thumb}, #{enabled}, #{markdown}, #{description})
     </insert>
 
+    <select id="findList" resultType="com.pblog.domain.ArticleInfo">
+        select * from article_info
+    </select>
 
+    <select id="findListByCategoryId" resultType="com.pblog.domain.ArticleInfo" parameterType="java.lang.Long">
+        select * from article_info where categorySlug = #{category, jdbcType = BIGINT}
+    </select>
+
+    <update id="updateArticleEnabled" parameterType="java.lang.Boolean">
+        update article_info
+        <set>
+            <if test="enabled != null">
+                enabled = #{enabled, jdbcType = TINYINT}
+            </if>
+        </set>
+        where id = #{articleId}
+    </update>
 </mapper>
