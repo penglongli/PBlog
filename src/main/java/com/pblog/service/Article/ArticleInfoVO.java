@@ -1,4 +1,4 @@
-package com.pblog.service.Article;
+package com.pblog.service.article;
 
 import java.util.Date;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.pblog.service;
 
 import com.pblog.domain.ArticleInfo;
-import com.pblog.web.controller.ManageArticle.ArticleInfoFormBean;
+import com.pblog.web.controller.articlemanage.ArticleInfoFormBean;
 
 import java.util.List;
 

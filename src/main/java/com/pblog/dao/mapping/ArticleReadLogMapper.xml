@@ -6,5 +6,9 @@
     select count(*) from article_read_log where articleId = #{articleId, jdbcType=INTEGER}
   </select>
 
+  <insert id="insert" parameterType="com.pblog.domain.ArticleReadLog">
+    insert into article_read_log(articleId, ipAddress, createTime, type)
+    values (#{articleId}, #{ipAddress}, #{createTime}, #{type})
+  </insert>
 
 </mapper>

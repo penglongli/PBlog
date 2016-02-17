@@ -15,4 +15,6 @@ public interface ArticleInfoMapper {
     int updateArticleEnabled(int articleId, Boolean enabled);
 
     List<ArticleInfo> findTopTenByCreateTimeDesc();
+
+    ArticleInfo findBySlug(Long slug);
 }

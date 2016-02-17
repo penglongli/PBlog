@@ -1,6 +1,8 @@
 package com.pblog.domain;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ArticleReadLog {
     private Long id;
@@ -12,6 +14,13 @@ public class ArticleReadLog {
     private Date createTime;
 
     private Integer type;
+
+    public static Map<String, Integer> TYPE = new HashMap<String, Integer>(){
+        {
+            put("READ", 1);
+            put("LIKE", 2);
+        }
+    };
 
     public Long getId() {
         return id;

@@ -1,4 +1,4 @@
-package com.pblog.web.controller.ManageArticle;
+package com.pblog.web.controller.articlemanage;
 
 public class ArticleInfoFormBean {
 
