@@ -1,16 +1,19 @@
-package com.pblog.service.Article;
+package com.pblog.service.article;
 
 import com.pblog.core.utils.GenerateUtils;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.dao.ArticleReadLogMapper;
 import com.pblog.dao.CategoryInfoMapper;
 import com.pblog.domain.ArticleInfo;
+import com.pblog.domain.ArticleReadLog;
 import com.pblog.domain.CategoryInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service(value = "articleInfoService")
@@ -36,6 +39,20 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
         }
 
         return articleInfoVOList;
+    }
+
+    public ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request) {
+        ArticleInfo articleInfo = articleInfoMapper.findBySlug(slug);
+
+        ArticleReadLog articleReadLog = new ArticleReadLog();
+        articleReadLog.setArticleId(articleInfo.getId());
+        articleReadLog.setIpAddress(GenerateUtils.getIpAddr(request));
+        articleReadLog.setCreateTime(new Date());
+        articleReadLog.setType(ArticleReadLog.TYPE.get("READ"));
+        articleReadLogMapper.insert(articleReadLog);
+
+        ArticleInfoVO articleInfoVO = transArticleInfoToVO(articleInfo);
+        return articleInfoVO;
     }
 
     private ArticleInfoVO transArticleInfoToVO(ArticleInfo articleInfo){
