@@ -1,82 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.pblog.dao.CategoryInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.pblog.domain.CategoryInfo" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="slug" property="slug" jdbcType="BIGINT" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    id, createTime, title, slug
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from category_info
-    where id = #{id,jdbcType=INTEGER}
+
+  <select id="findBySlug" resultType="com.pblog.domain.CategoryInfo" parameterType="java.lang.Long">
+    select * from category_info where slug = #{slug, jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from category_info
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.pblog.domain.CategoryInfo" >
-    insert into category_info (id, createTime, title, 
-      slug)
-    values (#{id,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{title,jdbcType=VARCHAR}, 
-      #{slug,jdbcType=BIGINT})
-  </insert>
-  <insert id="insertSelective" parameterType="com.pblog.domain.CategoryInfo" >
-    insert into category_info
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="createTime != null" >
-        createTime,
-      </if>
-      <if test="title != null" >
-        title,
-      </if>
-      <if test="slug != null" >
-        slug,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="title != null" >
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="slug != null" >
-        #{slug,jdbcType=BIGINT},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.pblog.domain.CategoryInfo" >
-    update category_info
-    <set >
-      <if test="createTime != null" >
-        createTime = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="title != null" >
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="slug != null" >
-        slug = #{slug,jdbcType=BIGINT},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.pblog.domain.CategoryInfo" >
-    update category_info
-    set createTime = #{createTime,jdbcType=TIMESTAMP},
-      title = #{title,jdbcType=VARCHAR},
-      slug = #{slug,jdbcType=BIGINT}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
+
+  <select id="findAll" resultType="com.pblog.domain.CategoryInfo">
+    select * from category_info;
+  </select>
 </mapper>

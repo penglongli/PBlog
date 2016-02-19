@@ -3,7 +3,7 @@ package com.pblog.service;
 import com.pblog.core.markdown.GenerateHtml;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.domain.ArticleInfo;
-import com.pblog.web.controller.ManageArticle.ArticleInfoFormBean;
+import com.pblog.web.controller.articlemanage.ArticleInfoFormBean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.pblog.web.controller.ManageArticle;
+package com.pblog.web.controller.articlemanage;
 
 import com.pblog.domain.ArticleInfo;
 import com.pblog.service.ManageArticleInfoService;

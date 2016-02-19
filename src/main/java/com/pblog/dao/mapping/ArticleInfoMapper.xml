@@ -29,4 +29,12 @@
         </set>
         where id = #{articleId}
     </update>
+    <!-- 最新十篇文章 -->
+    <select id="findTopTenByCreateTimeDesc" resultType="com.pblog.domain.ArticleInfo">
+        select * from article_info where enabled = true order by createTime desc;
+    </select>
+
+    <select id="findBySlug" resultType="com.pblog.domain.ArticleInfo" parameterType="java.lang.Long">
+        select * from article_info where slug = #{slug, jdbcType=BIGINT}
+    </select>
 </mapper>

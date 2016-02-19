@@ -2,16 +2,11 @@ package com.pblog.dao;
 
 import com.pblog.domain.CategoryInfo;
 
+import java.util.List;
+
 public interface CategoryInfoMapper {
-    int deleteByPrimaryKey(Integer id);
 
-    int insert(CategoryInfo record);
+    CategoryInfo findBySlug(Long slug);
 
-    int insertSelective(CategoryInfo record);
-
-    CategoryInfo selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(CategoryInfo record);
-
-    int updateByPrimaryKey(CategoryInfo record);
+    List<CategoryInfo> findAll();
 }
