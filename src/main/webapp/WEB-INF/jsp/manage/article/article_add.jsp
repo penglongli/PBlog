@@ -19,6 +19,7 @@
       <%@ include file="../include/index_second_header.jsp"%>
 
       <div class="article">
+        <form action="${staticDomain}/manage/article/add" method="post" id="article-form">
          <div class="article-title">
             <div class="article-title-theme">文章标题</div>
             <div class="article-title-content">
@@ -27,30 +28,46 @@
          </div>
          <div class="article-body">
             <div class="article-body-theme">文章正文</div>
-            <textarea class="editor"></textarea>
+            <textarea class="editor" name="content"></textarea>
          </div>
          <div class="article-category">
-            文章分类：<select>
-                        <option>全部</option>
-                        <option>测试1</option>
-                        <option>测试1123123</option>
-                        <option>测试1打发斯蒂芬</option>
-                        <option>测试1123</option>
-                        <option>测试1</option>
+            <div class="category" name="categorySlug">
+             文章分类：<select>
+                        <option value="0">全部</option>
+                        <option value="1">测试1</option>
+                        <option value="2">测试1123123</option>
+                        <option value="3">测试1打发斯蒂芬</option>
+                        <option value="4">测试1123</option>
+                        <option value="5">测试1</option>
                     </select>
+            </div>
+            <div class="tag">
+                标签:<input type="text" name="tag" />
+            </div>
+            <div style="clear: both;"></div>
          </div>
          <div class="article-operate">
              <i class="icon-eye-open" id="pre"></i>
-             <button class="preview-article">预览文章</button>
-             <button class="publish-article">发布文章</button>
-             <i class="icon-fighter-jet" id="publish"></i>
+             <button type="button" class="preview-article">预览文章</button>
              <div style="clear: both;"></div>
          </div>
          <div class="view"></div>
 
          <div class="description">
-
+            <div class="description-title">添加描述</div>
+            <textarea class="editor" name="description"></textarea>
          </div>
+         <div class="description-operate">
+              <i class="icon-eye-open"></i>
+              <button type="button" class="preview-description">预览描述</button>
+         </div>
+
+         <div class="description-view"></div>
+
+         <div class="publish">
+             <button type="button" class="publish-article"><i class="icon-fighter-jet"></i>发布文章</button>
+         </div>
+        </form>
       </div>
     </div>
   </div>
@@ -58,8 +75,13 @@
 
 <script type="text/javascript">
     $(function(){
+        $(".publish-article").click(function(){
+            $("#article-form").submit();
+        })
+
+
         $(".preview-article").click(function(){
-            alert($(".editor").val());
+            alert(2);
             $.ajax({
                 async: false,
                 url: '${pageContext.request.contextPath}/preview/markdown',

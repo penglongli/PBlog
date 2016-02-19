@@ -28,14 +28,14 @@ public class ManageArticleController {
         return "manage/article/article_list";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit")
     public String add(Model model){
 
         return "manage/article/article_add";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public Map<String, Object> add(@ModelAttribute ArticleInfoFormBean articleInfoFormBean, Model model){
+    public Map<String, Object> adda(@ModelAttribute ArticleInfoFormBean articleInfoFormBean, Model model){
         manageArticleInfoService.insert(articleInfoFormBean);
         return null;
     }

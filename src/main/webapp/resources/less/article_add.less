@@ -54,21 +54,6 @@
       font-size: 12px;
       padding: 10px;
     }
-
-    .editor{
-      overflow:auto;
-      border:1px solid silver;
-      border-right: none;
-      //border-radius:5px;
-      height: 300px;
-      box-shadow: inset 0 0 10px silver;
-      padding:0.7em;
-      background: #F9F9F9;
-      resize: none;
-      overflow-y: scroll;
-      width: 812px;
-    }
-
   }
 
   .article-category{
@@ -80,11 +65,26 @@
     border-top: none;
     font-size: 14px;
 
-    select{
-      margin-left: 10px;
-      font-size: 15px;
-      padding: 3px 0px 3px 7px;
+    .category{
+      float: left;
+      select{
+        margin-left: 10px;
+        font-size: 15px;
+        padding: 3px 0px 3px 7px;
+      }
     }
+    .tag{
+      float: right;
+      font-size: 15px;
+      margin-right: 10px;
+
+      input{
+        margin-left: 10px;
+        height: 20px;
+      }
+    }
+
+    
   }
 
   .article-operate{
@@ -99,21 +99,10 @@
       margin-left: 10px;
       padding: 5px 20px 5px 45px;
     }
-    .publish-article{
-      float: right;
-      margin-right: 10px;
-      padding: 5px 20px 5px 45px;
-    }
     #pre{
       position: relative;
       left: -104px;
       top: 3px;
-    }
-
-    #publish{
-      position: relative;
-      right: -565px;
-      top: 2px;
     }
   }
 
@@ -129,5 +118,67 @@
     width: 830px;
     border: 1px solid #DDDDDD;
 
+    .description-title{
+      padding: 10px;
+      font-size: 14px;
+    }
+    .editor{
+      height: 100px;
+    }
+  }
+
+  .description-operate{
+    width: 830px;
+    padding: 10px 0px;
+    border: 1px solid #DDDDDD;
+    background: #FFFFFF;
+    position: absolute;
+    i{
+      position: relative;
+      left: -104px;
+      top: 3px;
+    }
+    button{
+      float: left;
+      margin-left: 10px;
+      padding: 5px 20px 5px 45px;
+    }
+  }
+
+  .description-view{
+    width: 830px;
+    border: 1px solid #DDDDDD;
+    min-height: 50px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+  }
+
+  .editor{
+    overflow:auto;
+    border:1px solid silver;
+    border-right: none;
+    //border-radius:5px;
+    height: 300px;
+    box-shadow: inset 0 0 10px silver;
+    padding:0.7em;
+    background: #F9F9F9;
+    resize: none;
+    overflow-y: scroll;
+    width: 812px;
+  }
+
+  .publish{
+    text-align: center;
+    width: 830px;
+    margin-top: 15px;
+    .publish-article{
+      padding: 6px 10px;
+      font-size: 15px;
+
+      i{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
   }
 }

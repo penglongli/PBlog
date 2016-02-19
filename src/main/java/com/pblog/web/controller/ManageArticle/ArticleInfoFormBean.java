@@ -10,7 +10,7 @@ public class ArticleInfoFormBean {
 
     private String tag;
 
-    private String descrption;
+    private String description;
 
     public String getTitle() {
         return title;
@@ -44,11 +44,11 @@ public class ArticleInfoFormBean {
         this.tag = tag;
     }
 
-    public String getDescrption() {
-        return descrption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescrption(String descrption) {
-        this.descrption = descrption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

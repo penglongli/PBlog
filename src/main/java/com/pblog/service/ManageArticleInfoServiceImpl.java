@@ -22,6 +22,7 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
         ArticleInfo articleInfo = transFormBeanToArticle(articleInfoFormBean);
 
         articleInfoMapper.insert(articleInfo);
+        System.out.println(articleInfo.getId());
     }
 
     public List<ArticleInfo> findListByCategorySlug(Long categorySlug) {
@@ -57,7 +58,7 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
 
         String html = GenerateHtml.markdownToHTML(articleInfoFormBean.getContent());
         articleInfo.setMarkdown(html);
-        html = GenerateHtml.markdownToHTML(articleInfoFormBean.getDescrption());
+        html = GenerateHtml.markdownToHTML(articleInfoFormBean.getDescription());
         articleInfo.setDescription(html);
 
         return articleInfo;
