@@ -12,7 +12,7 @@
                 #{thumb}, #{enabled}, #{markdown}, #{description})
     </insert>
 
-    <select id="findList" parameterType="com.pblog.core.orm.PageRequest" resultType="ArticleInfo">
+    <select id="findList" parameterType="com.pblog.core.orm.Pagination" resultType="ArticleInfo">
         select * from article_info
     </select>
 

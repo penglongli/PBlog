@@ -6,11 +6,14 @@ import java.util.List;
 
 public class Pagination<T> extends PageRequest implements Iterable<T>, Serializable {
     protected List<T> items = null;
-    protected long totalCount = -1;
 
     private int pageNo;
 
     private int pageSize;
+
+    private int totalPage;
+
+    private int totalCount = -1;
 
     private String orderBy;
 
@@ -25,26 +28,8 @@ public class Pagination<T> extends PageRequest implements Iterable<T>, Serializa
         this.orderDir = pageRequest.getOrderDir();
     }
 
-    /**
-     * 是否还有下一页.
-     */
-    public boolean hasNextPage() {
-        return (getPageNo() + 1 <= getTotalPages());
-    }
-
-    /**
-     * 是否最后一页.
-     */
-    public boolean isLastPage() {
-        return !hasNextPage();
-    }
-
     public Iterator<T> iterator() {
         return items.iterator();
-    }
-
-    public int getTotalPages(){
-        return (int) Math.ceil((double) totalCount / (double) getPageSize());
     }
 
     public List<T> getItems() {
@@ -55,11 +40,19 @@ public class Pagination<T> extends PageRequest implements Iterable<T>, Serializa
         this.items = items;
     }
 
-    public long getTotalCount() {
+    public int getTotalPage() {
+        return totalPage;
+    }
+
+    public void setTotalPage(int totalPage) {
+        this.totalPage = totalPage;
+    }
+
+    public int getTotalCount() {
         return totalCount;
     }
 
-    public void setTotalCount(long totalCount) {
+    public void setTotalCount(int totalCount) {
         this.totalCount = totalCount;
     }
 }
