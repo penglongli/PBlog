@@ -19,7 +19,6 @@ public class ArticleController {
     @RequestMapping(value = "/{slug}")
     public String articleBySlug(@PathVariable Long slug, HttpServletRequest request, Model model){
         
-
         return "";
     }
 }

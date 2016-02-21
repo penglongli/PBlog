@@ -1,0 +1,42 @@
+pre {
+  background: #F8F8F8;
+  padding: 10px;
+}
+#wrapper {
+  padding-left: 217px;
+  padding-top: 43px;
+  margin-right: 0;
+}
+#wrapper .content {
+  width: 84%;
+  margin-right: 0;
+  padding: 4px 0px 4px 25px;
+  background: #FFFFFF;
+  position: absolute;
+}
+#wrapper .content .content-second-nav {
+  width: 99%;
+  background: #F5F5F5;
+}
+#wrapper .content .content-second-nav ol {
+  padding: 12px 0px 30px 8px;
+  font-size: 15px;
+}
+#wrapper .content .content-second-nav ol li {
+  float: left;
+  list-style: none;
+  color: #337AB7;
+}
+#wrapper .content .content-second-nav ol li i {
+  margin-right: 3px;
+  font-size: 14px;
+  color: black;
+}
+#wrapper .content .content-second-nav ol .active {
+  color: #9E7777;
+}
+#wrapper .content .content-second-nav ol .active:before {
+  color: #ccc;
+  padding: 0 7px;
+  content: "/\00a0";
+}

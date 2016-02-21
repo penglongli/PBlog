@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.pblog.dao.ArticleInfoMapper" >
 
-    <insert id="insert" parameterType="com.pblog.domain.ArticleInfo">
+    <insert id="insert" parameterType="ArticleInfo">
         <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
             SELECT LAST_INSERT_ID() AS id
         </selectKey>
@@ -12,11 +12,11 @@
                 #{thumb}, #{enabled}, #{markdown}, #{description})
     </insert>
 
-    <select id="findList" resultType="com.pblog.domain.ArticleInfo">
+    <select id="findList" parameterType="com.pblog.core.orm.PageRequest" resultType="ArticleInfo">
         select * from article_info
     </select>
 
-    <select id="findListByCategoryId" resultType="com.pblog.domain.ArticleInfo" parameterType="java.lang.Long">
+    <select id="findListByCategoryId" resultType="ArticleInfo" parameterType="java.lang.Long">
         select * from article_info where categorySlug = #{category, jdbcType = BIGINT}
     </select>
 
@@ -30,11 +30,16 @@
         where id = #{articleId}
     </update>
     <!-- 最新十篇文章 -->
-    <select id="findTopTenByCreateTimeDesc" resultType="com.pblog.domain.ArticleInfo">
+    <select id="findTopTenByCreateTimeDesc" resultType="ArticleInfo">
         select * from article_info where enabled = true order by createTime desc;
     </select>
 
-    <select id="findBySlug" resultType="com.pblog.domain.ArticleInfo" parameterType="java.lang.Long">
+    <select id="findBySlug" resultType="ArticleInfo" parameterType="java.lang.Long">
         select * from article_info where slug = #{slug, jdbcType=BIGINT}
+    </select>
+
+    <select id="pageByPageRequest" resultType="ArticleInfo">
+        select * from article_info
+        order by ${orderBy} ${orderDir} limit ${pageNo} * ${pageSize}, ${pageSize}
     </select>
 </mapper>

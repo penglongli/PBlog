@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -28,7 +29,8 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
     public List<ArticleInfo> findListByCategorySlug(Long categorySlug) {
         List<ArticleInfo> articleInfoList;
         if (null == categorySlug){
-            articleInfoList = articleInfoMapper.findList();
+            articleInfoList = new ArrayList<ArticleInfo>();
+            //articleInfoList = articleInfoMapper.findList();
         }else{
             articleInfoList = articleInfoMapper.findListByCategorySlug(categorySlug);
         }
