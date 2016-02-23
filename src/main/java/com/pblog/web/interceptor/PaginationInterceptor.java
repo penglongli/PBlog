@@ -17,8 +17,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 @Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class})})
-public class PageInterceptor implements Interceptor {
-    private static final Log logger = LogFactory.getLog(PageInterceptor.class);
+public class PaginationInterceptor implements Interceptor {
+    private static final Log logger = LogFactory.getLog(PaginationInterceptor.class);
 
     public Object intercept(Invocation invocation) throws Throwable {
         StatementHandler target = (StatementHandler) invocation.getTarget();

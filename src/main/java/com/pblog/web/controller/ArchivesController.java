@@ -9,6 +9,7 @@ public class ArchivesController {
 
     @RequestMapping(value = "/archives")
     public String index(Model model){
+
         return "web/archives/archives";
     }
 

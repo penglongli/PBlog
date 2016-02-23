@@ -17,6 +17,6 @@
     </typeAliases>
     
     <plugins>
-        <plugin interceptor="com.pblog.web.interceptor.PageInterceptor"></plugin>
+        <plugin interceptor="com.pblog.web.interceptor.PaginationInterceptor"></plugin>
     </plugins>
 </configuration>

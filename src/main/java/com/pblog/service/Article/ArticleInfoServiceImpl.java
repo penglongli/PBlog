@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -38,24 +39,16 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     private CommonUtilsService commonUtilsService;
 
     public List<ArticleInfoVO> findTopTenArticlesByCreateTime() {
-        //SqlSession sqlSession = sessionFactory.openSession();
-        PageRequest pageRequest = new PageRequest();
-        articleInfoMapper.findList(pageRequest);
 
-        //sqlSession.selectList("", "", new RowBounds(0, 3));
+        List<ArticleInfoVO> articleInfoVOList = new ArrayList<ArticleInfoVO>();
+        List<ArticleInfo> articleInfoList = articleInfoMapper.findTopTenByCreateTimeDesc();
 
-        //sqlSession.selectList("com.pblog.dao.ArticleInfoMapper.findList", null, new RowBounds(0, 3));
-
-        return null;
-        /*List<ArticleInfoVO> articleInfoVOList = new ArrayList<ArticleInfoVO>();
-        List<ArticleInfo> articleInfoList = articleInfoMapper.findTopTenByCreateTimeDesc();*/
-
-        /*for(ArticleInfo articleInfo : articleInfoList){
+        for(ArticleInfo articleInfo : articleInfoList){
             ArticleInfoVO articleInfoVO = commonUtilsService.transArticleInfoVO(articleInfo);
             articleInfoVOList.add(articleInfoVO);
-        }*/
+        }
 
-        //return articleInfoVOList;
+        return articleInfoVOList;
     }
 
     public ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request) {
@@ -73,7 +66,6 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     }
 
     public Pagination<ArticleInfoVO> page(PageRequest pageRequest) {
-
 
 
         return null;

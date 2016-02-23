@@ -1,4 +1,4 @@
-package com.pblog.web.controller.article;
+package com.pblog.web.controller;
 
 import com.pblog.service.article.ArticleInfoService;
 import org.springframework.stereotype.Controller;
