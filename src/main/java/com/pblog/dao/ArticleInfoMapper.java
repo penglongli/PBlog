@@ -20,6 +20,6 @@ public interface ArticleInfoMapper {
 
     ArticleInfo findBySlug(Long slug);
 
-    List<ArticleInfo> pageByPageRequest(PageRequest pageRequest);
+    List<ArticleInfo> page(PageRequest pageRequest);
 
 }

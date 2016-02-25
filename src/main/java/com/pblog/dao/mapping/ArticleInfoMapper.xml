@@ -38,8 +38,7 @@
         select * from article_info where slug = #{slug, jdbcType=BIGINT}
     </select>
 
-    <select id="pageByPageRequest" resultType="ArticleInfo">
+    <select id="page" parameterType="com.pblog.core.orm.PageRequest" resultType="ArticleInfo">
         select * from article_info
-        order by ${orderBy} ${orderDir} limit ${pageNo} * ${pageSize}, ${pageSize}
     </select>
 </mapper>

@@ -10,11 +10,18 @@ public class PageRequest {
 
     protected String orderDir = Sort.DESC;
 
+    protected int offset = 1;
+
+    protected int totalCount = -1;
+
+    protected int totalPage;
+
     public PageRequest(){}
 
     public PageRequest(int pageNo, int pageSize){
         this.pageNo = pageNo;
         this.pageSize = pageSize;
+        this.offset = (pageNo -1) * pageSize;
     }
 
     public int getPageNo() {
@@ -55,6 +62,30 @@ public class PageRequest {
 
     public void setOrderDir(String orderDir) {
         this.orderDir = orderDir;
+    }
+
+    public int getOffset() {
+        return offset;
+    }
+
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    public int getTotalPage() {
+        return totalPage;
+    }
+
+    public void setTotalPage(int totalPage) {
+        this.totalPage = totalPage;
     }
 
     public static class Sort{

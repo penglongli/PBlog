@@ -14,5 +14,4 @@ public interface ArticleInfoService {
 
     Pagination<ArticleInfoVO> page(PageRequest pageRequest);
 
-
 }

@@ -1,6 +1,6 @@
 package com.pblog.web.interceptor;
 
-import com.pblog.core.orm.Pagination;
+import com.pblog.core.orm.PageRequest;
 import com.pblog.core.utils.ReflectUtils;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.logging.Log;
@@ -25,8 +25,9 @@ public class PaginationInterceptor implements Interceptor {
         BoundSql boundSql = target.getBoundSql();
         String sql = boundSql.getSql();
         Object obj = boundSql.getParameterObject();
-        if(obj instanceof Pagination<?>){
-            Pagination<?> pagination = (Pagination<?>) obj;
+        if(obj instanceof PageRequest){
+            //Pagination<?> pagination = (Pagination<?>) obj;
+            PageRequest pageRequest = (PageRequest) obj;
 
             Object delegate = ReflectUtils.getFieldValue(target, "delegate");
             MappedStatement mappedStatement = (MappedStatement) ReflectUtils.getFieldValue(delegate, "mappedStatement");
@@ -34,24 +35,23 @@ public class PaginationInterceptor implements Interceptor {
 
             if(null != rowBounds && rowBounds.getOffset() != RowBounds.NO_ROW_LIMIT){
                 //重构sql语句
-                ReflectUtils.setFieldValue(boundSql, "sql", buildSql(sql, rowBounds));
+                ReflectUtils.setFieldValue(boundSql, "sql", buildSql(sql, rowBounds, pageRequest));
                 Connection connection = (Connection) invocation.getArgs()[0];
                 //设置总页数
-                setPageParameter(sql, connection, pagination);
+                setPageParameter(sql, connection, pageRequest);
             }
         }
-        // 将执行权交给下一个拦截器
         return invocation.proceed();
     }
 
-    private String buildSql(String oldSql, RowBounds rowBounds){
-        String sql = oldSql + " limit " + rowBounds.getOffset() + "," + rowBounds.getLimit();
+    private String buildSql(String oldSql, RowBounds rowBounds, PageRequest pageRequest){
+        String sql = oldSql + " limit " + pageRequest.getOffset() + "," + pageRequest.getPageSize();
         ReflectUtils.setFieldValue(rowBounds, "offset", RowBounds.NO_ROW_OFFSET);
         ReflectUtils.setFieldValue(rowBounds, "limit", RowBounds.NO_ROW_LIMIT);
         return sql;
     }
 
-    private void setPageParameter(String sql, Connection connection, Pagination<?> pagination) {
+    private void setPageParameter(String sql, Connection connection, PageRequest pageRequest) {
         // 记录总记录数
         String countSql = "select count(1) from (" + sql + ") as total";
         PreparedStatement countStmt = null;
@@ -63,9 +63,9 @@ public class PaginationInterceptor implements Interceptor {
             if (rs.next()) {
                 totalCount = rs.getInt(1);
             }
-            pagination.setTotalCount(totalCount);
-            int totalPage = totalCount / pagination.getPageSize() + ((totalCount % pagination.getPageSize() == 0) ? 0 : 1);
-            pagination.setTotalPage(totalPage);
+            pageRequest.setTotalCount(totalCount);
+            int totalPage = totalCount / pageRequest.getPageSize() + ((totalCount % pageRequest.getPageSize() == 0) ? 0 : 1);
+            pageRequest.setTotalPage(totalPage);
         } catch (SQLException e) {
             logger.error("Ignore this exception", e);
         } finally {

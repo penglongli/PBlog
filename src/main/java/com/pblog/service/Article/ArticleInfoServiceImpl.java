@@ -66,8 +66,16 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     }
 
     public Pagination<ArticleInfoVO> page(PageRequest pageRequest) {
+        List<ArticleInfo> articleInfoList = articleInfoMapper.page(pageRequest);
+        Pagination<ArticleInfoVO> pagination = new Pagination<ArticleInfoVO>(pageRequest);
 
+        List<ArticleInfoVO> articleInfoVOList = new ArrayList<ArticleInfoVO>();
+        for(ArticleInfo articleInfo : articleInfoList){
+            ArticleInfoVO articleInfoVO = commonUtilsService.transArticleInfoVO(articleInfo);
+            articleInfoVOList.add(articleInfoVO);
+        }
 
-        return null;
+        pagination.setItems(articleInfoVOList);
+        return pagination;
     }
 }
