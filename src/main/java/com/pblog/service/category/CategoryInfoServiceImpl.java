@@ -43,25 +43,10 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
 
             categoryInfoVO.setCategoryTitle(categoryInfo.getTitle());
             categoryInfoVO.setSlug(categoryInfo.getSlug());
-            categoryInfoVO.setSimpleArticleInfoVOList(transArticleToSimpleArticle(categoryInfo.getSlug()));
+            categoryInfoVO.setSimpleArticleInfoVOList(commonUtilsService.transArticleToSimpleArticle(categoryInfo.getSlug()));
         }
         return categoryInfoVOList;
     }
 
-    private List<SimpleArticleInfoVO> transArticleToSimpleArticle(Long categorySlug){
-        List<SimpleArticleInfoVO> simpleArticleInfoVOList = new ArrayList<SimpleArticleInfoVO>();
 
-        List<ArticleInfo> articleInfoList = articleInfoMapper.findListByCategorySlug(categorySlug);
-        for(ArticleInfo articleInfo : articleInfoList){
-            SimpleArticleInfoVO simpleArticleInfoVO = new SimpleArticleInfoVO();
-
-            simpleArticleInfoVO.setCreateTime(articleInfo.getCreateTime());
-            simpleArticleInfoVO.setSlug(articleInfo.getSlug());
-            simpleArticleInfoVO.setTitle(articleInfo.getTitle());
-            simpleArticleInfoVOList.add(simpleArticleInfoVO);
-        }
-
-        return simpleArticleInfoVOList;
-
-    }
 }

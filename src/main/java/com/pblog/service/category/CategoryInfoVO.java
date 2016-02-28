@@ -1,5 +1,7 @@
 package com.pblog.service.category;
 
+import com.pblog.service.article.SimpleArticleInfoVO;
+
 import java.util.List;
 
 public class CategoryInfoVO {

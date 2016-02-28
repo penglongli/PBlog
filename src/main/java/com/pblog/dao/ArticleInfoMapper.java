@@ -22,4 +22,5 @@ public interface ArticleInfoMapper {
 
     List<ArticleInfo> page(PageRequest pageRequest);
 
+    List<ArticleInfo> findByCreateTimeDesc();
 }

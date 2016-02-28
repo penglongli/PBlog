@@ -41,4 +41,10 @@
     <select id="page" parameterType="com.pblog.core.orm.PageRequest" resultType="ArticleInfo">
         select * from article_info
     </select>
+
+    <select id="findByCreateTimeDesc" resultType="ArticleInfo">
+        select * from article_info
+        order by createTime desc
+    </select>
+
 </mapper>
