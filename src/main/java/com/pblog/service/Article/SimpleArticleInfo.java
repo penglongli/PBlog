@@ -2,7 +2,7 @@ package com.pblog.service.article;
 
 import java.util.Date;
 
-public class SimpleArticleInfoVO {
+public class SimpleArticleInfo {
 
     private Date createTime;
 

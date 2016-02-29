@@ -1,7 +1,7 @@
 package com.pblog.service.archives;
 
 
-import com.pblog.service.article.SimpleArticleInfoVO;
+import com.pblog.service.article.SimpleArticleInfo;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ public class ArchivesVO {
 
     private String timeStamp;
 
-    List<SimpleArticleInfoVO> simpleArticleList;
+    List<SimpleArticleInfo> simpleArticleList;
 
     public String getTimeStamp() {
         return timeStamp;
@@ -19,11 +19,11 @@ public class ArchivesVO {
         this.timeStamp = timeStamp;
     }
 
-    public List<SimpleArticleInfoVO> getSimpleArticleList() {
+    public List<SimpleArticleInfo> getSimpleArticleList() {
         return simpleArticleList;
     }
 
-    public void setSimpleArticleList(List<SimpleArticleInfoVO> simpleArticleList) {
+    public void setSimpleArticleList(List<SimpleArticleInfo> simpleArticleList) {
         this.simpleArticleList = simpleArticleList;
     }
 }

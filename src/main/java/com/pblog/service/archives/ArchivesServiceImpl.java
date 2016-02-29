@@ -5,7 +5,7 @@ import com.pblog.core.utils.DateFormatUtils;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.domain.ArticleInfo;
 import com.pblog.service.CommonUtilsService;
-import com.pblog.service.article.SimpleArticleInfoVO;
+import com.pblog.service.article.SimpleArticleInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,20 +32,21 @@ public class ArchivesServiceImpl implements ArchivesService{
         List<ArchivesVO> archivesVOList = Lists.newArrayList();
         ArchivesVO archivesVO = new ArchivesVO();
 
-        List<SimpleArticleInfoVO> simpleArticleInfoVOList = Lists.newArrayList();
+        List<SimpleArticleInfo> simpleArticleInfoList = Lists.newArrayList();
         String tempStamp = DateFormatUtils.formatToYearMonth(articleInfoList.get(0).getCreateTime());
         for(ArticleInfo articleInfo : articleInfoList){
             //当前article的时间戳和temp时间戳不一致时
             if(!tempStamp.equals(DateFormatUtils.formatToYearMonth(articleInfo.getCreateTime()))){
-                archivesVO.setSimpleArticleList(simpleArticleInfoVOList);
+                archivesVO.setSimpleArticleList(simpleArticleInfoList);
+                archivesVOList.add(archivesVO);
 
                 archivesVO = new ArchivesVO();
-                simpleArticleInfoVOList = Lists.newArrayList();
+                simpleArticleInfoList = Lists.newArrayList();
             }
-            SimpleArticleInfoVO tempArticle = commonUtilsService.transArticleToSimpleArticle(articleInfo);
+            SimpleArticleInfo tempArticle = commonUtilsService.transArticleToSimpleArticle(articleInfo);
 
             archivesVO.setTimeStamp(tempStamp);
-            simpleArticleInfoVOList.add(tempArticle);
+            simpleArticleInfoList.add(tempArticle);
         }
 
         return archivesVOList;

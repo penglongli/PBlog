@@ -7,7 +7,7 @@ import com.pblog.dao.CategoryInfoMapper;
 import com.pblog.domain.ArticleInfo;
 import com.pblog.domain.CategoryInfo;
 import com.pblog.service.article.ArticleInfoVO;
-import com.pblog.service.article.SimpleArticleInfoVO;
+import com.pblog.service.article.SimpleArticleInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -48,12 +48,12 @@ public class CommonUtilsServiceImpl implements CommonUtilsService{
         return articleInfoVO;
     }
 
-    public SimpleArticleInfoVO transArticleToSimpleArticle(ArticleInfo articleInfo){
-        SimpleArticleInfoVO simpleArticleInfoVO = new SimpleArticleInfoVO();
+    public SimpleArticleInfo transArticleToSimpleArticle(ArticleInfo articleInfo){
+        SimpleArticleInfo simpleArticleInfo = new SimpleArticleInfo();
 
-        simpleArticleInfoVO.setCreateTime(articleInfo.getCreateTime());
-        simpleArticleInfoVO.setSlug(articleInfo.getSlug());
-        simpleArticleInfoVO.setTitle(articleInfo.getTitle());
-        return simpleArticleInfoVO;
+        simpleArticleInfo.setCreateTime(articleInfo.getCreateTime());
+        simpleArticleInfo.setSlug(articleInfo.getSlug());
+        simpleArticleInfo.setTitle(articleInfo.getTitle());
+        return simpleArticleInfo;
     }
 }

@@ -7,11 +7,15 @@ import com.pblog.domain.ArticleInfo;
 import com.pblog.domain.CategoryInfo;
 import com.pblog.service.CommonUtilsService;
 import com.pblog.service.article.ArticleInfoVO;
-import com.pblog.service.article.SimpleArticleInfoVO;
+import com.pblog.service.article.SimpleArticleInfo;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Service(value = "categoryInfoService")
+@Transactional
 public class CategoryInfoServiceImpl implements CategoryInfoService{
 
     @Resource
@@ -35,7 +39,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
         return articleInfoVOList;
     }
 
-    public List<CategoryInfoVO> findAll() {
+    public List<CategoryInfoVO> findCategoryInfoVO() {
         List<CategoryInfoVO> categoryInfoVOList = Lists.newArrayList();
         List<CategoryInfo> categoryInfoList = categoryInfoMapper.findAll();
 
@@ -45,15 +49,33 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
             categoryInfoVO.setCategoryTitle(categoryInfo.getTitle());
             categoryInfoVO.setSlug(categoryInfo.getSlug());
 
-            List<SimpleArticleInfoVO> simpleArticleInfoVOList = Lists.newArrayList();
+            List<SimpleArticleInfo> simpleArticleInfoList = Lists.newArrayList();
             List<ArticleInfo> articleInfoList = articleInfoMapper.findListByCategorySlug(categoryInfo.getSlug());
             for(ArticleInfo articleInfo : articleInfoList){
-                simpleArticleInfoVOList.add(commonUtilsService.transArticleToSimpleArticle(articleInfo));
+                simpleArticleInfoList.add(commonUtilsService.transArticleToSimpleArticle(articleInfo));
             }
-            categoryInfoVO.setSimpleArticleInfoVOList(simpleArticleInfoVOList);
+            categoryInfoVO.setSimpleArticleInfoList(simpleArticleInfoList);
         }
         return categoryInfoVOList;
     }
 
+    public List<SimpleCategoryInfo> findSimpleCategoryInfo() {
+        List<SimpleCategoryInfo> simpleCategoryInfoList = Lists.newArrayList();
 
+        List<CategoryInfo> categoryInfoList = categoryInfoMapper.findAll();
+        for(CategoryInfo categoryInfo : categoryInfoList){
+            simpleCategoryInfoList.add(transToSimpleCategoryInfo(categoryInfo));
+        }
+
+        return simpleCategoryInfoList;
+    }
+
+    private SimpleCategoryInfo transToSimpleCategoryInfo(CategoryInfo categoryInfo){
+        SimpleCategoryInfo simpleCategoryInfo = new SimpleCategoryInfo();
+
+        simpleCategoryInfo.setTitle(categoryInfo.getTitle());
+        simpleCategoryInfo.setCategoryId(categoryInfo.getId());
+
+        return simpleCategoryInfo;
+    }
 }

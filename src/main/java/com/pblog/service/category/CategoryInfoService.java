@@ -8,5 +8,7 @@ public interface CategoryInfoService {
 
     List<ArticleInfoVO> findArticleListByCategory(Long categorySlug);
 
-    List<CategoryInfoVO> findAll();
+    List<CategoryInfoVO> findCategoryInfoVO();
+
+    List<SimpleCategoryInfo> findSimpleCategoryInfo();
 }

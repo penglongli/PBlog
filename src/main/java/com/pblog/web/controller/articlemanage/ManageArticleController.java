@@ -2,6 +2,8 @@ package com.pblog.web.controller.articlemanage;
 
 import com.pblog.domain.ArticleInfo;
 import com.pblog.service.ManageArticleInfoService;
+import com.pblog.service.category.CategoryInfoService;
+import com.pblog.service.category.SimpleCategoryInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,6 +22,9 @@ public class ManageArticleController {
     @Resource(name = "manageArticleInfoService")
     private ManageArticleInfoService manageArticleInfoService;
 
+    @Resource(name = "categoryInfoService")
+    private CategoryInfoService categoryInfoService;
+
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String index(@RequestParam(value = "categorySlug", required = false)Long categorySlug,  Model model){
         List<ArticleInfo> articleInfoList =  manageArticleInfoService.findListByCategorySlug(categorySlug);
@@ -30,7 +35,9 @@ public class ManageArticleController {
 
     @RequestMapping(value = "/edit")
     public String add(Model model){
+        List<SimpleCategoryInfo> categoryInfoList = categoryInfoService.findSimpleCategoryInfo();
 
+        model.addAttribute("categoryList", categoryInfoList);
         return "manage/article/article_add";
     }
 

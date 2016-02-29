@@ -32,14 +32,12 @@
          </div>
          <div class="article-category">
             <div class="category" name="categorySlug">
-             文章分类：<select>
-                        <option value="0">全部</option>
-                        <option value="1">测试1</option>
-                        <option value="2">测试1123123</option>
-                        <option value="3">测试1打发斯蒂芬</option>
-                        <option value="4">测试1123</option>
-                        <option value="5">测试1</option>
-                    </select>
+                文章分类：
+                <select>
+                    <c:forEach  var="category" items="${categoryList}" varStatus="status">
+                        <option value="${category.categoryId}">${category.title}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="tag">
                 标签:<input type="text" name="tag" />
@@ -52,7 +50,6 @@
              <div style="clear: both;"></div>
          </div>
          <div class="view"></div>
-
          <div class="description">
             <div class="description-title">添加描述</div>
             <textarea class="editor" name="description"></textarea>
@@ -61,9 +58,7 @@
               <i class="icon-eye-open"></i>
               <button type="button" class="preview-description">预览描述</button>
          </div>
-
          <div class="description-view"></div>
-
          <div class="publish">
              <button type="button" class="publish-article"><i class="icon-fighter-jet"></i>发布文章</button>
          </div>
