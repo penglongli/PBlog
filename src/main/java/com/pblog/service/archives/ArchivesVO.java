@@ -4,13 +4,12 @@ package com.pblog.service.archives;
 import com.pblog.service.article.SimpleArticleInfoVO;
 
 import java.util.List;
-import java.util.Map;
 
 public class ArchivesVO {
 
     private String timeStamp;
 
-    List<Map<String, SimpleArticleInfoVO>> articleMap;
+    List<SimpleArticleInfoVO> simpleArticleList;
 
     public String getTimeStamp() {
         return timeStamp;
@@ -20,11 +19,11 @@ public class ArchivesVO {
         this.timeStamp = timeStamp;
     }
 
-    public List<Map<String, SimpleArticleInfoVO>> getArticleMap() {
-        return articleMap;
+    public List<SimpleArticleInfoVO> getSimpleArticleList() {
+        return simpleArticleList;
     }
 
-    public void setArticleMap(List<Map<String, SimpleArticleInfoVO>> articleMap) {
-        this.articleMap = articleMap;
+    public void setSimpleArticleList(List<SimpleArticleInfoVO> simpleArticleList) {
+        this.simpleArticleList = simpleArticleList;
     }
 }

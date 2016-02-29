@@ -1,14 +1,15 @@
 package com.pblog.service.category;
 
+import com.google.common.collect.Lists;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.dao.CategoryInfoMapper;
 import com.pblog.domain.ArticleInfo;
 import com.pblog.domain.CategoryInfo;
 import com.pblog.service.CommonUtilsService;
 import com.pblog.service.article.ArticleInfoVO;
+import com.pblog.service.article.SimpleArticleInfoVO;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryInfoServiceImpl implements CategoryInfoService{
@@ -23,7 +24,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
     private CommonUtilsService commonUtilsService;
 
     public List<ArticleInfoVO> findArticleListByCategory(Long categorySlug) {
-        List<ArticleInfoVO> articleInfoVOList = new ArrayList<ArticleInfoVO>();
+        List<ArticleInfoVO> articleInfoVOList = Lists.newArrayList();
         List<ArticleInfo> articleInfoList = articleInfoMapper.findListByCategorySlug(categorySlug);
 
         for(ArticleInfo articleInfo : articleInfoList){
@@ -35,7 +36,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
     }
 
     public List<CategoryInfoVO> findAll() {
-        List<CategoryInfoVO> categoryInfoVOList = new ArrayList<CategoryInfoVO>();
+        List<CategoryInfoVO> categoryInfoVOList = Lists.newArrayList();
         List<CategoryInfo> categoryInfoList = categoryInfoMapper.findAll();
 
         for(CategoryInfo categoryInfo : categoryInfoList){
@@ -43,7 +44,13 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
 
             categoryInfoVO.setCategoryTitle(categoryInfo.getTitle());
             categoryInfoVO.setSlug(categoryInfo.getSlug());
-            categoryInfoVO.setSimpleArticleInfoVOList(commonUtilsService.transArticleToSimpleArticle(categoryInfo.getSlug()));
+
+            List<SimpleArticleInfoVO> simpleArticleInfoVOList = Lists.newArrayList();
+            List<ArticleInfo> articleInfoList = articleInfoMapper.findListByCategorySlug(categoryInfo.getSlug());
+            for(ArticleInfo articleInfo : articleInfoList){
+                simpleArticleInfoVOList.add(commonUtilsService.transArticleToSimpleArticle(articleInfo));
+            }
+            categoryInfoVO.setSimpleArticleInfoVOList(simpleArticleInfoVOList);
         }
         return categoryInfoVOList;
     }

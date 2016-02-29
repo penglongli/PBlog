@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service("commonUtilsService")
 @Transactional
@@ -50,20 +48,12 @@ public class CommonUtilsServiceImpl implements CommonUtilsService{
         return articleInfoVO;
     }
 
-    public List<SimpleArticleInfoVO> transArticleToSimpleArticle(Long categorySlug){
-        List<SimpleArticleInfoVO> simpleArticleInfoVOList = new ArrayList<SimpleArticleInfoVO>();
+    public SimpleArticleInfoVO transArticleToSimpleArticle(ArticleInfo articleInfo){
+        SimpleArticleInfoVO simpleArticleInfoVO = new SimpleArticleInfoVO();
 
-        List<ArticleInfo> articleInfoList = articleInfoMapper.findListByCategorySlug(categorySlug);
-        for(ArticleInfo articleInfo : articleInfoList){
-            SimpleArticleInfoVO simpleArticleInfoVO = new SimpleArticleInfoVO();
-
-            simpleArticleInfoVO.setCreateTime(articleInfo.getCreateTime());
-            simpleArticleInfoVO.setSlug(articleInfo.getSlug());
-            simpleArticleInfoVO.setTitle(articleInfo.getTitle());
-            simpleArticleInfoVOList.add(simpleArticleInfoVO);
-        }
-
-        return simpleArticleInfoVOList;
-
+        simpleArticleInfoVO.setCreateTime(articleInfo.getCreateTime());
+        simpleArticleInfoVO.setSlug(articleInfo.getSlug());
+        simpleArticleInfoVO.setTitle(articleInfo.getTitle());
+        return simpleArticleInfoVO;
     }
 }

@@ -1,5 +1,6 @@
 package com.pblog.service;
 
+import com.google.common.collect.Lists;
 import com.pblog.core.markdown.GenerateHtml;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.domain.ArticleInfo;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
     public List<ArticleInfo> findListByCategorySlug(Long categorySlug) {
         List<ArticleInfo> articleInfoList;
         if (null == categorySlug){
-            articleInfoList = new ArrayList<ArticleInfo>();
+            articleInfoList = Lists.newArrayList();
             //articleInfoList = articleInfoMapper.findList();
         }else{
             articleInfoList = articleInfoMapper.findListByCategorySlug(categorySlug);

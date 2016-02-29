@@ -1,9 +1,9 @@
 package com.pblog.core.utils;
 
+import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 
 public class GenerateUtils {
@@ -14,7 +14,7 @@ public class GenerateUtils {
      * @return
      */
     public static List<String> spiltStringByComma(String tags){
-        List<String> tagList = new ArrayList<String>();
+        List<String> tagList = Lists.newArrayList();
         if(null != tags){
             String[] regexStr = tags.split(",");
             for (String str : regexStr){
