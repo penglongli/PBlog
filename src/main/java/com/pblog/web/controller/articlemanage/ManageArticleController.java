@@ -42,9 +42,9 @@ public class ManageArticleController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public Map<String, Object> adda(@ModelAttribute ArticleInfoFormBean articleInfoFormBean, Model model){
+    public String adda(@ModelAttribute ArticleInfoFormBean articleInfoFormBean, Model model){
         manageArticleInfoService.insert(articleInfoFormBean);
-        return null;
+        return "redirect:list";
     }
 
 

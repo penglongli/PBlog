@@ -33,7 +33,7 @@
          <div class="article-category">
             <div class="category" name="categorySlug">
                 文章分类：
-                <select>
+                <select name="categorySlug">
                     <c:forEach  var="category" items="${categoryList}" varStatus="status">
                         <option value="${category.categoryId}">${category.title}</option>
                     </c:forEach>
@@ -73,7 +73,6 @@
         $(".publish-article").click(function(){
             $("#article-form").submit();
         })
-
 
         $(".preview-article").click(function(){
             alert(2);

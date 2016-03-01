@@ -1,6 +1,5 @@
 package com.pblog.service;
 
-import com.google.common.collect.Lists;
 import com.pblog.core.markdown.GenerateHtml;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.domain.ArticleInfo;
@@ -23,13 +22,13 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
         ArticleInfo articleInfo = transFormBeanToArticle(articleInfoFormBean);
 
         articleInfoMapper.insert(articleInfo);
-        System.out.println(articleInfo.getId());
+        //System.out.println(articleInfo.getId());
     }
 
     public List<ArticleInfo> findListByCategorySlug(Long categorySlug) {
         List<ArticleInfo> articleInfoList;
         if (null == categorySlug){
-            articleInfoList = Lists.newArrayList();
+            articleInfoList = articleInfoMapper.findList();
             //articleInfoList = articleInfoMapper.findList();
         }else{
             articleInfoList = articleInfoMapper.findListByCategorySlug(categorySlug);
