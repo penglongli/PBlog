@@ -1,12 +1,13 @@
 @media screen and (min-width: 935px){
   body{
     font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+    background: #EEEEEE;
   }
   #fix-left{
     position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    bottom: 0;
     width: 312px;
     background: #2B333D;
     text-align: center;
@@ -31,7 +32,7 @@
       .motto{
         text-align: left;
         font-size: 13px;
-        padding: 0px 30px 15px 20px;
+        padding: 0 30px 15px 20px;
         color: #777777;
       }
     }
@@ -49,7 +50,7 @@
       .sidebar-nav-view{
         width: auto;
         float: left;
-        margin: 0px 5% 0px 28%;
+        margin: 0 5% 0 28%;
       }
 
       .active{
@@ -229,59 +230,47 @@
   .wrapper-header{
     position: fixed;
     left: 312px;
-    top: 0px;
-    right: 0px;
-    background: #000000;
+    top: 0;
+    right: 0;
+    background: #FFFFFF;
     border-bottom: 2px solid #DDD;
     z-index: 1000;
-
-    //opacity:0.5;
-    //border-bottom: 1px solid #E7E7E7;
-    /*filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#F7F7F7,endColorStr=#F3F3F3); /!*IE 6 7 8*!/
-    background: -ms-linear-gradient(top, #F7F7F7,  #F3F3F3);        /!* IE 10 *!/
-    background:-moz-linear-gradient(top,#F7F7F7,#F3F3F3);/!*火狐*!/
-    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#F7F7F7), to(#F3F3F3));/!*谷歌*!/
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F7F7F7), to(#F3F3F3));      /!* Safari 4-5, Chrome 1-9*!/
-    background: -webkit-linear-gradient(top, #F7F7F7, #F3F3F3);   /!*Safari5.1 Chrome 10+*!/
-    background: -o-linear-gradient(top, #F7F7F7, #F3F3F3);  /!*Opera 11.10+*!/*/
+    box-shadow: 2px 1px 5px #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
 
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      
+
+      a{
+        display: block;
+        color: #666666;
+        text-decoration: none;
+        letter-spacing: 1px;
+        &:link{
+          text-decoration: none;
+        }
+      }
+
       li {
         float: left;
-        font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+        font: 16px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
         display: list-item;
-        min-width: 80px;
+        min-width: 60px;
         text-align: center;
-        padding: 18px 15px;
+        padding: 12px 10px;
         cursor: pointer;
+        margin-left: 25px;
 
-        a{
-          display: block;
-          color: #777777;
-          text-decoration: none;
-          letter-spacing: 1px;
-          &:link{
-            text-decoration: none;
-          }
-        }
         &:hover{
-          background: #363C41;
-
-          a{
-            color: #FFF;
-          }
+          border-bottom: 4px solid #2ECC71;
         }
       }
       .active{
-        background: #363C41;
-
-        a{
-          color: #FFF;
-        }
+        border-bottom: 4px solid #2ECC71;
+        font-weight: 100;
+        color: #021;
       }
     }
   }
