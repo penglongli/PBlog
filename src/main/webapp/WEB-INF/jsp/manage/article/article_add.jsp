@@ -75,7 +75,6 @@
         })
 
         $(".preview-article").click(function(){
-            alert(2);
             $.ajax({
                 async: false,
                 url: '${pageContext.request.contextPath}/preview/markdown',

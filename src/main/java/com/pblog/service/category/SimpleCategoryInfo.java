@@ -2,16 +2,16 @@ package com.pblog.service.category;
 
 public class SimpleCategoryInfo {
 
-    private Integer categoryId;
+    private Long categorySlug;
 
     private String title;
 
-    public Integer getCategoryId() {
-        return categoryId;
+    public Long getCategorySlug() {
+        return categorySlug;
     }
 
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
+    public void setCategorySlug(Long categorySlug) {
+        this.categorySlug = categorySlug;
     }
 
     public String getTitle() {

@@ -74,7 +74,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
         SimpleCategoryInfo simpleCategoryInfo = new SimpleCategoryInfo();
 
         simpleCategoryInfo.setTitle(categoryInfo.getTitle());
-        simpleCategoryInfo.setCategoryId(categoryInfo.getId());
+        simpleCategoryInfo.setCategorySlug(categoryInfo.getSlug());
 
         return simpleCategoryInfo;
     }
