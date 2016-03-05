@@ -2,13 +2,14 @@
   body{
     font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
     background: #EEEEEE;
+    font-style: normal!important;
   }
   #fix-left{
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 312px;
+    width: 160px;
     background: #2B333D;
     text-align: center;
 
@@ -32,196 +33,35 @@
       .motto{
         text-align: left;
         font-size: 13px;
-        padding: 0 30px 15px 20px;
+        padding: 0 20px 15px 15px;
         color: #777777;
       }
     }
 
-    .sidebar-nav{
-      color: #999999;
-      font-size: 15px;
-      margin-bottom: 20px;
+    .menu_bar{
 
-      .sidebar-nav-mes{
-        float: left;
-        width: auto;
-        text-align: left;
-      }
-      .sidebar-nav-view{
-        width: auto;
-        float: left;
-        margin: 0 5% 0 28%;
-      }
+      ul{
+        list-style: none;
+        margin:0;
+        padding:0;
 
-      .active{
-        color: #87DAFF;
-        border-bottom: 1px solid #87DAFF;
-      }
-    }
-
-    .f1{
-      display: none;
-      .site-state{
-        width: 243px;
-        margin: 15px auto;
+        li{
+          font-size: 18px;
+          padding: 8px;
+        }
 
         a{
-          color: #999;
           text-decoration: none;
-
-          &:hover{
-            color: white;
-          }
-        }
-
-        .site-state-item-count{
-          display: block;
-          text-align: center;
-          font-size: 18px;
-        }
-        .site-state-item-name{
-          font-size: 13px;
-        }
-
-        .site-state-blog{
-          float: left;
-          width: 60px;
-        }
-        .site-state-category{
-          float: left;
-          border-left: 1px solid #6B6B6B;
-          width: 60px;
-        }
-        .site-state-book{
-          float: left;
-          border-left: 1px solid #6B6B6B;
-          width: 60px;
-        }
-        .site-state-record{
-          float: left;
-          border-left: 1px solid #6B6B6B;
-          width: 60px;
-        }
-      }
-
-      .btn-link{
-
-        .btn-link-title{
-          color: #C5D0DE;
-          font-size: 18px;
-        }
-
-        .btn-link-list{
-          margin-top: 10px;
           color: #999999;
-          font-size: 14px;
 
-          ul{
-            list-style: none;
-            li{
-              float: left;
-              margin-left: 13px;
-              a{
-                color: #999;
-                text-decoration: none;
-                img, svg{
-                  max-width: 20px;
-                  margin-right: 5px;
-                }
-                img{
-                  vertical-align: -20%;
-                  margin-top: 4px;
-                }
-                svg{
-                  vertical-align: -44%;
-                }
-
-                &:hover{
-                  color: white;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .contact-me{
-        margin-top: 30px;
-        .contact-me-title{
-          color: #C5D0DE;
-          font-size: 18px;
-        }
-        .contact-me-info{
-          font-size: 14px;
-          color: #999;
-          text-align: left;
-
-          ul{
-            list-style: none;
-            letter-spacing: 1px;
-            li{
-              margin-top: 5px;
-              a{
-                color: white;
-                margin-left: 2px;
-              }
-            }
-          }
-        }
-      }
-
-      .website-info{
-        margin-top: 30px;
-        .website-info-title{
-          color: #C5D0DE;
-          font-size: 18px;
-        }
-        .website-info-list{
-          text-align: left;
-          color: #999;
-          font-size: 14px;
-
-          ul{
-            li{
-              margin-left: 13px;
-
-              span{
-                color: white;
-              }
-            }
+          &:link{
+            text-decoration: none;
           }
         }
 
-      }
-    }
-
-    .f2{
-      display: none;
-
-      .read-rank{
-
-        ol{
-          //list-style: none;
-          font-size: 14px;
-          text-align: left;
-          margin: 0;
-          padding: 0px 20px 0px 30px;
-          word-break: break-all;
-          li{
-            display: list-item;
-            line-height: 1.8;
-            color: #999;
-            margin-top: 7px;
-            a{
-              color: #999;
-              text-decoration: none;
-
-              &:hover{
-                color: #FFF;
-                text-decoration: underline;
-              }
-            }
-          }
+        .active{
+          background: #2F889A;
+          color: #FFFFFF;
         }
       }
     }

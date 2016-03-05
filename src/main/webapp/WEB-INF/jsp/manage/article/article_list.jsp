@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="${styleDomain}/article_list.less" type="text/less" rel="stylesheet/less"  />
-    <link href="${cssDomain}/font-awesome.min.css" rel="stylesheet"/>
+    <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsDomain}/less.min.js"></script>
 </head>
 <body>

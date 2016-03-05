@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="wrapper-header">
-  <ul class="navbar">
+  <%--<ul class="navbar">
     <a href="${staticDomain}/"><li <c:if test="${active_line == 1}">class="active"</c:if>>首页</li></a>
     <a href="${staticDomain}/archives"><li <c:if test="${active_line == 2}">class="active"</c:if>>归档</li></a>
     <a href="${staticDomain}/category"><li <c:if test="${active_line == 3}">class="active"</c:if>>分类</li></a>
@@ -8,7 +8,7 @@
     <a href=""><li <c:if test="${active_line == 5}">class="active"</c:if>>日记</li></a>
     <a href=""><li <c:if test="${active_line == 6}">class="active"</c:if>>关于</li></a>
     <div style="clear: both;"></div>
-  </ul>
+  </ul>--%>
 </div>
 <div id="fix-left">
   <div class="author_info">
@@ -16,13 +16,18 @@
     <p>Pelin</p>
     <p class="motto"><i class="icon-heart"></i>&nbsp;&nbsp;我们在同一个时区，却有一辈子的时差。</p>
   </div>
-  <div class="sidebar-nav">
-    <div class="sidebar-nav-view <c:if test="${active_line == 1}">active</c:if>">站点概览</div>
-    <div class="sidebar-nav-mes <c:if test="${active_line != 1}">active</c:if>">文章信息</div>
-    <div style="clear: both;"></div>
+  <div class="menu_bar">
+    <ul>
+      <a href=""><li <c:if test="${active_line == 1}">class="active"</c:if>><i class="icon-home"></i> 首页</li></a>
+      <a href=""><li <c:if test="${active_line == 2}">class="active"</c:if>><i class="icon-calendar"></i> 归档</li></a>
+      <a href=""><li <c:if test="${active_line == 3}">class="active"</c:if>><i class="icon-reorder"></i> 分类</li></a>
+      <a href=""><li><i class="icon-book"></i> 读书</li></a>
+      <a href=""><li><i class="icon-text-width"></i> 日记</li></a>
+      <a href=""><li><i class="icon-info-sign"></i> 关于</li></a>
+    </ul>
   </div>
 
-  <div class="f1" style="display:<c:if test="${active_line == 1}">block</c:if>;">
+  <%--<div class="f1" style="display:<c:if test="${active_line == 1}">block</c:if>;">
     <div class="site-state">
       <div class="site-state-blog">
         <a href="">
@@ -91,19 +96,5 @@
         </ul>
       </div>
     </div>
-  </div>
-  <div class="f2" style="display:<c:if test="${active_line != 1}">block</c:if>;">
-    <div class="read-rank">
-      <ol>
-        <li><a href="">Android开发系列（十一）：对手机通讯录的读取、添加、删除、查找(2121)</a></li>
-        <li><a href="">Android开发系列（十七）：读取assets目录下的数据库文件(2121)</a></li>
-        <li><a href="">Android开发系列（二十二）：AdapterViewFlipper的功能和用法(2111)</a></li>
-        <li><a href="">异常类型：Myeclipse10将web项目打成war包时出现security alert:integrity check error(2035)</a></li>
-        <li><a href="">【数据库新手】关于创建数据库过程失败，“master”中拒绝了CREATE DATABASE权限问题(1572)</a></li>
-        <li><a href="">Android开发系列（十五）：【Android小游戏成语连连看】第一篇(1264)</a></li>
-        <li><a href="">计算机网络系列：在虚拟机上使用wireshark进行抓包(1176)</a></li>
-        <li><a href="">Android开发系列（三）：消息模式的Toast.make Text(1163)</a></li>
-      </ol>
-    </div>
-  </div>
+  </div>--%>
 </div>
