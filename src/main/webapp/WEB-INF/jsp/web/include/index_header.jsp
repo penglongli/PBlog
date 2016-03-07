@@ -9,6 +9,9 @@
     <a href=""><li <c:if test="${active_line == 6}">class="active"</c:if>>关于</li></a>
     <div style="clear: both;"></div>
   </ul>--%>
+  <div class="search">
+    <input type="text" class="search_input" />
+  </div>
 </div>
 <div id="fix-left">
   <div class="author_info">

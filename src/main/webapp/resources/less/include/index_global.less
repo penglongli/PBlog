@@ -1,15 +1,20 @@
 @media screen and (min-width: 935px){
   body{
     font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
-    background: #EEEEEE;
+    background: #FFF;
     font-style: normal!important;
   }
+
+  .clear-fix{
+    clear: both;
+  }
+
   #fix-left{
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 160px;
+    width: 11%;
     background: #2B333D;
     text-align: center;
 
@@ -69,48 +74,30 @@
 
   .wrapper-header{
     position: fixed;
-    left: 312px;
+    left: 11%;
     top: 0;
     right: 0;
+    padding: 8px;
     background: #FFFFFF;
     border-bottom: 2px solid #DDD;
     z-index: 1000;
     box-shadow: 2px 1px 5px #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .search{
+      background: url('../image/search_background.png') no-repeat;
+      width: 276px;
+      height: 28px;
+      background-size: 276px 28px;
+      display: inline-block;
 
-      a{
-        display: block;
-        color: #666666;
-        text-decoration: none;
-        letter-spacing: 1px;
-        &:link{
-          text-decoration: none;
-        }
-      }
-
-      li {
-        float: left;
-        font: 16px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
-        display: list-item;
-        min-width: 60px;
-        text-align: center;
-        padding: 12px 10px;
-        cursor: pointer;
-        margin-left: 25px;
-
-        &:hover{
-          border-bottom: 4px solid #2ECC71;
-        }
-      }
-      .active{
-        border-bottom: 4px solid #2ECC71;
-        font-weight: 100;
-        color: #021;
+      .search_input{
+        border: none;
+        width: 222px;
+        height: 26px;
+        margin: 0px 0px 2px 30px;
+        background-color: transparent;
+        outline: none;
       }
     }
   }
