@@ -17,6 +17,7 @@
 </c:choose>
 
 <c:set var="jsDomain" value="${staticDomain}/resources/js"/>
+<c:set var="jsPlugin" value="${staticDomain}/resources/js/plugins"/>
 <c:set var="imageDomain" value="${staticDomain}/resources/image"/>
 <c:set var="cssDomain" value="${staticDomain}/resources/css"/>
 <c:set var="cssPlugin" value="${staticDomain}/resources/css/plugins" />

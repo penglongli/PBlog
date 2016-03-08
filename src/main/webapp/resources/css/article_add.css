@@ -28,7 +28,7 @@ header .navbar-left {
   position: fixed;
   top: 50px;
   background: #222222;
-  width: 225px;
+  width: 13%;
 }
 header .navbar-left ul {
   color: #9D9D9D;
@@ -63,12 +63,11 @@ pre {
   padding: 10px;
 }
 #wrapper {
-  padding-left: 217px;
+  padding-left: 13%;
   padding-top: 43px;
-  margin-right: 0;
 }
 #wrapper .content {
-  width: 84%;
+  width: 85%;
   margin-right: 0;
   padding: 4px 0px 4px 25px;
   background: #FFFFFF;

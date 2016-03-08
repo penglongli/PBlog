@@ -8,69 +8,90 @@
   bottom: 0;
   left: 11%;
 
-  .article-list{
-    width: 21%;
+  .scroll-area{
     position: fixed;
+    width: 22%;
     top: 45px;
     bottom: 0;
-    overflow: hidden;
     border-right: 1px solid #EEEEEE;
 
-    .article-item{
-      padding: 16px 10px 10px 10px;
-      border-bottom: 1px solid #EEEEEE;
+    .article-list{
+      position: absolute;
+      height: auto;
 
-      .article-header{
-        margin-bottom: 15px;
+      .article-item{
+        padding: 16px 10px 10px 10px;
+        border-bottom: 1px solid #EEEEEE;
 
-        .article-category{
-          color: #8e2013;
-          text-decoration: none;
-          margin-right: 2px;
-        }
+        .article-header{
+          margin-bottom: 15px;
 
-        .article-title{
-          color: #551A8B;
-          text-decoration: none;
-        }
-      }
+          .article-category{
+            color: #8e2013;
+            text-decoration: none;
+            margin-right: 2px;
+          }
 
-      .article-description{
-        font-size: 12px;
-        color: #777777;
-        line-height: 1.7;
-        margin-bottom: 15px;
-      }
-
-      .article-metadata{
-        font-size: 13px;
-        color: #BFBFBF;
-
-        .create-time{
-          display: inline-block;
-          text-align: left;
-          float: left;
-
-          i {
-            margin-right: 7px;
+          .article-title{
+            color: #551A8B;
+            text-decoration: none;
           }
         }
 
-        .meta-tags{
-          float: right;
+        .article-description{
+          font-size: 12px;
+          color: #777777;
+          line-height: 1.7;
+          margin-bottom: 15px;
+        }
 
-          span{
+        .article-metadata{
+          font-size: 13px;
+          color: #BFBFBF;
+
+          .create-time{
             display: inline-block;
+            text-align: left;
             float: left;
-            margin-right: 10px;
+
+            i {
+              margin-right: 7px;
+            }
+          }
+
+          .meta-tags{
+            float: right;
+
+            span{
+              display: inline-block;
+              float: left;
+              margin-right: 10px;
+            }
           }
         }
+      }
+    }
+
+    .scroll-vertical{
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      width: 4px;
+      right: 0;
+
+      .scroll-bar{
+        width: 3px;
+        height: 257px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-color: #000;
+        background-clip: padding-box;
       }
     }
   }
 
   .article-content{
-    left: 24%;
+    left: 25%;
     position: absolute;
     width: 73%;
     height: 200px;

@@ -35,7 +35,7 @@
                 文章分类：
                 <select name="categorySlug">
                     <c:forEach  var="category" items="${categoryList}" varStatus="status">
-                        <option value="${category.categoryId}">${category.title}</option>
+                        <option value="${category.categorySlug}">${category.title}</option>
                     </c:forEach>
                 </select>
             </div>

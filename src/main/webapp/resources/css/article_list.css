@@ -28,7 +28,7 @@ header .navbar-left {
   position: fixed;
   top: 50px;
   background: #222222;
-  width: 225px;
+  width: 13%;
 }
 header .navbar-left ul {
   color: #9D9D9D;
@@ -63,12 +63,11 @@ pre {
   padding: 10px;
 }
 #wrapper {
-  padding-left: 217px;
+  padding-left: 13%;
   padding-top: 43px;
-  margin-right: 0;
 }
 #wrapper .content {
-  width: 84%;
+  width: 85%;
   margin-right: 0;
   padding: 4px 0px 4px 25px;
   background: #FFFFFF;
@@ -176,21 +175,21 @@ body .content-article-list table tbody tr td a:link {
   text-decoration: none;
 }
 body .content-article-list table .slug {
-  width: 15%;
+  width: 10%;
 }
 body .content-article-list table .title {
   width: 35%;
   text-align: left !important;
 }
 body .content-article-list table .viewNum {
-  width: 12%;
+  width: 10%;
 }
 body .content-article-list table .thumbNum {
-  width: 12%;
+  width: 10%;
 }
 body .content-article-list table .status {
-  width: 12%;
+  width: 10%;
 }
 body .content-article-list table .operate {
-  width: 14%;
+  width: 25%;
 }
