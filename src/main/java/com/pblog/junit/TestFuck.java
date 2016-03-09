@@ -4,6 +4,8 @@ import com.pblog.service.ManageArticleInfoService;
 import junit.framework.TestCase;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.io.IOException;
+
 public class TestFuck extends TestCase {
     private ClassPathXmlApplicationContext applicationContext;
 
@@ -25,5 +27,14 @@ public class TestFuck extends TestCase {
 
         System.out.println(a);
         System.out.println(articleInfo.getId());*/
+    }
+
+    public static void main(String[] args){
+        Runtime runtime = Runtime.getRuntime();
+        try {
+            runtime.exec("calc");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

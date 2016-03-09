@@ -47,6 +47,13 @@
     font-size: 18px;
     padding: 8px;
   }
+  #fix-left .menu_bar ul li i {
+    margin-right: 0.3em;
+  }
+  #fix-left .menu_bar ul li:hover {
+    background: #2F889A;
+    color: #FFFFFF;
+  }
   #fix-left .menu_bar ul a {
     text-decoration: none;
     color: #999999;
@@ -102,7 +109,7 @@
   border-right: 1px solid #EEEEEE;
 }
 .content .scroll-area .article-list {
-  position: absolute;
+  position: relative;
   height: auto;
 }
 .content .scroll-area .article-list .article-item {
@@ -165,7 +172,7 @@
 .content .article-content {
   left: 25%;
   position: absolute;
-  width: 73%;
+  width: 75%;
   height: 200px;
   background: blue;
 }

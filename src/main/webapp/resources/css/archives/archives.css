@@ -47,6 +47,13 @@
     font-size: 18px;
     padding: 8px;
   }
+  #fix-left .menu_bar ul li i {
+    margin-right: 0.3em;
+  }
+  #fix-left .menu_bar ul li:hover {
+    background: #2F889A;
+    color: #FFFFFF;
+  }
   #fix-left .menu_bar ul a {
     text-decoration: none;
     color: #999999;
