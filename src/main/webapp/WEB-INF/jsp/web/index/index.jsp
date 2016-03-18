@@ -49,7 +49,6 @@
   </div>
   <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
   <script type="text/javascript">
-
       var $$ = function(func){
           if (document.addEventListener) {
               window.addEventListener("load", func, false);

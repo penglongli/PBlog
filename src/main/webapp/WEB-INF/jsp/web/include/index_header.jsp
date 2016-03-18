@@ -12,12 +12,12 @@
   </div>
   <div class="menu_bar">
     <ul>
-      <a href="${staticDomain}/"><li <c:if test="${active_line == 1}">class="active"</c:if>><i class="icon-home"></i> 首页</li></a>
-      <a href="${staticDomain}/archives"><li <c:if test="${active_line == 2}">class="active"</c:if>><i class="icon-calendar"></i> 归档</li></a>
-      <a href="${staticDomain}/category"><li <c:if test="${active_line == 3}">class="active"</c:if>><i class="icon-reorder"></i> 分类</li></a>
-      <a href=""><li><i class="icon-book"></i> 读书</li></a>
-      <a href=""><li><i class="icon-text-width"></i> 日记</li></a>
-      <a href=""><li><i class="icon-info-sign"></i> 关于</li></a>
+      <a href="${staticDomain}/"><li <c:if test="${active_line == 1}">class="active"</c:if>><i class="icon-home"></i>首页</li></a>
+      <a href="${staticDomain}/archives"><li <c:if test="${active_line == 2}">class="active"</c:if>><i class="icon-calendar"></i>归档</li></a>
+      <a href="${staticDomain}/category"><li <c:if test="${active_line == 3}">class="active"</c:if>><i class="icon-reorder"></i>分类</li></a>
+      <a href=""><li><i class="icon-book"></i>读书</li></a>
+      <a href=""><li><i class="icon-text-width"></i>日记</li></a>
+      <a href=""><li><i class="icon-info-sign"></i>关于</li></a>
     </ul>
   </div>
 
