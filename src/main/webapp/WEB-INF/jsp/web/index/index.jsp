@@ -6,7 +6,7 @@
 <head>
     <title>Home | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link href="${cssDomain}/index.css" type="text/less" rel="stylesheet/css"  />
+    <link href="${styleDomain}/index.less" type="text/less" rel="stylesheet/css"  />
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="${jsDomain}/less.min.js"></script>
     <script type="text/javascript" src="${jsDomain}/jquery.min.js"></script>
