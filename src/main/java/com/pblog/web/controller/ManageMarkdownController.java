@@ -15,14 +15,11 @@ public class ManageMarkdownController {
     @RequestMapping(value = "/preview/markdown")
     @ResponseBody
     public Map<String, Object> previewMarkdown(@RequestParam(value = "content") String content){
-        System.out.println(content);
-        System.out.println("打印结束----------------------------");
         Map<String, Object> map = new HashMap<String, Object>();
         String html = GenerateHtml.markdownToHTML(content);
-        System.out.println("\n\n\n");
-        System.out.println(html);
         map.put("html", html);
         return map;
 
     }
+
 }

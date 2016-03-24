@@ -36,15 +36,12 @@
                        </div>
                    </div>
                </c:forEach>
-
            </div>
            <div class="scroll-vertical">
                <div class="scroll-bar"></div>
            </div>
         </div>
-        <div class="article-content">
-
-        </div>
+        <div class="article-content">${content}</div>
      </div>
   </div>
   <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>

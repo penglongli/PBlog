@@ -1,4 +1,4 @@
-package com.pblog.service;
+package com.pblog.service.article;
 
 import com.pblog.core.markdown.GenerateHtml;
 import com.pblog.dao.ArticleInfoMapper;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Service("manageArticleInfoService")
 @Transactional
-public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
+public class ManageArticleInfoServiceImpl implements ManageArticleInfoService {
 
     @Resource
     private ArticleInfoMapper articleInfoMapper;
@@ -42,14 +42,11 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
         return 0;
     }
 
-
-
-
     private ArticleInfo transFormBeanToArticle(ArticleInfoFormBean articleInfoFormBean){
         ArticleInfo articleInfo = new ArticleInfo();
 
         articleInfo.setCategorySlug(articleInfoFormBean.getCategorySlug());
-        articleInfo.setContent(articleInfoFormBean.getContent());
+        articleInfo.setMarkdown(articleInfoFormBean.getContent());
         articleInfo.setTag(articleInfoFormBean.getTag());
         articleInfo.setTitle(articleInfoFormBean.getTitle());
         articleInfo.setEnabled(true);
@@ -58,7 +55,7 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService{
         articleInfo.setThumb(0);
 
         String html = GenerateHtml.markdownToHTML(articleInfoFormBean.getContent());
-        articleInfo.setMarkdown(html);
+        articleInfo.setContent(html);
         html = GenerateHtml.markdownToHTML(articleInfoFormBean.getDescription());
         articleInfo.setDescription(html);
 

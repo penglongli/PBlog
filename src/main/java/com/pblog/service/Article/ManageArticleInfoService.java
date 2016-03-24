@@ -1,4 +1,4 @@
-package com.pblog.service;
+package com.pblog.service.article;
 
 import com.pblog.domain.ArticleInfo;
 import com.pblog.web.controller.articlemanage.ArticleInfoFormBean;

@@ -6,6 +6,8 @@ public class ArticleInfoFormBean {
 
     private String content;
 
+    private String markdown;
+
     private Long categorySlug;
 
     private String tag;
@@ -50,5 +52,13 @@ public class ArticleInfoFormBean {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getMarkdown() {
+        return markdown;
+    }
+
+    public void setMarkdown(String markdown) {
+        this.markdown = markdown;
     }
 }

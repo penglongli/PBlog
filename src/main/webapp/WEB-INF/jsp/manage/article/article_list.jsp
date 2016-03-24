@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="${styleDomain}/article_list.less" type="text/less" rel="stylesheet/less"  />
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <script src="${jsDomain}/less.min.js"></script>
+    <script src="${jsPlugin}/less.min.js"></script>
 </head>
 <body>
     <c:set var="active_line" value="2" />

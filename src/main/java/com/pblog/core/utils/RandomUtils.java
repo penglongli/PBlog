@@ -77,11 +77,10 @@ public class RandomUtils {
 
     public static void main(String[] args) {
         Set<String> strSet = Sets.newHashSet();
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 10000; i++){
             strSet.add(generateNumber2());
         }
-        System.out.println(strSet.size());
         Object[] strList = strSet.toArray();
-        System.out.println(strList[0]);
+        System.out.println(strList.length);
     }
 }

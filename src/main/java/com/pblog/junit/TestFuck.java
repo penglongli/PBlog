@@ -1,6 +1,6 @@
 package com.pblog.junit;
 
-import com.pblog.service.ManageArticleInfoService;
+import com.pblog.service.article.ManageArticleInfoService;
 import junit.framework.TestCase;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

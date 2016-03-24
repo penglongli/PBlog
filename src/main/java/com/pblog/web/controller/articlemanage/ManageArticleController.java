@@ -1,7 +1,7 @@
 package com.pblog.web.controller.articlemanage;
 
 import com.pblog.domain.ArticleInfo;
-import com.pblog.service.ManageArticleInfoService;
+import com.pblog.service.article.ManageArticleInfoService;
 import com.pblog.service.category.CategoryInfoService;
 import com.pblog.service.category.SimpleCategoryInfo;
 import org.springframework.stereotype.Controller;
