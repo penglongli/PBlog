@@ -28,7 +28,7 @@
          </div>
          <div class="article-body">
             <div class="article-body-theme">文章正文</div>
-            <textarea class="editor" name="markdown"></textarea>
+            <textarea class="editor" name="content"></textarea>
          </div>
          <div class="article-category">
             <div class="category" name="categorySlug">
@@ -52,7 +52,7 @@
          <div class="view"></div>
          <div class="description">
             <div class="description-title">添加描述</div>
-            <textarea class="editor"></textarea>
+            <textarea class="editor" name="description"></textarea>
          </div>
          <div class="description-operate">
              <i class="icon-eye-open"></i>
@@ -62,9 +62,6 @@
          <div class="publish">
              <button type="button" class="publish-article"><i class="icon-fighter-jet"></i>发布文章</button>
          </div>
-
-         <textarea style="display: none;" name="content"></textarea>
-         <textarea style="display: none;" name="description"></textarea>
         </form>
       </div>
     </div>
@@ -73,9 +70,6 @@
 
 <script type="text/javascript">
     $(".publish-article").click(function(){
-        previewArticle();
-        previewDescription();
-
         $("#article-add-form").submit();
     })
 
@@ -90,12 +84,12 @@
     function previewArticle(){
         var htmlValue = markedToHTML($(".editor:eq(0)"), $(".view"))
         $("textarea[name='content']").html(htmlValue);
-    }
+    };
 
     function previewDescription(){
         var htmlValue = markedToHTML($(".editor:eq(1)"), $(".description-view"));
         $("textarea[name='description']").html(htmlValue);
-    }
+    };
 
     function markedToHTML($input, $preview){
         var htmlValue = marked($input.val());

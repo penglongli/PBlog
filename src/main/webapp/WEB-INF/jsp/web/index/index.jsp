@@ -8,8 +8,8 @@
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
     <link href="${styleDomain}/index.less" type="text/less" rel="stylesheet/css"  />
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="${jsDomain}/less.min.js"></script>
-    <script type="text/javascript" src="${jsDomain}/jquery.min.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
 </head>
 <body>
   <c:set var="active_line" value="1"/>
@@ -41,9 +41,10 @@
                <div class="scroll-bar"></div>
            </div>
         </div>
-        <div class="article-content">${content}</div>
+        <div class="article-content"></div>
      </div>
   </div>
+  <textarea style="display: none;" class="artcon">${content}</textarea>
   <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
   <script type="text/javascript">
       var $$ = function(func){
@@ -55,25 +56,29 @@
           }
       }
 
-      $$(function(){
+      $(function(){
           loadSlider()
-      })
+      });
 
       function loadSlider(){
-         var $container = $(".scroll-area");
-         var $content = $(".article-list");
-         var $slideArea = $(".scroll-vertical");
-         var $bar = $(".scroll-bar");
-
+          var $container = $(".scroll-area");
+          var $content = $(".article-list");
+          var $slideArea = $(".scroll-vertical");
+          var $bar = $(".scroll-bar");
+          var $hideContent = $(".artcon");
+          var $articleContent = $(".article-content");
+/*
           console.log($container.height());
-          console.log($content.height())
+          console.log($content.height())*/
 
-         $container.slider({
-             container: $container,
-             content: $content,
-             slideArea: $slideArea,
-             bar: $bar
-         });
+          $articleContent.html($hideContent.val());
+
+          $container.slider({
+                container: $container,
+                content: $content,
+                slideArea: $slideArea,
+                bar: $bar
+          });
      }
   </script>
 </body>

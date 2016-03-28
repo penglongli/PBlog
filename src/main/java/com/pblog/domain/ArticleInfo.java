@@ -23,8 +23,6 @@ public class ArticleInfo {
 
     private Boolean enabled = true;
 
-    private String markdown;
-
     private String description;
 
     public Integer getId() {
@@ -105,14 +103,6 @@ public class ArticleInfo {
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
-    }
-
-    public String getMarkdown() {
-        return markdown;
-    }
-
-    public void setMarkdown(String markdown) {
-        this.markdown = markdown == null ? null : markdown.trim();
     }
 
     public String getDescription() {

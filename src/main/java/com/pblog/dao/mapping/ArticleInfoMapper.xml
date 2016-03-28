@@ -7,10 +7,11 @@
             SELECT LAST_INSERT_ID() AS id
         </selectKey>
         insert into article_info (title, content, createTime, lastModifyTime, categorySlug, tag, thumb,
-        enabled, markdown, description)
+        enabled, description)
         values (#{title}, #{content}, #{createTime}, #{lastModifyTime}, #{categorySlug}, #{tag},
-                #{thumb}, #{enabled}, #{markdown}, #{description})
+                #{thumb}, #{enabled}, #{description})
     </insert>
+
 
     <select id="findList" resultType="ArticleInfo">
         select * from article_info
@@ -46,5 +47,42 @@
         select * from article_info
         order by createTime desc
     </select>
+    
+    <update id="update" parameterType="ArticleInfo">
+        UPDATE article_info
+        <set>
+            <if test="title != null">
+                title = #{title, jdbcType = VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content, jdbcType = LONGVARCHAR},
+            </if>
+            <if test="slug != null">
+                slug = #{slug, jdbcType = BIGINT},
+            </if>
+            <if test="createTime != null">
+                createTime = #{createTime, jdbcType = TIMESTAMP},
+            </if>
+            <if test="lastModifyTime != null">
+                lastModifyTime = #{lastModifyTime, jdbcType = TIMESTAMP},
+            </if>
+            <if test="categorySlug != null">
+                categorySlug = #{categorySlug, jdbcType = BIGINT},
+            </if>
+            <if test="tag != null">
+                tag = #{tag, jdbcType = VARCHAR},
+            </if>
+            <if test="thumb != null">
+                thumb = #{thumb, jdbcType = INTEGER},
+            </if>
+            <if test="enabled != null">
+                enabled = #{enabled, jdbcType = TINYINT},
+            </if>
+            <if test="description != null">
+                description = #{description, jdbcType = LONGVARCHAR}
+            </if>
+        </set>
+        where id = #{id, jdbcType = INTEGER}
+    </update>
 
 </mapper>
