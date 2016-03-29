@@ -10,6 +10,7 @@
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/marked.js"></script>
 </head>
 <body>
   <c:set var="active_line" value="1"/>
@@ -21,15 +22,16 @@
                <c:forEach var="articleInfo" items="${pagination.items}" varStatus="status">
                    <div class="article-item">
                        <div class="article-header">
-                           <a href="" class="article-category">[${articleInfo.categoryName}]</a>
-                           <a href="" class="article-title">${articleInfo.title}</a>
+                           <a href="${staticDomain}/category/${articleInfo.categorySlug}" class="article-category">[${articleInfo.categoryName}]</a>
+                           <a href="${staticDomain}/article/${articleInfo.articleSlug}" class="article-title">${articleInfo.title}</a>
                        </div>
                        <div class="article-description">${articleInfo.description}</div>
                        <div class="article-metadata">
                            <span class="create-time"><i class="icon-calendar"></i><fmt:formatDate value="${articleInfo.createTime}" pattern="yyyy-MM-dd" /></span>
                            <div class="meta-tags">
-                               <span><i class="icon-tag"></i>Java</span>
-                               <span><i class="icon-tag"></i>设计模式</span>
+                               <c:forEach var="tag" items="${articleInfo.tags}" varStatus="status">
+                                    <span><i class="icon-tag"></i>${tag}</span>
+                               </c:forEach>
                                <div class="clear-fix"></div>
                            </div>
                            <div class="clear-fix"></div>
@@ -44,7 +46,9 @@
         <div class="article-content"></div>
      </div>
   </div>
-  <textarea style="display: none;" class="artcon">${content}</textarea>
+
+  <%--<textarea style="display: none;" class="artcon">${content}</textarea>--%>
+  <input type="hidden" value="${content}" class="markdown-content" />
   <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
   <script type="text/javascript">
       var $$ = function(func){
@@ -65,13 +69,10 @@
           var $content = $(".article-list");
           var $slideArea = $(".scroll-vertical");
           var $bar = $(".scroll-bar");
-          var $hideContent = $(".artcon");
+          var $markdown = $(".markdown-content");
           var $articleContent = $(".article-content");
-/*
-          console.log($container.height());
-          console.log($content.height())*/
 
-          $articleContent.html($hideContent.val());
+          $articleContent.html(marked($markdown.val()));
 
           $container.slider({
                 container: $container,

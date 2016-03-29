@@ -11,7 +11,6 @@ public class GenerateSlugInfo extends TestCase{
 
     public void testInsertSlug(){
         SlugInfoService slugInfoService = (SlugInfoService) applicationContext.getBean("slugInfoService");
-        System.out.println(slugInfoService);
         slugInfoService.insert();
     }
 

@@ -12,7 +12,6 @@
                 #{thumb}, #{enabled}, #{description})
     </insert>
 
-
     <select id="findList" resultType="ArticleInfo">
         select * from article_info
     </select>

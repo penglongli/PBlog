@@ -104,4 +104,5 @@ public class ArticleInfoVO {
     public void setCategorySlug(Long categorySlug) {
         this.categorySlug = categorySlug;
     }
+
 }
