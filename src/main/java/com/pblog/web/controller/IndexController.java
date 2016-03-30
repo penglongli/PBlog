@@ -30,7 +30,7 @@ public class IndexController {
         }
 
         model.addAttribute("pagination", pagination);
-        model.addAttribute("content", firstArticleInfoVO == null ? null : firstArticleInfoVO.getContent());
+        model.addAttribute("firstArticle", firstArticleInfoVO);
         return "web/index/index";
     }
 }

@@ -43,12 +43,22 @@
                <div class="scroll-bar"></div>
            </div>
         </div>
-        <div class="article-content"></div>
+        <div class="article-content">
+            <div class="content-head">
+                <h1><i class="icon-flag"></i> ${firstArticle.title}</h1>
+                <div class="content-head-detail">
+                    <span class="c_time"><i class="icon-time"></i> <fmt:formatDate value="${firstArticle.createTime}" pattern="MMMM d, EEEE" /> </span>
+                    <span class="c_eye"><i class="icon-eye-open"></i> 427人阅读</span>
+                    <span class="c_name"><a href=""><i class="icon-list"></i> ${firstArticle.categoryName}</a></span>
+                    <span class="c_like"><a href=""><i class="icon-heart-empty"></i> 喜欢</a></span>
+                </div>
+            </div>
+            <div class="content-body"></div>
+        </div>
      </div>
   </div>
 
-  <%--<textarea style="display: none;" class="artcon">${content}</textarea>--%>
-  <input type="hidden" value="${content}" class="markdown-content" />
+  <input type="hidden" value="${firstArticle.content}" class="markdown-content" />
   <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
   <script type="text/javascript">
       var $$ = function(func){
@@ -70,7 +80,7 @@
           var $slideArea = $(".scroll-vertical");
           var $bar = $(".scroll-bar");
           var $markdown = $(".markdown-content");
-          var $articleContent = $(".article-content");
+          var $articleContent = $(".content-body");
 
           $articleContent.html(marked($markdown.val()));
 

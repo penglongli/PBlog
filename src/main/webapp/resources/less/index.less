@@ -3,7 +3,7 @@
 .content{
   position: absolute;
   z-index: 100;
-  top: 45px;
+  top: 4rem;
   right: 0;
   bottom: 0;
   left: 11%;
@@ -11,7 +11,7 @@
   .scroll-area{
     position: fixed;
     width: 22%;
-    top: 45px;
+    top: 4rem;
     bottom: 0;
     border-right: 1px solid #EEEEEE;
 
@@ -20,16 +20,17 @@
       height: auto;
 
       .article-item{
-        padding: 16px 10px 10px 10px;
+        padding: 1.3rem 1rem 1rem 1rem;
         border-bottom: 1px solid #EEEEEE;
 
         .article-header{
-          margin-bottom: 15px;
+          margin-bottom: 1.3rem;
+          font-size: 1.45rem;
 
           .article-category{
             color: #8e2013;
             text-decoration: none;
-            margin-right: 2px;
+            margin-right: 0.1rem;
           }
 
           .article-title{
@@ -42,11 +43,12 @@
           font-size: 12px;
           color: #777777;
           line-height: 1.7;
-          margin-bottom: 15px;
+          margin-bottom: 1.8rem;
+          text-indent: 2em;
         }
 
         .article-metadata{
-          font-size: 13px;
+          font-size: 1.1rem;
           color: #BFBFBF;
 
           .create-time{
@@ -55,7 +57,7 @@
             float: left;
 
             i {
-              margin-right: 7px;
+              margin-right: 0.5rem;
             }
           }
 
@@ -65,7 +67,7 @@
             span{
               display: inline-block;
               float: left;
-              margin-right: 10px;
+              margin-right: 0.8rem;
             }
           }
         }
@@ -76,12 +78,12 @@
       top: 0;
       bottom: 0;
       position: absolute;
-      width: 4px;
+      width: 0.3rem;
       right: 0;
 
       .scroll-bar{
-        width: 3px;
-        height: 257px;
+        width: 0.26rem;
+        height: 18rem;
         border: 1px solid rgb(255, 255, 255);
         border-radius: 5px;
         background-color: #000;
@@ -91,9 +93,74 @@
   }
 
   .article-content{
-    left: 25%;
     position: absolute;
-    width: 75%;
+    left: 25%;
+    width: 72%;
+    font-size: 1.4rem;
+    line-height: 1.85em;
+    color: #424242;
+    font-weight: 300;
+    padding: 0 1.5%;
+
+    .content-head {
+      border-bottom: 1px solid #EDEDED;
+
+      .content-head-detail {
+        margin-bottom: 0.6rem;
+
+        span {
+          font-size: 1rem;
+          color: #BDBDBD;
+          margin-left: 1.35rem;
+
+          i {
+            margin-right: 0.15rem;
+          }
+        }
+
+        .c_time {
+          margin: 0;
+        }
+
+        .c_name a{
+          color: red;
+          text-decoration: none;
+        }
+
+        .c_eye {
+
+        }
+
+        .c_like a{
+          color: red;
+          text-decoration: none;
+        }
+
+        a:hover{
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+
+    h1, h2, h3 {
+      font-weight: 400;
+    }
+    h1{
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 2.05rem;
+    }
+    h3 {
+      font-size: 1.9rem;
+    }
+
+    p {
+      text-indent: 2em;
+    }
+
   }
 
 }
