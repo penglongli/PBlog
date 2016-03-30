@@ -1,29 +1,31 @@
 package com.pblog.service.archives;
 
 
+import com.pblog.service.article.ArticleInfoVO;
 import com.pblog.service.article.SimpleArticleInfo;
 
+import java.util.Date;
 import java.util.List;
 
 public class ArchivesVO {
 
-    private String timeStamp;
+    private Date timeStamp;
 
-    List<SimpleArticleInfo> simpleArticleList;
+    List<ArticleInfoVO> articleInfoVOList;
 
-    public String getTimeStamp() {
+    public Date getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(String timeStamp) {
+    public void setTimeStamp(Date timeStamp) {
         this.timeStamp = timeStamp;
     }
 
-    public List<SimpleArticleInfo> getSimpleArticleList() {
-        return simpleArticleList;
+    public List<ArticleInfoVO> getArticleInfoVOList() {
+        return articleInfoVOList;
     }
 
-    public void setSimpleArticleList(List<SimpleArticleInfo> simpleArticleList) {
-        this.simpleArticleList = simpleArticleList;
+    public void setArticleInfoVOList(List<ArticleInfoVO> articleInfoVOList) {
+        this.articleInfoVOList = articleInfoVOList;
     }
 }

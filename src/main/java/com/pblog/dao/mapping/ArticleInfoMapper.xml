@@ -78,10 +78,15 @@
                 enabled = #{enabled, jdbcType = TINYINT},
             </if>
             <if test="description != null">
-                description = #{description, jdbcType = LONGVARCHAR}
+                description = #{description, jdbcType = LONGVARCHAR},
             </if>
         </set>
         where id = #{id, jdbcType = INTEGER}
     </update>
-
+    
+    <select id="findListByCategorySlug" resultType="ArticleInfo">
+        select * from article_info
+        WHERE categorySlug = #{categorySlug, jdbcType = BIGINT}
+    </select>
+    
 </mapper>

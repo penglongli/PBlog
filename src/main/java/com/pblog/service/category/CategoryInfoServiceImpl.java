@@ -45,16 +45,13 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
 
         for(CategoryInfo categoryInfo : categoryInfoList){
             CategoryInfoVO categoryInfoVO = new CategoryInfoVO();
-
             categoryInfoVO.setCategoryTitle(categoryInfo.getTitle());
             categoryInfoVO.setSlug(categoryInfo.getSlug());
 
-            List<SimpleArticleInfo> simpleArticleInfoList = Lists.newArrayList();
-            List<ArticleInfo> articleInfoList = articleInfoMapper.findListByCategorySlug(categoryInfo.getSlug());
-            for(ArticleInfo articleInfo : articleInfoList){
-                simpleArticleInfoList.add(commonUtilsService.transArticleToSimpleArticle(articleInfo));
-            }
-            categoryInfoVO.setSimpleArticleInfoList(simpleArticleInfoList);
+            List<ArticleInfoVO> articleInfoVOList = findArticleListByCategory(categoryInfo.getSlug());
+            categoryInfoVO.setArticleInfoVOList(articleInfoVOList);
+
+            categoryInfoVOList.add(categoryInfoVO);
         }
         return categoryInfoVOList;
     }
@@ -75,6 +72,8 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
 
         simpleCategoryInfo.setTitle(categoryInfo.getTitle());
         simpleCategoryInfo.setCategorySlug(categoryInfo.getSlug());
+
+
 
         return simpleCategoryInfo;
     }

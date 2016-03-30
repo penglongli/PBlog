@@ -5,11 +5,13 @@ import com.pblog.core.utils.DateFormatUtils;
 import com.pblog.dao.ArticleInfoMapper;
 import com.pblog.domain.ArticleInfo;
 import com.pblog.service.CommonUtilsService;
+import com.pblog.service.article.ArticleInfoVO;
 import com.pblog.service.article.SimpleArticleInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.text.ParseException;
 import java.util.List;
 
 @Service(value = "archivesService")
@@ -22,32 +24,36 @@ public class ArchivesServiceImpl implements ArchivesService{
     @Resource(name = "commonUtilsService")
     private CommonUtilsService commonUtilsService;
 
-    public List<ArchivesVO> findArchivesList() {
+    public List<ArchivesVO> findArchivesList() throws ParseException {
         List<ArticleInfo> articleInfoList = articleInfoMapper.findByCreateTimeDesc();
 
         return transArchivesVO(articleInfoList);
     }
 
-    private List<ArchivesVO> transArchivesVO(List<ArticleInfo> articleInfoList){
+    private List<ArchivesVO> transArchivesVO(List<ArticleInfo> articleInfoList) throws ParseException {
         List<ArchivesVO> archivesVOList = Lists.newArrayList();
         ArchivesVO archivesVO = new ArchivesVO();
 
-        List<SimpleArticleInfo> simpleArticleInfoList = Lists.newArrayList();
+        List<ArticleInfoVO> articleInfoVOList = Lists.newArrayList();
         String tempStamp = DateFormatUtils.formatToYearMonth(articleInfoList.get(0).getCreateTime());
         for(ArticleInfo articleInfo : articleInfoList){
             //当前article的时间戳和temp时间戳不一致时
-            if(!tempStamp.equals(DateFormatUtils.formatToYearMonth(articleInfo.getCreateTime()))){
-                archivesVO.setSimpleArticleList(simpleArticleInfoList);
+            String currentStamp = DateFormatUtils.formatToYearMonth(articleInfo.getCreateTime());
+            if(!tempStamp.equals(currentStamp)){
+                archivesVO.setArticleInfoVOList(articleInfoVOList);
                 archivesVOList.add(archivesVO);
 
                 archivesVO = new ArchivesVO();
-                simpleArticleInfoList = Lists.newArrayList();
+                tempStamp = currentStamp;
+                articleInfoVOList = Lists.newArrayList();
             }
-            SimpleArticleInfo tempArticle = commonUtilsService.transArticleToSimpleArticle(articleInfo);
+            ArticleInfoVO tempArticle = commonUtilsService.transArticleInfoVO(articleInfo);
 
-            archivesVO.setTimeStamp(tempStamp);
-            simpleArticleInfoList.add(tempArticle);
+            archivesVO.setTimeStamp(DateFormatUtils.formatStrToYM(tempStamp));
+            archivesVO.setArticleInfoVOList(articleInfoVOList);
+            articleInfoVOList.add(tempArticle);
         }
+        archivesVOList.add(archivesVO);
 
         return archivesVOList;
     }

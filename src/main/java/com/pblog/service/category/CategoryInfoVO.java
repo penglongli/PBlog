@@ -1,5 +1,6 @@
 package com.pblog.service.category;
 
+import com.pblog.service.article.ArticleInfoVO;
 import com.pblog.service.article.SimpleArticleInfo;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public class CategoryInfoVO {
 
     private String categoryTitle;
 
-    private List<SimpleArticleInfo> simpleArticleInfoList;
+    private List<ArticleInfoVO> articleInfoVOList;
 
     public Long getSlug() {
         return slug;
@@ -28,11 +29,11 @@ public class CategoryInfoVO {
         this.categoryTitle = categoryTitle;
     }
 
-    public List<SimpleArticleInfo> getSimpleArticleInfoList() {
-        return simpleArticleInfoList;
+    public List<ArticleInfoVO> getArticleInfoVOList() {
+        return articleInfoVOList;
     }
 
-    public void setSimpleArticleInfoList(List<SimpleArticleInfo> simpleArticleInfoList) {
-        this.simpleArticleInfoList = simpleArticleInfoList;
+    public void setArticleInfoVOList(List<ArticleInfoVO> articleInfoVOList) {
+        this.articleInfoVOList = articleInfoVOList;
     }
 }
