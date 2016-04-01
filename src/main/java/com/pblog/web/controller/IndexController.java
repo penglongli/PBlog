@@ -31,6 +31,7 @@ public class IndexController {
 
         model.addAttribute("pagination", pagination);
         model.addAttribute("firstArticle", firstArticleInfoVO);
+        model.addAttribute("detail", false);
         return "web/index/index";
     }
 }

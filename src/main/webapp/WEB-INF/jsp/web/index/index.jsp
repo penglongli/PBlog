@@ -13,11 +13,14 @@
     <script type="text/javascript" src="${jsPlugin}/marked.js"></script>
 </head>
 <body>
-  <c:set var="active_line" value="1"/>
+   <c:if test="${not detail}">
+       <c:set var="active_line" value="1"/>
+   </c:if>
   <div id="wrapper">
      <%@ include file="../include/index_header.jsp"%>
-     <div class="content">
-        <div class="scroll-area">
+
+      <div class="content">
+        <div class="<c:if test="${detail}">scroll-area-detail</c:if> scroll-area">
            <div class="article-list">
                <c:forEach var="articleInfo" items="${pagination.items}" varStatus="status">
                    <div class="article-item">
@@ -43,7 +46,8 @@
                <div class="scroll-bar"></div>
            </div>
         </div>
-        <div class="article-content">
+
+        <div class="article-content <c:if test="${detail}">article-content-detail</c:if>">
             <div class="content-head">
                 <h1><i class="icon-flag"></i> ${firstArticle.title}</h1>
                 <div class="content-head-detail">

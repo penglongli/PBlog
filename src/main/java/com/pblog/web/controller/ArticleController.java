@@ -1,6 +1,7 @@
 package com.pblog.web.controller;
 
 import com.pblog.service.article.ArticleInfoService;
+import com.pblog.service.article.ArticleInfoVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,10 @@ public class ArticleController {
 
     @RequestMapping(value = "/{slug}")
     public String articleBySlug(@PathVariable Long slug, HttpServletRequest request, Model model){
-        
-        return "";
+        ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, request);
+
+        model.addAttribute("detail", true);
+        model.addAttribute("firstArticle", articleInfoVO);
+        return "web/index/index";
     }
 }
