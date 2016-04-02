@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.List;
 
 @Service(value = "archivesService")
@@ -28,6 +30,21 @@ public class ArchivesServiceImpl implements ArchivesService{
         List<ArticleInfo> articleInfoList = articleInfoMapper.findByCreateTimeDesc();
 
         return transArchivesVO(articleInfoList);
+    }
+
+    public List<ArticleInfoVO> findArticleByMonth(String timeStamp) throws ParseException {
+        List<ArticleInfoVO> articleInfoVOList = Lists.newArrayList();
+
+        Date startTime = DateFormatUtils.formatStrToYM(timeStamp);
+        Date endTime = DateFormatUtils.addMonth(timeStamp, 1);
+
+        List<ArticleInfo> articleInfoList = articleInfoMapper.findArticleListByMonth(startTime, endTime);
+        for(ArticleInfo articleInfo : articleInfoList){
+            ArticleInfoVO articleInfoVO = commonUtilsService.transArticleInfoVO(articleInfo);
+
+            articleInfoVOList.add(articleInfoVO);
+        }
+        return articleInfoVOList;
     }
 
     private List<ArchivesVO> transArchivesVO(List<ArticleInfo> articleInfoList) throws ParseException {

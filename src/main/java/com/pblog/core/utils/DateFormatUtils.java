@@ -2,6 +2,7 @@ package com.pblog.core.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateFormatUtils {
@@ -37,6 +38,18 @@ public class DateFormatUtils {
     public static Date formatStrToYM(String dateStr) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
         Date date = sdf.parse(dateStr);
+
+        return date;
+    }
+
+    public static Date addMonth(String timeStamp, int number) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+        Date date = sdf.parse(timeStamp);
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.setTime(date);
+        calendar.add(Calendar.MONTH, number);
+        date = calendar.getTime();
 
         return date;
     }

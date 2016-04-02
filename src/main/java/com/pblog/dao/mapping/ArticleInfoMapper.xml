@@ -88,5 +88,16 @@
         select * from article_info
         WHERE categorySlug = #{categorySlug, jdbcType = BIGINT}
     </select>
-    
+
+    <select id="findArticleListByMonth" parameterType="map" resultType="ArticleInfo">
+        select * from article_info
+        <where>
+            <if test="startTime != null">
+              createTime &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+              and createTime &lt; #{endTime}
+            </if>
+        </where>
+    </select>
 </mapper>

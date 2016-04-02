@@ -19,7 +19,7 @@
               <div class="archive-list">
                 <ul>
                     <c:forEach var="archivesVO" items="${archivesVOList}" varStatus="status">
-                        <li><a href=""><fmt:formatDate value="${archivesVO.timeStamp}" pattern="yyyy年MM月" /></a> <span>(${fn:length(archivesVO.articleInfoVOList)})</span></li>
+                        <li><a href="${staticDomain}/archives/<fmt:formatDate value="${archivesVO.timeStamp}" pattern="yyyy-MM" />"><fmt:formatDate value="${archivesVO.timeStamp}" pattern="yyyy年MM月" /></a> <span>(${fn:length(archivesVO.articleInfoVOList)})</span></li>
                     </c:forEach>
                 </ul>
               </div>

@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.util.Date;
 import java.util.List;
 
 public class GenerateUtils {
@@ -46,5 +48,20 @@ public class GenerateUtils {
         } else {
             return request.getRemoteAddr();
         }
+    }
+
+    public static boolean judgeTimeStamp(String timeStamp){
+        try {
+            Date date = DateFormatUtils.formatStrToYM(timeStamp);
+            if(date.compareTo(new Date()) == -1){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 }
