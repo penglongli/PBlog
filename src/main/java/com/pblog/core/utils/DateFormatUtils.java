@@ -42,6 +42,13 @@ public class DateFormatUtils {
         return date;
     }
 
+    /**
+     * 为时间类型增加月份
+     * @param timeStamp 时间
+     * @param number 增加月份数
+     * @return
+     * @throws ParseException
+     */
     public static Date addMonth(String timeStamp, int number) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
         Date date = sdf.parse(timeStamp);

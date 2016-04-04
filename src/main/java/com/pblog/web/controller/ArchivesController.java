@@ -1,5 +1,6 @@
 package com.pblog.web.controller;
 
+import com.pblog.core.utils.DateFormatUtils;
 import com.pblog.core.utils.GenerateUtils;
 import com.pblog.service.archives.ArchivesService;
 import com.pblog.service.archives.ArchivesVO;
@@ -26,7 +27,9 @@ public class ArchivesController {
         List<ArchivesVO> archivesVOList = null;
         try {
             archivesVOList = archivesService.findArchivesList();
+
             model.addAttribute("archivesVOList", archivesVOList);
+            model.addAttribute("articleInfoVOList", archivesVOList.size() > 0 ? archivesVOList.get(0).getArticleInfoVOList() : null);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -38,10 +41,15 @@ public class ArchivesController {
     @RequestMapping(value = "/archives/{timeStamp}", method = RequestMethod.GET)
     public String month(@PathVariable String timeStamp, Model model) throws ParseException {
         boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
+        List<ArchivesVO> archivesVOList = null;
+
         if(isRightPattern){
             List<ArticleInfoVO> articleInfoVOList = archivesService.findArticleByMonth(timeStamp);
+            archivesVOList = archivesService.findArchivesList();
 
-
+            model.addAttribute("archivesVOList", archivesVOList);
+            model.addAttribute("articleInfoVOList", articleInfoVOList);
+            model.addAttribute("timeStamp", DateFormatUtils.formatStrToYM(timeStamp));
             return "web/archives/archives";
         }else{
             return "404";
