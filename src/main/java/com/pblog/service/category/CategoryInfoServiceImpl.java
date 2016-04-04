@@ -73,8 +73,6 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
         simpleCategoryInfo.setTitle(categoryInfo.getTitle());
         simpleCategoryInfo.setCategorySlug(categoryInfo.getSlug());
 
-
-
         return simpleCategoryInfo;
     }
 }

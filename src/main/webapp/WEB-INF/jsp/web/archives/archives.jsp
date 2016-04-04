@@ -33,11 +33,11 @@
               <c:forEach var="articleInfoVO" items="${articleInfoVOList}" varStatus="status">
                   <div class="article-item">
                       <div class="article-head">
-                          <span class="article-title"><a href="">${articleInfoVO.title}</a></span>
+                          <span class="article-title"><a href="${staticDomain}/article/${articleInfoVO.articleSlug}">${articleInfoVO.title}</a></span>
                       </div>
                       <div class="article-metadata">
                           <span class="article-time"><fmt:formatDate value="${articleInfoVO.createTime}" pattern="yyyy-MM-dd HH:mm:ss" /></span>
-                          <span class="article-category"><a href="">${articleInfoVO.categoryName}</a></span>
+                          <span class="article-category"><a href="${staticDomain}/category/${articleInfoVO.categorySlug}">${articleInfoVO.categoryName}</a></span>
                           <span class="article-view"><i class="icon-eye-open"></i>阅读<span>(425)</span></span>
                       </div>
                       <div class="article-description">${articleInfoVO.description}</div>
