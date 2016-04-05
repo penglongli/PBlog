@@ -42,6 +42,14 @@
         </property>
     </bean>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/"/>
+            <mvc:mapping path="/**"/>
+            <bean class="com.pblog.web.interceptor.GlobalInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="100000000000000"/>
     </bean>

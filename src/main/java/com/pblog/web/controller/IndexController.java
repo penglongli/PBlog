@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class IndexController {
@@ -19,7 +20,7 @@ public class IndexController {
     private ArticleInfoService articleInfoService;
 
     @RequestMapping(value = {"/", "/article/list"}, method = RequestMethod.GET)
-    public String index(@RequestParam(value = "p", required = false)Integer page, Model model){
+    public String index(@RequestParam(value = "p", required = false)Integer page, HttpServletRequest request, Model model){
         page = (null == page) ? 1 : page;
         PageRequest pageRequest = new PageRequest(page, 10);
 
@@ -28,6 +29,10 @@ public class IndexController {
         if(pagination.getItems().size() > 0){
             firstArticleInfoVO = pagination.getItems().get(0);
         }
+
+        System.out.println(request.getAttribute("realIp"));
+        System.out.println(request.getAttribute("mobile"));
+
 
         model.addAttribute("pagination", pagination);
         model.addAttribute("firstArticle", firstArticleInfoVO);
