@@ -8,8 +8,12 @@
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <link href="${styleDomain}/archives/archives.less" type="text/less" rel="stylesheet/less"  />
     <script src="${jsPlugin}/less.min.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/global.js"></script>
 </head>
 <body>
+    <div id="progress"><span></span></div>
+
     <c:set var="active_line" value="2"/>
     <div id="wrapper">
       <%@ include file="../include/index_header.jsp"%>

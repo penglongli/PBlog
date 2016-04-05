@@ -12,6 +12,44 @@ body{
   clear: both;
 }
 
+/** 跳转进度条样式**/
+#progress {
+  position:fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background:#b91f1f;
+  transition:opacity 500ms linear
+}
+#progress.done {
+  opacity:0
+}
+#progress span {
+  position:absolute;
+  height:2px;
+  -webkit-box-shadow:#b91f1f 1px 0 6px 1px;
+  -webkit-border-radius:100%;
+  opacity:1;
+  width:150px;
+  right:-10px;
+  -webkit-animation:pulse 2s ease-out 0s infinite;
+}
+
+@-webkit-keyframes pulse {
+  30% {
+    opacity:.6
+  }
+  60% {
+    opacity:0;
+  }
+  100% {
+    opacity:.6
+  }
+}
+/** 进度条样式结束 **/
+
+
 #fix-left{
   position: fixed;
   top: 0;
@@ -92,7 +130,7 @@ body{
   padding: 8px;
   background: #FFFFFF;
   border-bottom: 2px solid #DDD;
-  z-index: 1000;
+  z-index: 999;
   box-shadow: 2px 1px 5px #DBDBDB;
   border-bottom: 1px solid #DBDBDB;
 

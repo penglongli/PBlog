@@ -11,12 +11,13 @@
     <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/marked.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/global.js"></script>
 </head>
 <body>
-   <c:if test="${not detail}">
-       <c:set var="active_line" value="1"/>
-   </c:if>
-  <div id="wrapper">
+   <div id="progress"><span></span></div>
+
+   <c:if test="${not detail}"><c:set var="active_line" value="1"/></c:if>
+   <div id="wrapper">
      <%@ include file="../include/index_header.jsp"%>
 
       <div class="content">
@@ -62,9 +63,9 @@
      </div>
   </div>
 
-  <input type="hidden" value="${firstArticle.content}" class="markdown-content" />
-  <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
-  <script type="text/javascript">
+   <input type="hidden" value="${firstArticle.content}" class="markdown-content" />
+   <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
+   <script type="text/javascript">
       var $$ = function(func){
           if (document.addEventListener) {
               window.addEventListener("load", func, false);
@@ -95,6 +96,6 @@
                 bar: $bar
           });
      }
-  </script>
+   </script>
 </body>
 </html>

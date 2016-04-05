@@ -9,9 +9,11 @@
     <link href="${styleDomain}/index_man.less" type="text/less" rel="stylesheet/less"  />
     <link href="${cssDomain}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsDomain}/less.min.js"></script>
+    <script src="${jsPlugin}/jquery.min.js"></script>
 </head>
 <body>
     <c:set var="active_line" value="1" />
+    <div id="progress"><span></span></div>
     <div id="wrapper">
         <%@ include file="../include/index_man_header.jsp"%>
         <div class="content">
