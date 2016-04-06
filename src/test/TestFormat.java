@@ -38,4 +38,19 @@ public class TestFormat extends TestCase{
         System.out.println(date);*/
     }
 
+    public void testMinusDate() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String str = "2016-03-03 21:00:00";
+        String str1 = "2016-03-03 22:00:00";
+
+        Date date = sdf.parse(str);
+        Date date1 = sdf.parse(str1);
+        System.out.println(date.getTime());
+        System.out.println(date1.getTime());
+
+        Long temp = 3600000L;
+        Long num = date1.getTime() - date.getTime();
+        System.out.println(num / temp);
+    }
+
 }

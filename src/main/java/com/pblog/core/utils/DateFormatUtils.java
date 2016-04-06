@@ -7,6 +7,8 @@ import java.util.Date;
 
 public class DateFormatUtils {
 
+    public static Long HOURS_LONG = 3600000L;
+
     /**
      * 取得时间的年和月
      * @param date
@@ -59,5 +61,24 @@ public class DateFormatUtils {
         date = calendar.getTime();
 
         return date;
+    }
+
+    /**
+     *
+     * 判断日期相减是否大于1小时
+     * @param minuendDate 被减数
+     * @param subtrahendDate 减数
+     * @return 如果间隔大于等于1小时，则返回true; 如果间隔小于1小时，则返回false
+     */
+    public static boolean isThanOneHour(Date minuendDate, Date subtrahendDate){
+        Long minuendLong = minuendDate.getTime();
+        Long subtrahendLong = subtrahendDate.getTime();
+
+        Long result = minuendLong - subtrahendLong;
+        if((result / HOURS_LONG) < 1){
+            return false;
+        }else{
+            return true;
+        }
     }
 }

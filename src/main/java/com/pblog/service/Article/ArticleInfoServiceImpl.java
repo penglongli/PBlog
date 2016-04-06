@@ -56,7 +56,7 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
 
         ArticleReadLog articleReadLog = new ArticleReadLog();
         articleReadLog.setArticleId(articleInfo.getId());
-        articleReadLog.setIpAddress(GenerateUtils.getIpAddr(request));
+        articleReadLog.setIpAddress(GenerateUtils.getIpAddress(request));
         articleReadLog.setCreateTime(new Date());
         articleReadLog.setType(ArticleReadLog.TYPE.get("READ"));
         articleReadLogMapper.insert(articleReadLog);
