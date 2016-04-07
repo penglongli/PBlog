@@ -30,13 +30,15 @@ public class IndexController {
             firstArticleInfoVO = pagination.getItems().get(0);
         }
 
-        System.out.println(request.getAttribute("realIp"));
-        System.out.println(request.getAttribute("mobile"));
-
-
         model.addAttribute("pagination", pagination);
         model.addAttribute("firstArticle", firstArticleInfoVO);
         model.addAttribute("detail", false);
-        return "web/index/index";
+
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if(mobile){
+            return "web/index/mobile_index";
+        }else{
+            return "web/index/index";
+        }
     }
 }
