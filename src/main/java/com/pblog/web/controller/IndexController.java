@@ -36,7 +36,7 @@ public class IndexController {
 
         Boolean mobile = (Boolean) request.getAttribute("mobile");
         if(mobile){
-            return "web/index/mobile_index";
+            return "web/index/index_mobile";
         }else{
             return "web/index/index";
         }
