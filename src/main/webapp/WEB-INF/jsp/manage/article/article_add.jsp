@@ -52,11 +52,12 @@
          <div class="view"></div>
          <div class="description">
             <div class="description-title">添加描述</div>
-            <textarea class="editor" name="description"></textarea>
+            <textarea class="editor"></textarea>
          </div>
          <div class="description-operate">
              <i class="icon-eye-open"></i>
              <button type="button" class="preview-description">预览描述</button>
+             <textarea name="description" style="display: none;"></textarea>
          </div>
          <div class="description-view"></div>
          <div class="publish">
