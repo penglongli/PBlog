@@ -12,51 +12,72 @@
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
+    <script type="text/javascript" src="${jsPlugin}/marked.js"></script>
 </head>
-<body>
-<div id="Wrapper">
-    <div id="Top">
-        <i class="icon-align-justify" onclick="slide()"></i>
+<body onload="loadFontSize()">
+    <div id="Wrapper">
+        <div id="Top">
+            <span class="top-list"><i class="icon-align-justify" onclick="slide()"></i></span>
+            <span>Pelin's Blog</span>
+            <span class="top-github"><a href=""><i class="icon-github"></i></a></span>
+            <div class="clear-fix"></div>
     </div>
-    <div id="Content">
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p><p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p><p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p><p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p><p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
-        <p>3年Android程序设计的自我吐槽</p>
-        <p>春节期间，因为使用VPN梯子的姿势不对，导致Chrome的Google书签和xMarks书签发生了冲突，所以有一些重要的书签可能丢失了，我需要整理一下。看了一边满屏的技术教程，顿时产生了颇多的思绪。</p>
+        <div id="Content">
+            <c:forEach var="articleInfo" items="${pagination.items}" varStatus="status">
+            <div class="article">
+                <h1>${articleInfo.title}</h1>
+                <div class="article-detail">
+                    <span class="time">
+                        <fmt:setLocale value="en" />
+                        <fmt:formatDate type="date" value="${articleInfo.createTime}" />
+                    </span>
+                    <span class="category"><a href="">${articleInfo.categoryName}</a></span>
+                </div>
+                <div class="article-description">${articleInfo.description}</div>
+                <span class="continue-read"><a href="">Continue reading</a></span>
+            </div>
+        </c:forEach>
     </div>
 </div>
-<nav class="SlideBar">测试</nav>
+    <nav id="SlideBar">
+    <div class="author_info">
+        <img src="${imageDomain}/author_header.png"/>
+        <p>Pelin</p>
+    </div>
+    <div class="menu_bar">
+        <ul>
+            <li><i class="icon-home"></i> Home</li>
+            <li><i class="icon-calendar"></i> Archives</li>
+            <li><i class="icon-reorder"></i> Categories</li>
+            <li><i class="icon-book"></i> Books</li>
+            <li><i class="icon-text-width"></i> Recorder</li>
+        </ul>
+        <ul>
+            <li><span class="csdn"></span> BLOG</li>
+            <li><span class="zhihu"></span> 知乎</li>
+        </ul>
+    </div>
+</nav>
 </body>
 
 
 <script type="text/javascript">
+    $(function () {
+
+    })
+
+
     $Wrapper = $("#Wrapper");
     $SlideBar = $("#SlideBar");
     var startX, startY, endX, endY, status = 0;
+
+    function loadFontSize(){
+        var templateWidth = 320;
+        var actualWidth = $(window).width();
+
+        $("html").css("font-size", (actualWidth * 1.0) / templateWidth * 10.5  + "px");
+    }
+
 
     function slide(){
         if(status == 1){
@@ -68,8 +89,8 @@
          }else if(status == 0){
              //向右滑动
              $Wrapper.css('position', 'fixed');
-             $SlideBar.animate({'right': '34%'}, 500);
-             $Wrapper.animate({'margin-left': '66%'}, 500);
+             $SlideBar.animate({'right': '24%'}, 500);
+             $Wrapper.animate({'margin-left': '76%'}, 500);
              status = 1;
          }
     }

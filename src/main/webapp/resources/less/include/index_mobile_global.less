@@ -1,8 +1,18 @@
+html{
+  font-size: 10.4px;
+}
+
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   overflow-x: hidden;
+  font-family: "Open Sans","Noto Sans","Noto Sans CJK SC","Microsoft Yahei",sans-serif;
+  font-size: 1.5rem;
+}
+
+.clear-fix {
+  clear: both;
 }
 
 #Wrapper {
@@ -11,24 +21,102 @@ body {
   overflow-x: hidden;
 
   #Top{
+    width: 100%;
+    position: fixed;
+    padding: 1em 0;
+    text-align: center;
+    font-family: "Open Sans",SimHei,"Noto Sans","Noto Sans CJK SC","Microsoft Yahei",sans-serif;
+    background: #FFF;
+    color: #88909a;
+    border-bottom: 1px solid #E3F2FD;
+
+    .top-list {
+      float: left;
+      margin-left: 1em;
+    }
+
+    .top-github {
+      float: right;
+      margin-right: 1em;
+    }
 
     i {
+      font-size: 2rem;
+    }
+
+    a {
       color: #88909a;
+      text-decoration: none;
     }
   }
 
   #Content {
-
+    margin-top: 4em;
+    padding: 0 1em 0 1em;
   }
 }
 
 
 #SlideBar{
   position: fixed;
+  width: 76%;
   bottom: 0;
   top: 0;
-  left: 0;
   right: 100%;
   overflow: hidden;
-  background: red;
+  color: #ebebeb;
+  font-family:"Consolas", "Microsoft Yahei", sans-serif;
+  background-image: url('/resources/image/mobile_slider_bar.jpg');
+  -webkit-background-size: 24.3em;
+  background-size: 24.3em;
+
+  .author_info{
+    margin-top: 1.5em;
+    text-align: center;
+
+    img {
+      width: 4em;
+    }
+
+    p {
+      line-height: .5;
+    }
+  }
+
+  .menu_bar {
+
+    ul {
+      font-size: 1.8rem;
+      padding: 0;
+      margin-left: 1.5em;
+      margin-top: 2em;
+      list-style: none;
+
+      li {
+        margin-top: .8em;
+
+        i {
+          margin-right: .8em;
+        }
+
+        .csdn{
+          background: url('/resources/image/csdn.png') no-repeat;
+          -webkit-background-size: 1em;
+          background-size: 1em;
+        }
+        .zhihu{
+          background: url('/resources/image/zhihu.png') no-repeat;
+          -webkit-background-size: 1em;
+          background-size: 1em;
+        }
+        span {
+          width: 1em;
+          height: 1.2em;
+          margin-right: .8em;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
 }

@@ -15,7 +15,6 @@
 </head>
 <body>
    <div id="progress"><span></span></div>
-
    <c:if test="${not detail}"><c:set var="active_line" value="1"/></c:if>
    <div id="wrapper">
      <%@ include file="../include/index_header.jsp"%>
