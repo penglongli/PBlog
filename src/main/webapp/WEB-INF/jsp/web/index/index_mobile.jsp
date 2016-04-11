@@ -16,16 +16,11 @@
 </head>
 <body onload="loadFontSize()">
 <div id="Wrapper">
-    <div id="Top">
-        <span class="top-list"><i class="icon-align-justify" onclick="slide()"></i></span>
-        <span>Pelin's Blog</span>
-        <span class="top-github"><a href=""><i class="icon-github"></i></a></span>
-        <div class="clear-fix"></div>
-    </div>
+    <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">
         <c:forEach var="articleInfo" items="${pagination.items}" varStatus="status">
             <div class="article">
-                <h1>${articleInfo.title}</h1>
+                <h1><a href="${staticDomain}/article/${articleInfo.articleSlug}">${articleInfo.title}</a></h1>
                 <div class="article-detail">
                     <span class="time">
                         <fmt:setLocale value="en"/>
@@ -34,30 +29,11 @@
                     <span class="category"><a href="">${articleInfo.categoryName}</a></span>
                 </div>
                 <div class="article-description">${articleInfo.description}</div>
-                <span class="continue-read"><a href="">Continue reading</a></span>
+                <span class="continue-read"><a href="${staticDomain}/article/${articleInfo.articleSlug}">Continue reading</a></span>
             </div>
         </c:forEach>
     </div>
 </div>
-<nav id="SlideBar">
-    <div class="author_info">
-        <img src="${imageDomain}/author_header.png"/>
-        <p>Pelin</p>
-    </div>
-    <div class="menu_bar">
-        <ul>
-            <li><i class="icon-home"></i> Home</li>
-            <li><i class="icon-calendar"></i> Archives</li>
-            <li><i class="icon-reorder"></i> Categories</li>
-            <li><i class="icon-book"></i> Books</li>
-            <li><i class="icon-text-width"></i> Recorder</li>
-        </ul>
-        <ul>
-            <li><span class="csdn"></span> BLOG</li>
-            <li><span class="zhihu"></span> 知乎</li>
-        </ul>
-    </div>
-</nav>
 </body>
 
 
