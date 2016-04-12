@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class ArchivesController {
 
 
     @RequestMapping(value = "/archives")
-    public String index(Model model){
+    public String index(HttpServletRequest request, Model model){
         List<ArchivesVO> archivesVOList = null;
         try {
             archivesVOList = archivesService.findArchivesList();
@@ -34,7 +35,13 @@ public class ArchivesController {
             e.printStackTrace();
         }
 
-        return "web/archives/archives";
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if(mobile){
+            return "web/archives/archives_mobile";
+        }else{
+            return "web/archives/archives";
+        }
+
     }
 
 
