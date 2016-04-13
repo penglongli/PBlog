@@ -13,7 +13,7 @@
     <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
 </head>
-<body onload="loadFontSize()">
+<body>
 <div id="Wrapper">
     <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">

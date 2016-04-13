@@ -26,11 +26,17 @@ public class ArchivesController {
     @RequestMapping(value = "/archives")
     public String index(HttpServletRequest request, Model model){
         List<ArchivesVO> archivesVOList = null;
+        Integer articleNum = 0;
+
         try {
             archivesVOList = archivesService.findArchivesList();
+            for(ArchivesVO archivesVO : archivesVOList){
+                articleNum += archivesVO.getArticleInfoVOList().size();
+            }
 
             model.addAttribute("archivesVOList", archivesVOList);
             model.addAttribute("articleInfoVOList", archivesVOList.size() > 0 ? archivesVOList.get(0).getArticleInfoVOList() : null);
+            model.addAttribute("num", articleNum);
         } catch (ParseException e) {
             e.printStackTrace();
         }

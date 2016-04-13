@@ -2,13 +2,15 @@ var $Wrapper = $("#Wrapper");
 var $SlideBar = $("#SlideBar");
 var startX, endX, status = 0;
 
+$(document).ready(function(){
+    loadFontSize();
+})
+
 function loadFontSize() {
     var templateWidth = 320;
     var actualWidth = $(window).width();
 
     $("html").css("font-size", (actualWidth * 1.0) / templateWidth * 10.5 + "px");
-
-    var nodeSize = $(".left-item").size();
 }
 
 
@@ -25,6 +27,13 @@ function slide() {
         $SlideBar.animate({'right': '24%'}, 500);
         $Wrapper.animate({'margin-left': '76%'}, 500);
         status = 1;
+    }
+}
+
+function sleep(n){
+    var start = new Date().getTime();
+    while (true) if (new Date().getTime() - start > n){
+        break;
     }
 }
 

@@ -8,17 +8,15 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Archives | Pelin的个人博客</title>
-    <%--<link href="${styleDomain}/archives/archives_mobile.less" type="text/less" rel="stylesheet"/>--%>
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <link href="${cssDomain}/archives/archives_mobile.css" rel="stylesheet" />
-    <%--<script type="text/javascript" src="${jsPlugin}/less.min.js"></script>--%>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
 </head>
-<body onload="loadFontSize()">
+<body onload="initial()">
 <div id="Wrapper">
     <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">
-        <div class="archive-header"><i class="icon-ok-sign"></i>文章统计：<span>82篇</span></div>
+        <div class="archive-header"><i class="icon-ok-sign"></i>文章统计：<span>${num}篇</span></div>
         <div class="archive-title">文章存档</div>
         <div class="archive-timeline">
             <div class="timeline-left">
@@ -40,14 +38,10 @@
                     <div class="right-item">
                         <c:forEach var="articleVO" items="${archivesVO.articleInfoVOList}" varStatus="articleStatus">
                             <div class="article-item">
-                                <span>04-11</span>
-                                <a href="">${articleVO.title}</a>
+                                <span><fmt:formatDate value="${articleVO.createTime}" pattern="MM-dd"/></span>
+                                <a href="${staticDomain}/article/${articleVO.articleSlug}">${articleVO.title}</a>
                             </div>
                         </c:forEach>
-                        <div class="article-item">
-                            <span>04-11</span>
-                            <a href="">测试</a>
-                        </div>
                     </div>
                 </c:forEach>
             </div>
@@ -58,21 +52,17 @@
 </body>
 <script type="text/javascript" src="${jsPlugin}/global_mobile.js"></script>
 <script type="text/javascript">
-    document.onreadystatechange = subSomething;
 
-    function subSomething()
-    {
-        console.log(document.readyState);
-        if(document.readyState == "complete"){
-            var nodeSize = $(".left-item").size();
+    function initial(){
+        var nodeSize = $(".left-item").size();
 
-            for(var i = 0; i < nodeSize; i++){
-                //$($(".left-item")[i]).css("display", "block");
-                //$($(".right-item")[i]).css("display", "block");
-                console.log($($(".right-item")[i]).height());
-            }
+        for(var i = 0; i < nodeSize; i++){
+            var rightHeight = $($(".right-item")[i]).height();
+
+            $($(".left-item")[i]).css({"height": rightHeight + 40});
+            $($(".right-item")[i]).fadeIn("slow");
+            $($(".left-item")[i]).fadeIn("slow");
         }
     }
-
 </script>
 </html>
