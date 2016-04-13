@@ -1,95 +1,130 @@
-@media screen and (min-width: 935px) {
-  body {
-    font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
-    background: #FFF;
-    font-style: normal!important;
+html {
+  font-size: 65%;
+}
+body {
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+}
+.clear-fix {
+  clear: both;
+}
+/** 跳转进度条样式**/
+#progress {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #b91f1f;
+  transition: opacity 500ms linear;
+}
+#progress.done {
+  opacity: 0;
+}
+#progress span {
+  position: absolute;
+  height: 2px;
+  -webkit-box-shadow: #b91f1f 1px 0 6px 1px;
+  -webkit-border-radius: 100%;
+  opacity: 1;
+  width: 150px;
+  right: -10px;
+  -webkit-animation: pulse 2s ease-out 0s infinite;
+}
+@-webkit-keyframes pulse {
+  30% {
+    opacity: 0.6;
   }
-  .clear-fix {
-    clear: both;
+  60% {
+    opacity: 0;
   }
-  #fix-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 11%;
-    background: #2B333D;
-    text-align: center;
+  100% {
+    opacity: 0.6;
   }
-  #fix-left .author_info {
-    background: #24272D;
-    margin-top: -10px;
-    padding-top: 10px;
-  }
-  #fix-left .author_info img {
-    display: block;
-    margin: 10px auto;
-    max-width: 76px;
-    padding: 2px;
-    border: none;
-  }
-  #fix-left .author_info p {
-    text-align: center;
-    color: white;
-  }
-  #fix-left .author_info .motto {
-    text-align: left;
-    font-size: 13px;
-    padding: 0 20px 15px 15px;
-    color: #777777;
-  }
-  #fix-left .menu_bar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  #fix-left .menu_bar ul li {
-    font-size: 18px;
-    padding: 8px;
-  }
-  #fix-left .menu_bar ul li i {
-    margin-right: 0.3em;
-  }
-  #fix-left .menu_bar ul li:hover {
-    background: #2F889A;
-    color: #FFFFFF;
-  }
-  #fix-left .menu_bar ul a {
-    text-decoration: none;
-    color: #999999;
-  }
-  #fix-left .menu_bar ul a:link {
-    text-decoration: none;
-  }
-  #fix-left .menu_bar ul .active {
-    background: #2F889A;
-    color: #FFFFFF;
-  }
-  .wrapper-header {
-    position: fixed;
-    left: 11%;
-    top: 0;
-    right: 0;
-    padding: 8px;
-    background: #FFFFFF;
-    border-bottom: 2px solid #DDD;
-    z-index: 1000;
-    box-shadow: 2px 1px 5px #DBDBDB;
-    border-bottom: 1px solid #DBDBDB;
-  }
-  .wrapper-header .search {
-    background: url('../image/search_background.png') no-repeat;
-    width: 276px;
-    height: 28px;
-    background-size: 276px 28px;
-    display: inline-block;
-  }
-  .wrapper-header .search .search_input {
-    border: none;
-    width: 222px;
-    height: 26px;
-    margin: 0px 0px 2px 30px;
-    background-color: transparent;
-    outline: none;
-  }
+}
+/** 进度条样式结束 **/
+#fix-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 11%;
+  background: #2B333D;
+  text-align: center;
+}
+#fix-left .author_info {
+  background: #24272D;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+#fix-left .author_info img {
+  display: block;
+  margin: 10px auto;
+  max-width: 76px;
+  padding: 2px;
+  border: none;
+}
+#fix-left .author_info p {
+  text-align: center;
+  color: white;
+}
+#fix-left .author_info .motto {
+  text-align: left;
+  font-size: 13px;
+  padding: 0 20px 15px 15px;
+  color: #777777;
+}
+#fix-left .menu_bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#fix-left .menu_bar ul li {
+  font-size: 18px;
+  padding: 8px;
+}
+#fix-left .menu_bar ul li i {
+  margin-right: 0.7em;
+}
+#fix-left .menu_bar ul li:hover {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+#fix-left .menu_bar ul a {
+  text-decoration: none;
+  color: #999999;
+}
+#fix-left .menu_bar ul a:link {
+  text-decoration: none;
+}
+#fix-left .menu_bar ul .active {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+.wrapper-header {
+  position: fixed;
+  left: 11%;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #DDD;
+  z-index: 999;
+  box-shadow: 2px 1px 5px #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+}
+.wrapper-header .search {
+  background: url('/resources/image/search_background.png') no-repeat;
+  width: 276px;
+  height: 28px;
+  background-size: 276px 28px;
+  display: inline-block;
+}
+.wrapper-header .search .search_input {
+  border: none;
+  width: 222px;
+  height: 26px;
+  margin: 0px 0px 2px 30px;
+  background-color: transparent;
+  outline: none;
 }

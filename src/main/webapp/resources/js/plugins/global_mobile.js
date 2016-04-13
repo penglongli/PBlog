@@ -7,6 +7,8 @@ function loadFontSize() {
     var actualWidth = $(window).width();
 
     $("html").css("font-size", (actualWidth * 1.0) / templateWidth * 10.5 + "px");
+
+    var nodeSize = $(".left-item").size();
 }
 
 

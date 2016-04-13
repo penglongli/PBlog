@@ -1,102 +1,137 @@
-@media screen and (min-width: 935px) {
-  body {
-    font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
-    background: #FFF;
-    font-style: normal!important;
+html {
+  font-size: 65%;
+}
+body {
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+}
+.clear-fix {
+  clear: both;
+}
+/** 跳转进度条样式**/
+#progress {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #b91f1f;
+  transition: opacity 500ms linear;
+}
+#progress.done {
+  opacity: 0;
+}
+#progress span {
+  position: absolute;
+  height: 2px;
+  -webkit-box-shadow: #b91f1f 1px 0 6px 1px;
+  -webkit-border-radius: 100%;
+  opacity: 1;
+  width: 150px;
+  right: -10px;
+  -webkit-animation: pulse 2s ease-out 0s infinite;
+}
+@-webkit-keyframes pulse {
+  30% {
+    opacity: 0.6;
   }
-  .clear-fix {
-    clear: both;
+  60% {
+    opacity: 0;
   }
-  #fix-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 11%;
-    background: #2B333D;
-    text-align: center;
+  100% {
+    opacity: 0.6;
   }
-  #fix-left .author_info {
-    background: #24272D;
-    margin-top: -10px;
-    padding-top: 10px;
-  }
-  #fix-left .author_info img {
-    display: block;
-    margin: 10px auto;
-    max-width: 76px;
-    padding: 2px;
-    border: none;
-  }
-  #fix-left .author_info p {
-    text-align: center;
-    color: white;
-  }
-  #fix-left .author_info .motto {
-    text-align: left;
-    font-size: 13px;
-    padding: 0 20px 15px 15px;
-    color: #777777;
-  }
-  #fix-left .menu_bar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  #fix-left .menu_bar ul li {
-    font-size: 18px;
-    padding: 8px;
-  }
-  #fix-left .menu_bar ul li i {
-    margin-right: 0.3em;
-  }
-  #fix-left .menu_bar ul li:hover {
-    background: #2F889A;
-    color: #FFFFFF;
-  }
-  #fix-left .menu_bar ul a {
-    text-decoration: none;
-    color: #999999;
-  }
-  #fix-left .menu_bar ul a:link {
-    text-decoration: none;
-  }
-  #fix-left .menu_bar ul .active {
-    background: #2F889A;
-    color: #FFFFFF;
-  }
-  .wrapper-header {
-    position: fixed;
-    left: 11%;
-    top: 0;
-    right: 0;
-    padding: 8px;
-    background: #FFFFFF;
-    border-bottom: 2px solid #DDD;
-    z-index: 1000;
-    box-shadow: 2px 1px 5px #DBDBDB;
-    border-bottom: 1px solid #DBDBDB;
-  }
-  .wrapper-header .search {
-    background: url('../image/search_background.png') no-repeat;
-    width: 276px;
-    height: 28px;
-    background-size: 276px 28px;
-    display: inline-block;
-  }
-  .wrapper-header .search .search_input {
-    border: none;
-    width: 222px;
-    height: 26px;
-    margin: 0px 0px 2px 30px;
-    background-color: transparent;
-    outline: none;
-  }
+}
+/** 进度条样式结束 **/
+#fix-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 11%;
+  background: #2B333D;
+  text-align: center;
+}
+#fix-left .author_info {
+  background: #24272D;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+#fix-left .author_info img {
+  display: block;
+  margin: 10px auto;
+  max-width: 76px;
+  padding: 2px;
+  border: none;
+}
+#fix-left .author_info p {
+  text-align: center;
+  color: white;
+}
+#fix-left .author_info .motto {
+  text-align: left;
+  font-size: 13px;
+  padding: 0 20px 15px 15px;
+  color: #777777;
+}
+#fix-left .menu_bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#fix-left .menu_bar ul li {
+  font-size: 18px;
+  padding: 8px;
+}
+#fix-left .menu_bar ul li i {
+  margin-right: 0.7em;
+}
+#fix-left .menu_bar ul li:hover {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+#fix-left .menu_bar ul a {
+  text-decoration: none;
+  color: #999999;
+}
+#fix-left .menu_bar ul a:link {
+  text-decoration: none;
+}
+#fix-left .menu_bar ul .active {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+.wrapper-header {
+  position: fixed;
+  left: 11%;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #DDD;
+  z-index: 999;
+  box-shadow: 2px 1px 5px #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+}
+.wrapper-header .search {
+  background: url('/resources/image/search_background.png') no-repeat;
+  width: 276px;
+  height: 28px;
+  background-size: 276px 28px;
+  display: inline-block;
+}
+.wrapper-header .search .search_input {
+  border: none;
+  width: 222px;
+  height: 26px;
+  margin: 0px 0px 2px 30px;
+  background-color: transparent;
+  outline: none;
 }
 .content {
   position: absolute;
   z-index: 100;
-  top: 45px;
+  top: 4rem;
   right: 0;
   bottom: 0;
   left: 11%;
@@ -104,7 +139,7 @@
 .content .scroll-area {
   position: fixed;
   width: 22%;
-  top: 45px;
+  top: 4rem;
   bottom: 0;
   border-right: 1px solid #EEEEEE;
 }
@@ -113,16 +148,17 @@
   height: auto;
 }
 .content .scroll-area .article-list .article-item {
-  padding: 16px 10px 10px 10px;
+  padding: 1.3rem 1rem 1rem 1rem;
   border-bottom: 1px solid #EEEEEE;
 }
 .content .scroll-area .article-list .article-item .article-header {
-  margin-bottom: 15px;
+  margin-bottom: 1.3rem;
+  font-size: 1.45rem;
 }
 .content .scroll-area .article-list .article-item .article-header .article-category {
   color: #8e2013;
   text-decoration: none;
-  margin-right: 2px;
+  margin-right: 0.1rem;
 }
 .content .scroll-area .article-list .article-item .article-header .article-title {
   color: #551A8B;
@@ -132,10 +168,11 @@
   font-size: 12px;
   color: #777777;
   line-height: 1.7;
-  margin-bottom: 15px;
+  margin-bottom: 1.8rem;
+  text-indent: 2em;
 }
 .content .scroll-area .article-list .article-item .article-metadata {
-  font-size: 13px;
+  font-size: 1.1rem;
   color: #BFBFBF;
 }
 .content .scroll-area .article-list .article-item .article-metadata .create-time {
@@ -144,7 +181,7 @@
   float: left;
 }
 .content .scroll-area .article-list .article-item .article-metadata .create-time i {
-  margin-right: 7px;
+  margin-right: 0.5rem;
 }
 .content .scroll-area .article-list .article-item .article-metadata .meta-tags {
   float: right;
@@ -152,27 +189,81 @@
 .content .scroll-area .article-list .article-item .article-metadata .meta-tags span {
   display: inline-block;
   float: left;
-  margin-right: 10px;
+  margin-right: 0.8rem;
 }
 .content .scroll-area .scroll-vertical {
   top: 0;
   bottom: 0;
   position: absolute;
-  width: 4px;
+  width: 0.3rem;
   right: 0;
 }
 .content .scroll-area .scroll-vertical .scroll-bar {
-  width: 3px;
-  height: 257px;
+  width: 0.26rem;
+  height: 18rem;
   border: 1px solid #ffffff;
   border-radius: 5px;
   background-color: #000;
   background-clip: padding-box;
 }
+.content .scroll-area-detail {
+  display: none;
+}
 .content .article-content {
-  left: 25%;
   position: absolute;
-  width: 75%;
-  height: 200px;
-  background: blue;
+  left: 25%;
+  width: 72%;
+  font-size: 1.4rem;
+  line-height: 1.85em;
+  color: #424242;
+  font-weight: 300;
+  padding: 0 1.5%;
+}
+.content .article-content .content-head {
+  border-bottom: 1px solid #EDEDED;
+}
+.content .article-content .content-head .content-head-detail {
+  margin-bottom: 0.6rem;
+}
+.content .article-content .content-head .content-head-detail span {
+  font-size: 1rem;
+  color: #BDBDBD;
+  margin-left: 1.35rem;
+}
+.content .article-content .content-head .content-head-detail span i {
+  margin-right: 0.15rem;
+}
+.content .article-content .content-head .content-head-detail .c_time {
+  margin: 0;
+}
+.content .article-content .content-head .content-head-detail .c_name a {
+  color: red;
+  text-decoration: none;
+}
+.content .article-content .content-head .content-head-detail .c_like a {
+  color: red;
+  text-decoration: none;
+}
+.content .article-content .content-head .content-head-detail a:hover {
+  text-decoration: underline;
+}
+.content .article-content h1,
+.content .article-content h2,
+.content .article-content h3 {
+  font-weight: 400;
+}
+.content .article-content h1 {
+  font-size: 2.2rem;
+}
+.content .article-content h2 {
+  font-size: 2.05rem;
+}
+.content .article-content h3 {
+  font-size: 1.9rem;
+}
+.content .article-content p {
+  text-indent: 2em;
+}
+.content .article-content-detail {
+  left: 14%;
 }

@@ -8,9 +8,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Archives | Pelin的个人博客</title>
-    <link href="${styleDomain}/archives/archives_mobile.less" type="text/less" rel="stylesheet"/>
+    <%--<link href="${styleDomain}/archives/archives_mobile.less" type="text/less" rel="stylesheet"/>--%>
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
+    <link href="${cssDomain}/archives/archives_mobile.css" rel="stylesheet" />
+    <%--<script type="text/javascript" src="${jsPlugin}/less.min.js"></script>--%>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
 </head>
 <body onload="loadFontSize()">
@@ -35,7 +36,6 @@
                 </c:forEach>
             </div>
             <div class="timeline-right">
-                <%--<div class="right-item">顺丰速运 已收取快件</div>--%>
                 <c:forEach var="archivesVO" items="${archivesVOList}" varStatus="status">
                     <div class="right-item">
                         <c:forEach var="articleVO" items="${archivesVO.articleInfoVOList}" varStatus="articleStatus">
@@ -44,6 +44,10 @@
                                 <a href="">${articleVO.title}</a>
                             </div>
                         </c:forEach>
+                        <div class="article-item">
+                            <span>04-11</span>
+                            <a href="">测试</a>
+                        </div>
                     </div>
                 </c:forEach>
             </div>
@@ -53,4 +57,22 @@
 </div>
 </body>
 <script type="text/javascript" src="${jsPlugin}/global_mobile.js"></script>
+<script type="text/javascript">
+    document.onreadystatechange = subSomething;
+
+    function subSomething()
+    {
+        console.log(document.readyState);
+        if(document.readyState == "complete"){
+            var nodeSize = $(".left-item").size();
+
+            for(var i = 0; i < nodeSize; i++){
+                //$($(".left-item")[i]).css("display", "block");
+                //$($(".right-item")[i]).css("display", "block");
+                console.log($($(".right-item")[i]).height());
+            }
+        }
+    }
+
+</script>
 </html>
