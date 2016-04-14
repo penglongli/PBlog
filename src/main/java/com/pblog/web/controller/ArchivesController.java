@@ -52,7 +52,7 @@ public class ArchivesController {
 
 
     @RequestMapping(value = "/archives/{timeStamp}", method = RequestMethod.GET)
-    public String month(@PathVariable String timeStamp, Model model) throws ParseException {
+    public String month(@PathVariable String timeStamp, HttpServletRequest request, Model model) throws ParseException {
         boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
         List<ArchivesVO> archivesVOList = null;
 
@@ -63,7 +63,13 @@ public class ArchivesController {
             model.addAttribute("archivesVOList", archivesVOList);
             model.addAttribute("articleInfoVOList", articleInfoVOList);
             model.addAttribute("timeStamp", DateFormatUtils.formatStrToYM(timeStamp));
-            return "web/archives/archives";
+
+            Boolean mobile = (Boolean) request.getAttribute("mobile");
+            if(mobile){
+                return "web/archives/archives_mobile_time";
+            }else {
+                return "web/archives/archives";
+            }
         }else{
             return "404";
         }

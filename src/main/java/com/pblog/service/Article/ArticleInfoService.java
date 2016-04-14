@@ -16,5 +16,4 @@ public interface ArticleInfoService {
     ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request);
 
     Pagination<ArticleInfoVO> page(PageRequest pageRequest);
-
 }

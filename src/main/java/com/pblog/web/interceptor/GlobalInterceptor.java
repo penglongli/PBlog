@@ -39,14 +39,6 @@ public class GlobalInterceptor implements HandlerInterceptor{
             request.setAttribute("mobile", false);
         }
 
-        //判断是否来自微信
-        /*String queryString = request.getQueryString();
-        if(queryString != null && !queryString.equals("") && queryString.contains("uFrom=weixin")){
-            request.setAttribute("weixin", true);
-        }else{
-            request.setAttribute("weixin", false);
-        }*/
-
         //获取访客IP
         String realIp = GenerateUtils.getIpAddress(request);
         request.setAttribute("realIp", (realIp == null) ? "127.0.0.1" : realIp);

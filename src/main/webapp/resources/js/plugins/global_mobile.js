@@ -17,13 +17,11 @@ function loadFontSize() {
 function slide() {
     if (status == 1) {
         //向左滑动
-        $Wrapper.css('position', '');
         $SlideBar.animate({'right': '100%'}, 250);
         $Wrapper.animate({'margin-left': '0'}, 250);
         status = 0;
     } else if (status == 0) {
         //向右滑动
-        $Wrapper.css('position', 'fixed');
         $SlideBar.animate({'right': '24%'}, 500);
         $Wrapper.animate({'margin-left': '76%'}, 500);
         status = 1;

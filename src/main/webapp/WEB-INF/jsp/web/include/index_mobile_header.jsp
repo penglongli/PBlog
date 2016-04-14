@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="Top">
-    <span class="top-list"><i class="icon-align-justify" onclick="slide()"></i></span>
+    <span class="top-list" onclick="slide()"><i class="icon-align-justify"></i></span>
     <span>Pelin's Blog</span>
     <span class="top-github"><a href="https://github.com/penglongli"><i class="icon-github"></i></a></span>
     <div class="clear-fix"></div>
