@@ -11,6 +11,12 @@ body {
   font-size: 1.4rem;
 }
 
+.body-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
 .clear-fix {
   clear: both;
 }
@@ -54,6 +60,13 @@ body {
     margin-top: 4em;
     padding: 0 1em 0 1em;
   }
+
+  .content-slide {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 
@@ -66,16 +79,17 @@ body {
   overflow: hidden;
   color: #ebebeb;
   font-family:"Consolas", "Microsoft Yahei", sans-serif;
-  background-image: url('/resources/image/mobile_slider_bar.jpg');
-  -webkit-background-size: 24.3em;
-  background-size: 24.3em;
-
+  //: url('/resources/image/mobile_slider_bar.jpg');
+  //-webkit-background-size: 24.3em;
+  //background-size: 24.3em;
+  background: #202020;
+  
   .author_info{
     margin-top: 1.5em;
     text-align: center;
 
     img {
-      width: 4em;
+      width: 5.5em;
     }
 
     p {
@@ -86,10 +100,10 @@ body {
   .menu_bar {
 
     ul {
-      font-size: 1.8rem;
+      font-size: 1.65rem;
+      margin-top: 1.5em;
       padding: 0;
       margin-left: 1.5em;
-      margin-top: 2em;
       list-style: none;
 
       li {
@@ -97,7 +111,7 @@ body {
 
         a {
           text-decoration: none;
-          color: #ebebeb;
+          color: #999;
         }
 
         i {

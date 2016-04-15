@@ -26,6 +26,7 @@ public class CategoryController {
 
         model.addAttribute("categoryInfoVOList", categoryInfoVOList);
         model.addAttribute("articleInfoVOList", articleInfoVOList.size() > 0 ? articleInfoVOList : null);
+        model.addAttribute("num", categoryInfoVOList.size());
 
         Boolean mobile = (Boolean) request.getAttribute("mobile");
         if(mobile){

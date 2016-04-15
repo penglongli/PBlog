@@ -16,8 +16,8 @@
 <div id="Wrapper">
     <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">
-        <div class="archive-header"><i class="icon-ok-sign"></i>文章统计：<span>${num}篇</span></div>
-        <div class="archive-title">文章存档</div>
+        <div class="archive-header"><i class="icon-ok-sign"></i>分类统计：<span>${num}类</span></div>
+        <div class="archive-title">文章分类</div>
         <div class="archive-timeline">
             <div class="timeline-left">
                 <c:forEach var="categoryInfoVO" items="${categoryInfoVOList}" varStatus="status">

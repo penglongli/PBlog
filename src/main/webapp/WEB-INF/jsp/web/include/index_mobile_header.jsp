@@ -15,12 +15,12 @@
             <li><a href="${staticDomain}/"><i class="icon-home"></i> Home</a></li>
             <li><a href="${staticDomain}/archives"><i class="icon-calendar"></i> Archives</a></li>
             <li><a href="${staticDomain}/category"><i class="icon-reorder"></i> Categories</a></li>
-            <li><i class="icon-book"></i> Books</li>
-            <li><i class="icon-text-width"></i> Recorder</li>
+            <li><a href=""><i class="icon-book"></i> Books</a></li>
+            <li><a href=""><i class="icon-text-width"></i> Recorder</a></li>
         </ul>
         <ul>
-            <li><a href="http://blog.csdn.net/u010800530"><span class="csdn"></span> BLOG</a></li>
-            <li><a href="https://www.zhihu.com/people/pelin.li"><span class="zhihu"></span> 知乎</a></li>
+            <li><a href="http://blog.csdn.net/u010800530" style="color: #FFF;"><span class="csdn"></span> BLOG</a></li>
+            <li><a href="https://www.zhihu.com/people/pelin.li" style="color: #FFF;"><span class="zhihu"></span> 知乎</a></li>
         </ul>
     </div>
 </nav>
