@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pblog.dao.SlugInfoMapper" >
+
+  <insert id="insert" parameterType="SlugInfo" >
+    insert into slug_info (id, slug)
+    values (#{id,jdbcType=INTEGER}, #{slug,jdbcType=BIGINT})
+  </insert>
+
+  <select id="queryById" resultType="SlugInfo">
+    select * from slug_info where id = #{id}
+  </select>
+</mapper>

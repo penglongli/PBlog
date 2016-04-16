@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pblog.dao.WebsiteTrafficMapper" >
+
+  <insert id="insert" parameterType="com.pblog.domain.WebsiteTraffic" >
+    insert into website_traffic (id, ipAddress, createTime,
+    operateSystem, browser)
+    values (#{id,jdbcType=BIGINT}, #{ipAddress,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
+    #{operateSystem,jdbcType=VARCHAR}, #{browser,jdbcType=VARCHAR})
+  </insert>
+
+  <select id="queryByIpAddress" parameterType="java.lang.String" resultType="com.pblog.domain.WebsiteTraffic">
+    select * from website_traffic
+    where ipAddress = #{ipAddress, jdbcType = VARCHAR}
+    order by id desc;
+  </select>
+
+</mapper>

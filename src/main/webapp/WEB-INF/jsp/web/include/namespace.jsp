@@ -1,11 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
 <%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
+<%@ page trimDirectiveWhitespaces="true" %>
 
 <c:set var="ENV" value="local"/>
-
 <c:choose>
     <c:when test="${ENV == 'local'}">
         <c:set var="staticDomain" value="${pageContext.request.contextPath}"/>
