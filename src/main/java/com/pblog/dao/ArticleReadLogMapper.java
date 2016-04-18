@@ -4,7 +4,6 @@ import com.pblog.domain.ArticleReadLog;
 
 public interface ArticleReadLogMapper {
 
-    Long queryForClickNumByArticle(Integer articleId);
+    int insert(ArticleReadLog record);
 
-    void insert(ArticleReadLog articleReadLog);
 }

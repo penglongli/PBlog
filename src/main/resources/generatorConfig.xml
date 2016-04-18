@@ -36,9 +36,7 @@
             <columnOverride column="content" jdbcType="LONGTEXT" javaType="java.lang.String" />
             <columnOverride column="markdown" jdbcType="LONGTEXT" javaType="java.lang.String" />
         </table>
-        <table tableName="article_read_log" domainObjectName="ArticleReadLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="useActualColumnNames" value="true" />
-        </table>
+
         <table tableName="author_info" domainObjectName="AuthorInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
         </table>
@@ -67,5 +65,8 @@
         <!--<table tableName="website_traffic" domainObjectName="WebsiteTraffic" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
         </table>-->
+        <table tableName="article_read_log" domainObjectName="ArticleReadLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="true" />
+        </table>
     </context>
 </generatorConfiguration>

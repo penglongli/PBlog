@@ -1,26 +1,17 @@
 package com.pblog.domain;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ArticleReadLog {
     private Long id;
 
-    private Integer articleId;
+    private Long articleSlug;
 
     private String ipAddress;
 
     private Date createTime;
 
     private Integer type;
-
-    public static Map<String, Integer> TYPE = new HashMap<String, Integer>(){
-        {
-            put("READ", 1);
-            put("LIKE", 2);
-        }
-    };
 
     public Long getId() {
         return id;
@@ -30,12 +21,12 @@ public class ArticleReadLog {
         this.id = id;
     }
 
-    public Integer getArticleId() {
-        return articleId;
+    public Long getArticleSlug() {
+        return articleSlug;
     }
 
-    public void setArticleId(Integer articleId) {
-        this.articleId = articleId;
+    public void setArticleSlug(Long articleSlug) {
+        this.articleSlug = articleSlug;
     }
 
     public String getIpAddress() {
@@ -60,5 +51,23 @@ public class ArticleReadLog {
 
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    public enum ArticleReadType {
+        TYPE_READ(1),
+
+        TYPE_LIKE(2),
+
+        TYPE_THUMB(3);
+
+        private Integer id;
+
+        ArticleReadType(Integer id){
+            this.id = id;
+        }
+
+        public Integer getId(){
+            return id;
+        }
     }
 }

@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.pblog.dao.ArticleReadLogMapper" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pblog.dao.ArticleReadLogMapper">
+  <resultMap id="BaseResultMap" type="com.pblog.domain.ArticleReadLog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="articleSlug" jdbcType="BIGINT" property="articleSlug" />
+    <result column="ipAddress" jdbcType="VARCHAR" property="ipAddress" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
 
-  <select id="queryForClickNumByArticle" resultType="java.lang.Long" parameterType="java.lang.Integer">
-    select count(*) from article_read_log where articleId = #{articleId, jdbcType=INTEGER}
-  </select>
+  <sql id="Base_Column_List">
+    id, articleSlug, ipAddress, createTime, type
+  </sql>
 
   <insert id="insert" parameterType="com.pblog.domain.ArticleReadLog">
-    insert into article_read_log(articleId, ipAddress, createTime, type)
-    values (#{articleId}, #{ipAddress}, #{createTime}, #{type})
+    insert into article_read_log (id, articleSlug, ipAddress, 
+      createTime, type)
+    values (#{id,jdbcType=BIGINT}, #{articleSlug,jdbcType=BIGINT}, #{ipAddress,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{type,jdbcType=INTEGER})
   </insert>
 
 </mapper>
