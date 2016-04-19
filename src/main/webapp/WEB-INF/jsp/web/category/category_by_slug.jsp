@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Home | Pelin的个人博客</title>
-    <link href="${styleDomain}/index_mobile.less" type="text/less" rel="stylesheet"/>
+    <link href="${styleDomain}/article_mobile_list.less" type="text/less" rel="stylesheet"/>
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>

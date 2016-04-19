@@ -2,6 +2,8 @@ package com.pblog.web.controller.articlemanage;
 
 public class ArticleInfoFormBean {
 
+    private Integer id;
+
     private String title;
 
     private String content;
@@ -52,4 +54,11 @@ public class ArticleInfoFormBean {
         this.description = description;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

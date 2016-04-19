@@ -15,6 +15,9 @@
         $content.css({"top": 0});
         $bar.css({"margin-top": 0});
 
+            console.log($container.height());
+        console.log($content.height());
+
         if($container.height() < $content.height()){
             this.bindScrollEvent();
             this.bindDragEvent();
@@ -111,10 +114,9 @@
     }
 
 
-
     $.fn.slider = function(options){
         var defaults = {
-            speed: 20,
+            speed: 5,
             container: null,
             content: null,
             slideArea: null,

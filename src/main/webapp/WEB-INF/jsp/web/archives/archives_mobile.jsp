@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Archives | Pelin的个人博客</title>
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <link href="${cssDomain}/archives/archives_mobile.css" rel="stylesheet" />
+    <link href="${cssDomain}/time_line.css" rel="stylesheet" />
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
 </head>
 <body onload="initial()">

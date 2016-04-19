@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Archives | Pelin的个人博客</title>
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <link href="${cssDomain}/archives/archives_mobile.css" rel="stylesheet" />
+    <link href="${cssDomain}/time_line.css" rel="stylesheet" />
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
 </head>
-<body onload="initial()">
+<body onload="timeLineInitial()">
 <div id="Wrapper">
     <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">
@@ -48,18 +48,4 @@
 </div>
 </body>
 <script type="text/javascript" src="${jsPlugin}/global_mobile.js"></script>
-<script type="text/javascript">
-
-    function initial(){
-        var nodeSize = $(".left-item").size();
-
-        for(var i = 0; i < nodeSize; i++){
-            var rightHeight = $($(".right-item")[i]).height();
-
-            $($(".left-item")[i]).css({"height": rightHeight + 40});
-            $($(".right-item")[i]).fadeIn("slow");
-            $($(".left-item")[i]).fadeIn("slow");
-        }
-    }
-</script>
 </html>

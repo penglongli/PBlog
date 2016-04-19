@@ -6,4 +6,5 @@ public interface ArticleReadLogMapper {
 
     int insert(ArticleReadLog record);
 
+    Long queryForClickNumByArticle(Long articleSlug);
 }

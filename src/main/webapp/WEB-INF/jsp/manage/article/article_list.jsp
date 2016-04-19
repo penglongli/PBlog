@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="${styleDomain}/article_list.less" type="text/less" rel="stylesheet/less"  />
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
+    <script src="${jsPlugin}/jquery.min.js"></script>
     <script src="${jsPlugin}/less.min.js"></script>
 </head>
 <body>
@@ -52,7 +53,9 @@
                         <c:forEach var="articleInfo" items="${articleInfoList}" varStatus="status">
                             <tr>
                                 <td class="slug">${articleInfo.slug}</td>
-                                <td class="title">${articleInfo.title}<span>(${articleInfo.createTime})<span></td>
+                                <td class="title">${articleInfo.title}
+                                    <span>(<fmt:formatDate value="${articleInfo.createTime}" pattern="yyyy-MM-dd" /> )<span>
+                                </td>
                                 <td class="viewNum">120</td>
                                 <td class="thumbNum">${articleInfo.thumb}</td>
                                 <td class="status">
@@ -62,9 +65,14 @@
                                     </c:choose>
                                 </td>
                                 <td class="operate">
-                                    <a href="">编辑</a>
-                                    <a href="">查看</a>
-                                    <a href="">隐藏</a>
+                                    <a href="${staticDomain}/manage/article/edit/${articleInfo.id}">编辑</a>
+                                    <a href="${staticDomain}/article/${articleInfo.slug}">查看</a>
+                                    <a href="javascript:void(0)" onclick="hideArticle(${articleInfo.id})">
+                                        <c:choose>
+                                            <c:when test="${articleInfo.enabled}">隐藏</c:when>
+                                            <c:otherwise>显示</c:otherwise>
+                                        </c:choose>
+                                    </a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -74,6 +82,20 @@
 
         </div>
     </div>
+
+    <input class="enabled_url" type="hidden" value="${staticDomain}/manage/article/enabled" />
 </body>
 
+<script type="text/javascript">
+    function hideArticle(articleInfoId){
+        var  url = $(".enabled_url").val();
+
+        $.post(url, {'id': articleInfoId}, function(data){
+            if(data.status == 1){
+                alert("更新成功");
+                location.reload();
+            }
+        }, "json");
+    }
+</script>
 </html>

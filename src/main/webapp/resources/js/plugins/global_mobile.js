@@ -7,14 +7,14 @@ var startX, endX, status = 0;
 
 $(document).ready(function(){
     loadFontSize();
-})
+});
 
 function loadFontSize() {
     var templateWidth = 320;
     var actualWidth = $(window).width();
 
     $("html").css("font-size", (actualWidth * 1.0) / templateWidth * 10.5 + "px");
-}
+};
 
 
 function slide() {
@@ -36,14 +36,14 @@ function slide() {
         $Content.animate({'left': '76%'}, 500);
         status = 1;
     }
-}
+};
 
 function sleep(n){
     var start = new Date().getTime();
     while (true) if (new Date().getTime() - start > n){
         break;
     }
-}
+};
 
 $Wrapper.on({
     touchstart: function (e) {
@@ -70,3 +70,18 @@ $Wrapper.on({
         }
     }
 });
+
+//初始化时间轴
+function timeLineInitial(){
+    var $leftItem = $(".left-item");
+    var $rightItem = $(".right-item");
+    var nodeSize = $leftItem.size();
+
+    for(var i = 0; i < nodeSize; i++){
+        var rightHeight = $($rightItem[i]).height();
+
+        $($leftItem[i]).css({"height": rightHeight + 40});
+        $($rightItem[i]).fadeIn("slow");
+        $($leftItem[i]).fadeIn("slow");
+    }
+};

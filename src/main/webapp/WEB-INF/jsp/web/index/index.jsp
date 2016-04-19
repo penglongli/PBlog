@@ -6,9 +6,10 @@
 <head>
     <title>Home | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link href="${styleDomain}/index.less" type="text/less" rel="stylesheet/css"/>
+    <%--<link href="${styleDomain}/index.less" type="text/less" rel="stylesheet/css"/>--%>
+    <link href="${cssDomain}/index.css" type="text/css" rel="stylesheet" />
     <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
+    <%--<script type="text/javascript" src="${jsPlugin}/less.min.js"></script>--%>
     <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
     <script type="text/javascript" src="${jsPlugin}/marked.js"></script>
     <script type="text/javascript" src="${jsPlugin}/global.js"></script>
@@ -64,40 +65,8 @@
         </div>
     </div>
 </div>
-
 <input type="hidden" value="${firstArticle.content}" class="markdown-content"/>
 <script type="text/javascript" src="${jsPlugin}/SliderBar.js"></script>
-<script type="text/javascript">
-    var $$ = function (func) {
-        if (document.addEventListener) {
-            window.addEventListener("load", func, false);
-        }
-        else if (document.attachEvent) {
-            window.attachEvent("onload", func);
-        }
-    }
-
-    $(function () {
-        loadSlider()
-    });
-
-    function loadSlider() {
-        var $container = $(".scroll-area");
-        var $content = $(".article-list");
-        var $slideArea = $(".scroll-vertical");
-        var $bar = $(".scroll-bar");
-        var $markdown = $(".markdown-content");
-        var $articleContent = $(".content-body");
-
-        $articleContent.html(marked($markdown.val()));
-
-        $container.slider({
-            container: $container,
-            content: $content,
-            slideArea: $slideArea,
-            bar: $bar
-        });
-    }
-</script>
+<script type="text/javascript" src="${jsDomain}/index_web.js"></script>
 </body>
 </html>

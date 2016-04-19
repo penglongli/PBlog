@@ -1,18 +1,21 @@
 @import "include/index_man_header";
 @import "include/global";
 
-.article{
-  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+.article {
   padding-bottom: 140px;
-  width: 83%;
+  width: 75%;
   position: absolute;
 
-  .article-title{
+  textarea {
+    font-family: 'Microsoft Yahei', sans-serif;
+  }
+
+  .article-title {
     width: 830px;
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
 
-    .article-title-theme{
+    .article-title-theme {
       padding: 10px;
       font-size: 12px;
       line-height: 120%;
@@ -20,14 +23,14 @@
       border-bottom: 1px solid #e2e2e2;
     }
 
-    .article-title-content{
+    .article-title-content {
       padding: 0px;
       background-color: #fff;
       font-size: 12px;
       line-height: 70%;
       text-align: left;
 
-      textarea{
+      textarea {
         width: 810px;
         height: 24px;
         border: none;
@@ -38,16 +41,15 @@
         line-height: 20px;
         padding: 10px;
         margin: 0px;
-        font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
       }
     }
   }
 
-  .article-body{
+  .article-body {
     width: 830px;
     border: 1px solid #DDDDDD;
 
-    .article-body-theme{
+    .article-body-theme {
       border-bottom: 1px solid #E2E2E2;
       border-left: 1px solid #E2E2E2;
       background: #FFFFFF;
@@ -56,7 +58,7 @@
     }
   }
 
-  .article-category{
+  .article-category {
     background: #FFFFFF;
     padding: 10px;
     width: 810px;
@@ -65,48 +67,47 @@
     border-top: none;
     font-size: 14px;
 
-    .category{
+    .category {
       float: left;
-      select{
+      select {
         margin-left: 10px;
         font-size: 15px;
         padding: 3px 0px 3px 7px;
       }
     }
-    .tag{
+    .tag {
       float: right;
       font-size: 15px;
       margin-right: 10px;
 
-      input{
+      input {
         margin-left: 10px;
         height: 20px;
       }
     }
 
-    
   }
 
-  .article-operate{
+  .article-operate {
     width: 830px;
     padding: 10px 0px;
     border: 1px solid #DDDDDD;
     background: #FFFFFF;
     position: absolute;
 
-    .preview-article{
+    .preview-article {
       float: left;
       margin-left: 10px;
       padding: 5px 20px 5px 45px;
     }
-    #pre{
+    #pre {
       position: relative;
       left: -104px;
       top: 3px;
     }
   }
 
-  .view{
+  .view {
     width: 830px;
     border: 1px solid #DDDDDD;
     min-height: 50px;
@@ -114,38 +115,38 @@
     margin-top: 50px;
   }
 
-  .description{
+  .description {
     width: 830px;
     border: 1px solid #DDDDDD;
 
-    .description-title{
+    .description-title {
       padding: 10px;
       font-size: 14px;
     }
-    .editor{
+    .editor {
       height: 100px;
     }
   }
 
-  .description-operate{
+  .description-operate {
     width: 830px;
     padding: 10px 0px;
     border: 1px solid #DDDDDD;
     background: #FFFFFF;
     position: absolute;
-    i{
+    i {
       position: relative;
       left: -104px;
       top: 3px;
     }
-    button{
+    button {
       float: left;
       margin-left: 10px;
       padding: 5px 20px 5px 45px;
     }
   }
 
-  .description-view{
+  .description-view {
     width: 830px;
     border: 1px solid #DDDDDD;
     min-height: 50px;
@@ -153,32 +154,91 @@
     margin-top: 50px;
   }
 
-  .editor{
-    overflow:auto;
-    border:1px solid silver;
+  .editor {
+    overflow: auto;
+    border: 1px solid silver;
     border-right: none;
     //border-radius:5px;
     height: 300px;
     box-shadow: inset 0 0 10px silver;
-    padding:0.7em;
+    padding: 0.7em;
     background: #F9F9F9;
     resize: none;
     overflow-y: scroll;
     width: 812px;
   }
 
-  .publish{
+  .publish {
     text-align: center;
     width: 830px;
     margin-top: 15px;
-    .publish-article{
+    .publish-article {
       padding: 6px 10px;
       font-size: 15px;
 
-      i{
+      i {
         margin-left: 10px;
         margin-right: 10px;
       }
+    }
+  }
+}
+
+.operate {
+  position: absolute;
+  width: 20%;
+  left: 79%;
+  font-size: 13px;
+
+  .title {
+    margin-bottom: 9px;
+  }
+
+  .publish {
+
+    button {
+      background: #FFF;
+      border: 1px solid #E5E5E5;
+      padding: 8px 18px;
+      border-radius: 10%;
+
+      i {
+        margin-right: 6px;
+      }
+    }
+
+    button:hover {
+      background: blue;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
+
+  .article-category {
+    margin-top: 20px;
+
+    span {
+      display: block;
+      margin-top: 5px;
+
+      input {
+        margin: 0 4px 0 0;
+        vertical-align: text-bottom;
+        height: 14px;
+      }
+    }
+  }
+
+  .tag {
+    margin-top: 20px;
+
+    input {
+      border: 1px solid #E0E0E0;
+      border-radius: 6%;
+      height: 16px;
+      font-size: 14px;
+      padding: 6px;
+      font-family: Microsoft Yahei;
     }
   }
 }

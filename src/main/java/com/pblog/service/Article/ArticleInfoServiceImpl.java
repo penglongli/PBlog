@@ -52,13 +52,14 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     }
 
     public ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request) {
+        String ipAddress = (String) request.getAttribute("realIp");
         ArticleInfo articleInfo = articleInfoMapper.findBySlug(slug);
 
         ArticleReadLog articleReadLog = new ArticleReadLog();
-        articleReadLog.setArticleId(articleInfo.getId());
-        articleReadLog.setIpAddress(GenerateUtils.getIpAddress(request));
+        articleReadLog.setArticleSlug(articleInfo.getSlug());
+        articleReadLog.setIpAddress(ipAddress);
         articleReadLog.setCreateTime(new Date());
-        articleReadLog.setType(ArticleReadLog.TYPE.get("READ"));
+        articleReadLog.setType(ArticleReadLog.ArticleReadType.TYPE_READ.getId());
         articleReadLogMapper.insert(articleReadLog);
 
         ArticleInfoVO articleInfoVO = commonUtilsService.transArticleInfoVO(articleInfo);

@@ -23,9 +23,6 @@ public class CommonUtilsServiceImpl implements CommonUtilsService{
     @Resource
     private ArticleReadLogMapper articleReadLogMapper;
 
-    @Resource
-    private ArticleInfoMapper articleInfoMapper;
-
     public ArticleInfoVO transArticleInfoVO(ArticleInfo articleInfo) {
         ArticleInfoVO articleInfoVO = new ArticleInfoVO();
 
@@ -42,7 +39,7 @@ public class CommonUtilsServiceImpl implements CommonUtilsService{
         CategoryInfo categoryInfo = categoryInfoMapper.findBySlug(categorySlug);
         articleInfoVO.setCategoryName(categoryInfo.getTitle());
 
-        Long clickNum = articleReadLogMapper.queryForClickNumByArticle(articleInfo.getId());
+        Long clickNum = articleReadLogMapper.queryForClickNumByArticle(articleInfo.getSlug());
         articleInfoVO.setReviewNum(clickNum);
 
         return articleInfoVO;

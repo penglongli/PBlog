@@ -20,4 +20,9 @@
       #{createTime,jdbcType=TIMESTAMP}, #{type,jdbcType=INTEGER})
   </insert>
 
+  <select id="queryForClickNumByArticle" resultType="java.lang.Long">
+    select count(*) from article_read_log
+    where `articleSlug` = #{articleSlug, jdbcType=BIGINT} and `type` = 1;
+  </select>
+  
 </mapper>
