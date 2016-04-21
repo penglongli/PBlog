@@ -33,7 +33,7 @@
                     </select>
                 </div>
                 <div class="add-article">
-                    <a href="${staticDomain}/manage/article/edit">添加文章</a>
+                    <a href="${staticDomain}/manage/article/add">添加文章</a>
                 </div>
                 <div style="clear: both;"></div>
             </div>

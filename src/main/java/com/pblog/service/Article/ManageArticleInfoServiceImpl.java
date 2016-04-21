@@ -43,9 +43,35 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService {
         return articleInfoList;
     }
 
-    public int updateArticleEnabled(int articleId, boolean enabled) {
-        articleInfoMapper.updateArticleEnabled(articleId, enabled);
-        return 0;
+    public int updateArticleEnabled(int articleId) {
+        ArticleInfo articleInfo = articleInfoMapper.findById(articleId);
+
+        boolean enabled = articleInfo.getEnabled();
+        if(enabled){
+            enabled = false;
+        }else {
+            enabled = true;
+        }
+        articleInfo.setEnabled(enabled);
+
+        return articleInfoMapper.update(articleInfo);
+    }
+
+    public ArticleInfo findById(Integer id) {
+        ArticleInfo articleInfo = articleInfoMapper.findById(id);
+
+        return articleInfo;
+    }
+
+    public int updateArticle(ArticleInfoFormBean articleInfoFormBean) {
+        ArticleInfo articleInfo = articleInfoMapper.findById(articleInfoFormBean.getId());
+        articleInfo.setTitle(articleInfoFormBean.getTitle());
+        articleInfo.setContent(articleInfoFormBean.getContent());
+        articleInfo.setCategorySlug(articleInfoFormBean.getCategorySlug());
+        articleInfo.setTag(articleInfoFormBean.getTag());
+        articleInfo.setDescription(articleInfoFormBean.getDescription());
+
+        return articleInfoMapper.update(articleInfo);
     }
 
     private ArticleInfo transFormBeanToArticle(ArticleInfoFormBean articleInfoFormBean){

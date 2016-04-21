@@ -31,6 +31,7 @@ public class ManageArticleController {
         return "manage/article/article_list";
     }
 
+
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String edit(Model model){
         List<SimpleCategoryInfo> categoryInfoList = categoryInfoService.findSimpleCategoryInfo();

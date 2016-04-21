@@ -11,7 +11,9 @@ public interface ManageArticleInfoService {
 
     List<ArticleInfo> findListByCategorySlug(Long categorySlug);
 
-    int updateArticleEnabled(int articleId, boolean enabled);
+    int updateArticleEnabled(int articleId);
 
+    ArticleInfo findById(Integer id);
 
+    int updateArticle(ArticleInfoFormBean articleInfoFormBean);
 }
