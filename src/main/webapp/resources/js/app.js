@@ -1,13 +1,16 @@
-'use strict'
-
 var pBlogApp = {};
 
 var APP = angular.module('pBlogApp', ['ngAnimate', 'ngRoute', 'ngSanitize', 'pBlogApp.filters', 'pBlogApp.services', 'pBlogApp.directives']).
     config(['$routeProvider',
         function ($routeProvider) {
-            $routeProvider.when('/cars', {
+            $routeProvider.when('/index', {
                 templateUrl: '/index/layout',
                 controller: IndexController
+            });
+
+            $routeProvider.when('/archives', {
+                templateUrl: '/archives/layout',
+                controller: ArchivesController
             });
     /*
 
@@ -31,5 +34,5 @@ var APP = angular.module('pBlogApp', ['ngAnimate', 'ngRoute', 'ngSanitize', 'pBl
             controller: DiaryController
         });
     */
-        $routeProvider.otherwise({redirectTo: '/cars'});
+        $routeProvider.otherwise({redirectTo: '/index'});
     }]);

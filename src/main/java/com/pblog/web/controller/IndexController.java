@@ -22,7 +22,6 @@ public class IndexController {
     @Resource(name = "articleInfoService")
     private ArticleInfoService articleInfoService;
 
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getRootPage(HttpServletRequest request, Model model) {
         Boolean mobile = (Boolean) request.getAttribute("mobile");

@@ -6,29 +6,19 @@
     <meta charset="UTF-8">
     <title>Home | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link rel="stylesheet" href="${cssDomain}/index.css" />
+    <link rel="stylesheet" href="${staticDomain}/resources/assets/css/index.css" />
     <link rel="stylesheet" href="${cssPlugin}/font-awesome.min.css" />
-    <script src="${jsPlugin}/jquery.min.js"></script>
-    <script src="${jsPlugin}/marked.js"></script>
+    <script src="${staticDomain}/resources/assets/js/lib.min.js"></script>
 </head>
 <body ng-app="pBlogApp">
 
 <div id="wrapper">
-    <%@ include file="include/index_header.jsp" %>
-
     <div class="content" ng-view></div>
+
+    <%@ include file="include/index_header.jsp" %>
 </div>
 
-<script src="${jsPlugin}/angular.min.js"></script>
-<script src="${jsPlugin}/angular-animate.min.js"></script>
-<script src="${jsPlugin}/angular-sanitize.min.js"></script>
-<script src="${jsPlugin}/angular-route.min.js"></script>
-<script src="${jsDomain}/app.js"></script>
-<script src="${jsDomain}/services.js"></script>
-<script src="${jsDomain}/controllers/IndexController.js"></script>
-<script src="${jsDomain}/filters.js"></script>
-<script src="${jsDomain}/directives.js"></script>
-
-
+<script src="${staticDomain}/resources/assets/js/angular-plugins.min.js"></script>
+<script src="${staticDomain}/resources/assets/js/client-js.min.js"></script>
 </body>
 </html>

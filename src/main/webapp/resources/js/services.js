@@ -1,5 +1,3 @@
-'use strict';
-
 /* Services */
 
 var AppServices = angular.module('pBlogApp.services', []);

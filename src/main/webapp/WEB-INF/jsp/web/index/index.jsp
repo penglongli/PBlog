@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <div class="scroll-area">
-    <div class="article-list">
+    <div class="index-article-list">
         <div class="article-item" ng-repeat="article in articleList">
             <div class="article-header">
                 <a href="${staticDomain}/category/{{ article.categorySlug }}" class="article-category">[{{ article.categoryName }}]</a>
@@ -39,3 +39,6 @@
     </div>
     <div class="content-body"></div>
 </div>
+
+<script type="text/javascript">
+</script>

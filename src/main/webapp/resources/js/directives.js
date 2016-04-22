@@ -1,5 +1,3 @@
-'use strict';
-
 /* Directives */
 
 var AppDirectives = angular.module('pBlogApp.directives', []);

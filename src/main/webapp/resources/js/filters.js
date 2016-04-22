@@ -1,5 +1,3 @@
-'use strict';
-
 /* Filters */
 
 var AppFilters = angular.module('pBlogApp.filters', []);

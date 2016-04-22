@@ -14,7 +14,7 @@ function loadFontSize() {
     var actualWidth = $(window).width();
 
     $("html").css("font-size", (actualWidth * 1.0) / templateWidth * 10.5 + "px");
-};
+}
 
 
 function slide() {
@@ -36,14 +36,14 @@ function slide() {
         $Content.animate({'left': '76%'}, 500);
         status = 1;
     }
-};
+}
 
 function sleep(n){
     var start = new Date().getTime();
     while (true) if (new Date().getTime() - start > n){
         break;
     }
-};
+}
 
 $Wrapper.on({
     touchstart: function (e) {
@@ -84,4 +84,4 @@ function timeLineInitial(){
         $($rightItem[i]).fadeIn("slow");
         $($leftItem[i]).fadeIn("slow");
     }
-};
+}

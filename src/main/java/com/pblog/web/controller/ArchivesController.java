@@ -1,15 +1,14 @@
 package com.pblog.web.controller;
 
-import com.pblog.core.utils.DateFormatUtils;
-import com.pblog.core.utils.GenerateUtils;
 import com.pblog.service.archives.ArchivesService;
 import com.pblog.service.archives.ArchivesVO;
-import com.pblog.service.article.ArticleInfoVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -19,11 +18,32 @@ import java.util.List;
 @Controller
 public class ArchivesController {
 
+    private final static Logger logger = LoggerFactory.getLogger(ArchivesController.class);
+
     @Resource(name = "archivesService")
     private ArchivesService archivesService;
 
+    @RequestMapping(value = "/archives/layout", method = RequestMethod.GET)
+    public String getArchivesPage(HttpServletRequest request, Model model){
 
-    @RequestMapping(value = "/archives")
+        return "web/archives/archives";
+    }
+
+    @RequestMapping(value ="/archivesList", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
+    @ResponseBody
+    public List<ArchivesVO> list(HttpServletRequest request, Model model){
+        List<ArchivesVO> archivesVOList = null;
+
+        try {
+            archivesVOList = archivesService.findArchivesList();
+        } catch (ParseException e) {
+            logger.info(e.getMessage());
+        }
+
+        return archivesVOList;
+    }
+
+    /*@RequestMapping(value = "/archives")
     public String index(HttpServletRequest request, Model model){
         List<ArchivesVO> archivesVOList = null;
         Integer articleNum = 0;
@@ -73,5 +93,5 @@ public class ArchivesController {
         }else{
             return "404";
         }
-    }
+    }*/
 }
