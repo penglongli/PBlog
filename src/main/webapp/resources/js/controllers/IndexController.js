@@ -7,7 +7,7 @@ var IndexController = function ($scope, $interval, $http) {
                 $scope.detail = data.detail;
                 $scope.articleList = data.pagination.items;
                 $scope.f_article = data.firstArticle;
-                initialize($scope.f_article.content);
+                initializeIndex($scope.f_article.content);
             }).
             error(function (err) {
                 console.log(err);
@@ -20,11 +20,17 @@ var IndexController = function ($scope, $interval, $http) {
  * 初始化
  * @param content_md 文章内容MD
  */
-function initialize(content_md){
+function initializeIndex(content_md){
     //loadCss();
     var $contentBody = $(".content-body");
 
-    $(".menu_bar ul li:eq(0)").addClass("active");
+    $(".menu_bar ul li").each(function (index) {
+        if(index == 0) {
+            $(this).addClass("active");
+        }else {
+            $(this).removeClass("active");
+        }
+    })
     $contentBody.html(marked(content_md));
     loadSlider();
 }
@@ -48,7 +54,6 @@ function loadSlider(){
  * 加载css文件
  */
 function loadCss(){
-    console.log(1);
     $("<link>").
         attr({rel: "stylesheet",
             type: "text/css",

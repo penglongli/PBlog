@@ -12,10 +12,10 @@
     </div>
     <div class="menu_bar">
         <ul>
-            <a href="${staticDomain}/">
+            <a href="${staticDomain}/#/index">
                 <li <c:if test="${active_line == 1}">class="active"</c:if>><i class="icon-home"></i>首页</li>
             </a>
-            <a href="${staticDomain}/archives">
+            <a href="${staticDomain}/#/archives">
                 <li <c:if test="${active_line == 2}">class="active"</c:if>><i class="icon-calendar"></i>归档</li>
             </a>
             <a href="${staticDomain}/category">

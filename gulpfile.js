@@ -12,12 +12,12 @@ var src = {
     js: resourceDir + '/js/*.js',
     jsController: resourceDir + '/js/controllers/*.js',
     less: resourceDir + '/less/**/*.less'
-}
+};
 
 var dist = {
     js: resourceDir + '/assets/js/',
     css: resourceDir + '/assets/css/'
-}
+};
 
 /**
  * 打包AngularJs工具
@@ -32,7 +32,7 @@ gulp.task('combinePluginJs', function () {
     .pipe(jshint.reporter('default'))
     .pipe(concat('angular-plugins.min.js'))
     .pipe(gulp.dest(dist.js));
-})
+});
 
 /**
  * 打包个人工具组件
@@ -46,7 +46,7 @@ gulp.task('combineOwnJs', function () {
     .pipe(jshint.reporter('default'))
     .pipe(concat('lib.min.js'))
     .pipe(gulp.dest(dist.js));
-})
+});
 
 /**
  * 打包Angular编写的客户端JS
@@ -56,15 +56,15 @@ gulp.task('combineJs', function () {
         .pipe(uglify({mangle: false}))
         .pipe(concat('client-js.min.js'))
         .pipe(gulp.dest(dist.js));
-})
+});
 
 gulp.task('less', function () {
     gulp.src(src.less)
         .pipe(less())
         .pipe(gulp.dest(dist.css));
-})
+});
 
 
 gulp.task('default', function () {
 
-})
+});

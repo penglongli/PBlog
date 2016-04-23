@@ -1,6 +1,8 @@
 <%@ include file="../include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<link rel="stylesheet" href="${staticDomain}/resources/assets/css/index.css" />
+
 <div class="scroll-area">
     <div class="index-article-list">
         <div class="article-item" ng-repeat="article in articleList">
@@ -39,6 +41,3 @@
     </div>
     <div class="content-body"></div>
 </div>
-
-<script type="text/javascript">
-</script>

@@ -1,5 +1,6 @@
 package com.pblog.web.controller;
 
+import com.google.common.collect.Maps;
 import com.pblog.service.archives.ArchivesService;
 import com.pblog.service.archives.ArchivesVO;
 import org.slf4j.Logger;
@@ -14,6 +15,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class ArchivesController {
@@ -31,7 +33,7 @@ public class ArchivesController {
 
     @RequestMapping(value ="/archivesList", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
     @ResponseBody
-    public List<ArchivesVO> list(HttpServletRequest request, Model model){
+    public Map<String, Object> list(HttpServletRequest request, Model model){
         List<ArchivesVO> archivesVOList = null;
 
         try {
@@ -40,7 +42,9 @@ public class ArchivesController {
             logger.info(e.getMessage());
         }
 
-        return archivesVOList;
+        Map<String, Object> map = Maps.newHashMap();
+        map.put("archivesVOList", archivesVOList);
+        return map;
     }
 
     /*@RequestMapping(value = "/archives")
