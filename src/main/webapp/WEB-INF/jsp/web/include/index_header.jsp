@@ -18,7 +18,7 @@
             <a href="${staticDomain}/#/archives">
                 <li <c:if test="${active_line == 2}">class="active"</c:if>><i class="icon-calendar"></i>归档</li>
             </a>
-            <a href="${staticDomain}/category">
+            <a href="${staticDomain}/#/category">
                 <li <c:if test="${active_line == 3}">class="active"</c:if>><i class="icon-reorder"></i>分类</li>
             </a>
             <a href="">

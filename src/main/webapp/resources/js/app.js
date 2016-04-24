@@ -12,6 +12,11 @@ var APP = angular.module('pBlogApp', ['ngAnimate', 'ngRoute', 'ngSanitize', 'pBl
                 templateUrl: '/archives/layout',
                 controller: ArchivesController
             });
+
+            $routeProvider.when('/category', {
+                templateUrl: '/category/layout',
+                controller: CategoryController
+            });
     /*
 
         $routeProvider.when('/archives', {

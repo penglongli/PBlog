@@ -19,7 +19,7 @@ var ArchivesController = function ($scope, $interval, $http) {
 /**
  * 初始化
  */
-function initializeArchives(){
+function initializeArchives() {
     $(".menu_bar ul li").each(function (index) {
         if(index == 1) {
             $(this).addClass("active");

@@ -26,7 +26,7 @@ public class ArchivesController {
     private ArchivesService archivesService;
 
     @RequestMapping(value = "/archives/layout", method = RequestMethod.GET)
-    public String getArchivesPage(HttpServletRequest request, Model model){
+    public String getArchivesPage(HttpServletRequest request, Model model) {
 
         return "web/archives/archives";
     }
