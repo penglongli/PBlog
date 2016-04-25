@@ -22,6 +22,11 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: ArchivesTimeStampController
         });
 
+        $routeProvider.when('/category/:categorySlug', {
+            templateUrl: '/category/layout',
+            controller: CategorySlugController
+        });
+
         $routeProvider.otherwise({redirectTo: '/index'});
     }).
     config(function(cfpLoadingBarProvider) {

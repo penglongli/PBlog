@@ -43,6 +43,19 @@ public class CategoryController {
         return map;
     }
 
+    @RequestMapping(value ="/category/{slug}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
+    @ResponseBody
+    public Map<String, Object> listBySlug(@PathVariable Long slug, HttpServletRequest request, Model model) {
+        Map<String, Object> map = Maps.newHashMap();
+
+        List<CategoryInfoVO> categoryInfoVOList = categoryInfoService.findCategoryInfoVO();
+        List<ArticleInfoVO> articleInfoVOList = categoryInfoService.findArticleListByCategory(slug);
+        map.put("categoryInfoVOList", categoryInfoVOList);
+        map.put("articleInfoVOList", articleInfoVOList);
+
+        return map;
+    }
+
     /*@RequestMapping(value = "/category")
     public String index(HttpServletRequest request, Model model){
         List<CategoryInfoVO> categoryInfoVOList = categoryInfoService.findCategoryInfoVO();

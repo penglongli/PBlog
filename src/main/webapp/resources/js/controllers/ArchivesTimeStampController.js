@@ -4,17 +4,17 @@ var ArchivesTimeStampController = function ($scope, $interval, $http, $timeout, 
 
     $scope.fetchArchivesTimeStampList = function () {
         $http.get('/archives/' + timeStamp + '.json').
-        success(function (data) {
-            initializeArchivesTimeStamp();
-            initializeLoad($scope, $timeout);
+            success(function (data) {
+                initializeArchivesTimeStamp();
+                initializeLoad($scope, $timeout);
 
-            $scope.archivesList = data.archivesVOList;
-            $scope.articleList = data.articleInfoVOList;
-            $scope.timeStamp = timeStamp;
-        }).
-        error(function (err) {
-            console.log(err);
-        });
+                $scope.archivesList = data.archivesVOList;
+                $scope.articleList = data.articleInfoVOList;
+                $scope.timeStamp = timeStamp;
+            }).
+            error(function (err) {
+                console.log(err);
+            });
     };
 
     $scope.fetchArchivesTimeStampList();

@@ -8,7 +8,7 @@
     <div class="archive-list">
         <ul>
             <li ng-repeat="categoryInfoVO in categoryList">
-                <a href="${staticDomain}/category/{{ categoryInfoVO.slug }}">{{ categoryInfoVO.categoryTitle }}</a>
+                <a href="${staticDomain}/#/category/{{ categoryInfoVO.slug }}">{{ categoryInfoVO.categoryTitle }}</a>
                 <span>({{ categoryInfoVO.articleInfoVOList.length }})</span>
             </li>
         </ul>
