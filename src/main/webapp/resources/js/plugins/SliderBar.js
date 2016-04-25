@@ -15,9 +15,6 @@
         $content.css({"top": 0});
         $bar.css({"margin-top": 0});
 
-            console.log($container.height());
-        console.log($content.height());
-
         if($container.height() < $content.height()){
             this.bindScrollEvent();
             this.bindDragEvent();
@@ -42,7 +39,6 @@
         var lastY = 0, currentY, isDraging = false;
 
         $bar.mousedown(function (event){
-            console.log("ceshi")
             lastY = event.clientY;
             isDraging = true;
         })
@@ -60,7 +56,6 @@
             }
         })
         $(document).mouseup(function (){
-            console.log()
             isDraging = false;
         })
 

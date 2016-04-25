@@ -1,5 +1,5 @@
 
-var CategoryController = function ($scope, $interval, $http) {
+var CategoryController = function ($scope, $interval, $http, $timeout) {
 
     $scope.fetchCategoryList = function () {
         $http.get('/categoryList.json').
@@ -7,7 +7,7 @@ var CategoryController = function ($scope, $interval, $http) {
                 initializeCategory();
                 $scope.categoryList = data.categoryInfoVOList;
                 $scope.articleList = data.articleInfoVOList;
-                console.log("category");
+                initializeLoad($scope, $timeout);
             }).
             error(function (err) {
                 console.log(err);

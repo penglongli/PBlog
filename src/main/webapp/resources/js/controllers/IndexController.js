@@ -1,5 +1,5 @@
 
-var IndexController = function ($scope, $interval, $http) {
+var IndexController = function ($scope, $interval, $http, $timeout) {
 
     $scope.fetchArticlesList = function () {
         $http.get('/topTenArticle.json').
@@ -7,7 +7,10 @@ var IndexController = function ($scope, $interval, $http) {
                 $scope.detail = data.detail;
                 $scope.articleList = data.pagination.items;
                 $scope.f_article = data.firstArticle;
+
                 initializeIndex($scope.f_article.content);
+
+                initializeLoad($scope, $timeout);
             }).
             error(function (err) {
                 console.log(err);
