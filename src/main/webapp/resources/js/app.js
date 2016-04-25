@@ -1,6 +1,6 @@
 var pBlogApp = {};
 
-var APP = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate', 'ngRoute', 'ngSanitize', 'pBlogApp.filters', 'pBlogApp.services', 'pBlogApp.directives']).
+var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate', 'ngRoute', 'ngSanitize', 'pBlogApp.filters', 'pBlogApp.services', 'pBlogApp.directives']).
     config(function ($routeProvider) {
         $routeProvider.when('/index', {
             templateUrl: '/index/layout',
@@ -17,6 +17,11 @@ var APP = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: CategoryController
         });
 
+        $routeProvider.when('/archives/:timeStamp', {
+            templateUrl: '/archives/layout',
+            controller: ArchivesTimeStampController
+        });
+
         $routeProvider.otherwise({redirectTo: '/index'});
     }).
     config(function(cfpLoadingBarProvider) {
@@ -30,7 +35,7 @@ var APP = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
         $scope.complete = function () {
             cfpLoadingBar.complete();
         };
-    });
+});
 
 /**
  * 加载进度条

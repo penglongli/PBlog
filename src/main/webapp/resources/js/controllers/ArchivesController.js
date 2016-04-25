@@ -28,5 +28,5 @@ function initializeArchives() {
         }else {
             $(this).removeClass("active");
         }
-    })
+    });
 }

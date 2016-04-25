@@ -1,12 +1,16 @@
 package com.pblog.web.controller;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.pblog.core.utils.GenerateUtils;
 import com.pblog.service.archives.ArchivesService;
 import com.pblog.service.archives.ArchivesVO;
+import com.pblog.service.article.ArticleInfoVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -46,6 +50,27 @@ public class ArchivesController {
         map.put("archivesVOList", archivesVOList);
         return map;
     }
+
+    @RequestMapping(value ="/archives/{timeStamp}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
+    @ResponseBody
+    public Map<String, Object> listByTimeStamp(@PathVariable String timeStamp, HttpServletRequest request, Model model) throws ParseException {
+        Map<String, Object> map = Maps.newHashMap();
+
+        boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
+        List<ArchivesVO> archivesVOList = Lists.newArrayList();
+        List<ArticleInfoVO> articleInfoVOList = Lists.newArrayList();
+
+        if(isRightPattern){
+            articleInfoVOList = archivesService.findArticleByMonth(timeStamp);
+            archivesVOList = archivesService.findArchivesList();
+        }
+
+        map.put("archivesVOList", archivesVOList);
+        map.put("articleInfoVOList", articleInfoVOList);
+        return map;
+    }
+
+
 
     /*@RequestMapping(value = "/archives")
     public String index(HttpServletRequest request, Model model){

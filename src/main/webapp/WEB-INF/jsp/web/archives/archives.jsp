@@ -8,7 +8,7 @@
     <div class="archive-list">
         <ul>
             <li ng-repeat="archivesVO in archivesList">
-                <a href="${staticDomain}/archives/{{ archivesVO.timeStamp | date:'yyyy-MM' }}">
+                <a href="${staticDomain}/#/archives/{{ archivesVO.timeStamp | date:'yyyy-MM' }}" time="{{ archivesVO.timeStamp | date:'yyyy-MM' }}">
                    {{ archivesVO.timeStamp | date:'yyyy年MM月' }}
                 </a>
                 <span>({{ archivesVO.articleInfoVOList.length + 1 }})</span>
