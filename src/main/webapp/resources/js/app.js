@@ -27,9 +27,15 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: CategorySlugController
         });
 
+        $routeProvider.when('/article/:articleSlug', {
+            templateUrl: '/article/slug/layout',
+            controller: ArticleController
+        });
+
         $routeProvider.otherwise({redirectTo: '/index'});
     }).
     config(function(cfpLoadingBarProvider) {
+        //配置angular-loading-bar
         cfpLoadingBarProvider.includeSpinner = true;
     }).
     controller('loadingBar', function ($scope, $http, $timeout, cfpLoadingBar) {
@@ -53,5 +59,16 @@ function initializeLoad($scope, $timeout) {
     $timeout(function() {
         $scope.complete();
         $scope.fakeIntro = false;
+
+        initializeHighLight();
     }, 750);
+}
+
+/**
+ * 加载代码高亮插件
+ */
+function initializeHighLight() {
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
 }

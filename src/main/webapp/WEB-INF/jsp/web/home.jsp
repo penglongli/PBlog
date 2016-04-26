@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <title>Home | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <%--<link rel="stylesheet" href="${staticDomain}/resources/assets/css/index.css" />--%>
     <link rel="stylesheet" href="${staticDomain}/resources/assets/css/include/index_global.css" />
     <link rel="stylesheet" href="${staticDomain}/resources/assets/css/loading-bar.css" />
-    <link rel="stylesheet" href="${cssPlugin}/font-awesome.min.css" />
+    <link rel="stylesheet" href="${cssPlugins}/font-awesome.min.css" />
     <script src="${staticDomain}/resources/assets/js/lib.min.js"></script>
     <script src="${staticDomain}/resources/assets/js/angular-plugins.min.js"></script>
     <script src="${staticDomain}/resources/assets/js/loading-bar.js"></script>

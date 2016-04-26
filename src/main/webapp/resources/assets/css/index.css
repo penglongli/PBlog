@@ -8,39 +8,19 @@ body {
 .clear-fix {
   clear: both;
 }
-/** 跳转进度条样式**/
-#progress {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 2px;
-  background: #b91f1f;
-  transition: opacity 500ms linear;
+/** 进度条样式 **/
+#loading-bar .bar {
+  background: #2c3e50;
 }
-#progress.done {
-  opacity: 0;
+#loading-bar-spinner .spinner-icon {
+  border-top-color: #2c3e50;
+  border-left-color: #2c3e50;
 }
-#progress span {
-  position: absolute;
-  height: 2px;
-  -webkit-box-shadow: #b91f1f 1px 0 6px 1px;
-  -webkit-border-radius: 100%;
-  opacity: 1;
-  width: 150px;
-  right: -10px;
-  -webkit-animation: pulse 2s ease-out 0s infinite;
-}
-@-webkit-keyframes pulse {
-  30% {
-    opacity: 0.6;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.6;
-  }
+#loading-bar .peg {
+  -moz-box-shadow: #2c3e50 1px 0 6px 1px;
+  -ms-box-shadow: #2c3e50 1px 0 6px 1px;
+  -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
+  box-shadow: #2c3e50 1px 0 6px 1px;
 }
 /** 进度条样式结束 **/
 #fix-left {
@@ -136,69 +116,69 @@ body {
   bottom: 0;
   left: 11%;
 }
-.content .scroll-area {
+.scroll-area {
   position: fixed;
   width: 22%;
   top: 4rem;
   bottom: 0;
   border-right: 1px solid #EEEEEE;
 }
-.content .scroll-area .article-list {
+.scroll-area .index-article-list {
   position: relative;
   height: auto;
 }
-.content .scroll-area .article-list .article-item {
+.scroll-area .index-article-list .article-item {
   padding: 1.3rem 1rem 1rem 1rem;
   border-bottom: 1px solid #EEEEEE;
 }
-.content .scroll-area .article-list .article-item .article-header {
+.scroll-area .index-article-list .article-item .article-header {
   margin-bottom: 1.3rem;
   font-size: 1.45rem;
 }
-.content .scroll-area .article-list .article-item .article-header .article-category {
+.scroll-area .index-article-list .article-item .article-header .article-category {
   color: #8e2013;
   text-decoration: none;
   margin-right: 0.1rem;
 }
-.content .scroll-area .article-list .article-item .article-header .article-title {
+.scroll-area .index-article-list .article-item .article-header .article-title {
   color: #551A8B;
   text-decoration: none;
 }
-.content .scroll-area .article-list .article-item .article-description {
+.scroll-area .index-article-list .article-item .article-description {
   font-size: 12px;
   color: #777777;
   line-height: 1.7;
   margin-bottom: 1.8rem;
   text-indent: 2em;
 }
-.content .scroll-area .article-list .article-item .article-metadata {
+.scroll-area .index-article-list .article-item .article-metadata {
   font-size: 1.1rem;
   color: #BFBFBF;
 }
-.content .scroll-area .article-list .article-item .article-metadata .create-time {
+.scroll-area .index-article-list .article-item .article-metadata .create-time {
   display: inline-block;
   text-align: left;
   float: left;
 }
-.content .scroll-area .article-list .article-item .article-metadata .create-time i {
+.scroll-area .index-article-list .article-item .article-metadata .create-time i {
   margin-right: 0.5rem;
 }
-.content .scroll-area .article-list .article-item .article-metadata .meta-tags {
+.scroll-area .index-article-list .article-item .article-metadata .meta-tags {
   float: right;
 }
-.content .scroll-area .article-list .article-item .article-metadata .meta-tags span {
+.scroll-area .index-article-list .article-item .article-metadata .meta-tags span {
   display: inline-block;
   float: left;
   margin-right: 0.8rem;
 }
-.content .scroll-area .scroll-vertical {
+.scroll-area .scroll-vertical {
   top: 0;
   bottom: 0;
   position: absolute;
   width: 0.3rem;
   right: 0;
 }
-.content .scroll-area .scroll-vertical .scroll-bar {
+.scroll-area .scroll-vertical .scroll-bar {
   width: 0.26rem;
   height: 18rem;
   border: 1px solid #ffffff;
@@ -206,10 +186,10 @@ body {
   background-color: #000;
   background-clip: padding-box;
 }
-.content .scroll-area-detail {
+.scroll-area-detail {
   display: none;
 }
-.content .article-content {
+.article-content {
   position: absolute;
   left: 25%;
   width: 72%;
@@ -219,51 +199,31 @@ body {
   font-weight: 300;
   padding: 0 1.5%;
 }
-.content .article-content .content-head {
+.article-content .content-head {
   border-bottom: 1px solid #EDEDED;
 }
-.content .article-content .content-head .content-head-detail {
+.article-content .content-head .content-head-detail {
   margin-bottom: 0.6rem;
 }
-.content .article-content .content-head .content-head-detail span {
+.article-content .content-head .content-head-detail span {
   font-size: 1rem;
   color: #BDBDBD;
   margin-left: 1.35rem;
 }
-.content .article-content .content-head .content-head-detail span i {
+.article-content .content-head .content-head-detail span i {
   margin-right: 0.15rem;
 }
-.content .article-content .content-head .content-head-detail .c_time {
+.article-content .content-head .content-head-detail .c_time {
   margin: 0;
 }
-.content .article-content .content-head .content-head-detail .c_name a {
+.article-content .content-head .content-head-detail .c_name a {
   color: red;
   text-decoration: none;
 }
-.content .article-content .content-head .content-head-detail .c_like a {
+.article-content .content-head .content-head-detail .c_like a {
   color: red;
   text-decoration: none;
 }
-.content .article-content .content-head .content-head-detail a:hover {
+.article-content .content-head .content-head-detail a:hover {
   text-decoration: underline;
-}
-.content .article-content h1,
-.content .article-content h2,
-.content .article-content h3 {
-  font-weight: 400;
-}
-.content .article-content h1 {
-  font-size: 2.2rem;
-}
-.content .article-content h2 {
-  font-size: 2.05rem;
-}
-.content .article-content h3 {
-  font-size: 1.9rem;
-}
-.content .article-content p {
-  text-indent: 2em;
-}
-.content .article-content-detail {
-  left: 14%;
 }

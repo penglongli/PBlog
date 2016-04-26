@@ -1,0 +1,22 @@
+.article-content {
+  font-family: Georgia, Times, "Times New Roman", Helvetica, "Microsoft YaHei", Arial, sans-serif !important;
+  font-size: 1.5rem;
+}
+.article-content em {
+  font-size: 1.3rem;
+  font-style: normal!important;
+  background: #F6F6F6;
+  padding: 0.2em 0.8em;
+  color: #C7254E;
+  font-family: Consolas, sans-serif !important;
+}
+.article-content code {
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  text-shadow: 1px 1px #CCC;
+  font-family: GothicCustom, 'Arial Narrow', sans-serif;
+}

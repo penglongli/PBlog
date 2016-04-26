@@ -8,39 +8,19 @@ body {
 .clear-fix {
   clear: both;
 }
-/** 跳转进度条样式**/
-#progress {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 2px;
-  background: #b91f1f;
-  transition: opacity 500ms linear;
+/** 进度条样式 **/
+#loading-bar .bar {
+  background: #2c3e50;
 }
-#progress.done {
-  opacity: 0;
+#loading-bar-spinner .spinner-icon {
+  border-top-color: #2c3e50;
+  border-left-color: #2c3e50;
 }
-#progress span {
-  position: absolute;
-  height: 2px;
-  -webkit-box-shadow: #b91f1f 1px 0 6px 1px;
-  -webkit-border-radius: 100%;
-  opacity: 1;
-  width: 150px;
-  right: -10px;
-  -webkit-animation: pulse 2s ease-out 0s infinite;
-}
-@-webkit-keyframes pulse {
-  30% {
-    opacity: 0.6;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.6;
-  }
+#loading-bar .peg {
+  -moz-box-shadow: #2c3e50 1px 0 6px 1px;
+  -ms-box-shadow: #2c3e50 1px 0 6px 1px;
+  -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
+  box-shadow: #2c3e50 1px 0 6px 1px;
 }
 /** 进度条样式结束 **/
 #fix-left {
@@ -127,6 +107,14 @@ body {
   margin: 0px 0px 2px 30px;
   background-color: transparent;
   outline: none;
+}
+.content {
+  position: absolute;
+  z-index: 100;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  left: 11%;
 }
 body {
   background: #E2E2E2!important;

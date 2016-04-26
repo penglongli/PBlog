@@ -58,6 +58,9 @@ header .navbar-left ul .active {
   background: #080808;
   color: #FFFFFF;
 }
+body {
+  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
 pre {
   background: #F8F8F8;
   padding: 10px;
@@ -100,10 +103,12 @@ pre {
   content: "/\00a0";
 }
 .article {
-  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
   padding-bottom: 140px;
-  width: 83%;
+  width: 75%;
   position: absolute;
+}
+.article textarea {
+  font-family: 'Microsoft Yahei', sans-serif;
 }
 .article .article-title {
   width: 830px;
@@ -135,7 +140,6 @@ pre {
   line-height: 20px;
   padding: 10px;
   margin: 0px;
-  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
 }
 .article .article-body {
   width: 830px;
@@ -257,4 +261,50 @@ pre {
 .article .publish .publish-article i {
   margin-left: 10px;
   margin-right: 10px;
+}
+.operate {
+  position: absolute;
+  width: 20%;
+  left: 79%;
+  font-size: 13px;
+}
+.operate .title {
+  margin-bottom: 9px;
+}
+.operate .publish button {
+  background: #FFF;
+  border: 1px solid #E5E5E5;
+  padding: 8px 18px;
+  border-radius: 10%;
+}
+.operate .publish button i {
+  margin-right: 6px;
+}
+.operate .publish button:hover {
+  background: blue;
+  color: #FFF;
+  cursor: pointer;
+}
+.operate .article-category {
+  margin-top: 20px;
+}
+.operate .article-category span {
+  display: block;
+  margin-top: 5px;
+}
+.operate .article-category span input {
+  margin: 0 4px 0 0;
+  vertical-align: text-bottom;
+  height: 14px;
+}
+.operate .tag {
+  margin-top: 20px;
+}
+.operate .tag input {
+  border: 1px solid #E0E0E0;
+  border-radius: 6%;
+  height: 16px;
+  font-size: 14px;
+  padding: 6px;
+  font-family: Microsoft Yahei;
 }

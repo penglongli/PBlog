@@ -58,6 +58,9 @@ header .navbar-left ul .active {
   background: #080808;
   color: #FFFFFF;
 }
+body {
+  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
 pre {
   background: #F8F8F8;
   padding: 10px;
@@ -100,7 +103,7 @@ pre {
   content: "/\00a0";
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Microsoft Yahei", sans-serif;
   margin: 0;
 }
 body .content-find {
@@ -164,12 +167,12 @@ body .content-article-list table tbody tr td span {
   font-size: 12px;
 }
 body .content-article-list table tbody tr td a {
-  padding: 10px 13px;
+  font-size: 12px;
+  padding: 6px 10px;
   background: #57D249;
   margin-left: 3px;
   color: #FFFFFF;
   border: 1px solid #fff;
-  font-family: Consolas;
 }
 body .content-article-list table tbody tr td a:link {
   text-decoration: none;

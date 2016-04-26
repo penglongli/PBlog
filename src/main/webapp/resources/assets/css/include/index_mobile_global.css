@@ -1,0 +1,114 @@
+html {
+  font-size: 10.4px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  font-size: 1.4rem;
+}
+.body-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.clear-fix {
+  clear: both;
+}
+#Wrapper {
+  width: 100%;
+  margin-left: 0;
+  overflow-x: hidden;
+}
+#Wrapper #Top {
+  width: 100%;
+  position: fixed;
+  padding: 1em 0;
+  text-align: center;
+  font-family: "Open Sans", SimHei, "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+  color: #88909a;
+  border-bottom: 1px solid #E3F2FD;
+}
+#Wrapper #Top .top-list {
+  float: left;
+  margin-left: 1em;
+}
+#Wrapper #Top .top-github {
+  float: right;
+  margin-right: 1em;
+}
+#Wrapper #Top i {
+  font-size: 2rem;
+}
+#Wrapper #Top a {
+  color: #88909a;
+  text-decoration: none;
+}
+#Wrapper #Content {
+  margin-top: 4em;
+  padding: 0 1em 0 1em;
+}
+#Wrapper .content-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#SlideBar {
+  position: fixed;
+  width: 76%;
+  bottom: 0;
+  top: 0;
+  right: 100%;
+  overflow: hidden;
+  color: #ebebeb;
+  font-family: "Consolas", "Microsoft Yahei", sans-serif;
+  background: #202020;
+}
+#SlideBar .author_info {
+  margin-top: 1.5em;
+  text-align: center;
+}
+#SlideBar .author_info img {
+  width: 5.5em;
+}
+#SlideBar .author_info p {
+  line-height: .5;
+}
+#SlideBar .menu_bar ul {
+  font-size: 1.65rem;
+  margin-top: 1.5em;
+  padding: 0;
+  margin-left: 1.5em;
+  list-style: none;
+}
+#SlideBar .menu_bar ul li {
+  margin-top: .8em;
+}
+#SlideBar .menu_bar ul li a {
+  text-decoration: none;
+  color: #999;
+}
+#SlideBar .menu_bar ul li i {
+  margin-right: .8em;
+}
+#SlideBar .menu_bar ul li .csdn {
+  background: url('/resources/image/csdn.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li .zhihu {
+  background: url('/resources/image/zhihu.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li span {
+  width: 1em;
+  height: 1.2em;
+  margin-right: .8em;
+  display: inline-block;
+  vertical-align: middle;
+}

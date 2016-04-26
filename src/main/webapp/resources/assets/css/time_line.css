@@ -1,0 +1,212 @@
+html {
+  font-size: 10.4px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  font-size: 1.4rem;
+}
+.body-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.clear-fix {
+  clear: both;
+}
+#Wrapper {
+  width: 100%;
+  margin-left: 0;
+  overflow-x: hidden;
+}
+#Wrapper #Top {
+  width: 100%;
+  position: fixed;
+  padding: 1em 0;
+  text-align: center;
+  font-family: "Open Sans", SimHei, "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+  color: #88909a;
+  border-bottom: 1px solid #E3F2FD;
+}
+#Wrapper #Top .top-list {
+  float: left;
+  margin-left: 1em;
+}
+#Wrapper #Top .top-github {
+  float: right;
+  margin-right: 1em;
+}
+#Wrapper #Top i {
+  font-size: 2rem;
+}
+#Wrapper #Top a {
+  color: #88909a;
+  text-decoration: none;
+}
+#Wrapper #Content {
+  margin-top: 4em;
+  padding: 0 1em 0 1em;
+}
+#Wrapper .content-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#SlideBar {
+  position: fixed;
+  width: 76%;
+  bottom: 0;
+  top: 0;
+  right: 100%;
+  overflow: hidden;
+  color: #ebebeb;
+  font-family: "Consolas", "Microsoft Yahei", sans-serif;
+  background: #202020;
+}
+#SlideBar .author_info {
+  margin-top: 1.5em;
+  text-align: center;
+}
+#SlideBar .author_info img {
+  width: 5.5em;
+}
+#SlideBar .author_info p {
+  line-height: .5;
+}
+#SlideBar .menu_bar ul {
+  font-size: 1.65rem;
+  margin-top: 1.5em;
+  padding: 0;
+  margin-left: 1.5em;
+  list-style: none;
+}
+#SlideBar .menu_bar ul li {
+  margin-top: .8em;
+}
+#SlideBar .menu_bar ul li a {
+  text-decoration: none;
+  color: #999;
+}
+#SlideBar .menu_bar ul li i {
+  margin-right: .8em;
+}
+#SlideBar .menu_bar ul li .csdn {
+  background: url('/resources/image/csdn.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li .zhihu {
+  background: url('/resources/image/zhihu.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li span {
+  width: 1em;
+  height: 1.2em;
+  margin-right: .8em;
+  display: inline-block;
+  vertical-align: middle;
+}
+body {
+  background: #F3F3F3!important;
+}
+#Content {
+  padding: 0!important;
+}
+.archive-header {
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
+  background: #FFF;
+  color: #535353;
+  text-align: center;
+  border-bottom: 1px solid #E6E6E6;
+}
+.archive-header i {
+  margin-right: 0.3em;
+}
+.archive-header span {
+  color: #F7443D;
+}
+.archive-title {
+  width: 100%;
+  font-size: 1.2rem;
+  background: #EFEEF3;
+  color: #ACABB0;
+  padding: 0.4em 0 0.4em 1em;
+  border-bottom: 1px solid #E4E3E6;
+}
+.archive-timeline {
+  font-size: 1.1rem;
+  width: 100%;
+  margin: 0;
+  background: #FFF;
+  padding-top: 1em;
+}
+.archive-timeline .timeline-left {
+  font-size: 1.1em;
+  width: 33%;
+  float: left;
+  margin-left: 1em;
+}
+.archive-timeline .timeline-left .left-item {
+  position: relative;
+  height: 10em;
+  border-right: 1px solid #E4E4E4;
+  display: none;
+}
+.archive-timeline .timeline-left .left-item span a {
+  text-decoration: none;
+  color: red;
+  padding-right: 0.3em;
+}
+.archive-timeline .timeline-left .left-item .time-point {
+  background: #FFF;
+  border: 2px solid #3AB07C;
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: .1em;
+  right: -0.6em;
+}
+.archive-timeline .timeline-right {
+  float: left;
+  width: 56%;
+  margin-left: 5%;
+  font-size: 1.15em;
+}
+.archive-timeline .timeline-right .right-item {
+  min-height: 8em;
+  margin-top: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ECECEC;
+  display: none;
+}
+.archive-timeline .timeline-right .right-item:first-child {
+  margin-top: 0;
+}
+.archive-timeline .timeline-right .right-item .article-item {
+  color: #555;
+  margin-top: 2em;
+}
+.archive-timeline .timeline-right .right-item .article-item span {
+  display: block;
+  font-weight: 600;
+}
+.archive-timeline .timeline-right .right-item .article-item a {
+  color: #555;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.3em;
+}
+.archive-timeline .timeline-right .right-item .article-item:first-child {
+  margin-top: 0;
+}

@@ -1,7 +1,10 @@
 <%@ include file="../include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<link rel="stylesheet" href="${staticDomain}/resources/assets/css/index.css" />
+<link rel="stylesheet" href="${cssDomain}/index.css" />
+<link rel="stylesheet" href="${cssDomain}/include/article_detail.css" />
+<link rel="stylesheet" href="${cssPlugins}/highlight.min.css" />
+<script type="text/javascript" src="${jsDomain}/highlight.min.js" ></script>
 
 <div class="scroll-area">
     <div class="index-article-list">

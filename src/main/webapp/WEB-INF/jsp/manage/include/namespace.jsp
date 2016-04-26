@@ -4,21 +4,8 @@
 
 <%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
 
-<c:set var="ENV" value="local" />
-
-<c:choose>
-    <c:when test="${ENV == 'local'}">
-        <c:set var="staticDomain" value="${pageContext.request.contextPath}"/>
-        <c:set var="styleDomain" value="${staticDomain}/resources/less"/>
-    </c:when>
-    <c:when test="${ENV == 'portal'}">
-
-    </c:when>
-</c:choose>
-
-<c:set var="jsDomain" value="${staticDomain}/resources/js"/>
-<c:set var="jsPlugin" value="${staticDomain}/resources/js/plugins" />
-<c:set var="imageDomain" value="${staticDomain}/resources/image"/>
-<c:set var="cssDomain" value="${staticDomain}/resources/css"/>
-<c:set var="cssPlugin" value="${staticDomain}/resources/css/plugins" />
-<c:set var="fontDomain" value="${staticDomain}/resources/font-awesome" />
+<c:set var="staticDomain" value="${pageContext.request.contextPath}" />
+<c:set var="jsDomain" value="${staticDomain}/resources/js" />
+<c:set var="jsPlugins" value="${jsDomain}/plugins" />
+<c:set var="cssDomain" value="${staticDomain}/resources/assets/css" />
+<c:set var="cssPlugins" value="${cssDomain}/plugins" />
