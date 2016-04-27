@@ -38,7 +38,7 @@ public class ArticleController {
         return "web/article/article";
     }
 
-    @RequestMapping(value ="/article/{slug}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
+    @RequestMapping(value ="/{slug}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
     @ResponseBody
     public Map<String, Object> articleBySlug(@PathVariable Long slug, HttpServletRequest request) {
         ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, request);

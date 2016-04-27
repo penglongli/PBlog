@@ -2,7 +2,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <link rel="stylesheet" href="${cssDomain}/index.css" />
-<link rel="stylesheet" href="${cssDomain}/include/article_detail.css" />
 <link rel="stylesheet" href="${cssPlugins}/highlight.min.css" />
 <script type="text/javascript" src="${jsDomain}/highlight.min.js" ></script>
 
@@ -10,8 +9,8 @@
     <div class="index-article-list">
         <div class="article-item" ng-repeat="article in articleList">
             <div class="article-header">
-                <a href="${staticDomain}/category/{{ article.categorySlug }}" class="article-category">[{{ article.categoryName }}]</a>
-                <a href="${staticDomain}/article/{{ article.articleSlug }}" class="article-title">{{ article.title }}</a>
+                <a href="${staticDomain}/#/category/{{ article.categorySlug }}" class="article-category">[{{ article.categoryName }}]</a>
+                <a href="${staticDomain}/#/article/{{ article.articleSlug }}" class="article-title">{{ article.title }}</a>
             </div>
             <div class="article-description" ng-bind-html="article.description"></div>
             <div class="article-metadata">

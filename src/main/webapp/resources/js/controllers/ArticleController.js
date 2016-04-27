@@ -6,10 +6,12 @@ var ArticleController = function ($scope, $interval, $http, $timeout, $routePara
         $http.get('/article/' + articleSlug + '.json').
             success(function (data) {
                 initializeArticleSlug();
-                console.log("测试结果");
-                console.log(data);
+
+                $scope.articleVO = data.articleVO;
             })
-    }
+    };
+
+    $scope.fetchArticle();
 };
 
 

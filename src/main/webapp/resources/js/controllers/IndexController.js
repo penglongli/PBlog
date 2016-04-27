@@ -34,6 +34,8 @@ function initializeIndex(content_md){
             $(this).removeClass("active");
         }
     })
+    md = content_md;
+    console.log(md);
     $contentBody.html(marked(content_md));
     loadSlider();
 }
@@ -52,15 +54,4 @@ function loadSlider(){
         slideArea: $slideArea,
         bar: $bar
     });
-}
-/**
- * 加载css文件
- */
-function loadCss(){
-    $("<link>").
-        attr({rel: "stylesheet",
-            type: "text/css",
-            href: "/resources/css/index.css"
-        }).
-        appendTo("head");
 }

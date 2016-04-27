@@ -190,14 +190,15 @@ body {
   display: none;
 }
 .article-content {
+  font-size: 1.5rem;
   position: absolute;
   left: 25%;
   width: 72%;
-  font-size: 1.4rem;
   line-height: 1.85em;
   color: #424242;
   font-weight: 300;
   padding: 0 1.5%;
+  font-family: Georgia, Times, "Times New Roman", Helvetica, "Microsoft YaHei", Arial, sans-serif !important;
 }
 .article-content .content-head {
   border-bottom: 1px solid #EDEDED;
@@ -226,4 +227,22 @@ body {
 }
 .article-content .content-head .content-head-detail a:hover {
   text-decoration: underline;
+}
+.article-content em {
+  font-size: 1.3rem;
+  font-style: normal!important;
+  background: #F6F6F6;
+  padding: 0.2em 0.8em;
+  color: #C7254E;
+  font-family: Consolas, sans-serif !important;
+}
+.article-content code {
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  text-shadow: 1px 1px #CCC;
+  font-family: GothicCustom, 'Arial Narrow', sans-serif;
 }
