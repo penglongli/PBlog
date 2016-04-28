@@ -9,7 +9,6 @@ var IndexController = function ($scope, $interval, $http, $timeout) {
                 $scope.f_article = data.firstArticle;
 
                 initializeIndex($scope.f_article.content);
-
                 initializeLoad($scope, $timeout);
             }).
             error(function (err) {
@@ -20,11 +19,10 @@ var IndexController = function ($scope, $interval, $http, $timeout) {
     $scope.fetchArticlesList();
 };
 /**
- * 初始化
+ * 初始化文章内容
  * @param content_md 文章内容MD
  */
 function initializeIndex(content_md){
-    //loadCss();
     var $contentBody = $(".content-body");
 
     $(".menu_bar ul li").each(function (index) {
@@ -34,8 +32,7 @@ function initializeIndex(content_md){
             $(this).removeClass("active");
         }
     })
-    md = content_md;
-    console.log(md);
+
     $contentBody.html(marked(content_md));
     loadSlider();
 }

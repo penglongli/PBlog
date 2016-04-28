@@ -1,10 +1,12 @@
 .article-content {
   font-size: 1.5rem;
-  position: absolute;
   width: 100%;
   line-height: 1.85em;
   color: #424242;
   font-weight: 300;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #EEEEEE;
   font-family: Georgia, Times, "Times New Roman", Helvetica, "Microsoft YaHei", Arial, sans-serif !important;
 }
 .article-content .content-head {
@@ -41,16 +43,47 @@
 }
 .article-content .content-body {
   width: 73%;
-  height: 100px;
-  background: red;
   margin-left: 2%;
   float: left;
 }
 .article-content .content-nav {
-  width: 24%;
-  height: 100px;
-  background: yellow;
+  width: 240px;
   float: right;
+  margin-top: 1em;
+  margin-right: 25px;
+}
+.article-content .content-nav .nav-heading {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 0 10px 20px;
+}
+.article-content .fixed {
+  position: fixed;
+  right: 0;
+  top: 50px;
+}
+.article-content .nav-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.article-content .nav-list ul li {
+  padding-left: 20px;
+  font-size: 15px;
+  border-left: 3px solid #F3F3F3;
+}
+.article-content .nav-list ul li:hover {
+  cursor: pointer;
+  color: #C1272D;
+  background: #F1F1F1;
+  border-color: #000;
+}
+.article-content .nav-list ul .active {
+  color: #C1272D;
+  background: #F1F1F1;
+  border-color: #c1272d;
 }
 .article-content em {
   font-size: 1.3rem;

@@ -68,6 +68,7 @@ function initializeLoad($scope, $timeout) {
  * 加载代码高亮插件
  */
 function initializeHighLight() {
+    console.log("加载代码高亮");
     $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
     });
