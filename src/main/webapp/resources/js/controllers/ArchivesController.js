@@ -1,6 +1,6 @@
 
 var ArchivesController = function ($scope, $interval, $http, $timeout) {
-    
+
     $scope.fetchArchivesList = function () {
         $http.get('/archivesList.json').
             success(function (data) {

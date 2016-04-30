@@ -6,7 +6,7 @@
     <title>文章管理</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="${cssDomain}/article_list.css" rel="stylesheet"  />
+    <link href="${cssDomain}/manage/article_list.css" rel="stylesheet"  />
     <link rel="stylesheet" href="${cssPlugins}/font-awesome.min.css" />
     <script src="${jsPlugins}/jquery.min.js"></script>
 </head>

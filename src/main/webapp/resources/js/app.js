@@ -1,7 +1,7 @@
 var pBlogApp = {};
 
 var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate', 'ngRoute', 'ngSanitize', 'pBlogApp.filters', 'pBlogApp.services', 'pBlogApp.directives']).
-    config(function ($routeProvider) {
+    config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/index', {
             templateUrl: '/index/layout',
             controller: IndexController
@@ -32,7 +32,13 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: ArticleController
         });
 
+        $routeProvider.when('/about', {
+            templateUrl: '/about/layout',
+            controller: AboutController
+        });
+
         $routeProvider.otherwise({redirectTo: '/index'});
+        //$locationProvider.html5Mode(true);$locationProvider.html5Mode(true);
     }).
     config(function(cfpLoadingBarProvider) {
         //配置angular-loading-bar

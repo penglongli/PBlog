@@ -15,37 +15,14 @@ public class GenerateSlugInfo extends TestCase{
 
     protected void setUp(){
         applicationContext = new ClassPathXmlApplicationContext("classpath:application.xml");
+        System.out.println(applicationContext);
     }
 
     public void testInsertSlug(){
         SlugInfoService slugInfoService = (SlugInfoService) applicationContext.getBean("slugInfoService");
+        System.out.println(slugInfoService);
+
         slugInfoService.insert();
-    }
-
-    public void testArray(){
-        /*List<ArchivesVO> archivesVOList = Lists.newArrayList();
-
-        ArchivesVO archivesVO = new ArchivesVO();
-        archivesVO.setTimeStamp("2016-03");
-
-        List<SimpleArticleInfo> simpleArticleInfoList = Lists.newArrayList();
-        archivesVO.setSimpleArticleList(simpleArticleInfoList);
-
-        SimpleArticleInfo simpleArticleInfo = new SimpleArticleInfo();
-        simpleArticleInfoList.add(simpleArticleInfo);
-        archivesVOList.add(archivesVO);*/
-
-
-
-        int a = 1;
-    }
-
-    public void testDate() throws ParseException {
-       /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
-        String dateStr = "2016-03";
-
-        Date date = sdf.parse(dateStr);
-        System.out.println(date);*/
     }
 
 }

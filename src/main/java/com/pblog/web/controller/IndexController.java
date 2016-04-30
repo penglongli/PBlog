@@ -58,6 +58,14 @@ public class IndexController {
         return map;
     }
 
+    @RequestMapping(value = "/about", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
+    @ResponseBody
+    public Map<String, Object> about(HttpServletRequest request, Model model) {
+        Map<String, Object> map = Maps.newHashMap();
+
+        System.out.println("打印测试");
+        return map;
+    }
 
     /*@RequestMapping(value = {"/", "/article/list"}, method = RequestMethod.GET)
     public String index(@RequestParam(value = "p", required = false)Integer page, HttpServletRequest request, Model model){

@@ -27,7 +27,7 @@
             <a href="">
                 <li><i class="icon-text-width"></i>日记</li>
             </a>
-            <a href="">
+            <a href="${staticDomain}/#/about">
                 <li><i class="icon-info-sign"></i>关于</li>
             </a>
         </ul>
