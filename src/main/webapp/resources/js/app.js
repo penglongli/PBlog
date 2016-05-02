@@ -2,6 +2,7 @@ var pBlogApp = {};
 
 var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate', 'ngRoute', 'ngSanitize', 'pBlogApp.filters', 'pBlogApp.services', 'pBlogApp.directives']).
     config(function ($routeProvider, $locationProvider) {
+
         $routeProvider.when('/index', {
             templateUrl: '/index/layout',
             controller: IndexController
@@ -74,7 +75,6 @@ function initializeLoad($scope, $timeout) {
  * 加载代码高亮插件
  */
 function initializeHighLight() {
-    console.log("加载代码高亮");
     $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
     });

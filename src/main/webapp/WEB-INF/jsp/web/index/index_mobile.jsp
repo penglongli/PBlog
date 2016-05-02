@@ -8,10 +8,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Home | Pelin的个人博客</title>
-    <link href="${styleDomain}/article_mobile_list.less" type="text/less" rel="stylesheet"/>
-    <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="${jsPlugin}/less.min.js"></script>
-    <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
+    <link href="${cssDomain}/article_mobile_list.css" rel="stylesheet"/>
+    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
+    <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="Wrapper">
@@ -33,6 +32,6 @@
         </c:forEach>
     </div>
 </div>
-<script type="text/javascript" src="${jsPlugin}/global_mobile.js"></script>
+<script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
 </body>
 </html>

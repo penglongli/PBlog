@@ -15,7 +15,7 @@
     <div class="contact">
         <h2>联系方式</h2>
         <ul>
-            <li>Email: <a href="mailto:penglong95.li@gmail.com">penglong95.li@gmail.com</a></li>
+            <li>Email: <a href="mailto:penglong95.li@gmail.com" target="_blank">penglong95.li@gmail.com</a></li>
         </ul>
     </div>
 
@@ -31,18 +31,18 @@
     <div class="social">
         <h2>社交账号</h2>
         <ul>
-            <li>Github</li>
-            <li>Zhihu</li>
-            <li>CSDN</li>
-            <li>Sina Weibo</li>
-            <li>V2EX</li>
+            <li><a href="https://github.com/penglongli" target="_blank">GitHub</a></li>
+            <li><a href="https://www.zhihu.com/people/pelin.li" target="_blank">Zhihu</a></li>
+            <li><a href="http://blog.csdn.net/u010800530" target="_blank">CSDN</a></li>
+            <li><a href="javascript:void(0)">Sina Weibo</a></li>
+            <li><a href="http://v2ex.com/member/Lpl" target="_blank">V2EX</a></li>
         </ul>
     </div>
 
     <div class="open-source">
         <h2>开源项目</h2>
         <ul>
-            <li>PBlog: 基于Java + AngularJS开发的一款单页应用博客</li>
+            <li><a href="https://github.com/penglongli/PBlog" target="_blank">PBlog</a>: 基于Java + AngularJS开发的一款单页应用博客</li>
         </ul>
     </div>
 
@@ -52,6 +52,13 @@
             <li>2015-10 ~ 2016-04 多贝网(实习)</li>
             <li>2015-07 ~ 2015-10 爱鲜蜂(实习)</li>
             <li>2012-11 ~ 2015-07 校内多家企业(打杂)</li>
+        </ul>
+    </div>
+
+    <div class="education">
+        <h2>教育背景</h2>
+        <ul>
+            <li>2012-09 ~ 2016-06 黄淮学院/学士学位 专业: 软件工程</li>
         </ul>
     </div>
 
@@ -75,4 +82,6 @@
             <li>脚本: Python3(简单使用)/Bash</li>
         </ul>
     </div>
+
+
 </div>

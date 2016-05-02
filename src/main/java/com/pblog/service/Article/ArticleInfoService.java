@@ -7,13 +7,12 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public interface ArticleInfoService {
-    /**
-     * 前十篇文章
-     * @return
-     */
-    List<ArticleInfoVO> findTopTenArticlesByCreateTime();
 
     ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request);
 
-    Pagination<ArticleInfoVO> page(PageRequest pageRequest);
+    /**
+     * 根据pageRequest分页
+     * @return 分页对象
+     */
+    Pagination<ArticleInfoVO> page(PageRequest pageRequest, HttpServletRequest request);
 }

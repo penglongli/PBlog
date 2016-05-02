@@ -14,6 +14,8 @@ public class ArticleInfoFormBean {
 
     private String description;
 
+    private String descriptionMd;
+
     public String getTitle() {
         return title;
     }
@@ -60,5 +62,13 @@ public class ArticleInfoFormBean {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getDescriptionMd() {
+        return descriptionMd;
+    }
+
+    public void setDescriptionMd(String descriptionMd) {
+        this.descriptionMd = descriptionMd;
     }
 }

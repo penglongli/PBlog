@@ -43,7 +43,7 @@
     </select>
 
     <select id="page" parameterType="com.pblog.core.orm.PageRequest" resultType="ArticleInfo">
-        select * from article_info
+        select * from article_info order by createTime desc
     </select>
 
     <select id="findByCreateTimeDesc" resultType="ArticleInfo">
@@ -83,6 +83,9 @@
             </if>
             <if test="description != null">
                 description = #{description, jdbcType = LONGVARCHAR},
+            </if>
+            <if test="descriptionMd != null">
+                descriptionMd = #{descriptionMd, jdbcType = LONGVARCHAR },
             </if>
         </set>
         where id = #{id, jdbcType = INTEGER}

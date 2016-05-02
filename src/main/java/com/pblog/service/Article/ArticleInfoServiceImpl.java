@@ -27,17 +27,12 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     private ArticleInfoMapper articleInfoMapper;
 
     @Resource
-    private CategoryInfoMapper categoryInfoMapper;
-
-    @Resource
     private ArticleReadLogMapper articleReadLogMapper;
-
-    @Resource
-    private SqlSessionFactory sessionFactory;
 
     @Resource(name = "commonUtilsService")
     private CommonUtilsService commonUtilsService;
 
+/*
     public List<ArticleInfoVO> findTopTenArticlesByCreateTime() {
 
         List<ArticleInfoVO> articleInfoVOList = new ArrayList<ArticleInfoVO>();
@@ -50,23 +45,20 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
 
         return articleInfoVOList;
     }
+*/
 
     public ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request) {
         String ipAddress = (String) request.getAttribute("realIp");
         ArticleInfo articleInfo = articleInfoMapper.findBySlug(slug);
 
-        ArticleReadLog articleReadLog = new ArticleReadLog();
-        articleReadLog.setArticleSlug(articleInfo.getSlug());
-        articleReadLog.setIpAddress(ipAddress);
-        articleReadLog.setCreateTime(new Date());
-        articleReadLog.setType(ArticleReadLog.ArticleReadType.TYPE_READ.getId());
-        articleReadLogMapper.insert(articleReadLog);
-
         ArticleInfoVO articleInfoVO = commonUtilsService.transArticleInfoVO(articleInfo);
+        articleInfoVO = (articleInfoVO == null ? new ArticleInfoVO() : articleInfoVO);
+        insertArticleReadLog(ipAddress, articleInfo.getSlug(), ArticleReadLog.ArticleReadType.TYPE_READ.getId());
+
         return articleInfoVO;
     }
 
-    public Pagination<ArticleInfoVO> page(PageRequest pageRequest) {
+    public Pagination<ArticleInfoVO> page(PageRequest pageRequest, HttpServletRequest request) {
         List<ArticleInfo> articleInfoList = articleInfoMapper.page(pageRequest);
         Pagination<ArticleInfoVO> pagination = new Pagination<ArticleInfoVO>(pageRequest);
 
@@ -76,7 +68,29 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
             articleInfoVOList.add(articleInfoVO);
         }
 
+        //分页第一篇文章会被浏览，则增加点击记录
+        String ipAddress = (String) request.getAttribute("realIp");
+        Long slug = articleInfoVOList.get(0).getArticleSlug();
+        insertArticleReadLog(ipAddress, slug, ArticleReadLog.ArticleReadType.TYPE_READ.getId());
+
         pagination.setItems(articleInfoVOList);
         return pagination;
     }
+
+    /**
+     * 插入文章点击记录
+     * @param ipAddress 地址
+     * @param articleInfoSlug 文章slug
+     * @param type 记录类型
+     */
+    private void insertArticleReadLog(String ipAddress, Long articleInfoSlug, Integer type) {
+        ArticleReadLog articleReadLog = new ArticleReadLog();
+
+        articleReadLog.setArticleSlug(articleInfoSlug);
+        articleReadLog.setIpAddress(ipAddress);
+        articleReadLog.setType(type);
+        articleReadLogMapper.insert(articleReadLog);
+    }
+
+
 }

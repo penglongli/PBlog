@@ -1,17 +1,8 @@
 
 var AboutController = function ($scope, $interval, $http, $timeout) {
     $scope.fetchAboutMessage = function () {
-
-        $http.get('/about.json').
-            success(function (data) {
-                initializeAbout();
-                initializeLoad($scope, $timeout);
-
-
-            }).
-            error(function (err) {
-                console.log(err);
-            });
+        initializeAbout();
+        initializeLoad($scope, $timeout);
     };
 
     $scope.fetchAboutMessage();

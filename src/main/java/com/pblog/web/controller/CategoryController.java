@@ -23,11 +23,42 @@ public class CategoryController {
     @Resource(name = "categoryInfoService")
     private CategoryInfoService categoryInfoService;
 
+    @RequestMapping(value = "/category", method = RequestMethod.GET)
+    public String index(HttpServletRequest request, Model model) {
+        List<CategoryInfoVO> categoryInfoVOList = categoryInfoService.findCategoryInfoVO();
+        List<ArticleInfoVO> articleInfoVOList = categoryInfoVOList.get(0).getArticleInfoVOList();
+
+        model.addAttribute("categoryInfoVOList", categoryInfoVOList);
+        model.addAttribute("articleInfoVOList", articleInfoVOList.size() > 0 ? articleInfoVOList : null);
+        model.addAttribute("num", categoryInfoVOList.size());
+
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if(mobile) {
+            return "web/category/category_mobile";
+        } else {
+            return "redirect:#/category";
+        }
+    }
 
     @RequestMapping(value = "/category/layout", method = RequestMethod.GET)
     public String getCategoryPage() {
 
-        return "web/category/category";
+        return "web/category/layout";
+    }
+
+    @RequestMapping(value = "/category/{slug}/list", method = RequestMethod.GET)
+    public String category(@PathVariable Long slug, HttpServletRequest request, Model model){
+        List<ArticleInfoVO> articleInfoVOList = categoryInfoService.findArticleListByCategory(slug);
+
+        model.addAttribute("articleInfoVOList", articleInfoVOList);
+        model.addAttribute("slug", slug);
+
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if(mobile){
+            return "web/common/detail";
+        } else {
+            return "web/category/category";
+        }
     }
 
     @RequestMapping(value ="/categoryList", method = RequestMethod.GET, produces = {"application/xml", "application/json"})

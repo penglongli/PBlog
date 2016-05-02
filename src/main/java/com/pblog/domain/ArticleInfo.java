@@ -25,6 +25,8 @@ public class ArticleInfo {
 
     private String description;
 
+    private String descriptionMd;
+
     public Integer getId() {
         return id;
     }
@@ -111,5 +113,13 @@ public class ArticleInfo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescriptionMd() {
+        return descriptionMd;
+    }
+
+    public void setDescriptionMd(String descriptionMd) {
+        this.descriptionMd = descriptionMd;
     }
 }

@@ -70,6 +70,7 @@ public class ManageArticleInfoServiceImpl implements ManageArticleInfoService {
         articleInfo.setCategorySlug(articleInfoFormBean.getCategorySlug());
         articleInfo.setTag(articleInfoFormBean.getTag());
         articleInfo.setDescription(articleInfoFormBean.getDescription());
+        articleInfo.setDescriptionMd(articleInfoFormBean.getDescriptionMd());
 
         return articleInfoMapper.update(articleInfo);
     }

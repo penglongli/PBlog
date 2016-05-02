@@ -26,17 +26,28 @@ public class IndexController {
     public String getRootPage(HttpServletRequest request, Model model) {
         Boolean mobile = (Boolean) request.getAttribute("mobile");
 
-        if(!mobile) {
-            return "web/home";
+        if(mobile) {
+            PageRequest pageRequest = new PageRequest(1, 10);
+
+            Pagination<ArticleInfoVO> pagination = articleInfoService.page(pageRequest, request);
+            ArticleInfoVO firstArticleInfoVO = null;
+            if(pagination.getItems().size() > 0){
+                firstArticleInfoVO = pagination.getItems().get(0);
+            }
+
+            model.addAttribute("pagination", pagination);
+            model.addAttribute("firstArticle", firstArticleInfoVO);
+
+            return "web/index/index_mobile";
         }else {
-            return "";
+            return "web/home";
         }
     }
 
     @RequestMapping(value = "/index/layout", method = RequestMethod.GET)
     public String getIndexPage(HttpServletRequest request, Model model){
 
-        return "web/index/index";
+        return "web/index/layout";
     }
 
     @RequestMapping(value ="/topTenArticle", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
@@ -45,11 +56,12 @@ public class IndexController {
         Integer page = 1;
         PageRequest pageRequest = new PageRequest(page, 10);
 
-        Pagination<ArticleInfoVO> pagination = articleInfoService.page(pageRequest);
+        Pagination<ArticleInfoVO> pagination = articleInfoService.page(pageRequest, request);
         ArticleInfoVO firstArticleInfoVO = null;
         if(pagination.getItems().size() > 0){
             firstArticleInfoVO = pagination.getItems().get(0);
         }
+
         Map<String, Object> map = Maps.newHashMap();
         map.put("pagination", pagination);
         map.put("firstArticle", firstArticleInfoVO);
@@ -57,53 +69,4 @@ public class IndexController {
 
         return map;
     }
-
-
-    /*@RequestMapping(value = {"/", "/article/list"}, method = RequestMethod.GET)
-    public String index(@RequestParam(value = "p", required = false)Integer page, HttpServletRequest request, Model model){
-        page = (null == page) ? 1 : page;
-        PageRequest pageRequest = new PageRequest(page, 10);
-
-        Pagination<ArticleInfoVO> pagination = articleInfoService.page(pageRequest);
-        ArticleInfoVO firstArticleInfoVO = null;
-        if(pagination.getItems().size() > 0){
-            firstArticleInfoVO = pagination.getItems().get(0);
-        }
-
-        model.addAttribute("pagination", pagination);
-        model.addAttribute("firstArticle", firstArticleInfoVO);
-        model.addAttribute("detail", false);
-
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
-        if(mobile){
-            return "web/index/index_mobile";
-        }else{
-            return "web/home";
-        }
-    }*/
-
-   /* @RequestMapping(value ="index", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
-    @ResponseBody
-    public Map<String, Object> index2(HttpServletRequest request, Model model){
-        Integer page = 1;
-        PageRequest pageRequest = new PageRequest(page, 10);
-
-        Pagination<ArticleInfoVO> pagination = articleInfoService.page(pageRequest);
-        ArticleInfoVO firstArticleInfoVO = null;
-        if(pagination.getItems().size() > 0){
-            firstArticleInfoVO = pagination.getItems().get(0);
-        }
-*//*
-        model.addAttribute("pagination", pagination);
-        model.addAttribute("firstArticle", firstArticleInfoVO);
-        model.addAttribute("detail", false);*//*
-
-
-        Map<String, Object> map = Maps.newHashMap();
-        map.put("pagination", pagination);
-        map.put("firstArticle", firstArticleInfoVO);
-        map.put("detail", false);
-
-        return map;
-    }*/
 }

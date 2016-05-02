@@ -14,6 +14,7 @@
     <script src="${staticDomain}/resources/assets/js/angular-plugins.min.js"></script>
     <script src="${staticDomain}/resources/assets/js/loading-bar.js"></script>
     <script src="${staticDomain}/resources/assets/js/client-js.min.js"></script>
+    <script src="${jsDomain}/highlight.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="pBlogApp" ng-controller="loadingBar">
 

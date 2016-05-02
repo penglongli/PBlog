@@ -8,9 +8,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Archives | Pelin的个人博客</title>
-    <link href="${cssPlugin}/font-awesome.min.css" rel="stylesheet"/>
     <link href="${cssDomain}/time_line.css" rel="stylesheet" />
-    <script type="text/javascript" src="${jsPlugin}/jquery.min.js"></script>
+    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
+    <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 <body onload="timeLineInitial()">
 <div id="Wrapper">
@@ -47,5 +47,5 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="${jsPlugin}/global_mobile.js"></script>
+<script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
 </html>

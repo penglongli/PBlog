@@ -183,10 +183,11 @@ body {
   color: inherit!important;
   text-decoration: none;
   font-size: 22px;
+  text-shadow: 1px 1px #CCC;
 }
 .archive-article-list .article-item .article-metadata {
   color: #AAAAAA;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 10px;
 }
 .archive-article-list .article-item .article-metadata .article-time:after {

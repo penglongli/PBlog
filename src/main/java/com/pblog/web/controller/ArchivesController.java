@@ -2,6 +2,7 @@ package com.pblog.web.controller;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.pblog.core.utils.DateFormatUtils;
 import com.pblog.core.utils.GenerateUtils;
 import com.pblog.service.archives.ArchivesService;
 import com.pblog.service.archives.ArchivesVO;
@@ -32,7 +33,7 @@ public class ArchivesController {
     @RequestMapping(value = "/archives/layout", method = RequestMethod.GET)
     public String getArchivesPage(HttpServletRequest request, Model model) {
 
-        return "web/archives/archives";
+        return "web/archives/layout";
     }
 
     @RequestMapping(value ="/archivesList", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
@@ -72,7 +73,7 @@ public class ArchivesController {
 
 
 
-    /*@RequestMapping(value = "/archives")
+    @RequestMapping(value = "/archives")
     public String index(HttpServletRequest request, Model model){
         List<ArchivesVO> archivesVOList = null;
         Integer articleNum = 0;
@@ -90,17 +91,32 @@ public class ArchivesController {
             e.printStackTrace();
         }
 
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
-        if(mobile){
-            return "web/archives/archives_mobile";
-        }else{
-            return "web/archives/archives";
-        }
+        return "web/archives/archives_mobile";
+    }
 
+    @RequestMapping(value = "/archives/{timeStamp}/list", method = RequestMethod.GET)
+    public String month(@PathVariable String timeStamp, HttpServletRequest request, Model model) throws ParseException {
+        boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
+
+        if(isRightPattern){
+            List<ArticleInfoVO> articleInfoVOList = archivesService.findArticleByMonth(timeStamp);
+
+            model.addAttribute("articleInfoVOList", articleInfoVOList);
+            model.addAttribute("timeStamp", DateFormatUtils.formatStrToYM(timeStamp));
+
+            Boolean mobile = (Boolean) request.getAttribute("mobile");
+            if(mobile){
+                return "web/common/detail";
+            }else {
+                return "web/archives/archives";
+            }
+        }else{
+            return "404";
+        }
     }
 
 
-    @RequestMapping(value = "/archives/{timeStamp}", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/archives/{timeStamp}", method = RequestMethod.GET)
     public String month(@PathVariable String timeStamp, HttpServletRequest request, Model model) throws ParseException {
         boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
         List<ArchivesVO> archivesVOList = null;

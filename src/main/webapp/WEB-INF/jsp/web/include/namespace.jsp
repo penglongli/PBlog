@@ -6,6 +6,7 @@
 
 <c:set var="staticDomain" value="${pageContext.request.contextPath}" />
 <c:set var="jsDomain" value="${staticDomain}/resources/assets/js" />
+<c:set var="jsPlugins" value="${staticDomain}/resources/js/plugins" />
 <c:set var="cssDomain" value="${staticDomain}/resources/assets/css" />
 <c:set var="cssPlugins" value="${staticDomain}/resources/assets/css/plugins" />
 <c:set var="fontDomain" value="${staticDomain}/resources/font" />

@@ -12,7 +12,7 @@
     <script src="${jsPlugins}/marked.js"></script>
 </head>
 <body>
-<c:set var="active_line" value="2"/>
+<c:set var="active_line" value="1"/>
 <c:set var="first_nav" value="文章管理" />
 <c:choose>
     <c:when test="${type == 1}">
@@ -38,8 +38,7 @@
                 <div class="article-title">
                     <div class="article-title-theme">文章标题</div>
                     <div class="article-title-content">
-                        <textarea rows="1" maxlength="120" name="title" autofocus="autofocus"
-                                  placeholder="请输入文章标题，标题字数在120字以内">${articleInfo.title}</textarea>
+                        <textarea rows="1" maxlength="120" name="title" autofocus="autofocus" placeholder="请输入文章标题，标题字数在120字以内">${articleInfo.title}</textarea>
                     </div>
                 </div>
                 <div class="article-body">
@@ -54,14 +53,14 @@
                 <div class="view"></div>
                 <div class="description">
                     <div class="description-title">添加描述</div>
-                    <textarea class="editor" title="文章描述"></textarea>
+                    <textarea class="editor" title="文章描述" name="descriptionMd">${articleInfo.descriptionMd}</textarea>
                 </div>
                 <div class="description-operate">
                     <i class="icon-eye-open"></i>
                     <button type="button" class="preview-description">预览描述</button>
                     <textarea name="description" style="display: none;" title="描述隐藏域"></textarea>
                 </div>
-                <div class="description-view">${articleInfo.description}</div>
+                <div class="description-view"></div>
             </div>
             <div class="operate">
                 <div class="publish">
@@ -86,32 +85,22 @@
 
 <script type="text/javascript">
     $(".publish-article").click(function () {
-        var title = $("textarea[name='title']").val();
-        var content = $("textarea[name='content']").val();
-        var description = $("textarea[name='description']").val();
-        var categorySlug = $("input[name='categorySlug']:checked").val();
-        var tag = $("input[name='tag']").val();
-
-        $("#article-add-form").submit();
-    })
-
-    $(".preview-article").click(function () {
-        previewArticle();
-    });
-
-    $(".preview-description").click(function () {
-        previewDescription();
-    });
-
-    function previewArticle() {
-        var htmlValue = markedToHTML($(".editor:eq(0)"), $(".view"))
-        //$("textarea[name='content']").html(htmlValue);
-    }
-
-    function previewDescription() {
         var htmlValue = markedToHTML($(".editor:eq(1)"), $(".description-view"));
         $("textarea[name='description']").html(htmlValue);
-    }
+
+        $("#article-add-form").submit();
+    });
+
+    //预览文章内容
+    $(".preview-article").click(function () {
+        markedToHTML($(".editor:eq(0)"), $(".view"))
+    });
+
+    //预览描述
+    $(".preview-description").click(function () {
+        var htmlValue = markedToHTML($(".editor:eq(1)"), $(".description-view"));
+        $("textarea[name='description']").html(htmlValue);
+    });
 
     function markedToHTML($input, $preview) {
         var htmlValue = marked($input.val());

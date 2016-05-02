@@ -18,13 +18,4 @@ public class AboutController {
 
         return "web/about/layout";
     }
-
-    @RequestMapping(value = "/about", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
-    @ResponseBody
-    public Map<String, Object> about(HttpServletRequest request, Model model) {
-        Map<String, Object> map = Maps.newHashMap();
-
-        System.out.println("打印测试");
-        return map;
-    }
 }
