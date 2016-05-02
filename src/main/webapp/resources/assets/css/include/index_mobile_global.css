@@ -25,12 +25,15 @@ body {
 #Wrapper #Top {
   width: 100%;
   position: fixed;
-  padding: 1em 0;
+  padding: 0;
   text-align: center;
   font-family: "Open Sans", SimHei, "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
   background: #FFF;
   color: #88909a;
   border-bottom: 1px solid #E3F2FD;
+  height: 3em;
+  line-height: 3em;
+  z-index: 999;
 }
 #Wrapper #Top .top-list {
   float: left;
@@ -42,13 +45,14 @@ body {
 }
 #Wrapper #Top i {
   font-size: 2rem;
+  line-height: 2.25em;
 }
 #Wrapper #Top a {
   color: #88909a;
   text-decoration: none;
 }
 #Wrapper #Content {
-  margin-top: 4em;
+  margin-top: 3em;
   padding: 0 1em 0 1em;
 }
 #Wrapper .content-slide {
@@ -69,11 +73,11 @@ body {
   background: #202020;
 }
 #SlideBar .author_info {
-  margin-top: 1.5em;
+  margin-top: 1em;
   text-align: center;
 }
 #SlideBar .author_info img {
-  width: 5.5em;
+  width: 5em;
 }
 #SlideBar .author_info p {
   line-height: .5;

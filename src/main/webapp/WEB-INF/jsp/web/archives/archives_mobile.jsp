@@ -23,7 +23,7 @@
                 <c:forEach var="archivesVO" items="${archivesVOList}" varStatus="status">
                     <div class="left-item">
                         <span>
-                            <a href="${staticDomain}/archives/<fmt:formatDate value="${archivesVO.timeStamp}" pattern="yyyy-MM" />"
+                            <a href="${staticDomain}/archives/<fmt:formatDate value="${archivesVO.timeStamp}" pattern="yyyy-MM" />/list"
                                <c:if test="${archivesVO.timeStamp eq timeStamp}">class="active"</c:if> >
                                 <fmt:formatDate value="${archivesVO.timeStamp}" pattern="yyyy年MM月"/>
                             </a>
@@ -52,19 +52,16 @@
 </body>
 <script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
 <script type="text/javascript">
-
     function initial(){
         var nodeSize = $(".left-item").size();
-
         for(var i = 0; i < nodeSize; i++){
-            var rightHeight = $($(".right-item")[i]).height();
-
-            console.log(rightHeight + " " + (rightHeight + 40));
+            var rightHeight = $($(".right-item")[i]).outerHeight();
 
             $($(".left-item")[i]).css({"height": rightHeight + 40});
             $($(".right-item")[i]).fadeIn("slow");
             $($(".left-item")[i]).fadeIn("slow");
         }
     }
+
 </script>
 </html>

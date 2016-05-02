@@ -7,8 +7,8 @@
     <div class="image"></div>
 </div>
 <div class="about-body">
-    <h1>Pelin.li</h1>
-    <h2>Java Engineer(Web),&nbsp; wants to be a poet !</h2>
+    <h1>PELIN LI</h1>
+    <h2>A Java Engineer(Web),&nbsp; wants to be a poet!</h2>
     <div class="spot">
         <a href="https://github.com/penglongli" target="_blank"><i class="icon-github"></i> Follow me on GitHub</a>
     </div>
@@ -82,6 +82,4 @@
             <li>脚本: Python3(简单使用)/Bash</li>
         </ul>
     </div>
-
-
 </div>

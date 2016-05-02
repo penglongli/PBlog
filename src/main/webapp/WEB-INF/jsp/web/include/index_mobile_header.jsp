@@ -15,8 +15,9 @@
             <li><a href="${staticDomain}/"><i class="icon-home"></i> Home</a></li>
             <li><a href="${staticDomain}/archives"><i class="icon-calendar"></i> Archives</a></li>
             <li><a href="${staticDomain}/category"><i class="icon-reorder"></i> Categories</a></li>
-            <li><a href=""><i class="icon-book"></i> Books</a></li>
-            <li><a href=""><i class="icon-text-width"></i> Recorder</a></li>
+            <li><a href="javascript:void(0)"><i class="icon-book"></i> Books</a></li>
+            <li><a href="javascript:void(0)"><i class="icon-text-width"></i> Recorder</a></li>
+            <li><a href="${staticDomain}/about"><i class="icon-info-sign"></i> About</a></li>
         </ul>
         <ul>
             <li><a href="http://blog.csdn.net/u010800530" style="color: #FFF;"><span class="csdn"></span> BLOG</a></li>

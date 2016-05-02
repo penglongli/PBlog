@@ -23,7 +23,7 @@
                 <c:forEach var="categoryInfoVO" items="${categoryInfoVOList}" varStatus="status">
                     <div class="left-item">
                         <span>
-                            <a href="${staticDomain}/category/${categoryInfoVO.slug}">${categoryInfoVO.categoryTitle}</a>
+                            <a href="${staticDomain}/category/${categoryInfoVO.slug}/list">${categoryInfoVO.categoryTitle}</a>
                             (${fn:length(categoryInfoVO.articleInfoVOList)})
                         </span>
                         <div class="time-point"></div>

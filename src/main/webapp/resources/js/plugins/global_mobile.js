@@ -13,8 +13,6 @@ function loadFontSize() {
     var templateWidth = 320;
     var actualWidth = $(window).width();
 
-    console.log("加载")
-
     $("html").css("font-size", (actualWidth * 1.0) / templateWidth * 10.5 + "px");
 }
 

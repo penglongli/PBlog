@@ -18,4 +18,10 @@ public class AboutController {
 
         return "web/about/layout";
     }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String index(HttpServletRequest request, Model model) {
+
+        return "web/about/about_mobile";
+    }
 }

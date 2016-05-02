@@ -24,7 +24,7 @@
                         <fmt:setLocale value="en"/>
                         <fmt:formatDate type="date" value="${articleInfo.createTime}"/>
                     </span>
-                    <span class="category"><a href="">${articleInfo.categoryName}</a></span>
+                    <span class="category"><a href="${staticDomain}/category/${articleInfo.categorySlug}/list">${articleInfo.categoryName}</a></span>
                 </div>
                 <div class="article-description">${articleInfo.description}</div>
                 <span class="continue-read"><a href="${staticDomain}/article/${articleInfo.articleSlug}">Continue reading</a></span>
