@@ -1,4 +1,4 @@
-# PBlog
+# PBlog (测试端口地址:http://115.29.112.160:8011/)
 Version: 0.1.0-SNAPSHOT | 更新: 05/03 2016
 
 [![Build Status](https://travis-ci.org/penglongli/PBlog.svg?branch=master)](https://travis-ci.org/penglongli/PBlog)
