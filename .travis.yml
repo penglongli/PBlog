@@ -2,5 +2,19 @@ language: java
 jdk:
   - oraclejdk7
   - openjdk7
+
 services:
   - mysql
+
+before_script:
+  - mysql -e 'CREATE DATABASE test;'
+  - mysql test < pblog.sql
+  
+script: 
+  - mvn test -f pom.xml
+
+after_script:
+  - mysql -e 'DROP DATABASE test;'
+
+after_success:
+  -mvn -f pom.xml cobertura:cobertura coveralls:report
