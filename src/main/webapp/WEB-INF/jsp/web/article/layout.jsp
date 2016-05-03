@@ -1,7 +1,7 @@
 <%@ include file="../include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<link rel="stylesheet" href="${cssDomain}/include/article_detail.css" />
+<link rel="stylesheet" href="${cssDomain}/article/layout.css" />
 <link rel="stylesheet" href="${cssPlugins}/highlight.min.css" />
 
 <div class="article-content">

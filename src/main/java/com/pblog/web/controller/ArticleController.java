@@ -21,27 +21,30 @@ public class ArticleController {
     @Resource(name = "articleInfoService")
     private ArticleInfoService articleInfoService;
 
-    /*@RequestMapping(value = "/{slug}")
-    public String articleBySlug(@PathVariable Long slug, HttpServletRequest request, Model model){
+    @RequestMapping(value = "/{slug}/detail", method = RequestMethod.GET)
+    public String index(@PathVariable Long slug, HttpServletRequest request, Model model) {
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if (!mobile) {
+            return "redirect:/#/article/" + slug;
+        }
+
         String ipAddress = (String) request.getAttribute("realIp");
-
-        ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, request);
-
-        model.addAttribute("detail", true);
-        model.addAttribute("firstArticle", articleInfoVO);
-        return "web/index/index";
-    }*/
+        ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, ipAddress);
+        model.addAttribute("articleInfo", articleInfoVO);
+        return "web/article/article_mobile";
+    }
 
     @RequestMapping(value = "/slug/layout", method = RequestMethod.GET)
-    public String index(HttpServletRequest request, Model model) {
+    public String layout(HttpServletRequest request, Model model) {
 
-        return "web/article/article";
+        return "web/article/layout";
     }
 
     @RequestMapping(value ="/{slug}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
     @ResponseBody
     public Map<String, Object> articleBySlug(@PathVariable Long slug, HttpServletRequest request) {
-        ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, request);
+        String ipAddress = (String) request.getAttribute("realIp");
+        ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, ipAddress);
 
         Map<String, Object> map = Maps.newHashMap();
         map.put("articleVO", articleInfoVO);

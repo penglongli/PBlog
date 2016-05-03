@@ -71,10 +71,13 @@ public class ArchivesController {
         return map;
     }
 
-
-
     @RequestMapping(value = "/archives")
     public String index(HttpServletRequest request, Model model){
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if (!mobile) {
+            return "redirect:#/archives";
+        }
+
         List<ArchivesVO> archivesVOList = null;
         Integer articleNum = 0;
 
@@ -90,26 +93,23 @@ public class ArchivesController {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         return "web/archives/archives_mobile";
     }
 
     @RequestMapping(value = "/archives/{timeStamp}/list", method = RequestMethod.GET)
     public String month(@PathVariable String timeStamp, HttpServletRequest request, Model model) throws ParseException {
-        boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if (!mobile) {
+            return "redirect:/#/archives/" + timeStamp;
+        }
 
+        boolean isRightPattern =  GenerateUtils.judgeTimeStamp(timeStamp);
         if(isRightPattern){
             List<ArticleInfoVO> articleInfoVOList = archivesService.findArticleByMonth(timeStamp);
 
             model.addAttribute("articleInfoVOList", articleInfoVOList);
             model.addAttribute("timeStamp", DateFormatUtils.formatStrToYM(timeStamp));
-
-            Boolean mobile = (Boolean) request.getAttribute("mobile");
-            if(mobile){
-                return "web/common/detail";
-            }else {
-                return "web/archives/archives";
-            }
+            return "web/common/detail";
         }else{
             return "404";
         }

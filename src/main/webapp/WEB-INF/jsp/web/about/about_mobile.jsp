@@ -7,7 +7,7 @@
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Home | Pelin的个人博客</title>
+    <title>About | Pelin的个人博客</title>
     <link href="${cssDomain}/about/about_mobile.css" rel="stylesheet"/>
     <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
         <div class="banner">
             <div class="info">
                 <h1>PELIN LI</h1>
-                <h2>A Java Engineer(Web),&nbsp; wants to be a poet!</h2>
+                <h2>A Java Engineer(Web) who wants to be a poet!</h2>
             </div>
         </div>
 
@@ -39,7 +39,7 @@
                 <h2>个人信息</h2>
                 <ul>
                     <li>李鹏龙/男/1995</li>
-                    <li>博客：<a href="http://www.pelinli.com" target="_blank">http://www.pelinli.com</a></li>
+                    <li>个人网站：<a href="http://www.pelinli.com" target="_blank">http://www.pelinli.com</a></li>
                     <li>城市: 北京</li>
                 </ul>
             </div>

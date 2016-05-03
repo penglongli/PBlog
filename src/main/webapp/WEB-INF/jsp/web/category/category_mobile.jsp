@@ -7,7 +7,8 @@
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Archives | Pelin的个人博客</title>
+    <title>Category | Pelin的个人博客</title>
+    <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
     <link href="${cssDomain}/time_line.css" rel="stylesheet" />
     <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
@@ -36,7 +37,7 @@
                         <c:forEach var="articleVO" items="${categoryInfVO.articleInfoVOList}" varStatus="articleStatus">
                             <div class="article-item">
                                 <span><fmt:formatDate value="${articleVO.createTime}" pattern="MM-dd"/></span>
-                                <a href="${staticDomain}/article/${articleVO.articleSlug}">${articleVO.title}</a>
+                                <a href="${staticDomain}/article/${articleVO.articleSlug}/detail">${articleVO.title}</a>
                             </div>
                         </c:forEach>
                     </div>
@@ -48,4 +49,17 @@
 </div>
 </body>
 <script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
+<script type="text/javascript">
+    function initial(){
+        var nodeSize = $(".left-item").size();
+        for(var i = 0; i < nodeSize; i++){
+            var rightHeight = $($(".right-item")[i]).outerHeight();
+
+            $($(".left-item")[i]).css({"height": rightHeight + 62});
+            $($(".right-item")[i]).fadeIn("slow");
+            $($(".left-item")[i]).fadeIn("slow");
+        }
+    }
+
+</script>
 </html>

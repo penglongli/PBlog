@@ -1,7 +1,7 @@
 <%@ include file="../include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<link rel="stylesheet" href="${staticDomain}/resources/assets/css/category/category.css" />
+<link rel="stylesheet" href="${staticDomain}/resources/assets/css/category/layout.css" />
 
 <div class="archive-panel">
     <div class="archive-head">文章分类</div>

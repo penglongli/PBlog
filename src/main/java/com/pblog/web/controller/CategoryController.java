@@ -25,19 +25,18 @@ public class CategoryController {
 
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) {
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if (!mobile) {
+            return "redirect:#/category";
+        }
+
         List<CategoryInfoVO> categoryInfoVOList = categoryInfoService.findCategoryInfoVO();
         List<ArticleInfoVO> articleInfoVOList = categoryInfoVOList.get(0).getArticleInfoVOList();
 
         model.addAttribute("categoryInfoVOList", categoryInfoVOList);
         model.addAttribute("articleInfoVOList", articleInfoVOList.size() > 0 ? articleInfoVOList : null);
         model.addAttribute("num", categoryInfoVOList.size());
-
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
-        if(mobile) {
-            return "web/category/category_mobile";
-        } else {
-            return "redirect:#/category";
-        }
+        return "web/category/category_mobile";
     }
 
     @RequestMapping(value = "/category/layout", method = RequestMethod.GET)
@@ -48,17 +47,16 @@ public class CategoryController {
 
     @RequestMapping(value = "/category/{slug}/list", method = RequestMethod.GET)
     public String category(@PathVariable Long slug, HttpServletRequest request, Model model){
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if (!mobile) {
+            return "redirect:/#/category/" + slug;
+        }
+
         List<ArticleInfoVO> articleInfoVOList = categoryInfoService.findArticleListByCategory(slug);
 
         model.addAttribute("articleInfoVOList", articleInfoVOList);
         model.addAttribute("slug", slug);
-
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
-        if(mobile){
-            return "web/common/detail";
-        } else {
-            return "web/category/category";
-        }
+        return "web/common/detail";
     }
 
     @RequestMapping(value ="/categoryList", method = RequestMethod.GET, produces = {"application/xml", "application/json"})

@@ -1,5 +1,5 @@
 html {
-  font-size: 10.4px;
+  font-size: 12px;
 }
 body {
   padding: 0;
@@ -7,7 +7,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .body-slide {
   position: fixed;
@@ -61,6 +61,9 @@ body {
   bottom: 0;
   width: 100%;
 }
+#Wrapper .content-slide .article:first-child {
+  margin-top: 1.5em;
+}
 #SlideBar {
   position: fixed;
   width: 76%;
@@ -83,14 +86,14 @@ body {
   line-height: .5;
 }
 #SlideBar .menu_bar ul {
-  font-size: 1.65rem;
-  margin-top: 1.5em;
+  font-size: 1.45rem;
+  margin-top: 1.3em;
   padding: 0;
   margin-left: 1.5em;
   list-style: none;
 }
 #SlideBar .menu_bar ul li {
-  margin-top: .8em;
+  margin-top: .7em;
 }
 #SlideBar .menu_bar ul li a {
   text-decoration: none;

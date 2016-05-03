@@ -47,8 +47,7 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
     }
 */
 
-    public ArticleInfoVO findArticleBySlug(Long slug, HttpServletRequest request) {
-        String ipAddress = (String) request.getAttribute("realIp");
+    public ArticleInfoVO findArticleBySlug(Long slug, String ipAddress) {
         ArticleInfo articleInfo = articleInfoMapper.findBySlug(slug);
 
         ArticleInfoVO articleInfoVO = commonUtilsService.transArticleInfoVO(articleInfo);
