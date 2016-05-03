@@ -1,5 +1,3 @@
 # PBlog
-使用SpringMVC + Mybatis开发  
 
-
-
+PBlog是一款使用Java开发的单页应用blog, 
