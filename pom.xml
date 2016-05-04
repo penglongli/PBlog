@@ -64,9 +64,9 @@
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
-                <version>4.0.0</version>
+                <version>4.1.0</version>
                 <configuration>
-                    <sourceEncoding>UTF-8</sourceEncoding>
+                    <repoToken>76zkXe9p6hZktVUTKMxPcs6zlgnA3lFMg</repoToken>
                 </configuration>
             </plugin>
 
@@ -75,21 +75,11 @@
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.7</version>
                 <configuration>
-                    <encoding>UTF-8</encoding>
+                    <format>xml</format>
+                    <maxmem>256m</maxmem>
                     <aggregate>true</aggregate>
-                    <formats>
-                        <format>xml</format>
-                        <format>html</format>
-                    </formats>
-                    <instrumentation>
-                        <excludes>
-                            <exclude>**/*Test.class</exclude>
-                        </excludes>
-                    </instrumentation>
                 </configuration>
             </plugin>
-
-
         </plugins>
 
         <resources>
