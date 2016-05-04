@@ -1,7 +1,7 @@
 # PBlog (测试端口地址:http://115.29.112.160:8011/)
 Version: 0.1.0-SNAPSHOT | 更新: 05/03 2016
 
-[![Build Status](https://travis-ci.org/penglongli/PBlog.svg?branch=master)](https://travis-ci.org/penglongli/PBlog) [![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?maxAge=2592000?style=plastic)]()
+[![Build Status](https://travis-ci.org/penglongli/PBlog.svg?branch=master)](https://travis-ci.org/penglongli/PBlog) [![Coverage Status](https://coveralls.io/repos/github/penglongli/PBlog/badge.svg?branch=master)](https://coveralls.io/github/penglongli/PBlog?branch=master)
 
 ---
 
