@@ -6,6 +6,9 @@ jdk:
 services:
   - mysql
 
+service_name: 
+  - travis-pro
+
 before_script:
   - mysql -e 'CREATE DATABASE test;'
   - mysql test < pblog.sql
