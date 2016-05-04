@@ -15,7 +15,7 @@ Version: 0.1.0-SNAPSHOT | 更新: 05/04 2016
 PBlog是一款使用Java开发的、使用markdown作为文章写作语法的单页应用blog，目的是为了作为学习交流使用。当然，你也可以将其作为个人博客网站使用，在使用的过程中如果遇到什么问题，有好的想法或者建议，可以一起互相交流。
 
 **NOTE:**
-欢迎提交pr和issue
+欢迎提交Pr和Issue
 
 ### 使用到的开源项目:
 - [Spring Framework](http://spring.io/) famework
