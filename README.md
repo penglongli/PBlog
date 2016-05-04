@@ -1,7 +1,7 @@
 # PBlog
 Version: 0.1.0-SNAPSHOT | 更新: 05/03 2016
 
-博客预览地址: [Pelin的个人博客](www.pelinli.com)
+博客预览地址: [Pelin的个人博客](http://www.pelinli.com)
 
 [![Build Status](https://travis-ci.org/penglongli/PBlog.svg?branch=master)](https://travis-ci.org/penglongli/PBlog) [![Coverage Status](https://coveralls.io/repos/github/penglongli/PBlog/badge.svg?branch=master)](https://coveralls.io/github/penglongli/PBlog?branch=master)
 
