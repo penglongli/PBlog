@@ -6,7 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class DateFormatUtils {
-
     public static Long HOURS_LONG = 3600000L;
 
     /**
