@@ -106,7 +106,7 @@ mvn package -DskipTests
 
 ## 交流贡献
 
-源码下载、使用、阅读、修改请参见 [wiki文档](http://www.baidu.com)
+源码下载、使用、阅读、修改请参见 [wiki文档](https://github.com/penglongli/PBlog/wiki)
 
 ## 版权
 This project is open-sourced under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
