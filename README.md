@@ -7,7 +7,7 @@ Version: 0.1.0-SNAPSHOT | 更新: 05/03 2016
 
 [**简介**](#简介) | 
 [**安装使用**](#安装使用) | 
-[**项目构建**](#项目构建) |  [**版权**](#版权)
+[**项目构建**](#项目构建) | [**交流贡献**](#交流贡献) |  [**版权**](#版权)
  
 ---
 
@@ -94,8 +94,19 @@ PBlog是一款使用Java开发的单页应用blog，目的是为了作为学习�
 *具体使用请参见:* [PBlog-releases](https://github.com/penglongli/PBlog/releases/)
 
 ## 项目构建
+**NOTE:** 
 
+* [Maven 3+](http://maven.apache.org/download.cgi)
+* 添加Maven的bin路径到Path中
 
+在项目根目录执行:
+```
+mvn package -DskipTests
+```
+
+## 交流贡献
+
+源码下载、使用、阅读、修改请参见 [wiki文档](http://www.baidu.com)
 
 ## 版权
 This project is open-sourced under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
