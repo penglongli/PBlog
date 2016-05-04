@@ -18,11 +18,11 @@ public class GenerateSlugInfo extends TestCase{
         System.out.println(applicationContext);
     }
 
-    public void testInsertSlug(){
+    /*public void testInsertSlug(){
         SlugInfoService slugInfoService = (SlugInfoService) applicationContext.getBean("slugInfoService");
         System.out.println(slugInfoService);
 
         slugInfoService.insert();
-    }
+    }*/
 
 }
