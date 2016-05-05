@@ -1,0 +1,120 @@
+@import "../include/index_global";
+
+
+.book-wrapper {
+  width: 60%;
+  margin-left: 35px;
+  margin-top: 10px;
+
+  .book {
+    border-top: 1px dashed #DDDDDD;
+    padding-top: 22px;
+    padding-bottom: 15px;
+
+    .book-banner {
+      float: left;
+
+      img {
+        width: 90px;
+        border: 5px solid #FFF;
+      }
+
+      img:hover {
+        border: 5px solid #333333;
+      }
+    }
+
+    .book-detail {
+      float: left;
+      width: e("calc(100% - 120px)");
+      margin-top: 2px;
+      margin-left: 20px;
+
+      .book-title {
+        font-size: 15px;
+        font-weight: 600;
+
+        a {
+          text-decoration: none;
+          color: #333;
+        }
+        
+        a:hover {
+          color: #0099cc;
+        }
+      }
+
+      .book-operate {
+        margin-top: 7px;
+      }
+
+      .book-intro {
+        font-size: 14px;
+        margin-top: 12px;
+        line-height: 1.4;
+      }
+    }
+
+    .book-read {
+      margin-left: 120px;
+
+      a {
+        text-decoration: none;
+        background: #00A8E6;
+        color: #FFF;
+        padding: 0 12px;
+        font-size: 13px;
+        line-height: 28px;
+        min-height: 30px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        display: inline-block;
+      }
+      
+      a:hover {
+        background: #0099cc;
+      }
+    }
+
+  }
+
+
+
+
+}
+
+.reading-book {
+  position: fixed;
+  height: 100px;
+  width: 270px;
+  right: 25px;
+  top: 55px;
+
+  .book-list {
+    margin-top: 20px;
+
+    img {
+      float: left;
+      display: inline-block;
+      width: 70px;
+      height: 100px;
+      margin: 0 18px 25px 0;
+    }
+
+    img:hover {
+      -webkit-transform: scale(1.4);
+      -moz-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+      -o-transform: scale(1.4);
+      transform: scale(1.4);
+    }
+  }
+}
+
+.cate-name {
+  font-size: 18px;
+  height: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+}

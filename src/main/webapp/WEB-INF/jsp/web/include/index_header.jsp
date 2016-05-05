@@ -21,7 +21,7 @@
             <a href="${staticDomain}/#/category">
                 <li <c:if test="${active_line == 3}">class="active"</c:if>><i class="icon-reorder"></i>分类</li>
             </a>
-            <a href="">
+            <a href="${staticDomain}/#/read">
                 <li><i class="icon-book"></i>读书</li>
             </a>
             <a href="">

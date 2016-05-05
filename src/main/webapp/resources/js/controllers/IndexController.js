@@ -31,7 +31,7 @@ function initializeIndex(content_md){
         }else {
             $(this).removeClass("active");
         }
-    })
+    });
 
     $contentBody.html(marked(content_md));
     loadSlider();

@@ -18,6 +18,16 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: CategoryController
         });
 
+        $routeProvider.when('/read', {
+            templateUrl: '/read/layout',
+            controller: ReadController
+        });
+
+        $routeProvider.when('/about', {
+            templateUrl: '/about/layout',
+            controller: AboutController
+        });
+
         $routeProvider.when('/archives/:timeStamp', {
             templateUrl: '/archives/layout',
             controller: ArchivesTimeStampController
@@ -31,16 +41,6 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
         $routeProvider.when('/article/:articleSlug', {
             templateUrl: '/article/slug/layout',
             controller: ArticleController
-        });
-
-        $routeProvider.when('/about', {
-            templateUrl: '/about/layout',
-            controller: AboutController
-        });
-
-        $routeProvider.when('/read', {
-            templateUrl: '/read',
-            controller: ReadController
         });
 
         $routeProvider.otherwise({redirectTo: '/index'});

@@ -1,7 +1,8 @@
 package com.pblog.dao;
 
 import com.pblog.domain.BookInfo;
-import com.sun.tools.javac.util.List;
+
+import java.util.List;
 
 public interface BookInfoMapper {
     int deleteByPrimaryKey(Integer id);

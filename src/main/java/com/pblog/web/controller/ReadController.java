@@ -13,7 +13,7 @@ public class ReadController {
     @RequestMapping(value = "/read/layout", method = RequestMethod.GET)
     public String layout(HttpServletRequest request, Model model) {
 
-        return "";
+        return "web/book/layout";
     }
 
     @RequestMapping(value = "/read", method = RequestMethod.GET)
