@@ -15,9 +15,10 @@
         <typeAlias type="com.pblog.domain.RecordReadLog" alias="RecordReadLog" />
         <typeAlias type="com.pblog.domain.TagInfo" alias="TagInfo" />
         <typeAlias type="com.pblog.domain.SlugInfo" alias="SlugInfo" />
+        <typeAlias type="com.pblog.domain.BookTable" alias="BookTable" />
     </typeAliases>
     
     <plugins>
-        <plugin interceptor="com.pblog.web.interceptor.PaginationInterceptor"></plugin>
+        <plugin interceptor="com.pblog.web.interceptor.PaginationInterceptor" />
     </plugins>
 </configuration>

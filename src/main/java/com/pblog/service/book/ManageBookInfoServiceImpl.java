@@ -2,9 +2,11 @@ package com.pblog.service.book;
 
 import com.pblog.dao.BookInfoMapper;
 import com.pblog.domain.BookInfo;
-import com.pblog.web.controller.readmanage.BookInfoFormBean;
+import com.pblog.web.controller.bookmanage.BookInfoFormBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service(value = "manageBookInfoService")
 public class ManageBookInfoServiceImpl implements ManageBookInfoService{
@@ -34,5 +36,10 @@ public class ManageBookInfoServiceImpl implements ManageBookInfoService{
         bookInfo.setContent(bookInfoFormBean.getContent());
 
         bookInfoMapper.insert(bookInfo);
+    }
+
+    public List<BookInfo> findList() {
+
+        return bookInfoMapper.selectAll();
     }
 }

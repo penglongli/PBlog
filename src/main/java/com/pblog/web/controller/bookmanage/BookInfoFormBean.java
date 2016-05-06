@@ -1,4 +1,4 @@
-package com.pblog.web.controller.readmanage;
+package com.pblog.web.controller.bookmanage;
 
 public class BookInfoFormBean {
 

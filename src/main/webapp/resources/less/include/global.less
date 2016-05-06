@@ -7,12 +7,16 @@ pre{
   padding: 10px;
 }
 
+.clear-fix {
+  clear: both;
+}
+
 #wrapper {
   padding-left: 13%;
   padding-top: 43px;
 
   .content {
-    width: 85%;
+    width: 84%;
     margin-right: 0;
     padding: 4px 0px 4px 25px;
     background: #FFFFFF; // #E2E2E2
@@ -31,6 +35,10 @@ pre{
           list-style: none;
           color: #337AB7;
 
+          a {
+            text-decoration: none;
+          }
+
           i {
             margin-right: 3px;
             font-size: 14px;
@@ -48,5 +56,86 @@ pre{
         }
       }
     }
+  }
+
+  //遮罩层
+  .mask {
+    display: none;
+    position: fixed;
+    background: #808080;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+    opacity: 0.96;
+    bottom: 0;
+    right: 0;
+
+    .modal-dialog {
+      font-size: 15px;
+      width: 40%;
+      margin-left: 35%;
+      background: #FFF;
+      margin-top: 60px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;;
+
+
+      .modal-title {
+        min-height: 15px;
+        padding: 15px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .modal-body {
+        min-height: 15px;
+        padding: 20px;
+        position: relative;
+      }
+
+      .modal-operate {
+        min-height: 15px;
+        padding: 10px 15px;
+        border-top: 1px solid #e5e5e5;
+
+        .close {
+          padding: 5px 12px;
+          border: 1px solid #CCCCCC;
+          border-radius: 6px;
+          float: right;
+          margin-right: 15px;
+        }
+
+        .sub, .confirm {
+          background: #428BCA;
+          color: #FFF;
+          padding: 5px 12px;
+          border-radius: 6px;
+          float: right;
+        }
+
+        .close:hover, .sub:hover, .confirm:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .click-btn {
+    text-decoration: none;
+    background: #00A8E6;
+    color: #FFF;
+    padding: 0 12px;
+    font-size: 13px;
+    line-height: 28px;
+    min-height: 30px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .click-btn:hover {
+    cursor: pointer;
   }
 }

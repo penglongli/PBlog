@@ -31,16 +31,19 @@ header .navbar-left {
   width: 13%;
 }
 header .navbar-left ul {
-  color: #9D9D9D;
   list-style: none;
   margin-top: 0;
   border: 0;
 }
+header .navbar-left ul a {
+  text-decoration: none;
+  color: #9D9D9D;
+}
 header .navbar-left ul li {
   line-height: 1.42857143;
+  font-size: 14px;
   margin-left: -40px;
   padding: 15px 0px 15px 20px;
-  font-size: 14px;
 }
 header .navbar-left ul li i {
   margin-right: 9px;

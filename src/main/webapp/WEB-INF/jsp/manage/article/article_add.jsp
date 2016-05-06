@@ -14,6 +14,7 @@
 <body>
 <c:set var="active_line" value="1"/>
 <c:set var="first_nav" value="文章管理" />
+<c:set var="first_url" value="${staticDomain}/manage/article/list" />
 <c:choose>
     <c:when test="${type == 1}">
         <c:set var="second_nav" value="文章添加" />

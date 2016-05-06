@@ -14,13 +14,14 @@
 <c:set var="active_line" value="1" />
 <c:set var="first_nav" value="文章管理" />
 <c:set var="second_nav" value="文章列表" />
+<c:set var="first_url" value="${staticDomain}/manage/article/list" />
 
 <div id="wrapper">
     <%@ include file="../include/index_man_header.jsp"%>
     <div class="content">
         <div class="content-second-nav">
             <ol>
-                <li><i class="icon-edit"></i>${first_nav}</li>
+                <li><a href="${staticDomain}/manage/article/list"><i class="icon-edit"></i>${first_nav}</a></li>
                 <li class="active"><i class="icon-list"></i>${second_nav}</li>
             </ol>
             <div style="clear: both;"></div>
@@ -81,7 +82,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>
 
