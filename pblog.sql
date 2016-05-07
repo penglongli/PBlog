@@ -64,7 +64,7 @@ CREATE TABLE `article_read_log` (
   `type` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_artSlug` (`articleSlug`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `article_read_log` (
 
 LOCK TABLES `article_read_log` WRITE;
 /*!40000 ALTER TABLE `article_read_log` DISABLE KEYS */;
-INSERT INTO `article_read_log` VALUES (1,93246051,'127.0.0.1',NULL,1);
+INSERT INTO `article_read_log` VALUES (1,93246051,'127.0.0.1',NULL,1),(2,93246051,'127.0.0.1',NULL,1),(3,93246051,'127.0.0.1',NULL,1),(4,93246051,'127.0.0.1',NULL,1),(5,93246051,'127.0.0.1',NULL,1),(6,93246051,'127.0.0.1',NULL,1),(7,93246051,'127.0.0.1',NULL,1),(8,93246051,'127.0.0.1',NULL,1),(9,93246051,'127.0.0.1',NULL,1),(10,93246051,'127.0.0.1',NULL,1),(11,93246051,'127.0.0.1',NULL,1),(12,93246051,'127.0.0.1',NULL,1),(13,93246051,'127.0.0.1',NULL,1),(14,93246051,'127.0.0.1',NULL,1),(15,93246051,'127.0.0.1',NULL,1),(16,93246051,'127.0.0.1',NULL,1),(17,93246051,'127.0.0.1',NULL,1),(18,93246051,'127.0.0.1',NULL,1),(19,93246051,'127.0.0.1',NULL,1),(20,93246051,'127.0.0.1',NULL,1),(21,93246051,'127.0.0.1',NULL,1),(22,93246051,'127.0.0.1',NULL,1),(23,93246051,'127.0.0.1',NULL,1),(24,93246051,'127.0.0.1',NULL,1),(25,93246051,'127.0.0.1',NULL,1),(26,93246051,'127.0.0.1',NULL,1),(27,93246051,'127.0.0.1',NULL,1),(28,93246051,'127.0.0.1',NULL,1),(29,93246051,'127.0.0.1',NULL,1),(30,93246051,'127.0.0.1',NULL,1),(31,93246051,'127.0.0.1',NULL,1),(32,93246051,'127.0.0.1',NULL,1),(33,93246051,'127.0.0.1',NULL,1),(34,93246051,'127.0.0.1',NULL,1),(35,93246051,'127.0.0.1',NULL,1),(36,93246051,'10.20.130.73',NULL,1),(37,93246051,'10.20.130.73',NULL,1),(38,93246051,'10.20.130.13',NULL,1),(39,93246051,'10.20.130.73',NULL,1),(40,93246051,'127.0.0.1',NULL,1),(41,93246051,'127.0.0.1',NULL,1),(42,93246051,'127.0.0.1',NULL,1),(43,93246051,'127.0.0.1',NULL,1),(44,93246051,'127.0.0.1',NULL,1),(45,93246051,'127.0.0.1',NULL,1),(46,93246051,'127.0.0.1',NULL,1),(47,93246051,'10.20.130.73',NULL,1),(48,93246051,'10.20.130.13',NULL,1);
 /*!40000 ALTER TABLE `article_read_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,6 +160,32 @@ CREATE TABLE `book_read_log` (
 LOCK TABLES `book_read_log` WRITE;
 /*!40000 ALTER TABLE `book_read_log` DISABLE KEYS */;
 /*!40000 ALTER TABLE `book_read_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `book_table`
+--
+
+DROP TABLE IF EXISTS `book_table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `book_table` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `bookName` varchar(50) DEFAULT NULL,
+  `bookUrl` varchar(100) DEFAULT NULL,
+  `bookBanner` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `book_table`
+--
+
+LOCK TABLES `book_table` WRITE;
+/*!40000 ALTER TABLE `book_table` DISABLE KEYS */;
+INSERT INTO `book_table` VALUES (8,'知更鸟女孩','https://book.douban.com/subject/26707942/?icn=index-editionrecommend','https://img3.doubanio.com/mpic/s28535995.jpg'),(9,'我的衣橱故事','https://book.douban.com/subject/26745200/?icn=index-latestbook-subject','https://img1.doubanio.com/lpic/s28685469.jpg'),(11,'奇迹','https://book.douban.com/subject/26735085/?icn=index-latestbook-subject','https://img3.doubanio.com/lpic/s28660552.jpg');
+/*!40000 ALTER TABLE `book_table` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -301,7 +327,7 @@ CREATE TABLE `website_traffic` (
   `operateSystem` varchar(20) DEFAULT NULL,
   `browser` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -310,7 +336,7 @@ CREATE TABLE `website_traffic` (
 
 LOCK TABLES `website_traffic` WRITE;
 /*!40000 ALTER TABLE `website_traffic` DISABLE KEYS */;
-INSERT INTO `website_traffic` VALUES (1,'127.0.0.1','2016-05-04 19:58:24','Windows 7','Chrome');
+INSERT INTO `website_traffic` VALUES (1,'127.0.0.1','2016-05-04 19:58:24','Windows 7','Chrome'),(2,'127.0.0.1','2016-05-05 23:25:28','Unknown','Unknown'),(3,'127.0.0.1','2016-05-06 00:25:44','Windows 7','Chrome'),(4,'127.0.0.1','2016-05-06 01:30:47','Windows 7','Chrome'),(5,'127.0.0.1','2016-05-06 05:13:47','Unknown','Unknown'),(6,'127.0.0.1','2016-05-06 06:14:42','Windows 7','Chrome'),(7,'127.0.0.1','2016-05-06 07:31:14','Windows 7','Chrome'),(8,'127.0.0.1','2016-05-06 08:31:15','Windows 7','Chrome'),(9,'127.0.0.1','2016-05-06 09:49:45','Unknown','Unknown'),(10,'127.0.0.1','2016-05-06 12:09:57','Windows 7','Chrome'),(11,'127.0.0.1','2016-05-06 13:52:51','Unknown','Unknown'),(12,'127.0.0.1','2016-05-06 15:04:48','Unknown','Unknown'),(13,'127.0.0.1','2016-05-07 15:18:09','Unknown','Unknown'),(14,'127.0.0.1','2016-05-07 16:23:33','Windows 7','Chrome'),(15,'10.20.130.73','2016-05-07 16:24:31','Windows 7','Chrome'),(16,'10.20.130.13','2016-05-07 16:26:10','Android 6.x','Chrome Mobile');
 /*!40000 ALTER TABLE `website_traffic` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -323,4 +349,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-04 19:58:48
+-- Dump completed on 2016-05-07 17:19:35

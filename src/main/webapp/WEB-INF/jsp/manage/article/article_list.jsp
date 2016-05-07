@@ -36,7 +36,7 @@
                 </select>
             </div>
             <div class="add-article">
-                <a href="${staticDomain}/manage/article/add">添加文章</a>
+                <a href="${staticDomain}/manage/article/add" class="click-btn">添加文章</a>
             </div>
             <div style="clear: both;"></div>
         </div>
@@ -68,9 +68,9 @@
                                 </c:choose>
                             </td>
                             <td class="operate">
-                                <a href="${staticDomain}/manage/article/edit/${articleInfo.id}">编辑</a>
-                                <a href="${staticDomain}/#/article/${articleInfo.slug}" target="_blank">查看</a>
-                                <a href="javascript:void(0)" onclick="hideArticle(${articleInfo.id})">
+                                <a href="${staticDomain}/manage/article/edit/${articleInfo.id}" class="click-btn">编辑</a>
+                                <a href="${staticDomain}/#/article/${articleInfo.slug}" target="_blank" class="click-btn">查看</a>
+                                <a href="javascript:void(0)" onclick="hideArticle(${articleInfo.id})" class="click-btn">
                                     <c:choose>
                                         <c:when test="${articleInfo.enabled}">隐藏</c:when>
                                         <c:otherwise>显示</c:otherwise>

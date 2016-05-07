@@ -40,7 +40,7 @@ public class ManageBookInfoController {
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String editPage(Model model) {
 
-        return "";
+        return "manage/book/edit";
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)

@@ -41,7 +41,7 @@ public class GlobalInterceptor implements HandlerInterceptor{
 
         //获取访客IP
         String realIp = GenerateUtils.getIpAddress(request);
-        request.setAttribute("realIp", (realIp == null) ? "127.0.0.1" : realIp);
+        request.setAttribute("realIp", realIp);
 
         WebsiteTraffic websiteTraffic = new WebsiteTraffic();
         websiteTraffic.setBrowser(userAgent.getBrowser().getName());
