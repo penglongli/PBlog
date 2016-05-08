@@ -38,8 +38,11 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insert" parameterType="com.pblog.domain.BookInfo" >
-    insert into book_info (id, title, createTime, 
+  <insert id="insert" parameterType="BookInfo" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS id
+    </selectKey>
+    insert into book_info (id, title, createTime,
       slug, banner, thumb, 
       introduction, content)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
@@ -59,7 +62,7 @@
   </update>
 
   <select id="selectAll" resultType="BookInfo">
-    select * from book_info;
+    select * from book_info
   </select>
 
   <select id="selectBySlug" parameterType="java.lang.Long" resultType="BookInfo">

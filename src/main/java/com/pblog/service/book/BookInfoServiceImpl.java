@@ -44,6 +44,6 @@ public class BookInfoServiceImpl implements BookInfoService{
         bookInfoVO.setContent(bookInfo.getContent());
         bookInfoVO.setReviewNum(1L);
 
-        return new BookInfoVO();
+        return bookInfoVO;
     }
 }

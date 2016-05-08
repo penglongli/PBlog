@@ -43,6 +43,11 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: ArticleController
         });
 
+        $routeProvider.when('/read/:bookSlug', {
+            templateUrl: '/read/slug/layout',
+            controller: BookController
+        });
+
         $routeProvider.otherwise({redirectTo: '/index'});
         //$locationProvider.html5Mode(true);$locationProvider.html5Mode(true);
     }).

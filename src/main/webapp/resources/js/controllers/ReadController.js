@@ -2,8 +2,17 @@
 var ReadController = function ($scope, $interval, $http, $timeout) {
     
     $scope.fetchBooksList = function () {
-        initializeRead();
-        initializeLoad($scope, $timeout);
+        $http.get('/book/list.json').
+            success(function(data) {
+                initializeRead();
+                initializeLoad($scope, $timeout);
+
+                $scope.bookInfoList = data.bookInfoVOList;
+                $scope.bookTableList = data.bookTableVOList;
+            }).
+            error(function(err) {
+                console.log(err);
+            });
     };
 
     $scope.fetchBooksList();

@@ -11,12 +11,19 @@ var $delIdInput = $(".del-id-input");
 function addBookTable() {
     $bookTableForm.attr("action", $(".bt-add-action").val());
     $modalTitle.html("添加 - 在读书籍");
+    $id.val("");
+    $bookName.val("");
+    $bookUrl.val("");
+    $bookBanner.val("");
+    $bannerView.attr("src", "");
+
     $("#mask-edit").css("display", "block");
 }
 
 //编辑
 function editBookTable(id, bookName, bookUrl, bookBanner) {
     $bookTableForm.attr("action", $(".bt-update-action").val());
+    $modalTitle.html("更新 - 在读书籍");
     $id.val(id);
     $bookName.val(bookName);
     $bookUrl.val(bookUrl);

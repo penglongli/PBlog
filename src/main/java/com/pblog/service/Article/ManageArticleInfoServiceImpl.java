@@ -5,6 +5,7 @@ import com.pblog.dao.SlugInfoMapper;
 import com.pblog.domain.ArticleInfo;
 import com.pblog.domain.SlugInfo;
 import com.pblog.web.controller.articlemanage.ArticleInfoFormBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,10 +17,10 @@ import java.util.List;
 @Transactional
 public class ManageArticleInfoServiceImpl implements ManageArticleInfoService {
 
-    @Resource
+    @Autowired
     private ArticleInfoMapper articleInfoMapper;
 
-    @Resource
+    @Autowired
     private SlugInfoMapper slugInfoMapper;
 
     public void insert(ArticleInfoFormBean articleInfoFormBean) throws RuntimeException{

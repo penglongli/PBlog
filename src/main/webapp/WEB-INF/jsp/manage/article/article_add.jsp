@@ -82,8 +82,6 @@
     </div>
 </div>
 
-</body>
-
 <script type="text/javascript">
     $(".publish-article").click(function () {
         var htmlValue = markedToHTML($(".editor:eq(1)"), $(".description-view"));
@@ -109,4 +107,5 @@
         return htmlValue;
     }
 </script>
+</body>
 </html>

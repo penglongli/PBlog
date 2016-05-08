@@ -12,4 +12,6 @@ public interface ManageBookInfoService {
     void update(BookInfoFormBean bookInfoFormBean);
 
     List<BookInfo> findList();
+
+    BookInfo findById(Integer id);
 }

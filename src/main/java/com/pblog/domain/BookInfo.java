@@ -13,7 +13,7 @@ public class BookInfo {
 
     private String banner;
 
-    private Integer thumb;
+    private Integer thumb = 0;
 
     private String introduction;
 

@@ -40,26 +40,29 @@ public class ManageBookInfoController {
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String editPage(Model model) {
 
+        model.addAttribute("type", 1);
         return "manage/book/edit";
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editPage(@PathVariable Integer id, Model model) {
+        BookInfo bookInfo = manageBookInfoService.findById(id);
 
-        return "";
+        model.addAttribute("bookInfo", bookInfo);
+        model.addAttribute("type", 2);
+        return "manage/book/edit";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String insert(@ModelAttribute BookInfoFormBean bookInfoFormBean) {
+        manageBookInfoService.insert(bookInfoFormBean);
 
         return "redirect:list";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(@ModelAttribute BookInfoFormBean bookInfoFormBean) {
-
+        manageBookInfoService.update(bookInfoFormBean);
         return "redirect:list";
     }
-
-
 }

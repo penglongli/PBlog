@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>文章管理</title>
+    <title>书评管理</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="${cssDomain}/manage/book_list.css" rel="stylesheet"  />
@@ -38,7 +38,7 @@
 
         <c:set var="second_nav" value="书评列表" />
         <%@ include file="../include/index_second_header.jsp" %>
-        <div class="add-read-book click-btn">添加书评</div>
+        <div class="add-read-book click-btn"><a href="${staticDomain}/manage/book/add">添加书评</a></div>
         <div class="book-list">
             <table>
                 <thead>
@@ -51,17 +51,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>93246051</td>
-                        <td>Java从入门到放弃</td>
-                        <td>2016-05-06 06:09</td>
-                        <td><img src="https://img3.doubanio.com/mpic/s1326871.jpg" /></td>
-                        <td>
-                            <a href="#">编辑</a>
-                            <a href="#">查看</a>
-                            <a href="#">隐藏</a>
-                        </td>
-                    </tr>
+                    <c:forEach var="bookInfo" items="${bookInfoList}" varStatus="status">
+                        <tr>
+                            <td>${bookInfo.slug}</td>
+                            <td>${bookInfo.title}</td>
+                            <td><fmt:formatDate value="${bookInfo.createTime}" pattern="YYYY-MM-dd HH:mm:ss" /></td>
+                            <td><img src="${bookInfo.banner}" /></a></td>
+                            <td>
+                                <a href="${staticDomain}/manage/book/edit/${bookInfo.id}" class="click-btn">编辑</a>
+                                <a href="#" class="click-btn">查看</a>
+                                <a href="#" class="click-btn">隐藏</a>
+                            </td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table>
         </div>
@@ -130,7 +132,6 @@
 <input type="hidden" value="${staticDomain}/manage/read/add" class="bt-add-action" />
 <input type="hidden" value="${staticDomain}/manage/read/update" class="bt-update-action" />
 <input type="hidden" value="${staticDomain}/manage/read/delete" class="bt-del-action" />
-
 <script type="text/javascript" src="${jsDomain}/manage/book_list.js"></script>
 </body>
 </html>
