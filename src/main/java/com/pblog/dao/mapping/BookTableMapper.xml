@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pblog.dao.BookTableMapper" >
+  <resultMap id="BaseResultMap" type="com.pblog.domain.BookTable" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="bookName" property="bookName" jdbcType="VARCHAR" />
+    <result column="bookUrl" property="bookUrl" jdbcType="VARCHAR" />
+    <result column="bookBanner" property="bookBanner" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, bookName, bookUrl, bookBanner
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from book_table
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from book_table
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pblog.domain.BookTable" >
+    insert into book_table (id, bookName, bookUrl, 
+      bookBanner)
+    values (#{id,jdbcType=INTEGER}, #{bookName,jdbcType=VARCHAR}, #{bookUrl,jdbcType=VARCHAR}, 
+      #{bookBanner,jdbcType=VARCHAR})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.pblog.domain.BookTable" >
+    update book_table
+    set bookName = #{bookName,jdbcType=VARCHAR},
+      bookUrl = #{bookUrl,jdbcType=VARCHAR},
+      bookBanner = #{bookBanner,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectAll" resultType="BookTable">
+    select * from book_table
+  </select>
+</mapper>
