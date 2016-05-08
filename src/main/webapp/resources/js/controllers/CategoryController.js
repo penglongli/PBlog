@@ -5,9 +5,10 @@ var CategoryController = function ($scope, $interval, $http, $timeout) {
         $http.get('/categoryList.json').
             success(function (data) {
                 initializeCategory();
+                initializeLoad($scope, $timeout);
+
                 $scope.categoryList = data.categoryInfoVOList;
                 $scope.articleList = data.articleInfoVOList;
-                initializeLoad($scope, $timeout);
             }).
             error(function (err) {
                 console.log(err);

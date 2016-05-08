@@ -1,5 +1,7 @@
 package com.pblog.service.book;
 
+import java.util.Date;
+
 public class BookInfoVO {
 
     public Long slug;
@@ -11,6 +13,8 @@ public class BookInfoVO {
     public Integer thumb;
 
     public String introduction;
+
+    public Date createTime;
 
     public String content;
 
@@ -70,5 +74,13 @@ public class BookInfoVO {
 
     public void setReviewNum(Long reviewNum) {
         this.reviewNum = reviewNum;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

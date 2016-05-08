@@ -6,9 +6,10 @@ var CategorySlugController = function ($scope, $interval, $http, $timeout, $rout
         $http.get('/category/' + categorySlug + '.json').
             success(function (data) {
                 initializeCategorySlug();
+                initializeLoad($scope, $timeout);
+
                 $scope.categoryList = data.categoryInfoVOList;
                 $scope.articleList = data.articleInfoVOList;
-                initializeLoad($scope, $timeout);
             }).
             error(function (err) {
                 console.log(err);

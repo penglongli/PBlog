@@ -54,6 +54,7 @@
     update book_info
     set title = #{title,jdbcType=VARCHAR},
       createTime = #{createTime,jdbcType=TIMESTAMP},
+      content = #{content, jdbcType=LONGVARCHAR},
       slug = #{slug,jdbcType=BIGINT},
       banner = #{banner,jdbcType=VARCHAR},
       thumb = #{thumb,jdbcType=INTEGER},

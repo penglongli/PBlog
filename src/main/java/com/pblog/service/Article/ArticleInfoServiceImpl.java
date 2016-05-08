@@ -88,6 +88,7 @@ public class ArticleInfoServiceImpl implements ArticleInfoService{
         articleReadLog.setArticleSlug(articleInfoSlug);
         articleReadLog.setIpAddress(ipAddress);
         articleReadLog.setType(type);
+        articleReadLog.setCreateTime(new Date());
         articleReadLogMapper.insert(articleReadLog);
     }
 

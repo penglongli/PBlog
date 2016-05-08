@@ -8,6 +8,7 @@ import com.pblog.service.book.BookTableService;
 import com.pblog.service.book.BookTableVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,9 +28,15 @@ public class ReadController {
     private BookTableService bookTableService;
 
     @RequestMapping(value = "/read/layout", method = RequestMethod.GET)
-    public String layout(HttpServletRequest request, Model model) {
+    public String indexLayout(HttpServletRequest request, Model model) {
 
         return "web/book/layout";
+    }
+
+    @RequestMapping(value = "/read/slug/layout", method = RequestMethod.GET)
+    public String slugLayout(HttpServletRequest request, Model model) {
+
+        return "web/book/detail";
     }
 
     @RequestMapping(value = "/book/list", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
@@ -44,6 +51,19 @@ public class ReadController {
 
         return map;
     }
+
+    @RequestMapping(value = "/book/{slug}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
+    @ResponseBody
+    public Map<String, Object> slug(@PathVariable Long slug, HttpServletRequest request) {
+        Map<String, Object> map = Maps.newHashMap();
+        String ipAddress = (String) request.getAttribute("realIp");
+
+        BookInfoVO bookInfoVO = bookInfoService.findBySlug(slug, ipAddress);
+        map.put("bookInfoVO", bookInfoVO);
+
+        return map;
+    }
+
 
     @RequestMapping(value = "/read", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) {

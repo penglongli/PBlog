@@ -7,5 +7,5 @@ public interface BookInfoService {
 
     List<BookInfoVO> findList();
 
-    BookInfoVO findBySlug(Long slug);
+    BookInfoVO findBySlug(Long slug, String ipAddress);
 }

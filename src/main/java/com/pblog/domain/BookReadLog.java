@@ -52,4 +52,22 @@ public class BookReadLog {
     public void setType(Integer type) {
         this.type = type;
     }
+
+    public enum BookReadType {
+        TYPE_READ(1),
+
+        TYPE_LIKE(2),
+
+        TYPE_THUMB(3);
+
+        private Integer id;
+
+        BookReadType(Integer id){
+            this.id = id;
+        }
+
+        public Integer getId(){
+            return id;
+        }
+    }
 }
