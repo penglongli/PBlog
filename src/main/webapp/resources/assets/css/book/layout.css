@@ -1,0 +1,212 @@
+html {
+  font-size: 65%;
+}
+body {
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+}
+.clear-fix {
+  clear: both;
+}
+/** 进度条样式 **/
+#loading-bar .bar {
+  background: #2c3e50;
+}
+#loading-bar-spinner .spinner-icon {
+  border-top-color: #2c3e50;
+  border-left-color: #2c3e50;
+}
+#loading-bar .peg {
+  -moz-box-shadow: #2c3e50 1px 0 6px 1px;
+  -ms-box-shadow: #2c3e50 1px 0 6px 1px;
+  -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
+  box-shadow: #2c3e50 1px 0 6px 1px;
+}
+/** 进度条样式结束 **/
+#fix-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 11%;
+  background: #2B333D;
+  text-align: center;
+}
+#fix-left .author_info {
+  background: #24272D;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+#fix-left .author_info img {
+  display: block;
+  margin: 10px auto;
+  max-width: 76px;
+  padding: 2px;
+  border: none;
+}
+#fix-left .author_info p {
+  text-align: center;
+  color: white;
+}
+#fix-left .author_info .motto {
+  text-align: left;
+  font-size: 13px;
+  padding: 0 20px 15px 15px;
+  color: #777777;
+}
+#fix-left .menu_bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#fix-left .menu_bar ul li {
+  font-size: 18px;
+  padding: 8px;
+}
+#fix-left .menu_bar ul li i {
+  margin-right: 0.7em;
+}
+#fix-left .menu_bar ul li:hover {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+#fix-left .menu_bar ul a {
+  text-decoration: none;
+  color: #999999;
+}
+#fix-left .menu_bar ul a:link {
+  text-decoration: none;
+}
+#fix-left .menu_bar ul .active {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+.wrapper-header {
+  position: fixed;
+  left: 11%;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #DDD;
+  z-index: 999;
+  box-shadow: 2px 1px 5px #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+}
+.wrapper-header .search {
+  background: url('/resources/image/search_background.png') no-repeat;
+  width: 276px;
+  height: 28px;
+  background-size: 276px 28px;
+  display: inline-block;
+}
+.wrapper-header .search .search_input {
+  border: none;
+  width: 222px;
+  height: 26px;
+  margin: 0px 0px 2px 30px;
+  background-color: transparent;
+  outline: none;
+}
+.content {
+  position: absolute;
+  z-index: 100;
+  top: 45px;
+  right: 0;
+  bottom: 0;
+  left: 11%;
+}
+.book-wrapper {
+  width: 60%;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+.book-wrapper .book {
+  border-top: 1px dashed #DDDDDD;
+  padding-top: 22px;
+  padding-bottom: 15px;
+}
+.book-wrapper .book .book-banner {
+  float: left;
+}
+.book-wrapper .book .book-banner img {
+  width: 90px;
+  border: 5px solid #FFF;
+}
+.book-wrapper .book .book-banner img:hover {
+  border: 5px solid #333333;
+}
+.book-wrapper .book .book-detail {
+  float: left;
+  width: calc(100% - 120px);
+  margin-top: 2px;
+  margin-left: 20px;
+}
+.book-wrapper .book .book-detail .book-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.book-wrapper .book .book-detail .book-title a {
+  text-decoration: none;
+  color: #333;
+}
+.book-wrapper .book .book-detail .book-title a:hover {
+  color: #0099cc;
+}
+.book-wrapper .book .book-detail .book-operate {
+  margin-top: 7px;
+}
+.book-wrapper .book .book-detail .book-intro {
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+.book-wrapper .book .book-read {
+  margin-left: 120px;
+}
+.book-wrapper .book .book-read a {
+  text-decoration: none;
+  background: #00A8E6;
+  color: #FFF;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 28px;
+  min-height: 30px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  display: inline-block;
+}
+.book-wrapper .book .book-read a:hover {
+  background: #0099cc;
+}
+.reading-book {
+  position: fixed;
+  height: 100px;
+  width: 270px;
+  right: 25px;
+  top: 55px;
+}
+.reading-book .book-list {
+  margin-top: 20px;
+}
+.reading-book .book-list img {
+  float: left;
+  display: inline-block;
+  width: 70px;
+  height: 100px;
+  margin: 0 18px 25px 0;
+}
+.reading-book .book-list img:hover {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+.cate-name {
+  font-size: 18px;
+  height: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+}

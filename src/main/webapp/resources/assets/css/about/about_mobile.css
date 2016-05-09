@@ -1,0 +1,240 @@
+html {
+  font-size: 12px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  font-size: 1.3rem;
+}
+.body-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.clear-fix {
+  clear: both;
+}
+#Wrapper {
+  width: 100%;
+  margin-left: 0;
+  overflow-x: hidden;
+}
+#Wrapper #Top {
+  width: 100%;
+  position: fixed;
+  padding: 0;
+  text-align: center;
+  font-family: "Open Sans", SimHei, "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+  color: #88909a;
+  border-bottom: 1px solid #E3F2FD;
+  height: 3em;
+  line-height: 3em;
+  z-index: 999;
+}
+#Wrapper #Top .top-list {
+  float: left;
+  margin-left: 1em;
+}
+#Wrapper #Top .top-github {
+  float: right;
+  margin-right: 1em;
+}
+#Wrapper #Top i {
+  font-size: 2rem;
+  line-height: 2.25em;
+}
+#Wrapper #Top a {
+  color: #88909a;
+  text-decoration: none;
+}
+#Wrapper #Content {
+  margin-top: 3em;
+  padding: 0 1em 0 1em;
+}
+#Wrapper .content-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#Wrapper .content-slide .article:first-child {
+  margin-top: 1.5em;
+}
+#SlideBar {
+  position: fixed;
+  width: 76%;
+  bottom: 0;
+  top: 0;
+  right: 100%;
+  overflow: hidden;
+  color: #ebebeb;
+  font-family: "Consolas", "Microsoft Yahei", sans-serif;
+  background: #202020;
+}
+#SlideBar .author_info {
+  margin-top: 1em;
+  text-align: center;
+}
+#SlideBar .author_info img {
+  width: 5em;
+}
+#SlideBar .author_info p {
+  line-height: .5;
+}
+#SlideBar .menu_bar ul {
+  font-size: 1.45rem;
+  margin-top: 1.3em;
+  padding: 0;
+  margin-left: 1.5em;
+  list-style: none;
+}
+#SlideBar .menu_bar ul li {
+  margin-top: .7em;
+}
+#SlideBar .menu_bar ul li a {
+  text-decoration: none;
+  color: #999;
+}
+#SlideBar .menu_bar ul li i {
+  margin-right: .8em;
+}
+#SlideBar .menu_bar ul li .csdn {
+  background: url('/resources/image/csdn.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li .zhihu {
+  background: url('/resources/image/zhihu.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li span {
+  width: 1em;
+  height: 1.2em;
+  margin-right: .8em;
+  display: inline-block;
+  vertical-align: middle;
+}
+body {
+  background: #FFF!important;
+}
+#Content {
+  padding: 0!important;
+  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.2rem;
+  margin: 3em 0;
+}
+.banner {
+  font-size: 1rem;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 16.5em;
+  color: #FFF;
+  text-align: center;
+  background: url('/resources/image/about_me.jpg') no-repeat #EEEEEE;
+  background-size: 100% 99%;
+}
+.banner .info {
+  width: 60%;
+  margin-left: 20%;
+  position: absolute;
+  bottom: 1em;
+  font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
+}
+.banner .info h1 {
+  font-size: 1.7rem;
+  margin: 0 0 .3em 0;
+  padding: 0;
+  letter-spacing: .15em;
+}
+.banner .info h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.about-detail {
+  margin: 0;
+  padding: 0 5%;
+  word-break: break-all;
+}
+.about-detail .spot {
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 1.5em 0;
+}
+.about-detail .spot a {
+  text-decoration: none;
+  color: #FFF;
+  background: #DF611A;
+  padding: .6em 1em .7em 1em;
+  border-radius: 4%;
+  vertical-align: top;
+}
+.about-detail .spot a i {
+  font-size: 1.75rem;
+  margin-right: .25em;
+  line-height: 1;
+}
+.about-detail .contact,
+.about-detail .person,
+.about-detail .social,
+.about-detail .open-source,
+.about-detail .work-experience,
+.about-detail .education,
+.about-detail .awards,
+.about-detail .technical {
+  margin-top: 1.5em;
+}
+.about-detail .contact h2,
+.about-detail .person h2,
+.about-detail .social h2,
+.about-detail .open-source h2,
+.about-detail .work-experience h2,
+.about-detail .education h2,
+.about-detail .awards h2,
+.about-detail .technical h2 {
+  font-size: 1.4rem;
+  color: #424242;
+  text-shadow: 1px 1px #CCC;
+  font-family: GothicCustom, 'Arial Narrow', sans-serif;
+  margin: 0;
+}
+.about-detail .contact a,
+.about-detail .person a,
+.about-detail .social a,
+.about-detail .open-source a,
+.about-detail .work-experience a,
+.about-detail .education a,
+.about-detail .awards a,
+.about-detail .technical a {
+  margin-left: .2em;
+  color: #796A66;
+}
+.about-detail .contact ul,
+.about-detail .person ul,
+.about-detail .social ul,
+.about-detail .open-source ul,
+.about-detail .work-experience ul,
+.about-detail .education ul,
+.about-detail .awards ul,
+.about-detail .technical ul {
+  margin-top: .6em;
+}
+.about-detail .contact ul li,
+.about-detail .person ul li,
+.about-detail .social ul li,
+.about-detail .open-source ul li,
+.about-detail .work-experience ul li,
+.about-detail .education ul li,
+.about-detail .awards ul li,
+.about-detail .technical ul li {
+  margin-top: .3em;
+  line-height: 1.6;
+}

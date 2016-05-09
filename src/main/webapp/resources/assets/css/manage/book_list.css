@@ -1,0 +1,307 @@
+header {
+  top: 0;
+  left: 0;
+  background: #222222;
+  position: fixed;
+  z-index: 1000;
+}
+header .navbar-header {
+  height: auto;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: #222222;
+  color: #9D9D9D;
+  font-size: 18px;
+  padding: 15px 0px 15px 20px;
+}
+header .navbar-right {
+  position: fixed;
+  right: 10px;
+  color: #999999;
+  top: 15px;
+  font-size: 14px;
+}
+header .navbar-left {
+  bottom: 0;
+  position: fixed;
+  top: 50px;
+  background: #222222;
+  width: 13%;
+}
+header .navbar-left ul {
+  list-style: none;
+  margin-top: 0;
+  border: 0;
+}
+header .navbar-left ul a {
+  text-decoration: none;
+  color: #9D9D9D;
+}
+header .navbar-left ul li {
+  line-height: 1.42857143;
+  font-size: 14px;
+  margin-left: -40px;
+  padding: 15px 0px 15px 20px;
+}
+header .navbar-left ul li i {
+  margin-right: 9px;
+}
+header .navbar-left ul li:hover {
+  background: #000000;
+  cursor: pointer;
+  color: #ffffff;
+}
+header .navbar-left ul .active {
+  line-height: 1.42857143;
+  font-size: 14px;
+  margin-left: -40px;
+  padding: 15px 0px 15px 20px;
+  background: #080808;
+  color: #FFFFFF;
+}
+body {
+  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+pre {
+  background: #F8F8F8;
+  padding: 10px;
+}
+.clear-fix {
+  clear: both;
+}
+#wrapper {
+  padding-left: 13%;
+  padding-top: 43px;
+}
+#wrapper .content {
+  width: 84%;
+  margin-right: 0;
+  padding: 4px 0px 4px 25px;
+  background: #FFFFFF;
+  position: absolute;
+}
+#wrapper .content .content-second-nav {
+  width: 99%;
+  background: #F5F5F5;
+}
+#wrapper .content .content-second-nav ol {
+  padding: 12px 0px 30px 8px;
+  font-size: 15px;
+}
+#wrapper .content .content-second-nav ol li {
+  float: left;
+  list-style: none;
+  color: #337AB7;
+}
+#wrapper .content .content-second-nav ol li a {
+  text-decoration: none;
+}
+#wrapper .content .content-second-nav ol li i {
+  margin-right: 3px;
+  font-size: 14px;
+  color: black;
+}
+#wrapper .content .content-second-nav ol .active {
+  color: #9E7777;
+}
+#wrapper .content .content-second-nav ol .active:before {
+  color: #ccc;
+  padding: 0 7px;
+  content: "/\00a0";
+}
+#wrapper .mask {
+  display: none;
+  position: fixed;
+  background: #808080;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  opacity: 0.96;
+  bottom: 0;
+  right: 0;
+}
+#wrapper .mask .modal-dialog {
+  font-size: 15px;
+  width: 40%;
+  margin-left: 35%;
+  background: #FFF;
+  margin-top: 60px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+#wrapper .mask .modal-dialog .modal-title {
+  min-height: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#wrapper .mask .modal-dialog .modal-body {
+  min-height: 15px;
+  padding: 20px;
+  position: relative;
+}
+#wrapper .mask .modal-dialog .modal-operate {
+  min-height: 15px;
+  padding: 10px 15px;
+  border-top: 1px solid #e5e5e5;
+}
+#wrapper .mask .modal-dialog .modal-operate .close {
+  padding: 5px 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  float: right;
+  margin-right: 15px;
+}
+#wrapper .mask .modal-dialog .modal-operate .sub,
+#wrapper .mask .modal-dialog .modal-operate .confirm {
+  background: #428BCA;
+  color: #FFF;
+  padding: 5px 12px;
+  border-radius: 6px;
+  float: right;
+}
+#wrapper .mask .modal-dialog .modal-operate .close:hover,
+#wrapper .mask .modal-dialog .modal-operate .sub:hover,
+#wrapper .mask .modal-dialog .modal-operate .confirm:hover {
+  cursor: pointer;
+}
+#wrapper .click-btn {
+  text-decoration: none;
+  background: #00A8E6;
+  color: #FFF;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 28px;
+  min-height: 30px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  display: inline-block;
+}
+#wrapper .click-btn:hover {
+  cursor: pointer;
+}
+.content {
+  margin-bottom: 150px;
+}
+.add-read-book {
+  margin-bottom: 15px;
+}
+.add-read-book a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.reading-list {
+  margin-bottom: 50px;
+}
+.reading-list .banner-item {
+  width: 100px;
+  height: 150px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+.reading-list .banner-item img {
+  width: 100px;
+  max-height: 150px;
+}
+.reading-list .banner-item .operate {
+  display: none;
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #6B6B6B;
+  opacity: 0.9;
+}
+.reading-list .banner-item .operate div {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  color: #FFF;
+  background: #0091B6;
+  margin-left: 30px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+.reading-list .banner-item .operate .edit {
+  margin-top: 30px;
+}
+.reading-list .banner-item .operate .del {
+  margin-top: 10px;
+}
+.reading-list .banner-item:hover {
+  cursor: pointer;
+}
+.reading-list .banner-item:hover .operate {
+  display: block;
+}
+.book-list table {
+  width: 99%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.book-list table thead {
+  font-size: 15px;
+  width: inherit;
+  background: #4DBCE9;
+  color: #FFFFFF;
+}
+.book-list table thead th {
+  padding: 10px 0;
+}
+.book-list table tbody {
+  font-size: 13px;
+}
+.book-list table tbody img {
+  width: 90px;
+  margin: 10px;
+}
+.book-list table tbody a {
+  background: #57D249!important;
+}
+.modal-body .title,
+.modal-body .banner-url,
+.modal-body .book-url {
+  width: 65%;
+}
+.modal-body .title span,
+.modal-body .banner-url span,
+.modal-body .book-url span {
+  display: block;
+  margin-bottom: 5px;
+}
+.modal-body .title input,
+.modal-body .banner-url input,
+.modal-body .book-url input {
+  width: calc(97%);
+  line-height: 23px;
+  height: 24px;
+  text-align: initial;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  font-weight: 400;
+  padding-left: 2%;
+  color: #777;
+}
+.modal-body .banner-url,
+.modal-body .book-url {
+  margin-top: 15px;
+}
+.modal-body .view {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 110px;
+  height: 150px;
+  text-align: center;
+}
+.modal-body .view img {
+  max-width: 110px;
+  max-height: 150px;
+  margin-top: 15px;
+}

@@ -1,0 +1,158 @@
+html {
+  font-size: 12px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  font-size: 1.3rem;
+}
+.body-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.clear-fix {
+  clear: both;
+}
+#Wrapper {
+  width: 100%;
+  margin-left: 0;
+  overflow-x: hidden;
+}
+#Wrapper #Top {
+  width: 100%;
+  position: fixed;
+  padding: 0;
+  text-align: center;
+  font-family: "Open Sans", SimHei, "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+  color: #88909a;
+  border-bottom: 1px solid #E3F2FD;
+  height: 3em;
+  line-height: 3em;
+  z-index: 999;
+}
+#Wrapper #Top .top-list {
+  float: left;
+  margin-left: 1em;
+}
+#Wrapper #Top .top-github {
+  float: right;
+  margin-right: 1em;
+}
+#Wrapper #Top i {
+  font-size: 2rem;
+  line-height: 2.25em;
+}
+#Wrapper #Top a {
+  color: #88909a;
+  text-decoration: none;
+}
+#Wrapper #Content {
+  margin-top: 3em;
+  padding: 0 1em 0 1em;
+}
+#Wrapper .content-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#Wrapper .content-slide .article:first-child {
+  margin-top: 1.5em;
+}
+#SlideBar {
+  position: fixed;
+  width: 76%;
+  bottom: 0;
+  top: 0;
+  right: 100%;
+  overflow: hidden;
+  color: #ebebeb;
+  font-family: "Consolas", "Microsoft Yahei", sans-serif;
+  background: #202020;
+}
+#SlideBar .author_info {
+  margin-top: 1em;
+  text-align: center;
+}
+#SlideBar .author_info img {
+  width: 5em;
+}
+#SlideBar .author_info p {
+  line-height: .5;
+}
+#SlideBar .menu_bar ul {
+  font-size: 1.45rem;
+  margin-top: 1.3em;
+  padding: 0;
+  margin-left: 1.5em;
+  list-style: none;
+}
+#SlideBar .menu_bar ul li {
+  margin-top: .7em;
+}
+#SlideBar .menu_bar ul li a {
+  text-decoration: none;
+  color: #999;
+}
+#SlideBar .menu_bar ul li i {
+  margin-right: .8em;
+}
+#SlideBar .menu_bar ul li .csdn {
+  background: url('/resources/image/csdn.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li .zhihu {
+  background: url('/resources/image/zhihu.png') no-repeat;
+  -webkit-background-size: 1em;
+  background-size: 1em;
+}
+#SlideBar .menu_bar ul li span {
+  width: 1em;
+  height: 1.2em;
+  margin-right: .8em;
+  display: inline-block;
+  vertical-align: middle;
+}
+#Content {
+  margin-top: 3.5em;
+  padding-bottom: .1em;
+  font-family: Georgia, Times, "Times New Roman", Helvetica, "Microsoft YaHei", Arial, sans-serif !important;
+  padding-top: .1em!important;
+}
+h1,
+h2,
+h3 {
+  font-family: GothicCustom, 'Arial Narrow', sans-serif;
+  text-shadow: 1px 1px #CCC;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.6rem;
+  margin-top: 2em;
+}
+pre code {
+  font-size: 1.05rem;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+.article-content {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+.article-content ul {
+  padding: 0;
+  margin-left: 3em;
+}
+.article-content ul li {
+  margin-top: .05em;
+}

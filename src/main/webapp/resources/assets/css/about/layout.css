@@ -1,0 +1,230 @@
+html {
+  font-size: 65%;
+}
+body {
+  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  background: #FFF;
+}
+.clear-fix {
+  clear: both;
+}
+/** 进度条样式 **/
+#loading-bar .bar {
+  background: #2c3e50;
+}
+#loading-bar-spinner .spinner-icon {
+  border-top-color: #2c3e50;
+  border-left-color: #2c3e50;
+}
+#loading-bar .peg {
+  -moz-box-shadow: #2c3e50 1px 0 6px 1px;
+  -ms-box-shadow: #2c3e50 1px 0 6px 1px;
+  -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
+  box-shadow: #2c3e50 1px 0 6px 1px;
+}
+/** 进度条样式结束 **/
+#fix-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 11%;
+  background: #2B333D;
+  text-align: center;
+}
+#fix-left .author_info {
+  background: #24272D;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+#fix-left .author_info img {
+  display: block;
+  margin: 10px auto;
+  max-width: 76px;
+  padding: 2px;
+  border: none;
+}
+#fix-left .author_info p {
+  text-align: center;
+  color: white;
+}
+#fix-left .author_info .motto {
+  text-align: left;
+  font-size: 13px;
+  padding: 0 20px 15px 15px;
+  color: #777777;
+}
+#fix-left .menu_bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#fix-left .menu_bar ul li {
+  font-size: 18px;
+  padding: 8px;
+}
+#fix-left .menu_bar ul li i {
+  margin-right: 0.7em;
+}
+#fix-left .menu_bar ul li:hover {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+#fix-left .menu_bar ul a {
+  text-decoration: none;
+  color: #999999;
+}
+#fix-left .menu_bar ul a:link {
+  text-decoration: none;
+}
+#fix-left .menu_bar ul .active {
+  background: #2F889A;
+  color: #FFFFFF;
+}
+.wrapper-header {
+  position: fixed;
+  left: 11%;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #DDD;
+  z-index: 999;
+  box-shadow: 2px 1px 5px #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+}
+.wrapper-header .search {
+  background: url('/resources/image/search_background.png') no-repeat;
+  width: 276px;
+  height: 28px;
+  background-size: 276px 28px;
+  display: inline-block;
+}
+.wrapper-header .search .search_input {
+  border: none;
+  width: 222px;
+  height: 26px;
+  margin: 0px 0px 2px 30px;
+  background-color: transparent;
+  outline: none;
+}
+.content {
+  position: absolute;
+  z-index: 100;
+  top: 45px;
+  right: 0;
+  bottom: 0;
+  left: 11%;
+}
+.about-head {
+  width: 66.6667%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.about-head .image {
+  position: fixed;
+  background: url('/resources/image/about_me.jpg') no-repeat #EEEEEE;
+  top: 45px;
+  bottom: 0;
+  width: 60%;
+  background-size: cover;
+  background-position-x: 80%;
+}
+.about-body {
+  width: 28%;
+  float: right;
+  word-wrap: break-word;
+  padding-right: 3%;
+  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin-bottom: 2em;
+}
+.about-body .spot {
+  margin-top: 3em;
+}
+.about-body .spot a {
+  text-decoration: none;
+  color: #FFF;
+  background: #DF611A;
+  font-size: 1.6rem;
+  padding: 0.5em 1em;
+  border-radius: 4%;
+  font-weight: 600;
+  vertical-align: top;
+}
+.about-body .spot a i {
+  line-height: 1;
+  font-size: 2.1rem;
+  margin-right: .2em;
+}
+.about-body .spot a:hover {
+  background: #DF617E;
+}
+.about-body .contact,
+.about-body .person,
+.about-body .social,
+.about-body .open-source,
+.about-body .work-experience,
+.about-body .education,
+.about-body .awards,
+.about-body .technical {
+  margin-top: 3em;
+}
+.about-body .contact h2,
+.about-body .person h2,
+.about-body .social h2,
+.about-body .open-source h2,
+.about-body .work-experience h2,
+.about-body .education h2,
+.about-body .awards h2,
+.about-body .technical h2 {
+  color: #424242;
+  text-shadow: 1px 1px #CCC;
+  font-family: GothicCustom, 'Arial Narrow', sans-serif;
+}
+.about-body .contact ul,
+.about-body .person ul,
+.about-body .social ul,
+.about-body .open-source ul,
+.about-body .work-experience ul,
+.about-body .education ul,
+.about-body .awards ul,
+.about-body .technical ul {
+  font-size: 1.4rem;
+  font-family: Verdana, Microsoft YaHei, sans-serif;
+  color: #796A66;
+}
+.about-body .contact ul li,
+.about-body .person ul li,
+.about-body .social ul li,
+.about-body .open-source ul li,
+.about-body .work-experience ul li,
+.about-body .education ul li,
+.about-body .awards ul li,
+.about-body .technical ul li {
+  margin-top: .3em;
+}
+.about-body .contact ul li a,
+.about-body .person ul li a,
+.about-body .social ul li a,
+.about-body .open-source ul li a,
+.about-body .work-experience ul li a,
+.about-body .education ul li a,
+.about-body .awards ul li a,
+.about-body .technical ul li a {
+  color: #796A66;
+}
+.about-body h1 {
+  font-size: 2rem;
+  color: #343434;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
+  letter-spacing: 0.15em;
+}
+.about-body h2 {
+  font-size: 1.5rem;
+  color: #666666;
+  padding: 0;
+  margin-top: 7px;
+}
