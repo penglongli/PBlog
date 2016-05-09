@@ -30,7 +30,7 @@
   -o-transition: width 350ms;
   transition: width 350ms;
 
-  background: #29d;
+  background: #54C440;
   position: fixed;
   z-index: 10002;
   top: 0;
@@ -49,10 +49,10 @@
   top: 0;
   height: 2px;
   opacity: .45;
-  -moz-box-shadow: #29d 1px 0 6px 1px;
-  -ms-box-shadow: #29d 1px 0 6px 1px;
-  -webkit-box-shadow: #29d 1px 0 6px 1px;
-  box-shadow: #29d 1px 0 6px 1px;
+  -moz-box-shadow: #54C440 1px 0 6px 1px;
+  -ms-box-shadow: #54C440 1px 0 6px 1px;
+  -webkit-box-shadow: #54C440 1px 0 6px 1px;
+  box-shadow: #54C440 1px 0 6px 1px;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
@@ -71,8 +71,8 @@
   height: 14px;
 
   border:  solid 2px transparent;
-  border-top-color:  #29d;
-  border-left-color: #29d;
+  border-top-color:  #54C440;
+  border-left-color: #54C440;
   border-radius: 50%;
 
   -webkit-animation: loading-bar-spinner 400ms linear infinite;

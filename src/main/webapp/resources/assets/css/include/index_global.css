@@ -8,34 +8,6 @@ body {
 .clear-fix {
   clear: both;
 }
-/** 进度条样式 **/
-/*#loading-bar .bar {
-  background: #2c3e50;
-}
-#loading-bar-spinner .spinner-icon {
-  border-top-color:  #2c3e50;
-  border-left-color: #2c3e50;
-}
-#loading-bar .peg {
-  -moz-box-shadow: #2c3e50 1px 0 6px 1px;
-  -ms-box-shadow: #2c3e50 1px 0 6px 1px;
-  -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
-  box-shadow: #2c3e50 1px 0 6px 1px;
-}*/
-#loading-bar .bar {
-  background: #54C440;
-}
-#loading-bar-spinner .spinner-icon {
-  border-top-color: #54C440;
-  border-left-color: #54C440;
-}
-#loading-bar .peg {
-  -moz-box-shadow: #54C440 2px 0 6px 1px;
-  -ms-box-shadow: #54C440 2px 0 6px 1px;
-  -webkit-box-shadow: #54C440 2px 0 6px 1px;
-  box-shadow: #54C440 2px 0 6px 1px;
-}
-/** 进度条样式结束 **/
 #fix-left {
   position: fixed;
   top: 0;
@@ -45,11 +17,13 @@ body {
   background: #3C3F41;
   border-right: 1px solid #000;
   width: calc(5% - 1px);
+  z-index: 100;
 }
 #fix-left .author_info {
   background: #313335;
   padding: 20px 0 30px 0;
   color: #FFF;
+  height: 75px;
 }
 #fix-left .author_info img {
   display: block;
@@ -70,10 +44,24 @@ body {
 #fix-left .menu_bar ul li {
   font-size: 18px;
   padding: 8px;
+  height: 24px;
+}
+#fix-left .menu_bar ul li span {
+  display: none;
+  position: absolute;
+  width: 54px;
+  height: 40px;
+  font-size: 16px;
+  background: #2D2F30;
+  line-height: 40px;
+  left: 45px;
 }
 #fix-left .menu_bar ul li:hover {
   background: #2D2F30;
   color: #BA8947;
+}
+#fix-left .menu_bar ul li:hover span {
+  display: block;
 }
 #fix-left .menu_bar ul a {
   text-decoration: none;

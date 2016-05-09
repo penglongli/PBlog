@@ -6,11 +6,10 @@
   font-weight: 300;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #EEEEEE;
-  font-family: Georgia, Times, "Times New Roman", Helvetica, "Microsoft YaHei", Arial, sans-serif !important;
+  border-bottom: 1px solid #515658;
 }
 .book-content .content-head {
-  border-bottom: 1px solid #EDEDED;
+  border-bottom: 1px solid #515658;
   text-align: center;
   width: 60%;
   padding-right: 30%;
@@ -63,9 +62,10 @@
 }
 .book-content .content-nav span {
   font-size: 14px;
+  color: #D9D9D9;
 }
 .book-content .content-nav span a {
-  color: #3377aa;
+  color: #4094c7;
   text-decoration: none;
 }
 .book-content .content-nav img {
@@ -91,6 +91,8 @@
 .book-content h1,
 .book-content h2,
 .book-content h3 {
-  text-shadow: 1px 1px #CCC;
   font-family: GothicCustom, 'Arial Narrow', sans-serif;
+}
+.book-content h1 {
+  color: #D2D8BA;
 }
