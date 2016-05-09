@@ -1,18 +1,22 @@
 .article-content {
   font-size: 1.5rem;
-  width: 100%;
+  width: 100% - 1px;
   line-height: 1.85em;
   color: #424242;
   font-weight: 300;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #EEEEEE;
-  font-family: Georgia, Times, "Times New Roman", Helvetica, "Microsoft YaHei", Arial, sans-serif !important;
+  border-bottom: 1px solid #3F4138;
+  border-left: 1px solid #555555;
+  letter-spacing: 1px;
 }
 .article-content .content-head {
-  border-bottom: 1px solid #EDEDED;
+  border-bottom: 1px solid #3F4138;
 }
 .article-content .content-head h1 {
+  color: #D2D8BA;
+  font-weight: normal;
+  font-size: 2.6rem;
   margin-left: 2%;
 }
 .article-content .content-head .content-head-detail {
@@ -31,11 +35,11 @@
   margin: 0;
 }
 .article-content .content-head .content-head-detail .c_name a {
-  color: red;
+  color: #5E9C4C;
   text-decoration: none;
 }
 .article-content .content-head .content-head-detail .c_like a {
-  color: red;
+  color: #5E9C4C;
   text-decoration: none;
 }
 .article-content .content-head .content-head-detail a:hover {
@@ -45,6 +49,7 @@
   width: 73%;
   margin-left: 2%;
   float: left;
+  color: #8A8888;
 }
 .article-content .content-nav {
   width: 240px;
@@ -57,6 +62,7 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
+  color: #B5B9BA;
   padding: 0 0 10px 20px;
 }
 .article-content .fixed {
@@ -72,34 +78,48 @@
 .article-content .nav-list ul li {
   padding-left: 20px;
   font-size: 15px;
-  border-left: 3px solid #F3F3F3;
+  border-left: 3px solid #565656;
+  color: #6A5D5D;
 }
 .article-content .nav-list ul li:hover {
   cursor: pointer;
   color: #C1272D;
-  background: #F1F1F1;
-  border-color: #000;
+  background: #293134;
+  border-color: #BD9662;
 }
 .article-content .nav-list ul .active {
   color: #C1272D;
-  background: #F1F1F1;
+  background: #293134;
   border-color: #c1272d;
 }
 .article-content em {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: normal!important;
-  background: #F6F6F6;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.5em;
   color: #C7254E;
   font-family: Consolas, sans-serif !important;
 }
 .article-content code {
+  background: #3C3F41;
+  color: #BABABA;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-.article-content h1,
-.article-content h2,
+.article-content h1 {
+  color: #D2D8BA;
+  font-weight: normal;
+  font-size: 2.6rem;
+}
+.article-content h2 {
+  color: #549EE0;
+}
 .article-content h3 {
-  text-shadow: 1px 1px #CCC;
-  font-family: GothicCustom, 'Arial Narrow', sans-serif;
+  color: #8AB26C;
+}
+.article-content a {
+  color: #80bd01;
+  text-decoration: none;
+}
+.article-content a:hover {
+  text-decoration: underline;
 }

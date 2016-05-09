@@ -7,18 +7,21 @@ body{
 
 .archive-panel{
   position: fixed;
-  width: 17%;
-  top: 55px;
+  width: 218px;
+  top: 46px;
   bottom: 0;
-  background: #FFFFFF;
-  border-right: 2px solid #DADADA;
-  margin-left: 10px;
+  background: #3C3F41;
+  border-right: 1px solid #525252;
+  border-top: 1px solid #000;
+  border-left: 1px solid #555555;
 
   .archive-head{
-    background: #F5F5F5;
     padding: 10px;
     font-size: 14px;
     font-weight: bold;
+    background: #393C3E;
+    border-bottom: 1px solid #242627;
+    color: #7A987B;
   }
 
   .archive-list{
@@ -30,17 +33,18 @@ body{
       li {
         padding-left: 15px;
         margin-top: 8px;
+        color: #ADADAD;
 
         &:before{
           font-family: FontAwesome;
           content: '\f0da';
           font-size: 1em;
-          color: #000;
+          color: #ADADAD;
           margin-right: 0.5em;
         }
 
         a {
-          color: red;
+          color: #BD9662;
           font-size: 15px;
           text-decoration: none;
 
@@ -64,15 +68,14 @@ body{
 
 .archive-article-list{
   position: absolute;
-  left: 21%;
-  right: 1%;
-  top: 10px;
-  background: #FFFFFF;
-  border-left:2px solid #DADADA;
+  left: 220px;
+  right: 0;
+  background: #323232;
+  border-left:1px solid #000;
   padding: 0 3% 80px 3%;
 
   .article-item {
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px dashed #515658;
     padding: 25px 0;
 
     .article-head {
@@ -81,16 +84,15 @@ body{
       .article-title {
 
           a {
-            color: inherit!important;
+            color: #95949A;
             text-decoration: none;
             font-size: 22px;
-            text-shadow: 1px 1px #CCC;
           }
       }
     }
 
     .article-metadata {
-      color: #AAAAAA;
+      color: #999;
       font-size: 13px;
       margin-bottom: 10px;
 
@@ -107,6 +109,7 @@ body{
 
         a {
           text-decoration: none;
+          color: #71A7C7;
 
           &:hover{
             text-decoration: underline;
@@ -165,7 +168,7 @@ body{
         text-align: right;
 
         a {
-          color: red;
+          color: #CC7832;
           text-decoration: none;
 
           i {

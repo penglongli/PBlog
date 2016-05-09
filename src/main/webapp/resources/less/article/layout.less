@@ -1,20 +1,23 @@
 
 .article-content{
   font-size: 1.5rem;
-  width: 100%;
+  width: e("100% - 1px");
   line-height: 1.85em;
   color: #424242;
   font-weight: 300;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #EEEEEE;
-  font-family: Georgia,Times,"Times New Roman",
-  Helvetica,"Microsoft YaHei", Arial,sans-serif !important;
+  border-bottom: 1px solid #3F4138;
+  border-left: 1px solid #555555;
+  letter-spacing: 1px;
 
   .content-head {
-    border-bottom: 1px solid #EDEDED;
+    border-bottom: 1px solid #3F4138;
 
     h1 {
+      color: #D2D8BA;
+      font-weight: normal;
+      font-size: 2.6rem;
       margin-left: 2%;
     }
 
@@ -37,7 +40,7 @@
       }
 
       .c_name a{
-        color: red;
+        color: #5E9C4C;
         text-decoration: none;
       }
 
@@ -46,7 +49,7 @@
       }
 
       .c_like a{
-        color: red;
+        color: #5E9C4C;
         text-decoration: none;
       }
 
@@ -62,6 +65,7 @@
     width: 73%;
     margin-left: 2%;
     float: left;
+    color: #8A8888;
   }
 
   .content-nav {
@@ -75,6 +79,7 @@
       cursor: pointer;
       font-size: 16px;
       font-weight: 700;
+      color: #B5B9BA;
       padding: 0 0 10px 20px;
     }
   }
@@ -85,6 +90,7 @@
     top: 50px;
   }
 
+
   .nav-list ul {
     margin: 0;
     padding: 0;
@@ -93,39 +99,59 @@
     li {
       padding-left: 20px;
       font-size: 15px;
-      border-left: 3px solid #F3F3F3;
+      border-left: 3px solid #565656;
+      color: #6A5D5D;
     }
 
     li:hover {
       cursor: pointer;
       color: #C1272D;
-      background: #F1F1F1;
-      border-color: #000;
+      background: #293134;
+      border-color: #BD9662;
     }
 
     .active {
       color: #C1272D;
-      background: #F1F1F1;
+      background: #293134;
       border-color: #c1272d;
     }
   }
 
   em {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-style: normal!important;
-    background: #F6F6F6;
-    padding: 0.2em 0.8em;
+    padding: 0.2em 0.5em;
     color: #C7254E;
     font-family: Consolas, sans-serif !important;
   }
 
   code {
+    background: #3C3F41;
+    color: #BABABA;
     font-size: 1.1rem;
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   }
 
-  h1, h2, h3 {
-    text-shadow: 1px 1px #CCC;
-    font-family: GothicCustom,'Arial Narrow',sans-serif;
+  h1 {
+    color: #D2D8BA;
+    font-weight: normal;
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    color: #549EE0;
+  }
+
+  h3 {
+    color: #8AB26C;
+  }
+
+  a {
+    color: #80bd01;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }

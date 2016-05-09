@@ -3,16 +3,16 @@ html{
 }
 
 body{
-  //font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
-  font-family: "Open Sans","Noto Sans","Noto Sans CJK SC","Microsoft Yahei",sans-serif;
-  background: #FFF;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  background: #2F2D2D;
 }
 
 .clear-fix{
   clear: both;
 }
+
 /** 进度条样式 **/
-#loading-bar .bar {
+/*#loading-bar .bar {
   background: #2c3e50;
 }
 #loading-bar-spinner .spinner-icon {
@@ -24,8 +24,20 @@ body{
   -ms-box-shadow: #2c3e50 1px 0 6px 1px;
   -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
   box-shadow: #2c3e50 1px 0 6px 1px;
+}*/
+#loading-bar .bar {
+  background: #54C440;
 }
-
+#loading-bar-spinner .spinner-icon {
+  border-top-color:  #54C440;
+  border-left-color: #54C440;
+}
+#loading-bar .peg {
+  -moz-box-shadow: #54C440 2px 0 6px 1px;
+  -ms-box-shadow: #54C440 2px 0 6px 1px;
+  -webkit-box-shadow: #54C440 2px 0 6px 1px;
+  box-shadow: #54C440 2px 0 6px 1px;
+}
 /** 进度条样式结束 **/
 
 
@@ -34,14 +46,15 @@ body{
   top: 0;
   left: 0;
   bottom: 0;
-  width: 11%;
-  background: #2B333D;
   text-align: center;
+  background: #3C3F41;
+  border-right: 1px solid #000;
+  width: e("calc(5% - 1px)");
 
   .author_info{
-    background: #24272D;
-    margin-top: -10px;
-    padding-top: 10px;
+    background: #313335;
+    padding: 20px 0 30px 0;
+    color: #FFF;
 
     img{
       display: block;
@@ -49,17 +62,11 @@ body{
       max-width: 76px;
       padding: 2px;
       border: none;
-    }
-    p{
-      text-align: center;
-      color: white;
+      width: 80%;
     }
 
-    .motto{
-      text-align: left;
-      font-size: 13px;
-      padding: 0 20px 15px 15px;
-      color: #777777;
+    p {
+      margin: 0;
     }
   }
 
@@ -74,13 +81,9 @@ body{
         font-size: 18px;
         padding: 8px;
 
-        i {
-          margin-right: 0.7em;
-        }
-
         &:hover{
-          background: #2F889A;
-          color: #FFFFFF;
+          background: #2D2F30;
+          color: #BA8947;
         }
       }
 
@@ -94,8 +97,8 @@ body{
       }
 
       .active{
-        background: #2F889A;
-        color: #FFFFFF;
+        background: #2D2F30;
+        color: #BA8947;
       }
     }
   }
@@ -103,29 +106,40 @@ body{
 
 .wrapper-header{
   position: fixed;
-  left: 11%;
+  left: 5%;
   top: 0;
   right: 0;
-  padding: 8px;
-  background: #FFFFFF;
-  border-bottom: 2px solid #DDD;
   z-index: 999;
-  box-shadow: 2px 1px 5px #DBDBDB;
-  border-bottom: 1px solid #DBDBDB;
+  background: #3C3F41;
+  height: 45px;
+  border-left: 1px solid #555555;
+  border-bottom: 1px solid #555555;
 
   .search{
-    background: url('/resources/image/search_background.png') no-repeat;
-    width: 276px;
-    height: 28px;
-    background-size: 276px 28px;
     display: inline-block;
+    background: #2B2B2B;
+    color: #ADADAD;
+    width: 300px;
+    height: 30px;
+    border-radius: 13px;
+    margin: 7px 0 0 10px;
+
+    i {
+      font-size: 16px;
+      position: absolute;
+      line-height: 30px;
+      left: 15px;
+    }
 
     .search_input{
       border: none;
       width: 222px;
-      height: 26px;
-      margin: 0px 0px 2px 30px;
-      background-color: transparent;
+      background: #2B2B2B;
+      color: #A8B6AC;
+      position: absolute;
+      left: 35px;
+      height: 28px;
+      line-height: 28px;
       outline: none;
     }
   }
@@ -135,9 +149,10 @@ body{
 .content {
   position: absolute;
   z-index: 100;
-  top: 45px;
+  top: 46px;
   right: 0;
   bottom: 0;
-  left: 11%;
+  left: 5%;
+  background: #2F2D2D;
 }
 
