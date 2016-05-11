@@ -23,6 +23,11 @@ var app = angular.module('pBlogApp', ['chieffancypants.loadingBar', 'ngAnimate',
             controller: ReadController
         });
 
+        $routeProvider.when('/record', {
+            templateUrl: '/record/layout',
+            controller: RecordController
+        });
+
         $routeProvider.when('/about', {
             templateUrl: '/about/layout',
             controller: AboutController

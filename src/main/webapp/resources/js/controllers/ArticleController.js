@@ -6,13 +6,12 @@ var ArticleController = function ($scope, $interval, $http, $timeout, $routePara
         $http.get('/article/' + articleSlug + '.json').
             success(function (data) {
                 $scope.articleVO = data.articleVO;
-
-                initializeArticleSlug();
-                initializeLoad($scope, $timeout);
                 initializeArticleContent(data.articleVO.content);
-            })
+        })
     };
 
+    initializeArticleSlug();
+    initializeLoad($scope, $timeout);
     $scope.fetchArticle();
 };
 

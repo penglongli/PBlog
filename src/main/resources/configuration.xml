@@ -12,7 +12,6 @@
         <typeAlias type="com.pblog.domain.BookReadLog" alias="BookReadLog" />
         <typeAlias type="com.pblog.domain.CategoryInfo" alias="CategoryInfo" />
         <typeAlias type="com.pblog.domain.RecordInfo" alias="RecordInfo" />
-        <typeAlias type="com.pblog.domain.RecordReadLog" alias="RecordReadLog" />
         <typeAlias type="com.pblog.domain.TagInfo" alias="TagInfo" />
         <typeAlias type="com.pblog.domain.SlugInfo" alias="SlugInfo" />
         <typeAlias type="com.pblog.domain.BookTable" alias="BookTable" />

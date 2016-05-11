@@ -14,7 +14,7 @@ var IndexController = function ($scope, $interval, $http, $timeout) {
             error(function (err) {
                 console.log(err);
             });
-    }
+    };
 
     $scope.fetchArticlesList();
 };

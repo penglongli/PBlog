@@ -338,12 +338,6 @@ body {
   margin-top: 7px;
 }
 
-#archives {
-  /*body{
-    background: #E2E2E2!important;
-  }
-*/
-}
 #archives .archive-panel {
   position: fixed;
   width: 218px;
@@ -419,7 +413,7 @@ body {
   margin-bottom: 10px;
 }
 #archives .archive-article-list .article-item .article-metadata .article-time:after {
-  content: '   •   ';
+  content: ' • ';
   font-size: 17px;
   margin: 0 0.2em;
 }
@@ -603,7 +597,7 @@ body {
   text-decoration: underline;
 }
 
-.book-content {
+#bookDetail .book-content {
   font-size: 1.5rem;
   width: 100%;
   line-height: 1.85em;
@@ -613,75 +607,76 @@ body {
   margin-bottom: 30px;
   border-bottom: 1px solid #515658;
 }
-.book-content .content-head {
+#bookDetail .book-content .content-head {
   border-bottom: 1px solid #515658;
   text-align: center;
   width: 60%;
   padding-right: 30%;
   padding-left: 10%;
 }
-.book-content .content-head h1 {
+#bookDetail .book-content .content-head h1 {
   margin-left: 2%;
   font-size: 21px;
 }
-.book-content .content-head .content-head-detail {
+#bookDetail .book-content .content-head .content-head-detail {
   margin-bottom: 0.6em;
   margin-left: 2%;
 }
-.book-content .content-head .content-head-detail span {
+#bookDetail .book-content .content-head .content-head-detail span {
   font-size: 1rem;
   color: #BDBDBD;
   margin-left: 1.35rem;
 }
-.book-content .content-head .content-head-detail span i {
+#bookDetail .book-content .content-head .content-head-detail span i {
   margin-right: 0.15rem;
 }
-.book-content .content-head .content-head-detail .c_time {
+#bookDetail .book-content .content-head .content-head-detail .c_time {
   margin: 0;
 }
-.book-content .content-head .content-head-detail .c_name a {
+#bookDetail .book-content .content-head .content-head-detail .c_name a {
   color: red;
   text-decoration: none;
 }
-.book-content .content-head .content-head-detail .c_like a {
+#bookDetail .book-content .content-head .content-head-detail .c_like a {
   color: red;
   text-decoration: none;
 }
-.book-content .content-head .content-head-detail a:hover {
+#bookDetail .book-content .content-head .content-head-detail a:hover {
   text-decoration: underline;
 }
-.book-content .content-body {
+#bookDetail .book-content .content-body {
   width: 60%;
   float: left;
   height: 1000px;
   margin-left: 10%;
+  color: #8A8888;
 }
-.book-content .content-body p {
+#bookDetail .book-content .content-body p {
   text-indent: 2em;
 }
-.book-content .content-nav {
+#bookDetail .book-content .content-nav {
   width: 240px;
   float: right;
   margin-top: 1em;
   margin-right: 25px;
 }
-.book-content .content-nav span {
+#bookDetail .book-content .content-nav span {
   font-size: 14px;
   color: #D9D9D9;
 }
-.book-content .content-nav span a {
+#bookDetail .book-content .content-nav span a {
   color: #4094c7;
   text-decoration: none;
 }
-.book-content .content-nav img {
+#bookDetail .book-content .content-nav img {
   margin: 10px 0 0 10px;
 }
-.book-content .fixed {
+#bookDetail .book-content .fixed {
   position: fixed;
   right: 0;
   top: 50px;
 }
-.book-content em {
+#bookDetail .book-content em {
   font-size: 1.3rem;
   font-style: normal!important;
   background: #F6F6F6;
@@ -689,16 +684,16 @@ body {
   color: #C7254E;
   font-family: Consolas, sans-serif !important;
 }
-.book-content code {
+#bookDetail .book-content code {
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-.book-content h1,
-.book-content h2,
-.book-content h3 {
+#bookDetail .book-content h1,
+#bookDetail .book-content h2,
+#bookDetail .book-content h3 {
   font-family: GothicCustom, 'Arial Narrow', sans-serif;
 }
-.book-content h1 {
+#bookDetail .book-content h1 {
   color: #D2D8BA;
 }
 
@@ -1078,4 +1073,67 @@ body {
 }
 #index .article-content a:hover {
   text-decoration: underline;
+}
+
+#record {
+  padding-top: 40px;
+  min-height: 800px;
+  background: url("/resources/image/content_background.jpg");
+  background-size: cover;
+}
+#record .record-content {
+  width: 55%;
+  margin-left: 30%;
+}
+#record .record-content .record-title {
+  font-size: 24px;
+  height: 56px;
+  line-height: 56px;
+  padding-left: 60px;
+  font-weight: 600;
+  background: url("/resources/image/clock.png") no-repeat;
+  background-position-y: 3px;
+  background-size: 50px 50px;
+  color: #FFF;
+}
+#record .record-content .main .year {
+  position: relative;
+}
+#record .record-content .main .year .time-line {
+  width: 2px;
+  position: absolute;
+  bottom: 0;
+  top: -5px;
+  background: #5495BA;
+  left: 24px;
+}
+#record .record-content .main .year .year-title {
+  width: 130px;
+  font-size: 24px;
+  color: #BD9662;
+  margin-left: -132px;
+}
+#record .record-content .main .year .year-title i {
+  margin-left: 10px;
+}
+#record .record-content .main .year .daily {
+  margin-top: 40px;
+}
+#record .record-content .main .year .daily .daily-title {
+  font-size: 18px;
+}
+#record .record-content .main .year .daily .daily-title .time {
+  float: left;
+  margin-left: -100px;
+  color: #A9B7C6;
+}
+#record .record-content .main .year .daily .daily-title .title {
+  float: left;
+  margin-left: 65px;
+  color: #63d029;
+}
+#record .record-content .main .year .daily .daily-content {
+  margin-left: 65px;
+  color: #CECECE;
+  padding-bottom: 40px;
 }

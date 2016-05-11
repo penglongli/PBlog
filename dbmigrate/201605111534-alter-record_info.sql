@@ -1,0 +1,1 @@
+alter table `record_info` drop column `slug`;

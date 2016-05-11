@@ -76,7 +76,7 @@ gulp.task('combinePcCss', function () {
         resourceDir + '/assets/css/book/*.css',
         resourceDir + '/assets/css/category/*.css',
         resourceDir + '/assets/css/index/*.css',
-        resourceDir + '/assets/css/index/*.css'
+        resourceDir + '/assets/css/record/*.css'
     ])
     .pipe(concat('dacular-pc-main.css'))
     .pipe(gulp.dest(dist.css))

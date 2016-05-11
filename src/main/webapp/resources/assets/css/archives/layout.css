@@ -1,9 +1,3 @@
-#archives {
-  /*body{
-    background: #E2E2E2!important;
-  }
-*/
-}
 #archives .archive-panel {
   position: fixed;
   width: 218px;
@@ -79,7 +73,7 @@
   margin-bottom: 10px;
 }
 #archives .archive-article-list .article-item .article-metadata .article-time:after {
-  content: '   •   ';
+  content: ' • ';
   font-size: 17px;
   margin: 0 0.2em;
 }

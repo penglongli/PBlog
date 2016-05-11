@@ -28,9 +28,9 @@
                 <i class="icon-book"></i>
                 <span style="top: 245px">阅读</span>
             </li></a>
-            <a href=""><li class="menu_5">
+            <a href="${staticDomain}/#/record"><li class="menu_5">
                 <i class="icon-text-width"></i>
-                <span style="top: 285px">日记</span>
+                <span style="top: 285px">日志</span>
             </li></a>
             <a href="${staticDomain}/#/about"><li class="menu_5">
                 <i class="icon-info-sign"></i>

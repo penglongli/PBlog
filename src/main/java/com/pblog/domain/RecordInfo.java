@@ -11,8 +11,6 @@ public class RecordInfo {
 
     private String content;
 
-    private Long slug;
-
     public Integer getId() {
         return id;
     }
@@ -43,13 +41,5 @@ public class RecordInfo {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
-    }
-
-    public Long getSlug() {
-        return slug;
-    }
-
-    public void setSlug(Long slug) {
-        this.slug = slug;
     }
 }
