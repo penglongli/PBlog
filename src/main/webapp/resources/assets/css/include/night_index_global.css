@@ -1,0 +1,122 @@
+html {
+  font-size: 65%;
+}
+body {
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  background: #2F2D2D;
+}
+.clear-fix {
+  clear: both;
+}
+#fix-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #3C3F41;
+  border-right: 1px solid #000;
+  width: calc(5% - 1px);
+  z-index: 100;
+}
+#fix-left .author_info {
+  background: #313335;
+  padding: 20px 0 30px 0;
+  color: #FFF;
+  height: 75px;
+}
+#fix-left .author_info img {
+  display: block;
+  margin: 10px auto;
+  max-width: 76px;
+  padding: 2px;
+  border: none;
+  width: 80%;
+}
+#fix-left .author_info p {
+  margin: 0;
+}
+#fix-left .menu_bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#fix-left .menu_bar ul li {
+  font-size: 18px;
+  padding: 8px;
+  height: 24px;
+}
+#fix-left .menu_bar ul li span {
+  display: none;
+  position: absolute;
+  width: 54px;
+  height: 40px;
+  font-size: 16px;
+  background: #2D2F30;
+  line-height: 40px;
+  left: 45px;
+}
+#fix-left .menu_bar ul li:hover {
+  background: #2D2F30;
+  color: #BA8947;
+}
+#fix-left .menu_bar ul li:hover span {
+  display: block;
+}
+#fix-left .menu_bar ul a {
+  text-decoration: none;
+  color: #999999;
+}
+#fix-left .menu_bar ul a:link {
+  text-decoration: none;
+}
+#fix-left .menu_bar ul .active {
+  background: #2D2F30;
+  color: #BA8947;
+}
+.wrapper-header {
+  position: fixed;
+  left: 5%;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background: #3C3F41;
+  height: 45px;
+  border-left: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}
+.wrapper-header .search {
+  display: inline-block;
+  background: #2B2B2B;
+  color: #ADADAD;
+  width: 300px;
+  height: 30px;
+  border-radius: 13px;
+  margin: 7px 0 0 10px;
+}
+.wrapper-header .search i {
+  font-size: 16px;
+  position: absolute;
+  line-height: 30px;
+  left: 15px;
+}
+.wrapper-header .search .search_input {
+  border: none;
+  width: 222px;
+  background: #2B2B2B;
+  color: #A8B6AC;
+  position: absolute;
+  left: 35px;
+  height: 28px;
+  line-height: 28px;
+  outline: none;
+}
+.content {
+  position: absolute;
+  z-index: 100;
+  top: 46px;
+  right: 0;
+  bottom: 0;
+  left: 5%;
+  background: #2F2D2D;
+}

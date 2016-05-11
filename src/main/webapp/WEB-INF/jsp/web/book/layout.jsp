@@ -1,8 +1,6 @@
 <%@ include file="../include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<link rel="stylesheet" href="${cssDomain}/book/layout.css" />
-
 <div id="book">
     <div class="book-wrapper">
         <span class="cate-name">读书</span>

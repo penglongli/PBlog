@@ -1,8 +1,6 @@
 <%@ include file="../include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<link rel="stylesheet" href="${cssPlugins}/highlight.min.css" />
-
 <div id="index">
     <div class="scroll-area">
         <div class="index-article-list">

@@ -6,9 +6,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
 
-//var rev = require('gulp-rev');
-
-var resourceDir = 'src/main/webapp/resources';
+var resourceDir = 'src/main/webapp/resources/';
 
 var src = {
     js: resourceDir + '/js/*.js',
@@ -20,6 +18,39 @@ var dist = {
     js: resourceDir + '/assets/js/',
     css: resourceDir + '/assets/css/'
 };
+
+//编译less文件
+gulp.task('less', function () {
+    gulp.src(src.less)
+        .pipe(less())
+        .pipe(gulp.dest(dist.css));
+});
+
+//合并压缩PC端夜间模式css文件
+gulp.task('combinePcNightCss', function () {
+    gulp.src([
+            resourceDir + 'assets/plugins/loading-bar.css',   //进度条样式
+            dist.css + '*/night_*.css'
+        ])
+        .pipe(concat('night-pc-main.css'))
+        .pipe(gulp.dest(dist.css))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(minifycss())
+        .pipe(gulp.dest(dist.css));
+});
+
+//合并压缩PC端日间模式css文件
+gulp.task('combinePcDayCss', function () {
+    gulp.src([
+            resourceDir + 'assets/plugins/loading-bar.css',   //进度条样式
+            dist.css + '*/day_*.css'
+        ])
+        .pipe(concat('day-pc-main.css'))
+        .pipe(gulp.dest(dist.css))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(minifycss())
+        .pipe(gulp.dest(dist.css));
+});
 
 /**
  * 打包AngularJs工具
@@ -59,31 +90,6 @@ gulp.task('combineJs', function () {
         .pipe(gulp.dest(dist.js));
 });
 
-gulp.task('less', function () {
-    gulp.src(src.less)
-        .pipe(less())
-        .pipe(gulp.dest(dist.css));
-});
-
-//合并压缩PC端css文件
-gulp.task('combinePcCss', function () {
-    gulp.src([
-        resourceDir + '/assets/css/plugins/loading-bar.css',   //进度条样式
-        resourceDir + '/assets/css/include/index_global.css',
-        resourceDir + '/assets/css/about/*.css',
-        resourceDir + '/assets/css/archives/*.css',
-        resourceDir + '/assets/css/article/*.css',
-        resourceDir + '/assets/css/book/*.css',
-        resourceDir + '/assets/css/category/*.css',
-        resourceDir + '/assets/css/index/*.css',
-        resourceDir + '/assets/css/record/*.css'
-    ])
-    .pipe(concat('dacular-pc-main.css'))
-    .pipe(gulp.dest(dist.css))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
-    .pipe(gulp.dest(dist.css));
-});
 
 
 

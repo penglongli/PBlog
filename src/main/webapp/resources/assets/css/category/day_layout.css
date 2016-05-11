@@ -1,0 +1,130 @@
+#category .archive-panel {
+  position: fixed;
+  width: 218px;
+  top: 46px;
+  bottom: 0;
+  background: #FFF;
+  border-right: 1px solid #E7E7E7;
+  border-left: 1px solid #555555;
+}
+#category .archive-panel .archive-head {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #F5F5F5;
+  border-bottom: 1px solid #DBDBDB;
+  color: #7A987B;
+}
+#category .archive-panel .archive-list ul {
+  padding: 0;
+  list-style: none;
+}
+#category .archive-panel .archive-list ul li {
+  padding-left: 15px;
+  margin-top: 8px;
+  color: #ADADAD;
+}
+#category .archive-panel .archive-list ul li:before {
+  font-family: FontAwesome;
+  content: '\f0da';
+  font-size: 1em;
+  color: #ADADAD;
+  margin-right: 0.5em;
+}
+#category .archive-panel .archive-list ul li a {
+  color: #BE9117;
+  font-size: 15px;
+  text-decoration: none;
+}
+#category .archive-panel .archive-list ul li a:hover {
+  text-decoration: underline;
+}
+#category .archive-panel .archive-list ul li .active {
+  color: blue;
+}
+#category .archive-panel .archive-list ul li span {
+  margin-left: 10px;
+  font-size: 13px;
+}
+#category .article-list {
+  position: absolute;
+  left: 221px;
+  right: 0;
+  background: #FFF;
+  padding: 0 3% 80px 3%;
+}
+#category .article-list .article-item {
+  border-bottom: 1px dashed #DDDDDD;
+  padding: 25px 0 16px 0;
+}
+#category .article-list .article-item .article-head {
+  margin-bottom: 10px;
+}
+#category .article-list .article-item .article-head .article-title a {
+  color: #333;
+  text-decoration: none;
+  font-size: 22px;
+}
+#category .article-list .article-item .article-metadata {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+#category .article-list .article-item .article-metadata .article-time:after {
+  content: ' • ';
+  font-size: 17px;
+  margin: 0 0.2em;
+}
+#category .article-list .article-item .article-metadata .article-category a {
+  text-decoration: none;
+  color: #4288AF;
+}
+#category .article-list .article-item .article-metadata .article-category a:hover {
+  text-decoration: underline;
+}
+#category .article-list .article-item .article-metadata .article-category:after {
+  content: '   •   ';
+  font-size: 17px;
+  margin: 0 0.2em;
+}
+#category .article-list .article-item .article-metadata .article-view i {
+  margin-right: 3px;
+}
+#category .article-list .article-item .article-description {
+  font-size: 15px;
+  text-indent: 2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+#category .article-list .article-item .article-description p {
+  text-indent: 2em;
+}
+#category .article-list .article-item .article-footer {
+  font-size: 14px;
+}
+#category .article-list .article-item .article-footer .article-tags {
+  width: 75%;
+  float: left;
+  text-align: left;
+}
+#category .article-list .article-item .article-footer .article-tags .tag {
+  background: #CCCCCC;
+  color: #FFF;
+  padding: 2px 9px 5px 9px;
+  margin-left: 5px;
+}
+#category .article-list .article-item .article-footer .article-tags .tag:first-child {
+  margin: 0;
+}
+#category .article-list .article-item .article-footer .read-more {
+  width: 25%;
+  float: left;
+  text-align: right;
+}
+#category .article-list .article-item .article-footer .read-more a {
+  color: #CC7832;
+  text-decoration: none;
+}
+#category .article-list .article-item .article-footer .read-more a i {
+  margin-left: 7px;
+}
