@@ -2,16 +2,14 @@ package com.pblog.dao;
 
 import com.pblog.domain.PicInfo;
 
+import java.util.List;
+
 public interface PicInfoMapper {
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(Long id);
 
     int insert(PicInfo record);
 
-    int insertSelective(PicInfo record);
+    List<PicInfo> selectAll();
 
-    PicInfo selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(PicInfo record);
-
-    int updateByPrimaryKey(PicInfo record);
+    PicInfo selectById(Long id);
 }

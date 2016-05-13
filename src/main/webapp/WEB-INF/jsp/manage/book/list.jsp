@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="${cssDomain}/manage/book_list.css" rel="stylesheet"  />
-    <link rel="stylesheet" href="${cssPlugins}/font-awesome.min.css" />
+    <link rel="stylesheet" href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" />
     <script src="${jsPlugins}/jquery.min.js"></script>
 </head>
 <body>

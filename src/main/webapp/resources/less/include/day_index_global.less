@@ -11,6 +11,37 @@ body{
   clear: both;
 }
 
+/** 进度条样式  **/
+#loading-bar .bar {
+  background: #2c3e50;
+}
+-#loading-bar-spinner .spinner-icon {
+  border-top-color:  #2c3e50;
+  border-left-color: #2c3e50;
+}
+-#loading-bar .peg {
+  -moz-box-shadow: #2c3e50 1px 0 6px 1px;
+  -ms-box-shadow: #2c3e50 1px 0 6px 1px;
+  -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
+  box-shadow: #2c3e50 1px 0 6px 1px;
+}
+#loading-bar-spinner .spinner-icon {
+  width: 14px;
+  height: 14px;
+
+  border:  solid 2px transparent;
+  border-top-color:  #799FDA;
+  border-left-color: #799FDA;
+  border-radius: 50%;
+
+  -webkit-animation: loading-bar-spinner 400ms linear infinite;
+  -moz-animation:    loading-bar-spinner 400ms linear infinite;
+  -ms-animation:     loading-bar-spinner 400ms linear infinite;
+  -o-animation:      loading-bar-spinner 400ms linear infinite;
+  animation:         loading-bar-spinner 400ms linear infinite;
+}
+/** 进度条样式结束 **/
+
 #fix-left{
   position: fixed;
   top: 0;

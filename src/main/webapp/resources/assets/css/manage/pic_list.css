@@ -210,3 +210,30 @@ pre {
 .pic-list table tbody a {
   background: #57D249!important;
 }
+#mask-upload .upload-wrapper {
+  position: relative;
+  height: 31px;
+  width: 92px;
+  display: inline-block;
+}
+#mask-upload .upload-wrapper input {
+  width: 80px;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  padding: 5px;
+}
+#mask-upload .upload-wrapper span {
+  position: absolute;
+  width: 80px;
+  text-align: center;
+  z-index: 11;
+  background: #EEEEEE;
+  border: 1px solid #96D2F6;
+  color: #1784C7;
+  padding: 5px;
+  border-radius: 6px;
+}
+#mask-upload .upload-wrapper:hover {
+  cursor: pointer;
+}
