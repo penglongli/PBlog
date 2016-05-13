@@ -882,6 +882,7 @@ body {
   font-size: 18px;
   padding: 8px;
   height: 24px;
+  line-height: 24px;
 }
 #fix-left .menu_bar ul li span {
   display: none;
@@ -899,6 +900,24 @@ body {
 }
 #fix-left .menu_bar ul li:hover span {
   display: block;
+}
+#fix-left .menu_bar ul li:hover a {
+  color: #BA8947;
+}
+#fix-left .menu_bar ul .menu_2 {
+  font-size: 16px;
+}
+#fix-left .menu_bar ul .menu_3 {
+  font-size: 16px;
+}
+#fix-left .menu_bar ul .menu_5 {
+  font-size: 16px;
+}
+#fix-left .menu_bar ul .menu_6 {
+  font-size: 20px;
+}
+#fix-left .menu_bar ul .menu_7 {
+  margin-top: 40px;
 }
 #fix-left .menu_bar ul a {
   text-decoration: none;

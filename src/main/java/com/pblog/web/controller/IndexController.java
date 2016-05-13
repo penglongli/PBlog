@@ -46,7 +46,6 @@ public class IndexController {
 
     @RequestMapping(value = "/index/layout", method = RequestMethod.GET)
     public String getIndexPage(HttpServletRequest request, Model model){
-
         return "web/index/layout";
     }
 

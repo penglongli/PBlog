@@ -1,5 +1,6 @@
 <%@ include file="include/namespace.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
     <title>Home | Pelin的个人博客</title>
     <base href="/">
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link rel="stylesheet" href="${staticDomain}/resources/assets/css/day-pc-main.min.css" />
+    <link rel="stylesheet" href="${staticDomain}/resources/assets/css/${mo}-pc-main.min.css" />
     <link rel="stylesheet" href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" />
     <link rel="stylesheet" href="${staticDomain}/resources/assets/plugins/highlight.min.css" />
     <script src="${staticDomain}/resources/assets/js/lib.min.js"></script>

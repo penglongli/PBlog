@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 @Component
@@ -49,6 +50,12 @@ public class GlobalInterceptor implements HandlerInterceptor{
         websiteTraffic.setOperateSystem(userAgent.getOperatingSystem().getName());
         websiteTraffic.setIpAddress((realIp == null) ? "127.0.0.1" : realIp);
         websiteTrafficService.save(websiteTraffic);
+
+        //设置模式，默认设置为夜间模式
+        HttpSession session = request.getSession();
+        if(session.getAttribute("mo") == null) {
+            request.getSession().setAttribute("mo", "night");
+        }
 
         return true;
     }

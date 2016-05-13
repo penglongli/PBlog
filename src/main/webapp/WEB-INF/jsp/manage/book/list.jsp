@@ -27,8 +27,8 @@
                 <div class="banner-item">
                     <img src="${bookTable.bookBanner}" alt="${bookTable.bookName}" />
                     <div class="operate">
-                        <div class="edit" onclick="editBookTable('${bookTable.id}', '${bookTable.bookName}', '${bookTable.bookUrl}', '${bookTable.bookBanner}')"><i class="icon-edit"></i></div>
-                        <div class="del" onclick="delMask('${bookTable.id}')"><i class="icon-trash"></i></div>
+                        <div class="edit" onclick="editBookTable('${bookTable.id}', '${bookTable.bookName}', '${bookTable.bookUrl}', '${bookTable.bookBanner}')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                        <div class="del" onclick="delMask('${bookTable.id}')"><i class="fa fa-trash" aria-hidden="true"></i></div>
                     </div>
                 </div>
             </c:forEach>

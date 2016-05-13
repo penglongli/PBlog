@@ -74,8 +74,8 @@
         <!--<table tableName="book_table" domainObjectName="BookTable" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
         </table>-->
-        <table tableName="pic_info" domainObjectName="PicInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <!--<table tableName="pic_info" domainObjectName="PicInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
-        </table>
+        </table>-->
     </context>
 </generatorConfiguration>

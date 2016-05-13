@@ -21,8 +21,8 @@
     <div class="content">
         <div class="content-second-nav">
             <ol>
-                <li><a href="${staticDomain}/manage/article/list"><i class="icon-edit"></i>${first_nav}</a></li>
-                <li class="active"><i class="icon-list"></i>${second_nav}</li>
+                <li><a href="${staticDomain}/manage/article/list"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>${first_nav}</a></li>
+                <li class="active"><i class="fa fa-list" aria-hidden="true"></i>${second_nav}</li>
             </ol>
             <div style="clear: both;"></div>
         </div>
