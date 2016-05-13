@@ -8,6 +8,6 @@
   </insert>
 
   <select id="queryById" resultType="SlugInfo">
-    select * from slug_info where id = #{id}
+    select * from slug_info where id = #{id, jdbcType=INTEGER}
   </select>
 </mapper>

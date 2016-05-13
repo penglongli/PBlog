@@ -36,7 +36,7 @@ public class CommonUtilsServiceImpl implements CommonUtilsService{
         articleInfoVO.setLikeNum(articleInfo.getThumb());
 
         Long categorySlug = articleInfo.getCategorySlug();
-        CategoryInfo categoryInfo = categoryInfoMapper.findBySlug(categorySlug);
+        CategoryInfo categoryInfo = categoryInfoMapper.selectBySlug(categorySlug);
         articleInfoVO.setCategoryName(categoryInfo.getTitle());
 
         Long clickNum = articleReadLogMapper.queryForClickNumByArticle(articleInfo.getSlug());

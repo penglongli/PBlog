@@ -2,11 +2,43 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.pblog.dao.CategoryInfoMapper" >
 
-  <select id="findBySlug" resultType="com.pblog.domain.CategoryInfo" parameterType="java.lang.Long">
-    select * from category_info where slug = #{slug, jdbcType=BIGINT}
+  <sql id="Base_Column_List">
+    id, createTime, title, slug
+  </sql>
+
+  <select id="selectBySlug" resultType="com.pblog.domain.CategoryInfo" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List" />
+    from category_info
+    where slug = #{slug, jdbcType=BIGINT}
   </select>
 
-  <select id="findAll" resultType="com.pblog.domain.CategoryInfo">
-    select * from category_info;
+  <select id="selectAll" resultType="com.pblog.domain.CategoryInfo">
+    select 
+    <include refid="Base_Column_List" />
+    from category_info;
   </select>
+
+  <insert id="save" parameterType="com.pblog.domain.CategoryInfo" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS id
+    </selectKey>
+    insert into category_info
+    (<include refid="Base_Column_List" />)
+    VALUES
+    (#{id, jdbcType=INTEGER}, #{createTime, jdbcType=DATE}, #{title, jdbcType=VARCHAR}, #{slug, jdbcType=BIGINT})
+  </insert>
+
+  <update id="update" parameterType="com.pblog.domain.CategoryInfo" >
+    update category_info
+    SET `title` = #{title, jdbcType=VARCHAR}, `slug` = #{slug, jdbcType=BIGINT}
+    WHERE `id` = #{id, jdbcType=INTEGER}
+  </update>
+
+  <update id="updateBySlug" parameterType="com.pblog.domain.CategoryInfo" >
+    update category_info
+    SET `title` = #{title, jdbcType=VARCHAR}
+    WHERE `slug` = #{slug, jdbcType=BIGINT}
+  </update>
+
 </mapper>

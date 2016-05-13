@@ -41,7 +41,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
 
     public List<CategoryInfoVO> findCategoryInfoVO() {
         List<CategoryInfoVO> categoryInfoVOList = Lists.newArrayList();
-        List<CategoryInfo> categoryInfoList = categoryInfoMapper.findAll();
+        List<CategoryInfo> categoryInfoList = categoryInfoMapper.selectAll();
 
         for(CategoryInfo categoryInfo : categoryInfoList){
             CategoryInfoVO categoryInfoVO = new CategoryInfoVO();
@@ -59,7 +59,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService{
     public List<SimpleCategoryInfo> findSimpleCategoryInfo() {
         List<SimpleCategoryInfo> simpleCategoryInfoList = Lists.newArrayList();
 
-        List<CategoryInfo> categoryInfoList = categoryInfoMapper.findAll();
+        List<CategoryInfo> categoryInfoList = categoryInfoMapper.selectAll();
         for(CategoryInfo categoryInfo : categoryInfoList){
             simpleCategoryInfoList.add(transToSimpleCategoryInfo(categoryInfo));
         }

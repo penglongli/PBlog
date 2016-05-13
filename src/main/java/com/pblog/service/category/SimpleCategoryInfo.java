@@ -6,6 +6,8 @@ public class SimpleCategoryInfo {
 
     private String title;
 
+    private Integer num;
+
     public Long getCategorySlug() {
         return categorySlug;
     }
@@ -20,5 +22,13 @@ public class SimpleCategoryInfo {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
     }
 }
