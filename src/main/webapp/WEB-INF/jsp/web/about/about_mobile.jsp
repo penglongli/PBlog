@@ -8,8 +8,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>About | Pelin的个人博客</title>
-    <link href="${cssDomain}/about/about_mobile.css" rel="stylesheet"/>
-    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
+    <link href="${cssDomain}/mobile/about_mobile.css" rel="stylesheet"/>
+    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 
@@ -26,12 +26,15 @@
 
         <div class="about-detail">
             <div class="spot">
-                <a href="https://github.com/penglongli" target="_blank"><i class="icon-github"></i> Follow me on GitHub</a>
+                <a href="https://github.com/penglongli">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    <span>Follow me on GitHub</span>
+                </a>
             </div>
             <div class="contact">
                 <h2>联系方式</h2>
                 <ul>
-                    <li>Email: <a href="mailto:penglong95.li@gmail.com" target="_blank">penglong95.li@gmail.com</a></li>
+                    <li>Email: <a href="mailto:penglong95.li@gmail.com">penglong95.li@gmail.com</a></li>
                 </ul>
             </div>
 
@@ -39,7 +42,7 @@
                 <h2>个人信息</h2>
                 <ul>
                     <li>李鹏龙/男/1995</li>
-                    <li>个人网站：<a href="http://www.pelinli.com" target="_blank">http://www.pelinli.com</a></li>
+                    <li>个人网站：<a href="http://www.pelinli.com">http://www.pelinli.com</a></li>
                     <li>城市: 北京</li>
                 </ul>
             </div>
@@ -47,18 +50,18 @@
             <div class="social">
                 <h2>社交账号</h2>
                 <ul>
-                    <li><a href="https://github.com/penglongli" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.zhihu.com/people/pelin.li" target="_blank">Zhihu</a></li>
-                    <li><a href="http://blog.csdn.net/u010800530" target="_blank">CSDN</a></li>
+                    <li><a href="https://github.com/penglongli">GitHub</a></li>
+                    <li><a href="https://www.zhihu.com/people/pelin.li">Zhihu</a></li>
+                    <li><a href="http://blog.csdn.net/u010800530">CSDN</a></li>
                     <li><a href="javascript:void(0)">Sina Weibo</a></li>
-                    <li><a href="http://v2ex.com/member/Lpl" target="_blank">V2EX</a></li>
+                    <li><a href="http://v2ex.com/member/Lpl">V2EX</a></li>
                 </ul>
             </div>
 
             <div class="open-source">
                 <h2>开源项目</h2>
                 <ul>
-                    <li><a href="https://github.com/penglongli/PBlog" target="_blank">PBlog</a>: 基于Java + AngularJS开发的一款单页应用博客</li>
+                    <li><a href="https://github.com/penglongli/PBlog">PBlog</a>: 基于Java + AngularJS开发的一款单页应用博客</li>
                 </ul>
             </div>
 
@@ -101,7 +104,6 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
+<script type="text/javascript" src="${staticDomain}/resources/js/mobile/global_mobile.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@
                     <span class="tag" ng-repeat="tag in articleInfoVO.tags">{{ tag }}</span>
                 </div>
                 <div class="read-more">
-                    <a href="${staticDomain}/#/article/{{ articleInfoVO.articleSlug }}">继续阅读<i class=" icon-double-angle-right"></i></a>
+                    <a href="${staticDomain}/#/article/{{ articleInfoVO.articleSlug }}">继续阅读<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="clear-fix"></div>
             </div>

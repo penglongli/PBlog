@@ -27,6 +27,8 @@ public class ReadController {
     @Resource(name = "bookTableService")
     private BookTableService bookTableService;
 
+    //--------------------PC端------------------------
+
     @RequestMapping(value = "/read/layout", method = RequestMethod.GET)
     public String indexLayout(HttpServletRequest request, Model model) {
 
@@ -64,10 +66,28 @@ public class ReadController {
         return map;
     }
 
+    //------------------手机端--------------------------
 
     @RequestMapping(value = "/read", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) {
+        Boolean mobile = (Boolean) request.getAttribute("mobile");
+        if (!mobile) {
+            return "redirect:/#/read";
+        }
 
-        return "";
+        List<BookInfoVO> bookInfoVOList = bookInfoService.findList();
+
+        model.addAttribute("bookInfoVOList", bookInfoVOList);
+        return "web/book/read_mobile";
     }
+
+    @RequestMapping(value = "/read/{slug}/detail", method = RequestMethod.GET)
+    public String slugDetail(@PathVariable Long slug, HttpServletRequest request, Model model) {
+        String ipAddress = (String) request.getAttribute("realIp");
+
+        BookInfoVO bookInfoVO = bookInfoService.findBySlug(slug, ipAddress);
+        model.addAttribute("bookInfoVO", bookInfoVO);
+        return "web/book/read_mobile_detail";
+    }
+
 }

@@ -21,6 +21,8 @@ public class ArticleController {
     @Resource(name = "articleInfoService")
     private ArticleInfoService articleInfoService;
 
+    //------------------移动端-------------------------
+
     @RequestMapping(value = "/{slug}/detail", method = RequestMethod.GET)
     public String index(@PathVariable Long slug, HttpServletRequest request, Model model) {
         Boolean mobile = (Boolean) request.getAttribute("mobile");
@@ -34,6 +36,8 @@ public class ArticleController {
         return "web/article/article_mobile";
     }
 
+    //--------------------PC端——-----------------------
+
     @RequestMapping(value = "/slug/layout", method = RequestMethod.GET)
     public String layout(HttpServletRequest request, Model model) {
 
@@ -42,7 +46,7 @@ public class ArticleController {
 
     @RequestMapping(value ="/{slug}", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
     @ResponseBody
-    public Map<String, Object> articleBySlug(@PathVariable Long slug, HttpServletRequest request) {
+    public Map<String, Object> articleJson(@PathVariable Long slug, HttpServletRequest request) {
         String ipAddress = (String) request.getAttribute("realIp");
         ArticleInfoVO articleInfoVO = articleInfoService.findArticleBySlug(slug, ipAddress);
 

@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Article | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link href="${cssDomain}/article/article_mobile.css" rel="stylesheet"/>
-    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="${cssPlugins}/highlight.min.css" />
-    <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
-    <script src="${jsPlugins}/marked.js" type="text/javascript"></script>
-    <script src="${jsDomain}/highlight.min.js" type="text/javascript"></script>
+    <link href="${cssDomain}/mobile/article_mobile.css" rel="stylesheet"/>
+    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="${staticDomain}/resources/assets/plugins/highlight.min.css" />
+    <script src="${staticDomain}/resources/js/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="${staticDomain}/resources/js/plugins/marked.js" type="text/javascript"></script>
+    <script src="${staticDomain}/resources/assets/js/highlight.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="Wrapper">
@@ -28,7 +28,7 @@
 </div>
 
 <textarea style="display: none" class="md">${articleInfo.content}</textarea>
-<script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
+<script type="text/javascript" src="${staticDomain}/resources/js/mobile/global_mobile.js"></script>
 <script type="text/javascript">
     var md = $(".md").val();
     $(".article-content").html(marked(md));

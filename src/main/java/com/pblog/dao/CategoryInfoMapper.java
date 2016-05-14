@@ -1,7 +1,6 @@
 package com.pblog.dao;
 
 import com.pblog.domain.CategoryInfo;
-import org.apache.log4j.Category;
 
 import java.util.List;
 

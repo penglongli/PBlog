@@ -14,7 +14,7 @@
   background-position-x: 80%;
 }
 #about .about-body {
-  width: 28%;
+  width: 31%;
   float: right;
   word-wrap: break-word;
   padding-right: 3%;
@@ -26,21 +26,32 @@
 }
 #about .about-body .spot a {
   text-decoration: none;
-  color: #FFF;
-  background: #DF611A;
-  font-size: 1.6rem;
-  padding: 0.5em 1em;
-  border-radius: 4%;
-  font-weight: 600;
-  vertical-align: top;
+  display: inline-block;
+  height: 40px;
+  background: #3E4143;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  line-height: 40px;
+  padding: 0 15px;
+  position: relative;
+  width: 180px;
+  color: #ADADAD;
+  border: 1px solid #5F5F5F;
 }
 #about .about-body .spot a i {
-  line-height: 1;
   font-size: 2.1rem;
   margin-right: .2em;
+  position: absolute;
+  line-height: 38px;
+  left: 17px;
+}
+#about .about-body .spot a span {
+  position: absolute;
+  left: 46px;
+  line-height: 42px;
 }
 #about .about-body .spot a:hover {
-  background: #DF617E;
+  background: #282828;
 }
 #about .about-body .contact,
 #about .about-body .person,
@@ -73,7 +84,7 @@
 #about .about-body .technical ul {
   font-size: 1.4rem;
   font-family: Verdana, Microsoft YaHei, sans-serif;
-  color: #796A66;
+  color: #7D7776;
 }
 #about .about-body .contact ul li,
 #about .about-body .person ul li,
@@ -93,11 +104,21 @@
 #about .about-body .education ul li a,
 #about .about-body .awards ul li a,
 #about .about-body .technical ul li a {
-  color: #796A66;
+  color: #7D7776;
+}
+#about .about-body .contact ul li a:hover,
+#about .about-body .person ul li a:hover,
+#about .about-body .social ul li a:hover,
+#about .about-body .open-source ul li a:hover,
+#about .about-body .work-experience ul li a:hover,
+#about .about-body .education ul li a:hover,
+#about .about-body .awards ul li a:hover,
+#about .about-body .technical ul li a:hover {
+  color: #297385;
 }
 #about .about-body h1 {
   font-size: 2rem;
-  color: #343434;
+  color: #40B760;
   padding: 0;
   margin-bottom: 0;
   font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
@@ -105,7 +126,7 @@
 }
 #about .about-body h2 {
   font-size: 1.5rem;
-  color: #666666;
+  color: #888!important;
   padding: 0;
   margin-top: 7px;
 }

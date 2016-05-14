@@ -7,7 +7,7 @@
         <div class="main">
             <div class="year">
                 <div class="time-line"></div>
-                <div class="year-title">2016年 <i class="icon-caret-down"></i></div>
+                <div class="year-title">2016年 <i class="fa fa-caret-down" aria-hidden="true"></i></div>
                 <div class="daily" ng-repeat="recordInfo in recordInfoList">
                     <div class="daily-title">
                         <div class="time">{{ recordInfo.createTime | date:'MM月dd日' }}</div>

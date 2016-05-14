@@ -9,12 +9,12 @@
         <h1>PELIN LI</h1>
         <h2>A Java Engineer(Web),&nbsp; wants to be a poet!</h2>
         <div class="spot">
-            <a href="https://github.com/penglongli" target="_blank"><i class="icon-github"></i> Follow me on GitHub</a>
+            <a href="https://github.com/penglongli" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i> <span>Follow me on GitHub</span></a>
         </div>
         <div class="contact">
             <h2>联系方式</h2>
             <ul>
-                <li>Email: <a href="mailto:penglong95.li@gmail.com" target="_blank">penglong95.li@gmail.com</a></li>
+                <li>Email: <a href="mailto:penglong95.li@gmail.com">penglong95.li@gmail.com</a></li>
             </ul>
         </div>
 

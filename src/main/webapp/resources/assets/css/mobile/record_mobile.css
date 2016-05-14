@@ -120,13 +120,13 @@ body {
   vertical-align: middle;
 }
 body {
-  background: #F3F3F3!important;
+  background: #F0E5F7!important;
 }
 #Content {
   padding: 0!important;
   margin-top: 3.5em!important;
 }
-.archive-header {
+.record-header {
   width: 100%;
   margin: 0;
   padding: 0.5em 0;
@@ -135,13 +135,13 @@ body {
   text-align: center;
   border-top: 1px solid #E7F3FD;
 }
-.archive-header i {
+.record-header i {
   margin-right: 0.3em;
 }
-.archive-header span {
+.record-header span {
   color: #F7443D;
 }
-.archive-title {
+.record-title {
   font-size: 1.2rem;
   width: 100%;
   background: #EFEEF3;
@@ -149,71 +149,85 @@ body {
   padding: 0.4em 0 0.4em 1em;
   border-bottom: 1px solid #E4E3E6;
 }
-.archive-timeline {
-  font-size: 1rem;
-  width: 100%;
-  margin: 0;
-  background: #FFF;
-  padding-top: 1em;
+.record-list {
+  margin-top: 10px;
 }
-.archive-timeline .timeline-left {
-  font-size: 1rem;
-  width: 33%;
-  float: left;
-  margin-left: 1em;
+.record-list .clock img {
+  height: 50px;
+  margin-left: 70px;
 }
-.archive-timeline .timeline-left .left-item {
+.record-list .daily {
   position: relative;
-  height: 10em;
-  border-right: 1px solid #E4E4E4;
+  margin-top: 20px;
   display: none;
 }
-.archive-timeline .timeline-left .left-item span a {
-  text-decoration: none;
-  color: red;
-  padding-right: 0.3em;
-}
-.archive-timeline .timeline-left .left-item .time-point {
-  background: #FFF;
-  border: 2px solid #3AB07C;
-  width: 0.8em;
-  height: 0.8em;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  top: .1em;
-  right: -0.6em;
-}
-.archive-timeline .timeline-right {
-  font-size: 1.15em;
+.record-list .daily .detail-time {
+  width: 70px;
+  font-size: 1.1rem;
+  text-align: right;
   float: left;
-  width: 56%;
-  margin-left: 5%;
 }
-.archive-timeline .timeline-right .right-item {
-  margin-top: 40px;
-  padding-bottom: 2.5em;
-  border-bottom: 1px solid #ECECEC;
-  display: none;
+.record-list .daily .detail-time span {
+  padding-right: .2em;
 }
-.archive-timeline .timeline-right .right-item:first-child {
-  margin-top: 0;
+.record-list .daily .detail-time span:first-child {
+  padding-right: 0;
 }
-.archive-timeline .timeline-right .right-item .article-item {
+.record-list .daily .daily-record {
+  width: calc(100% - 145px);
+  float: right;
+  font-size: 1rem;
+  background: #FFF;
+  padding: 10px 6px 10px 10px;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 5px;
+  margin-bottom: 15px;
   color: #555;
-  margin-top: 2em;
+  line-height: 1.4;
 }
-.archive-timeline .timeline-right .right-item .article-item span {
-  display: block;
-  font-weight: 600;
+.record-list .daily .daily-record p {
+  margin: 5px 0 0 0;
 }
-.archive-timeline .timeline-right .right-item .article-item a {
-  color: #555;
-  text-decoration: none;
-  display: block;
-  margin-top: 0.3em;
+.record-list .daily .daily-record p:first-child {
+  margin: 0;
 }
-.archive-timeline .timeline-right .right-item .article-item:first-child {
-  margin-top: 0;
+.record-list .daily .daily-record img {
+  width: 90%;
+}
+.record-list .daily .daily-record:before {
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  content: "";
+  border-width: 9px;
+  border-right-color: #FFF;
+  top: 10px;
+  background: #F0E5F7;
+  left: -18px;
+}
+.record-list .daily .icon {
+  position: absolute;
+  left: 83px;
+  top: 6px;
+  z-index: 100;
+  width: 16px;
+  border: 2px solid #7C7C7C;
+  padding: 2px 1px;
+  border-radius: 50%;
+  background: #FFF;
+}
+.record-list .daily .icon i {
+  color: #E2A41D;
+  font-size: 14px;
+  margin-left: 3px;
+}
+.record-list .daily .time-line {
+  position: absolute;
+  top: -23px;
+  bottom: 0;
+  background: #08987E;
+  width: 2px;
+  left: 93px;
 }

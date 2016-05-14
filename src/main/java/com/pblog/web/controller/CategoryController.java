@@ -23,6 +23,8 @@ public class CategoryController {
     @Resource(name = "categoryInfoService")
     private CategoryInfoService categoryInfoService;
 
+    //------------------移动端---------------------
+
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) {
         Boolean mobile = (Boolean) request.getAttribute("mobile");
@@ -39,12 +41,6 @@ public class CategoryController {
         return "web/category/category_mobile";
     }
 
-    @RequestMapping(value = "/category/layout", method = RequestMethod.GET)
-    public String getCategoryPage() {
-
-        return "web/category/layout";
-    }
-
     @RequestMapping(value = "/category/{slug}/list", method = RequestMethod.GET)
     public String category(@PathVariable Long slug, HttpServletRequest request, Model model){
         Boolean mobile = (Boolean) request.getAttribute("mobile");
@@ -58,6 +54,14 @@ public class CategoryController {
         model.addAttribute("slug", slug);
         return "web/common/detail";
     }
+
+    //------------------PC端----------------------------
+    @RequestMapping(value = "/category/layout", method = RequestMethod.GET)
+    public String layout() {
+
+        return "web/category/layout";
+    }
+
 
     @RequestMapping(value ="/categoryList", method = RequestMethod.GET, produces = {"application/xml", "application/json"})
     @ResponseBody
@@ -84,37 +88,4 @@ public class CategoryController {
 
         return map;
     }
-
-    /*@RequestMapping(value = "/category")
-    public String index(HttpServletRequest request, Model model){
-        List<CategoryInfoVO> categoryInfoVOList = categoryInfoService.findCategoryInfoVO();
-        List<ArticleInfoVO> articleInfoVOList = categoryInfoVOList.get(0).getArticleInfoVOList();
-
-        model.addAttribute("categoryInfoVOList", categoryInfoVOList);
-        model.addAttribute("articleInfoVOList", articleInfoVOList.size() > 0 ? articleInfoVOList : null);
-        model.addAttribute("num", categoryInfoVOList.size());
-
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
-        if(mobile){
-            return "web/category/category_mobile";
-        }else{
-            return "web/category/category";
-        }
-    }
-
-    @RequestMapping(value = "/category/{slug}")
-    public String list(@PathVariable Long slug, HttpServletRequest request, Model model){
-        List<CategoryInfoVO> categoryInfoVOList = categoryInfoService.findCategoryInfoVO();
-        List<ArticleInfoVO> articleInfoVOList = categoryInfoService.findArticleListByCategory(slug);
-
-        model.addAttribute("categoryInfoVOList", categoryInfoVOList);
-        model.addAttribute("articleInfoVOList", articleInfoVOList);
-        model.addAttribute("slug", slug);
-
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
-        if(mobile){
-            return "web/category/category_by_slug";
-        }
-        return "web/category/category";
-    }*/
 }

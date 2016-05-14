@@ -18,7 +18,7 @@
   }
 
   .about-body {
-    width: 28%;
+    width: 31%;
     float: right;
     word-wrap: break-word;
     padding-right: 3%;
@@ -30,23 +30,35 @@
 
       a {
         text-decoration: none;
-        color: #FFF;
-        background: #DF611A;
-        font-size: 1.6rem;
-        padding: 0.5em 1em;
-        border-radius: 4%;
-        font-weight: 600;
-        vertical-align: top;
+        display: inline-block;
+        height: 40px;
+        background: #3E4143;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        line-height: 40px;
+        padding: 0 15px;
+        position: relative;
+        width: 180px;
+        color: #ADADAD;
+        border: 1px solid #5F5F5F;
 
         i {
-          line-height: 1;
           font-size: 2.1rem;
           margin-right: .2em;
+          position: absolute;
+          line-height: 38px;
+          left: 17px;
+        }
+
+        span {
+          position: absolute;
+          left: 46px;
+          line-height: 42px;
         }
       }
 
       a:hover {
-        background: #DF617E;
+        background: #282828;
       }
     }
 
@@ -61,13 +73,17 @@
       ul {
         font-size: 1.4rem;
         font-family: Verdana, Microsoft YaHei, sans-serif;
-        color: #796A66;
+        color: #7D7776;
 
         li {
           margin-top: .3em;
 
           a {
-            color: #796A66;
+            color: #7D7776;
+          }
+
+          a:hover {
+            color: #297385;
           }
         }
       }
@@ -76,7 +92,7 @@
 
     h1 {
       font-size: 2rem;
-      color: #343434;
+      color: #40B760;
       padding: 0;
       margin-bottom: 0;
       font-family: proxima-nova-1,proxima-nova-2,Tahoma,Helvetica,Verdana,sans-serif;
@@ -85,7 +101,7 @@
 
     h2 {
       font-size: 1.5rem;
-      color: #666666;
+      color: #888!important;
       padding: 0;
       margin-top: 7px;
     }

@@ -1,0 +1,138 @@
+@import "../include/index_mobile_global";
+
+body {
+  background: #F0E5F7!important;
+}
+
+#Content {
+  padding: 0!important;
+  margin-top: 3.5em!important;
+}
+
+.record-header {
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
+  background: #FFF;
+  color: #535353;
+  text-align: center;
+  border-top: 1px solid #E7F3FD;
+
+  i {
+    margin-right: 0.3em;
+  }
+
+  span {
+    color: #F7443D;
+  }
+}
+
+.record-title {
+  font-size: 1.2rem;
+  width: 100%;
+  background: #EFEEF3;
+  color: #ACABB0;
+  padding: 0.4em 0 0.4em 1em;
+  border-bottom: 1px solid #E4E3E6;
+}
+
+.record-list {
+  margin-top: 10px;
+
+  .clock {
+
+    img {
+      height: 50px;
+      margin-left: 70px;
+    }
+  }
+
+  .daily {
+    position: relative;
+    margin-top: 20px;
+    display: none;
+
+    .detail-time {
+      width: 70px;
+      font-size: 1.1rem;
+      text-align: right;
+      float: left;
+
+      span {
+        padding-right: .2em;
+      }
+
+      span:first-child {
+        padding-right: 0;
+      }
+    }
+
+    .daily-record {
+      width: e("calc(100% - 145px)");
+      float: right;
+      font-size: 1rem;
+      background: #FFF;
+      padding: 10px 6px 10px 10px;
+      position: relative;
+      margin-right: 10px;
+      margin-left: 5px;
+      margin-bottom: 15px;
+      color: #555;
+      line-height: 1.4;
+
+      p {
+        margin: 5px 0 0 0;
+      }
+
+      p:first-child {
+        margin: 0;
+      }
+
+      img {
+        width: 90%;
+      }
+
+      &:before {
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        position: absolute;
+        content: "";
+        border-width: 9px;
+        border-right-color: #FFF;
+        top: 10px;
+        background: #F0E5F7;
+        left: -18px;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      left: 83px;
+      top: 6px;
+      z-index: 100;
+      width: 16px;
+      border: 2px solid #7C7C7C;
+      padding: 2px 1px;
+      border-radius: 50%;
+      background: #FFF;
+
+      i {
+        color: #E2A41D;
+        font-size: 14px;
+        margin-left: 3px;
+      }
+    }
+
+    .time-line {
+      position: absolute;
+      top: -23px;
+      bottom: 0;
+      background: #08987E;
+      width: 2px;
+      left: 93px;
+    }
+  }
+
+
+}

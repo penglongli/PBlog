@@ -10,12 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class AboutController {
 
-    @RequestMapping(value = "/about/layout", method = RequestMethod.GET)
-    public String getAboutPage(HttpServletRequest request, Model model) {
-
-        return "web/about/layout";
-    }
-
+    //----------------移动端——--------------------
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) {
         Boolean mobile = (Boolean) request.getAttribute("mobile");
@@ -25,5 +20,12 @@ public class AboutController {
         } else {
             return "redirect:/#/about";
         }
+    }
+
+    //----------------PC端------------------------
+    @RequestMapping(value = "/about/layout", method = RequestMethod.GET)
+    public String layout(HttpServletRequest request, Model model) {
+
+        return "web/about/layout";
     }
 }

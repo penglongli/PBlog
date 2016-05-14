@@ -27,7 +27,7 @@
                     <span class="article-category">
                         <a href="${staticDomain}/#/category/{{ articleInfoVO.categorySlug }}">{{ articleInfoVO.categoryName }}</a>
                     </span>
-                <span class="article-view"><i class="icon-eye-open"></i>点击<span>({{ articleInfoVO.reviewNum }})</span></span>
+                <span class="article-view">点击<span>({{ articleInfoVO.reviewNum }})</span></span>
             </div>
             <div class="article-description" ng-bind-html="articleInfoVO.description"></div>
             <div class="article-footer">
@@ -35,7 +35,7 @@
                     <span class="tag" ng-repeat="tag in articleInfoVO.tags">{{ tag }}</span>
                 </div>
                 <div class="read-more">
-                    <a href="${staticDomain}/#/article/{{ articleInfoVO.articleSlug }}">继续阅读<i class=" icon-double-angle-right"></i></a>
+                    <a href="${staticDomain}/#/article/{{ articleInfoVO.articleSlug }}">继续阅读<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="clear-fix"></div>
             </div>

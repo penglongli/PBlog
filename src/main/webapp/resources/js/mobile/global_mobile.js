@@ -73,15 +73,15 @@ $Wrapper.on({
 
 //初始化时间轴
 function timeLineInitial(){
-    var $leftItem = $(".left-item");
     var $rightItem = $(".right-item");
+    var $leftItem = $(".left-item");
     var nodeSize = $leftItem.size();
 
     for(var i = 0; i < nodeSize; i++){
-        var rightHeight = $($rightItem[i]).height();
+        var rightHeight = $rightItem.eq(i).outerHeight();
 
         $($leftItem[i]).css({"height": rightHeight + 40});
-        $($rightItem[i]).fadeIn("slow");
-        $($leftItem[i]).fadeIn("slow");
+        $($rightItem[i]).delay(i * 500).fadeIn("slow");
+        $($leftItem[i]).delay(i * 500).fadeIn("slow");
     }
 }

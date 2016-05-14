@@ -6,7 +6,7 @@ body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
-  font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1.3rem;
 }
 .body-slide {
@@ -44,8 +44,8 @@ body {
   margin-right: 1em;
 }
 #Wrapper #Top i {
-  font-size: 2rem;
-  line-height: 2.25em;
+  font-size: 1.5rem;
+  line-height: 2.75em;
 }
 #Wrapper #Top a {
   color: #88909a;
@@ -165,22 +165,32 @@ body {
   word-break: break-all;
 }
 .about-detail .spot {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: 1.5em 0;
 }
 .about-detail .spot a {
+  font-size: 1.2rem;
+  position: relative;
+  width: 14.5em;
+  display: inline-block;
+  height: 3em;
+  border-radius: 5px;
   text-decoration: none;
   color: #FFF;
   background: #DF611A;
-  padding: .6em 1em .7em 1em;
-  border-radius: 4%;
-  vertical-align: top;
 }
 .about-detail .spot a i {
   font-size: 1.75rem;
   margin-right: .25em;
-  line-height: 1;
+  position: absolute;
+  left: .8em;
+  line-height: 2.1em;
+}
+.about-detail .spot a span {
+  position: absolute;
+  left: 3.5em;
+  line-height: 3em;
 }
 .about-detail .contact,
 .about-detail .person,

@@ -52,22 +52,33 @@ body {
   word-break: break-all;
 
   .spot {
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     text-align: center;
     margin: 1.5em 0;
 
     a {
+      font-size: 1.2rem;
+      position: relative;
+      width: 14.5em;
+      display: inline-block;
+      height: 3em;
+      border-radius: 5px;
       text-decoration: none;
       color: #FFF;
       background: #DF611A;
-      padding: .6em 1em .7em 1em;
-      border-radius: 4%;
-      vertical-align: top;
 
       i {
         font-size: 1.75rem;
         margin-right: .25em;
-        line-height: 1;
+        position: absolute;
+        left: .8em;
+        line-height: 2.1em;
+      }
+
+      span {
+        position: absolute;
+        left: 3.5em;
+        line-height: 3em;
       }
     }
   }
@@ -79,7 +90,6 @@ body {
     h2 {
       font-size: 1.4rem;
       color: #424242;
-      //text-shadow: 1px 1px #CCC;
       font-family: GothicCustom, 'Arial Narrow', sans-serif;
       margin: 0;
     }

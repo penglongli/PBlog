@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="wrapper-header">
     <div class="search">
-        <i class="icon-search"></i>
+        <i class="fa fa-search" aria-hidden="true"></i>
         <input type="text" class="search_input"/>
     </div>
 </div>

@@ -5,6 +5,8 @@ import com.pblog.core.orm.PageRequest;
 import com.pblog.core.orm.Pagination;
 import com.pblog.service.article.ArticleInfoService;
 import com.pblog.service.article.ArticleInfoVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,11 +21,15 @@ import java.util.Map;
 @Controller
 public class IndexController {
 
+    private static Logger logger = LoggerFactory.getLogger(IndexController.class);
+
     @Resource(name = "articleInfoService")
     private ArticleInfoService articleInfoService;
 
+    //-------------移动端----------------
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getRootPage(HttpServletRequest request, Model model) {
+    public String index(HttpServletRequest request, Model model) {
         Boolean mobile = (Boolean) request.getAttribute("mobile");
 
         if(mobile) {
@@ -44,8 +50,11 @@ public class IndexController {
         }
     }
 
+    //-----------------------PC端---------------------------
+
     @RequestMapping(value = "/index/layout", method = RequestMethod.GET)
-    public String getIndexPage(HttpServletRequest request, Model model){
+    public String layout(HttpServletRequest request, Model model){
+
         return "web/index/layout";
     }
 

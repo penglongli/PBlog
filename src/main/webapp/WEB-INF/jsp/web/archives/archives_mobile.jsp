@@ -9,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Archives | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link href="${cssDomain}/time_line.css" rel="stylesheet" />
-    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
-    <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
+    <link href="${staticDomain}/resources/assets/css/mobile/time_line.css" rel="stylesheet" />
+    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
+    <script src="${staticDomain}/resources/js/plugins/jquery.min.js" type="text/javascript"></script>
 </head>
-<body onload="initial()">
+<body onload="timeLineInitial()">
 <div id="Wrapper">
     <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">
-        <div class="archive-header"><i class="icon-ok-sign"></i>文章统计：<span>${num}篇</span></div>
+        <div class="archive-header"><i class="fa fa-check-circle" aria-hidden="true"></i>文章统计：<span>${num}篇</span></div>
         <div class="archive-title">文章存档</div>
         <div class="archive-timeline">
             <div class="timeline-left">
@@ -51,18 +51,5 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
-<script type="text/javascript">
-    function initial(){
-        var nodeSize = $(".left-item").size();
-        for(var i = 0; i < nodeSize; i++){
-            var rightHeight = $($(".right-item")[i]).outerHeight();
-
-            $($(".left-item")[i]).css({"height": rightHeight + 62});
-            $($(".right-item")[i]).fadeIn("slow");
-            $($(".left-item")[i]).fadeIn("slow");
-        }
-    }
-
-</script>
+<script type="text/javascript" src="${staticDomain}/resources/js/mobile/global_mobile.js"></script>
 </html>
