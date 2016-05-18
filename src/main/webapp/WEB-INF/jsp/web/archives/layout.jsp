@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
-    <div class="clear-fix"></div>
 
+    <%@ include file="../include/footer.jsp" %>
+    <div class="clear-fix"></div>
 </div>

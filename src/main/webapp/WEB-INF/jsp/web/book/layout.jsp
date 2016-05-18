@@ -27,5 +27,6 @@
             <div class="clear-fix"></div>
         </div>
     </div>
-
 </div>
+
+<%@ include file="../include/footer.jsp"%>

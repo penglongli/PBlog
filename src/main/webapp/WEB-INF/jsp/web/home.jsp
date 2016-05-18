@@ -22,7 +22,7 @@
 <div id="wrapper">
     <div class="content" ng-view></div>
 
-    <%@ include file="include/index_header.jsp" %>
+    <%@ include file="include/header.jsp" %>
 </div>
 
 

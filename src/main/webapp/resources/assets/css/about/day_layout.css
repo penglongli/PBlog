@@ -55,7 +55,6 @@
 }
 #about .about-body .contact,
 #about .about-body .person,
-#about .about-body .social,
 #about .about-body .open-source,
 #about .about-body .work-experience,
 #about .about-body .education,
@@ -65,7 +64,6 @@
 }
 #about .about-body .contact h2,
 #about .about-body .person h2,
-#about .about-body .social h2,
 #about .about-body .open-source h2,
 #about .about-body .work-experience h2,
 #about .about-body .education h2,
@@ -76,7 +74,6 @@
 }
 #about .about-body .contact ul,
 #about .about-body .person ul,
-#about .about-body .social ul,
 #about .about-body .open-source ul,
 #about .about-body .work-experience ul,
 #about .about-body .education ul,
@@ -88,7 +85,6 @@
 }
 #about .about-body .contact ul li,
 #about .about-body .person ul li,
-#about .about-body .social ul li,
 #about .about-body .open-source ul li,
 #about .about-body .work-experience ul li,
 #about .about-body .education ul li,
@@ -98,13 +94,26 @@
 }
 #about .about-body .contact ul li a,
 #about .about-body .person ul li a,
-#about .about-body .social ul li a,
 #about .about-body .open-source ul li a,
 #about .about-body .work-experience ul li a,
 #about .about-body .education ul li a,
 #about .about-body .awards ul li a,
 #about .about-body .technical ul li a {
   color: #796A66;
+}
+#about .about-body .social {
+  margin: 30px 0 100px 0;
+}
+#about .about-body .social img,
+#about .about-body .social svg {
+  width: 46px;
+  height: 46px;
+  margin-left: 16px;
+}
+#about .about-body .social img {
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
 }
 #about .about-body h1 {
   font-size: 2rem;

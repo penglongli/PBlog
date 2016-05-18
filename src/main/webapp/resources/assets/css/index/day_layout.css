@@ -1,6 +1,6 @@
 #index .scroll-area {
   position: fixed;
-  width: 22%;
+  width: 280px;
   top: 47px;
   bottom: 0;
   background: #FFF;
@@ -76,11 +76,11 @@
 #index .article-content {
   font-size: 1.5rem;
   position: absolute;
-  left: 25%;
-  width: 72%;
+  left: 282px;
+  width: calc(100% - 312px);
   line-height: 1.85em;
   font-weight: 300;
-  padding: 0 1.5%;
+  padding-left: 30px;
   color: #424242;
 }
 #index .article-content .content-head {
@@ -112,6 +112,10 @@
 }
 #index .article-content .content-head .content-head-detail a:hover {
   text-decoration: underline;
+}
+#index .article-content .content-body {
+  border-bottom: 1px solid #E2E2E2;
+  padding-bottom: 30px;
 }
 #index .article-content em {
   font-size: 1.4rem;

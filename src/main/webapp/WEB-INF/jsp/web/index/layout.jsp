@@ -24,7 +24,6 @@
             <div class="scroll-bar"></div>
         </div>
     </div>
-
     <div class="article-content">
         <div class="content-head">
             <h1><i class="fa fa-flag" aria-hidden="true"></i> {{ f_article.title }}</h1>
@@ -39,5 +38,7 @@
             </div>
         </div>
         <div class="content-body"></div>
+
+        <%@ include file="../include/footer.jsp"%>
     </div>
 </div>

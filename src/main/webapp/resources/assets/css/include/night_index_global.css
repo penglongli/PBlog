@@ -44,7 +44,7 @@ body {
   text-align: center;
   background: #3C3F41;
   border-right: 1px solid #000;
-  width: calc(5% - 1px);
+  width: 64px;
   z-index: 100;
 }
 #fix-left .author_info {
@@ -123,7 +123,7 @@ body {
 }
 .wrapper-header {
   position: fixed;
-  left: 5%;
+  left: 65px;
   top: 0;
   right: 0;
   z-index: 999;
@@ -164,6 +164,47 @@ body {
   top: 46px;
   right: 0;
   bottom: 0;
-  left: 5%;
+  left: 65px;
   background: #2F2D2D;
+}
+.foot-wrapper {
+  padding-top: 25px;
+  text-align: center;
+  border-top: 1px solid #555555;
+  padding-bottom: 15px;
+  background: #272727;
+}
+.foot-wrapper .foot-links {
+  color: #272727;
+}
+.foot-wrapper .foot-links a {
+  color: #272727;
+}
+.foot-wrapper img,
+.foot-wrapper svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.foot-wrapper svg path {
+  fill: #979797;
+}
+.foot-wrapper .foot-message {
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: #666;
+  margin-top: 10px;
+}
+.foot-wrapper .foot-message .project {
+  letter-spacing: 0.3px;
+}
+.foot-wrapper .foot-message .copyright {
+  margin-left: 15px;
+}
+.foot-wrapper .foot-message a {
+  color: #666!important;
+  text-decoration: underline!important;
+}
+.foot-wrapper img {
+  border-radius: 20px;
 }

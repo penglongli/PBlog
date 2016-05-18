@@ -4,9 +4,8 @@
   line-height: 1.85em;
   color: #424242;
   font-weight: 300;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #515658;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
 }
 #bookDetail .book-content .content-head {
   border-bottom: 1px solid #515658;

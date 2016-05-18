@@ -12,11 +12,11 @@ body {
 #loading-bar .bar {
   background: #2c3e50;
 }
--#loading-bar-spinner .spinner-icon {
+#loading-bar-spinner .spinner-icon {
   border-top-color: #2c3e50;
   border-left-color: #2c3e50;
 }
--#loading-bar .peg {
+#loading-bar .peg {
   -moz-box-shadow: #2c3e50 1px 0 6px 1px;
   -ms-box-shadow: #2c3e50 1px 0 6px 1px;
   -webkit-box-shadow: #2c3e50 1px 0 6px 1px;
@@ -44,7 +44,7 @@ body {
   text-align: center;
   background: #3C3F41;
   border-right: 1px solid #000;
-  width: calc(5% - 1px);
+  width: 64px;
   z-index: 100;
 }
 #fix-left .author_info {
@@ -123,7 +123,7 @@ body {
 }
 .wrapper-header {
   position: fixed;
-  left: 5%;
+  left: 64px;
   top: 0;
   right: 0;
   z-index: 999;
@@ -166,6 +166,35 @@ body {
   top: 46px;
   right: 0;
   bottom: 0;
-  left: 5%;
+  left: 64px;
   background: #FFF;
+}
+.foot-wrapper {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.foot-wrapper img,
+.foot-wrapper svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.foot-wrapper .foot-message {
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: #666;
+}
+.foot-wrapper .foot-message .project {
+  letter-spacing: 0.3px;
+}
+.foot-wrapper .foot-message .copyright {
+  margin-left: 15px;
+}
+.foot-wrapper .foot-message a {
+  color: #666!important;
+  text-decoration: underline!important;
+}
+.foot-wrapper img {
+  border-radius: 20px;
 }

@@ -1,3 +1,7 @@
+#book {
+  min-height: 600px;
+  border-bottom: 1px solid #000;
+}
 #book .book-wrapper {
   width: 60%;
   margin-left: 35px;

@@ -1,14 +1,13 @@
 #article .article-content {
   font-size: 1.5rem;
-  width: 100% - 1px;
+  width: calc(100% - 1px);
   line-height: 1.85em;
   color: #424242;
   font-weight: 300;
   padding-bottom: 20px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #3F4138;
   border-left: 1px solid #555555;
   letter-spacing: 1px;
+  border-bottom: 1px solid #000;
 }
 #article .article-content .content-head {
   border-bottom: 1px solid #3F4138;
@@ -17,7 +16,9 @@
   color: #D2D8BA;
   font-weight: normal;
   font-size: 2.6rem;
-  margin-left: 2%;
+  margin: 0 0 0 2%;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 #article .article-content .content-head .content-head-detail {
   margin-bottom: 0.6em;
@@ -122,4 +123,7 @@
 }
 #article .article-content a:hover {
   text-decoration: underline;
+}
+#article .foot-wrapper {
+  border-left: 1px solid #555555;
 }

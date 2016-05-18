@@ -21,4 +21,6 @@
         </div>
         <div class="clear-fix"></div>
     </div>
+    
+    <%@ include file="../include/footer.jsp"%>
 </div>

@@ -12,9 +12,9 @@
                             <i class="icon-time"></i>
                             {{ articleVO.createTime | date:'MMM d, EEEE' }}
                         </span>
-                <span class="c_eye"><i class="icon-eye-open"></i> {{articleVO.reviewNum}}次点击</span>
-                <span class="c_name"><a href=""><i class="icon-list"></i> {{ articleVO.categoryName }}</a></span>
-                <span class="c_like"><a href=""><i class="icon-heart-empty"></i> 喜欢</a></span>
+                <span class="c_eye"><i class="fa fa-eye" aria-hidden="true"></i> {{articleVO.reviewNum}}次点击</span>
+                <span class="c_name"><a href=""><i class="fa fa-align-justify" aria-hidden="true"></i> {{ articleVO.categoryName }}</a></span>
+                <span class="c_like"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i> 喜欢</a></span>
             </div>
         </div>
         <div class="content-body"></div>
@@ -24,4 +24,6 @@
         </div>
         <div class="clear-fix"></div>
     </div>
+
+    <%@ include file="../include/footer.jsp"%>
 </div>
