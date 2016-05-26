@@ -5,9 +5,6 @@ var CategorySlugController = function ($scope, $interval, $http, $timeout, $rout
     $scope.fetchCategorySlugList = function () {
         $http.get('/category/' + categorySlug + '.json').
             success(function (data) {
-                initializeCategorySlug();
-                initializeLoad($scope, $timeout);
-
                 $scope.categoryList = data.categoryInfoVOList;
                 $scope.articleList = data.articleInfoVOList;
             }).
@@ -15,6 +12,10 @@ var CategorySlugController = function ($scope, $interval, $http, $timeout, $rout
                 console.log(err);
             });
     };
+
+    initializeCategorySlug();
+    initializeLoad($scope, $timeout);
+
     $scope.fetchCategorySlugList();
 };
 
@@ -26,4 +27,6 @@ function initializeCategorySlug () {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title","分类 | Pelin的个人博客");
 }

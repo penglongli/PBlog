@@ -1,12 +1,11 @@
 
 var BookController = function ($scope, $interval, $http, $timeout, $routeParams) {
-    var bookSlug = $routeParams.bookSlug
+    var bookSlug = $routeParams.bookSlug;
 
     $scope.fetchBooksDetail = function () {
         $http.get('/book/' + bookSlug + '.json').
         success(function(data) {
-            initializeBook();
-            initializeLoad($scope, $timeout);
+            initializeBook(data.bookInfoVO.title);
             initializeBookContent(data.bookInfoVO.content);
 
             $scope.bookInfoVO = data.bookInfoVO;
@@ -16,11 +15,12 @@ var BookController = function ($scope, $interval, $http, $timeout, $routeParams)
         });
     };
 
+    initializeLoad($scope, $timeout);
     $scope.fetchBooksDetail();
 };
 
 
-function initializeBook() {
+function initializeBook(book_title) {
     $(".menu_bar ul li").each(function (index) {
         if(index == 3) {
             $(this).addClass("active");
@@ -28,6 +28,8 @@ function initializeBook() {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title", book_title + " | Pelin的个人博客");
 }
 
 function initializeBookContent(content_md) {

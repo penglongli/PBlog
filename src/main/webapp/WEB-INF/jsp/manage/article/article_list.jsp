@@ -46,7 +46,6 @@
                     <tr>
                         <th class="slug">编号</th>
                         <th class="title">标题</th>
-                        <th class="viewNum">浏览量</th>
                         <th class="thumbNum">点赞数</th>
                         <th class="status">状态</th>
                         <th class="operate">操作</th>
@@ -59,7 +58,6 @@
                             <td class="title">${articleInfo.title}
                                 <span>(<fmt:formatDate value="${articleInfo.createTime}" pattern="yyyy-MM-dd" /> )<span>
                             </td>
-                            <td class="viewNum">120</td>
                             <td class="thumbNum">${articleInfo.thumb}</td>
                             <td class="status">
                                 <c:choose>

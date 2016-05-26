@@ -5,9 +5,6 @@ var ArchivesTimeStampController = function ($scope, $interval, $http, $timeout, 
     $scope.fetchArchivesTimeStampList = function () {
         $http.get('/archives/' + timeStamp + '.json').
             success(function (data) {
-                initializeArchivesTimeStamp();
-                initializeLoad($scope, $timeout);
-
                 $scope.archivesList = data.archivesVOList;
                 $scope.articleList = data.articleInfoVOList;
                 $scope.timeStamp = timeStamp;
@@ -16,6 +13,9 @@ var ArchivesTimeStampController = function ($scope, $interval, $http, $timeout, 
                 console.log(err);
             });
     };
+
+    initializeArchivesTimeStamp();
+    initializeLoad($scope, $timeout);
 
     $scope.fetchArchivesTimeStampList();
 };
@@ -28,4 +28,6 @@ function initializeArchivesTimeStamp() {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title","归档 | Pelin的个人博客");
 }

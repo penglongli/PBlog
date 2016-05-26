@@ -10,7 +10,7 @@
     <title>Books | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
     <link href="${cssDomain}/mobile/read_mobile.css" rel="stylesheet"/>
-    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
+    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="info">
                         <h3 class="title"><a href="${staticDomain}/read/${bookInfoVO.slug}/detail">${bookInfoVO.title}</a></h3>
-                        <div class="detail"><a href="${staticDomain}/about">李鹏龙</a><span>03-10 17:20</span></div>
+                        <div class="detail"><a href="${staticDomain}/about">Pelin</a><span><fmt:formatDate value="${bookInfoVO.createTime}" pattern="MM-dd HH:mm" /> </span></div>
                         <div class="intro">${bookInfoVO.introduction}</div>
                         <div class="actions">
                             <a href="${staticDomain}/read/${bookInfoVO.slug}/detail">阅读</a>

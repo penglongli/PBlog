@@ -63,7 +63,7 @@
   </update>
 
   <select id="selectAll" resultType="BookInfo">
-    select * from book_info
+    select * from book_info order by createTime DESC
   </select>
 
   <select id="selectBySlug" parameterType="java.lang.Long" resultType="BookInfo">

@@ -90,7 +90,6 @@ public class PaginationInterceptor implements Interceptor {
         }
     }
 
-    public void setProperties(Properties properties) {
-    }
+    public void setProperties(Properties properties) {}
 
 }

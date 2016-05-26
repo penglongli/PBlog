@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Detail | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link href="${cssDomain}/article_mobile_list.css" rel="stylesheet"/>
+    <link href="${cssDomain}/mobile/article_mobile_list.css" rel="stylesheet"/>
     <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
@@ -33,6 +33,6 @@
         </c:forEach>
     </div>
 </div>
-<script type="text/javascript" src="${jsPlugins}/global_mobile.js"></script>
+<script type="text/javascript" src="${staticDomain}/resources/js/mobile/global_mobile.js"></script>
 </body>
 </html>

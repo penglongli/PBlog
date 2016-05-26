@@ -43,11 +43,14 @@
     </select>
 
     <select id="page" parameterType="com.pblog.core.orm.PageRequest" resultType="ArticleInfo">
-        select * from article_info order by createTime desc
+        select * from article_info
+        WHERE  enabled = TRUE
+        order by createTime desc
     </select>
 
     <select id="findByCreateTimeDesc" resultType="ArticleInfo">
         select * from article_info
+        WHERE enabled = TRUE
         order by createTime desc
     </select>
     
@@ -93,7 +96,8 @@
     
     <select id="findListByCategorySlug" resultType="ArticleInfo">
         select * from article_info
-        WHERE categorySlug = #{categorySlug, jdbcType = BIGINT}
+        WHERE categorySlug = #{categorySlug, jdbcType = BIGINT} AND enabled = TRUE
+        order by createTime DESC
     </select>
 
     <select id="findArticleListByMonth" parameterType="map" resultType="ArticleInfo">
@@ -106,5 +110,6 @@
               and createTime &lt; #{endTime}
             </if>
         </where>
+        order by createTime DESC
     </select>
 </mapper>

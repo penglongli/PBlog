@@ -6,11 +6,12 @@ var ArticleController = function ($scope, $interval, $http, $timeout, $routePara
         $http.get('/article/' + articleSlug + '.json').
             success(function (data) {
                 $scope.articleVO = data.articleVO;
+
+                initializeArticleSlug(data.articleVO.title);
                 initializeArticleContent(data.articleVO.content);
         })
     };
 
-    initializeArticleSlug();
     initializeLoad($scope, $timeout);
     $scope.fetchArticle();
 };
@@ -18,10 +19,12 @@ var ArticleController = function ($scope, $interval, $http, $timeout, $routePara
 /**
  * 更新左侧导航样式
  */
-function initializeArticleSlug () {
+function initializeArticleSlug (article_title) {
     $(".menu_bar ul li").each(function () {
         $(this).removeClass("active");
     });
+
+    $(document).attr("title", article_title + " | Pelin的个人博客");
 }
 
 function initializeArticleContent (content_md) {

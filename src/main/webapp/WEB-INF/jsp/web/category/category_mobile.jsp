@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Category | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link href="${staticDomain}/resources/assets/css/mobile/time_line.css" rel="stylesheet" />
-    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
-    <script src="${staticDomain}/resources/js/plugins/jquery.min.js" type="text/javascript"></script>
+    <link href="${cssDomain}/mobile/time_line.css" rel="stylesheet" />
+    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
+    <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 <body onload="timeLineInitial()">
 <div id="Wrapper">

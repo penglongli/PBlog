@@ -11,7 +11,7 @@
             <div class="book-detail">
                 <div class="book-title"><a href="${staticDomain}/#/read/{{ bookInfo.slug }}">{{ bookInfo.title }}</a></div>
                 <div class="book-operate">
-                    <span><a href="/#/about">李鹏龙</a></span> / <span>03-10 17:20</span> / <span>阅读: 8558</span>
+                    <span><a href="/#/about">Pelin</a></span> / <span>{{ bookInfo.createTime | date:'MM-dd HH:mm' }}</span> / <span>阅读: {{ bookInfo.reviewNum }}</span>
                 </div>
                 <div class="book-intro">{{ bookInfo.introduction }}</div>
             </div>

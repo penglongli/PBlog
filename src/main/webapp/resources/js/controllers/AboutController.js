@@ -1,11 +1,7 @@
 
 var AboutController = function ($scope, $interval, $http, $timeout) {
-    $scope.fetchAboutMessage = function () {
-        initializeAbout();
-        initializeLoad($scope, $timeout);
-    };
-
-    $scope.fetchAboutMessage();
+    initializeAbout();
+    initializeLoad($scope, $timeout);
 };
 
 function initializeAbout() {
@@ -16,4 +12,6 @@ function initializeAbout() {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title","关于 | Pelin的个人博客");
 }

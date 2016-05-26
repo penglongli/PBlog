@@ -71,7 +71,7 @@
   display: inline-block;
 }
 #book .book-wrapper .book .book-read a:hover {
-  background: #0099cc;
+  color: #9C9C9C!important;
 }
 #book .reading-book {
   position: fixed;

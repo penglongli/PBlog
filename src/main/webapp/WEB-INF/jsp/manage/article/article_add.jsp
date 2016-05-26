@@ -80,12 +80,56 @@
             </div>
         </form>
     </div>
+
+    <!-- 提示 -->
+    <div class="mask" id="mask-tip">
+        <div class="modal-dialog">
+            <div class="modal-title">提示</div>
+            <div class="modal-body"></div>
+            <div class="modal-operate">
+                <span class="close" onclick="closeMask()">关闭</span>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
+    var $title = $("textarea[name='title']");
+    var $content = $("textarea[name='content']");
+    var $descriptionMd = $("textarea[name='descriptionMd']");
+    var $tag = $("input[name='tag']");
+    var $maskTip = $("#mask-tip");
+
+
     $(".publish-article").click(function () {
         var htmlValue = markedToHTML($(".editor:eq(1)"), $(".description-view"));
         $("textarea[name='description']").html(htmlValue);
+
+        var title = $title.val();
+        var content = $content.val();
+        var descriptionMd = $descriptionMd.val();
+        var tag = $tag.val();
+
+        if((null == title) || ("" == $.trim(title))) {
+            tipMask("文章标题不能为空");
+            return false;
+        }
+
+        if((null == content) || ("" == $.trim(content))) {
+            tipMask("文章内容不能为空");
+            return false;
+        }
+
+        if((null == descriptionMd) || ("" == $.trim(descriptionMd))) {
+            tipMask("文章描述不能为空");
+            return false;
+        }
+
+        if((null == tag) || ("" == $.trim(tag))) {
+            tipMask("文章标签不能为空，标签格式以英文字符逗号隔开");
+            return false;
+        }
 
         $("#article-add-form").submit();
     });
@@ -100,6 +144,19 @@
         var htmlValue = markedToHTML($(".editor:eq(1)"), $(".description-view"));
         $("textarea[name='description']").html(htmlValue);
     });
+
+    //关闭遮罩层
+    function closeMask(str) {
+        $(".mask").css("display", "none");
+        if(str == "reload") {
+            location.reload();
+        }
+    }
+
+    function tipMask(modalBody) {
+        $maskTip.find(".modal-body").html(modalBody);
+        $maskTip.css("display", "block");
+    }
 
     function markedToHTML($input, $preview) {
         var htmlValue = marked($input.val());

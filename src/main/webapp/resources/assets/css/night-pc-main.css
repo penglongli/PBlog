@@ -346,6 +346,7 @@
   text-indent: 2em;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #8A8888;
 }
 #archives .archive-article-list .article-item .article-description p {
   text-indent: 2em;
@@ -359,8 +360,8 @@
   text-align: left;
 }
 #archives .archive-article-list .article-item .article-footer .article-tags .tag {
-  background: #CCCCCC;
-  color: #FFF;
+  background: #3C3F41;
+  color: #BD9662;
   padding: 2px 9px;
   margin-left: 5px;
 }
@@ -386,6 +387,7 @@
 
 #article .article-content {
   font-size: 1.5rem;
+  background: #313335;
   width: calc(100% - 1px);
   line-height: 1.85em;
   color: #424242;
@@ -487,7 +489,6 @@
   font-family: Consolas, sans-serif !important;
 }
 #article .article-content code {
-  background: #3C3F41;
   color: #BABABA;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -563,7 +564,7 @@
 #bookDetail .book-content .content-body {
   width: 60%;
   float: left;
-  height: 1000px;
+  min-height: 600px;
   margin-left: 10%;
   color: #8A8888;
 }
@@ -686,7 +687,7 @@
   display: inline-block;
 }
 #book .book-wrapper .book .book-read a:hover {
-  background: #0099cc;
+  color: #9C9C9C!important;
 }
 #book .reading-book {
   position: fixed;
@@ -819,6 +820,7 @@
   text-indent: 2em;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #8A8888;
 }
 #category .article-list .article-item .article-description p {
   text-indent: 2em;
@@ -832,8 +834,8 @@
   text-align: left;
 }
 #category .article-list .article-item .article-footer .article-tags .tag {
-  background: #CCCCCC;
-  color: #FFF;
+  background: #3C3F41;
+  color: #BD9662;
   padding: 2px 9px;
   margin-left: 5px;
 }
@@ -895,6 +897,23 @@ body {
   animation: loading-bar-spinner 400ms linear infinite;
 }
 /** 进度条样式结束  **/
+/** 代码块样式 **/
+.hljs-title,
+.hljs-section {
+  color: #E8BF6A!important;
+  font-weight: bold;
+}
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #E79344!important;
+}
+/** 代码块样式结束**/
 #fix-left {
   position: fixed;
   top: 0;
@@ -1022,9 +1041,8 @@ body {
   z-index: 100;
   top: 46px;
   right: 0;
-  bottom: 0;
   left: 65px;
-  background: #2F2D2D;
+  background: #313335;
 }
 .foot-wrapper {
   padding-top: 25px;
@@ -1195,7 +1213,6 @@ body {
   font-family: Consolas, sans-serif !important;
 }
 #index .article-content code {
-  background: #3C3F41;
   color: #BABABA;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -1278,4 +1295,7 @@ body {
   margin-left: 65px;
   color: #CECECE;
   padding-bottom: 40px;
+}
+#record .record-content .main .year .daily .daily-content a {
+  color: #CECECE;
 }

@@ -63,3 +63,6 @@
   font-size: 13.4px;
   line-height: 0.9;
 }
+#record .record-content .main .year .daily .daily-content a {
+  color: #675050;
+}

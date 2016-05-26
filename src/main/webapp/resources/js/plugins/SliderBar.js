@@ -19,7 +19,7 @@
             this.bindScrollEvent();
             this.bindDragEvent();
         }
-    }
+    };
 
     //绑定滚动事件
     SliderBar.prototype.bindScrollEvent = function (){
@@ -30,7 +30,7 @@
             event.preventDefault();
             _this.calcDistance(-event.originalEvent.wheelDelta/120);
         })
-    }
+    };
 
     //监测拖动
     SliderBar.prototype.bindDragEvent = function () {
@@ -41,7 +41,8 @@
         $bar.mousedown(function (event){
             lastY = event.clientY;
             isDraging = true;
-        })
+        });
+
         $(document).mousemove(function (event) {
             if(isDraging){
                 currentY = event.clientY;
@@ -54,12 +55,13 @@
                 _this.modifyStyle(-contentTop, barMarginTop, maxTop, maxMarginTop);
                 lastY = event.clientY;
             }
-        })
+        });
+
         $(document).mouseup(function (){
             isDraging = false;
-        })
+        });
 
-    }
+    };
 
     //计算位移
     SliderBar.prototype.calcDistance = function (value) {
@@ -71,7 +73,7 @@
         this.calcLimit();
 
         this.modifyStyle(contentTop, barMarginTop, maxTop, maxMarginTop);
-    }
+    };
 
     //计算临界值
     SliderBar.prototype.calcLimit = function (){
@@ -84,7 +86,7 @@
 
         maxTop = conHeight - deviceHeight;
         maxMarginTop = deviceHeight - barHeight;
-    }
+    };
 
     SliderBar.prototype.modifyStyle = function (top, marginTop, maxTop, maxMarginTop) {
         var $content = this.option.content;
@@ -106,12 +108,12 @@
 
         $content.css("top", actualTop + "px");
         $bar.css("margin-top", actualMarginTop + "px");
-    }
+    };
 
 
     $.fn.slider = function(options){
         var defaults = {
-            speed: 5,
+            speed: 10,
             container: null,
             content: null,
             slideArea: null,

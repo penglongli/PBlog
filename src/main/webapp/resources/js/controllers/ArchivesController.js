@@ -4,9 +4,6 @@ var ArchivesController = function ($scope, $interval, $http, $timeout) {
     $scope.fetchArchivesList = function () {
         $http.get('/archivesList.json').
             success(function (data) {
-                initializeArchives();
-                initializeLoad($scope, $timeout);
-
                 $scope.archivesList = data.archivesVOList;
                 $scope.articleList = data.archivesVOList[0].articleInfoVOList;
             }).
@@ -15,6 +12,8 @@ var ArchivesController = function ($scope, $interval, $http, $timeout) {
             });
     };
 
+    initializeArchives();
+    initializeLoad($scope, $timeout);
     $scope.fetchArchivesList();
 };
 
@@ -29,4 +28,6 @@ function initializeArchives() {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title","归档 | Pelin的个人博客");
 }

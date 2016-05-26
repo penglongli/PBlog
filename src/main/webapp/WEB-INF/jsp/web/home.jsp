@@ -5,17 +5,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Home | Pelin的个人博客</title>
     <base href="/">
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
-    <link rel="stylesheet" href="${staticDomain}/resources/assets/css/${mo}-pc-main.min.css" />
-    <link rel="stylesheet" href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" />
-    <link rel="stylesheet" href="${staticDomain}/resources/assets/plugins/highlight.min.css" />
-    <script src="${staticDomain}/resources/assets/js/lib.min.js"></script>
-    <script src="${staticDomain}/resources/assets/js/angular-plugins.min.js"></script>
-    <script src="${staticDomain}/resources/assets/js/loading-bar.js"></script>
-    <script src="${staticDomain}/resources/assets/js/client-js.min.js"></script>
-    <script src="${jsDomain}/highlight.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="${cssDomain}/${mo}-pc-main.min.css" />
+    <link rel="stylesheet" href="${cssPlugins}/font-awesome.min.css" />
+    <link rel="stylesheet" href="${cssPlugins}/highlight.min.css" />
+    <script src="${jsAssets}/lib.min.js"></script>
+    <script src="${jsAssets}/angular-plugins.min.js"></script>
+    <script src="${jsAssets}/loading-bar.js"></script>
+    <script src="${jsAssets}/client-js.min.js"></script>
+    <script src="${jsAssets}/highlight.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="pBlogApp" ng-controller="loadingBar">
 

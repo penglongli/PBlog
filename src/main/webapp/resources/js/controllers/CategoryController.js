@@ -4,9 +4,6 @@ var CategoryController = function ($scope, $interval, $http, $timeout) {
     $scope.fetchCategoryList = function () {
         $http.get('/categoryList.json').
             success(function (data) {
-                initializeCategory();
-                initializeLoad($scope, $timeout);
-
                 $scope.categoryList = data.categoryInfoVOList;
                 $scope.articleList = data.articleInfoVOList;
             }).
@@ -15,6 +12,8 @@ var CategoryController = function ($scope, $interval, $http, $timeout) {
             });
     };
 
+    initializeCategory();
+    initializeLoad($scope, $timeout);
     $scope.fetchCategoryList();
 };
 
@@ -25,5 +24,7 @@ function initializeCategory() {
         }else {
             $(this).removeClass("active");
         }
-    })
+    });
+
+    $(document).attr("title","分类 | Pelin的个人博客");
 }

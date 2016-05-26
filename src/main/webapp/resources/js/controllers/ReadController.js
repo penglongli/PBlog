@@ -4,9 +4,6 @@ var ReadController = function ($scope, $interval, $http, $timeout) {
     $scope.fetchBooksList = function () {
         $http.get('/book/list.json').
             success(function(data) {
-                initializeRead();
-                initializeLoad($scope, $timeout);
-
                 $scope.bookInfoList = data.bookInfoVOList;
                 $scope.bookTableList = data.bookTableVOList;
             }).
@@ -15,6 +12,8 @@ var ReadController = function ($scope, $interval, $http, $timeout) {
             });
     };
 
+    initializeRead();
+    initializeLoad($scope, $timeout);
     $scope.fetchBooksList();
 };
 
@@ -26,4 +25,6 @@ function initializeRead() {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title","读书 | Pelin的个人博客");
 }

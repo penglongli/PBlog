@@ -10,7 +10,7 @@
     <title>Home | Pelin的个人博客</title>
     <link rel="icon" href="${imageDomain}/pblog_icon.ico"/>
     <link href="${cssDomain}/mobile/article_mobile_list.css" rel="stylesheet"/>
-    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="${cssPlugins}/font-awesome.min.css" />
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -33,6 +33,6 @@
         </c:forEach>
     </div>
 </div>
-<script type="text/javascript" src="${staticDomain}/resources/js/mobile/global_mobile.js"></script>
+<script type="text/javascript" src="${jsDomain}/mobile/global_mobile.js"></script>
 </body>
 </html>

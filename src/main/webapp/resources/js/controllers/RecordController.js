@@ -25,5 +25,7 @@ function initializeRecord () {
             $(this).removeClass("active");
         }
     });
+
+    $(document).attr("title","记录 | Pelin的个人博客");
 }
 

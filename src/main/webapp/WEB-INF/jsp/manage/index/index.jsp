@@ -77,24 +77,6 @@
                         </tr>
                     </tbody>
                 </table>
-<%--
-                <div class="article-head">
-                    <span class="slug">编号</span>
-                    <span class="title">标题</span>
-                    <span class="createTime">创建时间</span>
-                    <span class="viewNum">浏览量</span>
-                    <span class="thumbNum">点赞数</span>
-                    <span class="status">状态</span>
-                </div>
---%>
-                <%--<div class="article-body">
-                    <span class="slug">93478371</span>
-                    <span class="title">【MyBatis】MyBatis+SpringMVC+EasyUI整合分页</span>
-                    <span class="createTime">2015-08-05 10:30</span>
-                    <span class="viewNum">120</span>
-                    <span class="thumbNum">0</span>
-                    <span class="status">是</span>
-                </div>--%>
             </div>
         </div>
     </div>

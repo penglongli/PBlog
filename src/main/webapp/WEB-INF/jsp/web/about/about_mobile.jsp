@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>About | Pelin的个人博客</title>
     <link href="${cssDomain}/mobile/about_mobile.css" rel="stylesheet"/>
-    <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
+    <link href="${cssPlugins}/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
 </head>
 

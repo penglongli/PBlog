@@ -21,13 +21,13 @@ var dist = {
 
 //编译less文件
 gulp.task('less', function () {
-    gulp.src(src.less)
+    return gulp.src(src.less)
         .pipe(less())
         .pipe(gulp.dest(dist.css));
 });
 
 //合并压缩PC端夜间模式css文件
-gulp.task('combinePcNightCss', function () {
+gulp.task('combinePcNightCss', ['less'], function () {
     gulp.src([
             resourceDir + 'assets/plugins/loading-bar.css',   //进度条样式
             dist.css + '*/night_*.css'
@@ -40,7 +40,7 @@ gulp.task('combinePcNightCss', function () {
 });
 
 //合并压缩PC端日间模式css文件
-gulp.task('combinePcDayCss', function () {
+gulp.task('combinePcDayCss', ['less'], function () {
     gulp.src([
             resourceDir + 'assets/plugins/loading-bar.css',   //进度条样式
             dist.css + '*/day_*.css'
@@ -91,10 +91,5 @@ gulp.task('combineJs', function () {
 });
 
 
-
-
-
-
-gulp.task('default', function () {
-
-});
+gulp.task('default', ['less', 'combinePcNightCss', 'combinePcDayCss', 'combinePluginJs',
+    'combineOwnJs', 'combineJs']);
