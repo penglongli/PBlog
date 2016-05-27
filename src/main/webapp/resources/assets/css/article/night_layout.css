@@ -52,6 +52,8 @@
   margin-left: 2%;
   float: left;
   color: #8A8888;
+  line-height: 1.5;
+  font-size: 15px;
 }
 #article .article-content .content-nav {
   width: 240px;
@@ -79,7 +81,7 @@
 }
 #article .article-content .nav-list ul li {
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 14px;
   border-left: 3px solid #565656;
   color: #6A5D5D;
 }
@@ -103,8 +105,12 @@
 }
 #article .article-content code {
   color: #BABABA;
-  font-size: 1.1rem;
+  font-size: 14px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+#article .article-content img {
+  display: block;
+  margin: 15px auto;
 }
 #article .article-content h1 {
   color: #D2D8BA;
@@ -112,10 +118,10 @@
   font-size: 2.6rem;
 }
 #article .article-content h2 {
-  color: #549EE0;
+  color: #BBB;
 }
 #article .article-content h3 {
-  color: #8AB26C;
+  color: #A7A7A7;
 }
 #article .article-content a {
   color: #80bd01;

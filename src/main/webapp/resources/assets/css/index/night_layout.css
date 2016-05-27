@@ -78,7 +78,7 @@
   margin-left: 282px;
   line-height: 1.85em;
   font-weight: 300;
-  color: #8A8888;
+  color: #959393;
   border-left: 1px solid #282828;
 }
 #index .article-content .content-head {
@@ -117,6 +117,10 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+#index .article-content .content-body img {
+  display: block;
+  margin: 15px auto;
+}
 #index .article-content em {
   font-size: 1.4rem;
   font-style: normal!important;
@@ -126,7 +130,7 @@
 }
 #index .article-content code {
   color: #BABABA;
-  font-size: 1.1rem;
+  font-size: 14px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 #index .article-content h1 {
@@ -135,7 +139,10 @@
   font-size: 2.6rem;
 }
 #index .article-content h2 {
-  color: #549EE0;
+  color: #BBBBBB;
+}
+#index .article-content h3 {
+  color: #A7A7A7;
 }
 #index .article-content a {
   color: #80bd01;

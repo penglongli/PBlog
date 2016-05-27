@@ -1,5 +1,6 @@
 package com.pblog.service.pic;
 
+import com.pblog.core.utils.ImageUtils;
 import com.pblog.core.utils.MultipartFileValidator;
 import com.pblog.dao.PicInfoMapper;
 import com.pblog.domain.PicInfo;
@@ -12,15 +13,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Service(value = "picInfoService")
 @Transactional
 public class PicInfoServiceImpl implements PicInfoService{
-
-    private static String staticPath = "E:\\pblog\\static";
-
-    private static String relPath = "/static/image/";
 
     @Autowired
     private PicInfoMapper picInfoMapper;
@@ -32,23 +28,13 @@ public class PicInfoServiceImpl implements PicInfoService{
 
     public void upload(MultipartFile file) throws IOException {
         MultipartFileValidator.validate(file);
+        String fileName = ImageUtils.uploadImage(file);
 
-        String fileName = makeFileName(file);
-        File tempFile = new File(staticPath, fileName);
-
-        boolean success = tempFile.createNewFile();
-        if (success) {
-            file.transferTo(tempFile);
-
-            PicInfo picInfo = new PicInfo();
-            picInfo.setCreateTime(new Date());
-            picInfo.setPhysicalPath(staticPath + File.separator + fileName);
-            picInfo.setRelativePath(relPath + fileName);
-            picInfoMapper.insert(picInfo);
-        } else {
-            throw new RuntimeException("文件上传服务器失败，请刷新后重试！");
-        }
-
+        PicInfo picInfo = new PicInfo();
+        picInfo.setCreateTime(new Date());
+        picInfo.setPhysicalPath(ImageUtils.staticPath + File.separator + fileName);
+        picInfo.setRelativePath(ImageUtils.relPath + fileName);
+        picInfoMapper.insert(picInfo);
     }
 
     public int deleteById(Long picId) {
@@ -69,17 +55,5 @@ public class PicInfoServiceImpl implements PicInfoService{
         }
     }
 
-    private String getSuffix(MultipartFile file) {
-        String fileName = file.getOriginalFilename();
-        int n = fileName.indexOf(".");
 
-        return fileName.substring(n);
-    }
-
-    private String makeFileName(MultipartFile file) {
-        String suffix = getSuffix(file);
-        String fileName = UUID.randomUUID().toString().replace("-", "");
-
-        return fileName + suffix;
-    }
 }

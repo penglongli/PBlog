@@ -75,9 +75,8 @@
 }
 #index .article-content {
   font-size: 1.5rem;
-  position: absolute;
-  left: 282px;
-  width: calc(100% - 312px);
+  margin-left: 282px;
+  width: calc(100% - 332px);
   line-height: 1.85em;
   font-weight: 300;
   padding-left: 30px;
@@ -117,6 +116,10 @@
   border-bottom: 1px solid #E2E2E2;
   padding-bottom: 30px;
 }
+#index .article-content .content-body img {
+  display: block;
+  margin: 15px auto;
+}
 #index .article-content em {
   font-size: 1.4rem;
   font-style: normal!important;
@@ -127,7 +130,7 @@
 #index .article-content code {
   background: #F0F0F0;
   color: #D6D3D3;
-  font-size: 1.1rem;
+  font-size: 14px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 #index .article-content h1 {
