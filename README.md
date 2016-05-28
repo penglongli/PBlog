@@ -1,5 +1,5 @@
 # PBlog
-Version: 0.1.0-SNAPSHOT | 更新: 05/04 2016
+Version: 0.1.0-SNAPSHOT | 更新: 05/28 2016
 
 博客预览地址: [Pelin的个人博客](http://www.pelinli.com)
 
@@ -72,26 +72,41 @@ PBlog是一款使用Java开发的、使用markdown作为文章写作语法的单
 
 **Completed**:
 
-* 首页 (PC端和移动端)
-* 归档 (PC端和移动端)
-* 分类 (PC端和移动端)
-* 关于 (PC端和移动端)
-* 文章管理
+* 前台页面（移动端与PC端的日间、夜间模式）
+* 后台管理（文章管理、书评信息、个人日志、图片管理、分类管理，有部分功能有小bug或者缺部分功能，但是不影响使用）
 
 **TODO List:**
-* 增加日志记录
-* 读书
-* 日记
-* 单元测试覆盖(coveralls)
+* 增加评论功能
+* 增加移动端footer和修改移动端样式bug
 
 **使用方式:**
 
-1. 下载 [PBlog.war](https://github.com/penglongli/PBlog/releases/download/0.1.0/PBlog.war);
-2. 下载 pblog.sql(见源码目录)， 创建数据库: pblog, 导入pblog.sql;
+1. 下载 [PBlog.war](https://github.com/penglongli/PBlog/releases/download/0.1.1/PBlog.war);
+2. 下载 pblog.sql(见源码目录)， 创建数据库: pblog(默认utf8), 导入pblog.sql;
 3. 移动PBog.war重命名为ROOT.war，并移动至tomcat/webapps目录下，启动tomcat。 启动后webapps目录下会生成ROOT目录;
-4. 修改**ROOT/WEB-INF/classes/properties/pblog-local.properties**文件中的数据库账户密码
-5. 重启tomcat，打开浏览器访问。
-6. 文章管理uri: **/manage/article/list**(由于使用nginx作为登录，所以并未写用户登录模块。所以未配置nginx的用户使用的时候是可以自由访问的)
+4. 修改webapps\ROOT\WEB-INF\classes\properties\pblog-local.properties文件：
+``` java
+## jdbc properties
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://127.0.0.1:3306/pblog?useUnicode=true&characterEncoding=UTF-8
+jdbc.username=root
+jdbc.password=root
+
+
+## imageUtils properties
+## 这是图片上传目录
+server.root.staticPath=E:\\pblog\\static
+## 这是图片访问路径
+server.root.relPath=/static/image/
+```
+根据实际需要修改数据库账户密码、图片上传目录。其中图片上传目录根据Mac/Linux/Windows系统做相应修改
+5. 修改conf/server.xml文件，在标签下增加一行代码：
+``` java
+<!--  这是配置图片的访问路径虚目录 -- >
+<Context path="/static/image" docBase="E:\pblog\static"></Context>
+```
+其中doBase根据Mac/Linux/Windows系统做相应修改
+6. 重启Tomcat服务器即可打开浏览器访问。
 
 *具体使用请参见:* [PBlog-releases](https://github.com/penglongli/PBlog/releases/)
 
