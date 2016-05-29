@@ -10,7 +10,7 @@ public class DateFormatUtils {
 
     /**
      * 取得时间的年和月
-     * @param date
+     * @param date 日期
      * @return
      */
     public static String formatToYearMonth(Date date){
@@ -21,8 +21,7 @@ public class DateFormatUtils {
 
     /**
      * 取得日
-     * @param date
-     * @return
+     * @param date 日期
      */
     public static String formatToDay(Date date){
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd");
@@ -32,22 +31,19 @@ public class DateFormatUtils {
 
     /**
      * 字符串转日期格式(格式：yyyy-MM)
-     * @param dateStr
-     * @return
+     * @param dateStr 日期字符串
      * @throws ParseException
      */
     public static Date formatStrToYM(String dateStr) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
-        Date date = sdf.parse(dateStr);
 
-        return date;
+        return sdf.parse(dateStr);
     }
 
     /**
      * 为时间类型增加月份
      * @param timeStamp 时间
      * @param number 增加月份数
-     * @return
      * @throws ParseException
      */
     public static Date addMonth(String timeStamp, int number) throws ParseException {
@@ -80,4 +76,6 @@ public class DateFormatUtils {
             return true;
         }
     }
+
+
 }

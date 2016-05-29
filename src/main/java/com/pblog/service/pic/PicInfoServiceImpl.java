@@ -1,10 +1,11 @@
 package com.pblog.service.pic;
 
-import com.pblog.core.utils.ImageUtils;
+import com.pblog.core.utils.ImageUploadUtils;
 import com.pblog.core.utils.MultipartFileValidator;
 import com.pblog.dao.PicInfoMapper;
 import com.pblog.domain.PicInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,6 +22,12 @@ public class PicInfoServiceImpl implements PicInfoService{
     @Autowired
     private PicInfoMapper picInfoMapper;
 
+    @Value("${server.root.staticPath}")
+    private String staticPath;
+
+    @Value("${server.root.relPath}")
+    private String relPath;
+
     public List<PicInfo> list() {
 
         return picInfoMapper.selectAll();
@@ -28,12 +35,14 @@ public class PicInfoServiceImpl implements PicInfoService{
 
     public void upload(MultipartFile file) throws IOException {
         MultipartFileValidator.validate(file);
-        String fileName = ImageUtils.uploadImage(file);
+        String fileName = ImageUploadUtils.uploadImage(file, staticPath);
+
+
 
         PicInfo picInfo = new PicInfo();
         picInfo.setCreateTime(new Date());
-        picInfo.setPhysicalPath(ImageUtils.staticPath + File.separator + fileName);
-        picInfo.setRelativePath(ImageUtils.relPath + fileName);
+        picInfo.setPhysicalPath(staticPath + File.separator + fileName);
+        picInfo.setRelativePath(relPath + fileName);
         picInfoMapper.insert(picInfo);
     }
 

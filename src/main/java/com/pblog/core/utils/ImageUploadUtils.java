@@ -10,29 +10,27 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Component
-public class ImageUtils {
+public class ImageUploadUtils {
 
-    private static Logger logger = LoggerFactory.getLogger(ImageUtils.class);
+    private static Logger logger = LoggerFactory.getLogger(ImageUploadUtils.class);
 
-    public static String staticPath = "/var/static/pblog/image/";
-
-    public static String relPath = "/static/image/";
-
-    public static String uploadImage(MultipartFile file) throws IOException {
+    public static String uploadImage(MultipartFile file, String staticPath) throws IOException {
         String fileName = makeFileName(file);
         File tempFile = new File(staticPath, fileName);
 
         boolean success = tempFile.createNewFile();
         if (success) {
             file.transferTo(tempFile);
+
+            ImageFormatUtils.waterMark(tempFile);
         } else {
-            logger.info("File upload server failure!");
-            throw new RuntimeException("文件上传服务器失败");
+            logger.info("image failed to upload!");
         }
 
         return fileName;
     }
 
+    //获得文件扩展名
     private static String getSuffix(MultipartFile file) {
         String fileName = file.getOriginalFilename();
         int n = fileName.indexOf(".");
@@ -40,6 +38,7 @@ public class ImageUtils {
         return fileName.substring(n);
     }
 
+    //重新生成文件名称
     private static String makeFileName(MultipartFile file) {
         String suffix = getSuffix(file);
         String fileName = UUID.randomUUID().toString().replace("-", "");
