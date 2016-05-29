@@ -56,6 +56,7 @@
   line-height: 1.6;
 }
 #article .article-content .content-body img {
+  max-width: 100%;
   display: block;
   margin: 15px auto;
 }

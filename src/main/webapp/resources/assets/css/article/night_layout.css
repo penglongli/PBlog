@@ -109,6 +109,7 @@
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 #article .article-content img {
+  max-width: 100%;
   display: block;
   margin: 15px auto;
 }
