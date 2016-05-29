@@ -37,8 +37,6 @@ public class PicInfoServiceImpl implements PicInfoService{
         MultipartFileValidator.validate(file);
         String fileName = ImageUploadUtils.uploadImage(file, staticPath);
 
-
-
         PicInfo picInfo = new PicInfo();
         picInfo.setCreateTime(new Date());
         picInfo.setPhysicalPath(staticPath + File.separator + fileName);
