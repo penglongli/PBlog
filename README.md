@@ -1,5 +1,5 @@
 # PBlog
-Version: 0.1.0-SNAPSHOT | 更新: 05/28 2016
+Version: 0.1.1-SNAPSHOT | 更新: 05/28 2016
 
 博客预览地址: [Pelin的个人博客](http://www.pelinli.com)
 
@@ -15,7 +15,7 @@ Version: 0.1.0-SNAPSHOT | 更新: 05/28 2016
 PBlog是一款使用Java开发的、使用markdown作为文章写作语法的单页应用blog，目的是为了作为学习交流使用。当然，你也可以将其作为个人博客网站使用，在使用的过程中如果遇到什么问题，有好的想法或者建议，可以一起互相交流。
 
 **NOTE:**
-欢迎提交 Pr 和 Issue
+欢迎提交 Pr 和 Issue(如果在安装过程中出现错误，可以直接提交Issue，很高兴别人能够使用)
 
 ### 使用到的开源项目:
 - [Spring Framework](http://spring.io/) famework
@@ -76,7 +76,6 @@ PBlog是一款使用Java开发的、使用markdown作为文章写作语法的单
 * 后台管理（文章管理、书评信息、个人日志、图片管理、分类管理，有部分功能有小bug或者缺部分功能，但是不影响使用）
 
 **TODO List:**
-* 增加token禁止被调用数据接口
 * 增加评论功能
 * 增加移动端footer和修改移动端样式bug
 
@@ -121,6 +120,7 @@ server.root.relPath=/static/image/
 ```
 mvn package -DskipTests
 ```
+即可在项目根目录下的/target中生成PBlog.war文件
 
 ## 交流贡献
 
