@@ -12,6 +12,7 @@
     <link href="${cssDomain}/mobile/read_mobile_detail.css" rel="stylesheet"/>
     <link href="${staticDomain}/resources/assets/plugins/font-awesome.min.css" rel="stylesheet"/>
     <script src="${jsPlugins}/jquery.min.js" type="text/javascript"></script>
+    <script src="${staticDomain}/resources/js/mobile/analytics.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="Wrapper">

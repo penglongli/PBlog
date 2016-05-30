@@ -11,39 +11,8 @@ body {
   margin: 3em 0;
 }
 
-.banner {
-  font-size: 1rem;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 16.5em;
-  color: #FFF;
-  text-align: center;
-  background: url('/resources/image/about_me.jpg') no-repeat #EEEEEE;
-  background-size: 100% 99%;
-
-  .info {
-    width: 60%;
-    margin-left: 20%;
-    position: absolute;
-    bottom: 1em;
-    font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
-
-    h1 {
-      font-size: 1.7rem;
-      margin: 0 0 .3em 0;
-      padding: 0;
-      letter-spacing: .15em;
-    }
-
-    h2 {
-      margin: 0;
-      padding: 0;
-      font-size: 1.2rem;
-      font-weight: normal;
-    }
-  }
+.header-image {
+  max-width: 100%;
 }
 
 .about-detail {
@@ -84,7 +53,7 @@ body {
   }
 
 
-  .contact, .person, .social, .open-source, .work-experience, .education, .awards, .technical {
+  .contact, .person, .open-source, .work-experience, .education, .awards, .technical {
     margin-top: 1.5em;
 
     h2 {
@@ -106,6 +75,22 @@ body {
         margin-top: .3em;
         line-height: 1.6;
       }
+    }
+  }
+
+  .social {
+    font-size: 1rem;
+    margin-top: 1.5em;
+
+    a {
+      margin-left: 5px;
+      display: inline-block;
+    }
+
+    img, svg {
+      width: 4em;
+      height: 4em;
+      border-radius: 50%;
     }
   }
 

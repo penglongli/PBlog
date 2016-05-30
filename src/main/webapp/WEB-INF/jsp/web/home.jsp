@@ -15,6 +15,15 @@
     <script src="${jsAssets}/loading-bar.js"></script>
     <script src="${jsAssets}/client-js.min.js"></script>
     <script src="${jsAssets}/highlight.min.js" type="text/javascript"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?03296f04a7ca2b9ee9d16adfbd1e2c17";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body ng-app="pBlogApp" ng-controller="loadingBar">
 

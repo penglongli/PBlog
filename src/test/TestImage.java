@@ -10,12 +10,6 @@ import java.io.IOException;
 
 public class TestImage extends TestCase{
 
-    public void testWaterMark() throws IOException {
-        File file = new File("E:\\pblog\\static\\8c1ba0ed13644803850f06aaaf0f0596.png");
-
-        ImageFormatUtils.waterMark(file);
-    }
-
     //图片缩放
     public void testResizeImage() throws IOException {
         File imageFile = new File("E:\\test\\header.png");
@@ -63,6 +57,51 @@ public class TestImage extends TestCase{
 
 
         ImageIO.write(tempBuffer, "png", imageFile);
+    }
+
+    //合并两个图片(也可以合并多个)
+    public void testMerge() throws IOException {
+        File newFile = new File("E:\\test\\merge.jpg");
+        File backgroundFile = new File("E:\\test\\background.jpg");
+        File headerFile = new File("E:\\test\\header-120x120.png");
+        BufferedImage backgroundImage = ImageIO.read(backgroundFile); //背景图片
+        BufferedImage headerImage = ImageIO.read(headerFile); //头像图片
+        int bWidth = backgroundImage.getWidth(), bHeight = backgroundImage.getHeight();
+        int hWidth = headerImage.getWidth(), hHeight = headerImage.getHeight();
+
+        BufferedImage combined = new BufferedImage(bWidth, bHeight, BufferedImage.TYPE_INT_RGB);
+        Graphics g = combined.getGraphics();
+        //先把背景图画到画板上
+        g.drawImage(backgroundImage, 0, 0, null);
+
+        //计算出头像放置的 Y 轴位置
+        Double tempHeight1 = backgroundImage.getHeight() * 0.2;
+        Long tempHeight2 = Math.round(tempHeight1);
+        Integer headerImageY = Integer.valueOf(tempHeight2.toString());
+        g.drawImage(headerImage, (bWidth - hWidth) / 2, headerImageY, null);
+
+        newFile.createNewFile();
+        ImageIO.write(combined, "jpg", newFile);
+    }
+
+    //图片加水印
+    public void testWaterMark() throws IOException {
+        File uploadFile = new File("E:\\test\\background.jpg");
+        Font font = new Font(Font.MONOSPACED, Font.BOLD, 20);// 添加字体的属性设置
+
+        BufferedImage uploadImage = ImageIO.read(uploadFile);
+        int width = uploadImage.getWidth();
+        int height = uploadImage.getHeight();
+
+        BufferedImage combined = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics g = combined.getGraphics();
+        g.drawImage(uploadImage, 0, 0, null);
+        g.setFont(font);
+        g.setColor(Color.RED);
+        g.drawString("PBlog | www.pelinli.com", 10, 20);
+        g.drawString("https://github.com/penglongli", 10, 40);
+
+        ImageIO.write(combined, "png", uploadFile);
     }
 
 

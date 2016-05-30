@@ -128,36 +128,8 @@ body {
   font-size: 1.2rem;
   margin: 3em 0;
 }
-.banner {
-  font-size: 1rem;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 16.5em;
-  color: #FFF;
-  text-align: center;
-  background: url('/resources/image/about_me.jpg') no-repeat #EEEEEE;
-  background-size: 100% 99%;
-}
-.banner .info {
-  width: 60%;
-  margin-left: 20%;
-  position: absolute;
-  bottom: 1em;
-  font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
-}
-.banner .info h1 {
-  font-size: 1.7rem;
-  margin: 0 0 .3em 0;
-  padding: 0;
-  letter-spacing: .15em;
-}
-.banner .info h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.2rem;
-  font-weight: normal;
+.header-image {
+  max-width: 100%;
 }
 .about-detail {
   margin: 0;
@@ -194,7 +166,6 @@ body {
 }
 .about-detail .contact,
 .about-detail .person,
-.about-detail .social,
 .about-detail .open-source,
 .about-detail .work-experience,
 .about-detail .education,
@@ -204,7 +175,6 @@ body {
 }
 .about-detail .contact h2,
 .about-detail .person h2,
-.about-detail .social h2,
 .about-detail .open-source h2,
 .about-detail .work-experience h2,
 .about-detail .education h2,
@@ -217,7 +187,6 @@ body {
 }
 .about-detail .contact a,
 .about-detail .person a,
-.about-detail .social a,
 .about-detail .open-source a,
 .about-detail .work-experience a,
 .about-detail .education a,
@@ -228,7 +197,6 @@ body {
 }
 .about-detail .contact ul,
 .about-detail .person ul,
-.about-detail .social ul,
 .about-detail .open-source ul,
 .about-detail .work-experience ul,
 .about-detail .education ul,
@@ -238,7 +206,6 @@ body {
 }
 .about-detail .contact ul li,
 .about-detail .person ul li,
-.about-detail .social ul li,
 .about-detail .open-source ul li,
 .about-detail .work-experience ul li,
 .about-detail .education ul li,
@@ -246,4 +213,18 @@ body {
 .about-detail .technical ul li {
   margin-top: .3em;
   line-height: 1.6;
+}
+.about-detail .social {
+  font-size: 1rem;
+  margin-top: 1.5em;
+}
+.about-detail .social a {
+  margin-left: 5px;
+  display: inline-block;
+}
+.about-detail .social img,
+.about-detail .social svg {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
 }

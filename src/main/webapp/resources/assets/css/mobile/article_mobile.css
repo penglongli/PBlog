@@ -164,3 +164,9 @@ pre code {
   color: #42A5F5;
   text-decoration: none;
 }
+.article-content img {
+  max-width: 100%;
+}
+.article-content strong {
+  display: inline-block !important;
+}
