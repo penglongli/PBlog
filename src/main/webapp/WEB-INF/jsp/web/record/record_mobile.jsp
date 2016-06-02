@@ -29,10 +29,23 @@
                         <span><fmt:formatDate value="${recordInfo.createTime}" pattern="MM月dd日" /></span>
                         <span><fmt:formatDate value="${recordInfo.createTime}" pattern="HH:mm" /></span>
                     </div>
-                    <div class="icon"><i class="fa fa-moon-o" aria-hidden="true"></i></div>
-                    <div class="daily-record">${recordInfo.content}</div>
+                    <div class="icon">
+                        <c:choose>
+                            <c:when test="${nightList[status.index]}">
+                                <i class="fa fa-moon-o" aria-hidden="true" style="left: 0.2em"></i>
+                            </c:when>
+                            <c:otherwise>
+                                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+                    <div class="daily-record">
+                        <div class="daily-record-title">${recordInfo.title}</div>
+                        <div class="daily-record-content"></div>
+                    </div>
                     <div style="clear: both"></div>
                     <div class="time-line"></div>
+                    <input class="daily-record-md" value="${recordInfo.content}" type="hidden" />
                 </div>
             </c:forEach>
         </div>
@@ -42,9 +55,9 @@
 <script type="text/javascript" src="${staticDomain}/resources/js/mobile/global_mobile.js"></script>
 <script type="text/javascript">
     $(".daily").each(function (index) {
-        var recordHtml = marked($(this).find(".daily-record").html());
-        $(this).delay(index * 1000).find(".daily-record").html(recordHtml);
-        $(this).delay(index * 1000).fadeIn("slow");
+        var recordHtml = marked($(this).find(".daily-record-md").val());
+        $(this).delay(index * 1000).find(".daily-record-content").html(recordHtml);
+        $(this).delay(index * 1000).fadeIn("fast");
     });
 </script>
 </body>

@@ -1,6 +1,8 @@
 package com.pblog.web.controller;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.pblog.core.utils.DateFormatUtils;
 import com.pblog.domain.RecordInfo;
 import com.pblog.service.record.RecordService;
 import org.springframework.stereotype.Controller;
@@ -42,8 +44,21 @@ public class RecordController {
     @RequestMapping(value = "/record/detail", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) {
         List<RecordInfo> recordInfoList = recordService.list();
+        List<Boolean> nightList = Lists.newArrayList();
+
+        for (RecordInfo recordInfo : recordInfoList) {
+            Integer hour = DateFormatUtils.formatToHour(recordInfo.getCreateTime());
+
+            //19:00 — 5:00 夜晚，6:00 — 19:00 白天
+            if (hour >= 19 || hour <= 5) {
+                nightList.add(true);
+            } else {
+                nightList.add(false);
+            }
+        }
 
         model.addAttribute("recordInfoList", recordInfoList);
+        model.addAttribute("nightList", nightList);
         return "web/record/record_mobile";
     }
 }

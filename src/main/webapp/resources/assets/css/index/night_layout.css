@@ -116,11 +116,23 @@
   border-bottom: 1px solid #000;
   padding-left: 30px;
   padding-right: 30px;
+  -ms-word-break: break-all;
+  word-break: break-all;
 }
 #index .article-content .content-body img {
   max-width: 100%;
   display: block;
   margin: 15px auto;
+}
+#index .article-content .content-body table {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  text-align: center;
+}
+#index .article-content .content-body table td {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 3px 10px;
 }
 #index .article-content em {
   font-size: 1.4rem;

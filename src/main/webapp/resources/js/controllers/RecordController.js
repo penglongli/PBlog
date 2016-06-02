@@ -7,7 +7,7 @@ var RecordController = function ($scope, $interval, $http, $timeout, $routeParam
                 $scope.recordInfoList = data.recordInfoList;
 
                 for(var i = 0; i < data.recordInfoList.length; i++) {
-                    $scope.recordInfoList[0].content = marked(data.recordInfoList[0].content);
+                    $scope.recordInfoList[i].content = marked(data.recordInfoList[i].content);
                 }
             })
     };

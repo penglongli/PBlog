@@ -121,6 +121,16 @@
   display: block;
   margin: 15px auto;
 }
+#index .article-content .content-body table {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  text-align: center;
+}
+#index .article-content .content-body table td {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 3px 10px;
+}
 #index .article-content em {
   font-size: 1.4rem;
   font-style: normal!important;

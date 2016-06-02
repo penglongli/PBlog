@@ -60,6 +60,16 @@
   display: block;
   margin: 15px auto;
 }
+#article .article-content .content-body table {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  text-align: center;
+}
+#article .article-content .content-body table td {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 3px 10px;
+}
 #article .article-content .content-nav {
   width: 240px;
   float: right;

@@ -38,12 +38,14 @@ body {
 
 .record-list {
   margin-top: 10px;
+  -ms-word-break: break-all;
+  word-break: break-all;
 
   .clock {
 
     img {
-      height: 50px;
-      margin-left: 70px;
+      margin-left: 16%;
+      height: 2.7em;
     }
   }
 
@@ -53,13 +55,14 @@ body {
     display: none;
 
     .detail-time {
-      width: 70px;
+      width: 18%;
       font-size: 1.1rem;
       text-align: right;
       float: left;
 
       span {
         padding-right: .2em;
+        display: block;
       }
 
       span:first-child {
@@ -68,7 +71,7 @@ body {
     }
 
     .daily-record {
-      width: e("calc(100% - 145px)");
+      width: 64%;
       float: right;
       font-size: 1rem;
       background: #FFF;
@@ -79,6 +82,16 @@ body {
       margin-bottom: 15px;
       color: #555;
       line-height: 1.4;
+
+      .daily-record-title {
+        font-size: 1.2rem;
+        color: #37B158;
+        font-weight: bold;
+      }
+
+      .daily-record-content {
+        margin-top: 10px;
+      }
 
       p {
         margin: 5px 0 0 0;
@@ -108,19 +121,21 @@ body {
 
     .icon {
       position: absolute;
-      left: 83px;
-      top: 6px;
+      left: 18.8%;
+      top: 0.3em;
       z-index: 100;
-      width: 16px;
       border: 2px solid #7C7C7C;
-      padding: 2px 1px;
       border-radius: 50%;
       background: #FFF;
+      width: 1.1em;
+      height: 1.1em;
 
       i {
+        font-size: 0.9em;
         color: #E2A41D;
-        font-size: 14px;
-        margin-left: 3px;
+        position: absolute;
+        top: 0.1em;
+        left: 0.1em;
       }
     }
 
@@ -130,7 +145,7 @@ body {
       bottom: 0;
       background: #08987E;
       width: 2px;
-      left: 93px;
+      left: 22%;
     }
   }
 

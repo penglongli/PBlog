@@ -30,6 +30,17 @@ public class DateFormatUtils {
     }
 
     /**
+     * 取得小时
+     * @param date
+     * @return
+     */
+    public static Integer formatToHour(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH");
+
+        return Integer.valueOf(dateFormat.format(date));
+    }
+
+    /**
      * 字符串转日期格式(格式：yyyy-MM)
      * @param dateStr 日期字符串
      * @throws ParseException
