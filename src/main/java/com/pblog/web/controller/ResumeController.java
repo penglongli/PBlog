@@ -11,12 +11,7 @@ public class ResumeController {
 
     @RequestMapping(value = "/resume", method = RequestMethod.GET)
     public String index(HttpServletRequest request) {
-        Boolean mobile = (Boolean) request.getAttribute("mobile");
 
-        if(mobile) {
-            return "web/resume/resume_mobile";
-        } else {
-            return "web/resume/resume";
-        }
+        return "web/resume/resume";
     }
 }

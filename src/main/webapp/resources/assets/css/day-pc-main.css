@@ -103,139 +103,6 @@
   100% { transform: rotate(360deg); }
 }
 
-#about .about-head {
-  width: 66.6667%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-#about .about-head .image {
-  position: fixed;
-  background: url('/resources/image/about_me.jpg') no-repeat #EEEEEE;
-  top: 45px;
-  bottom: 0;
-  width: 60%;
-  background-size: cover;
-  background-position-x: 80%;
-}
-#about .about-body {
-  width: 31%;
-  float: right;
-  word-wrap: break-word;
-  padding-right: 3%;
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-  margin-bottom: 2em;
-}
-#about .about-body .spot {
-  margin-top: 3em;
-}
-#about .about-body .spot a {
-  text-decoration: none;
-  display: inline-block;
-  height: 40px;
-  background: #DF611A;
-  font-size: 1.4rem;
-  border-radius: 5px;
-  line-height: 40px;
-  padding: 0 15px;
-  position: relative;
-  width: 180px;
-  color: #FFF;
-  border: 1px solid #DF611A;
-}
-#about .about-body .spot a i {
-  font-size: 2.1rem;
-  margin-right: .2em;
-  position: absolute;
-  line-height: 38px;
-  left: 17px;
-}
-#about .about-body .spot a span {
-  position: absolute;
-  left: 46px;
-  line-height: 42px;
-}
-#about .about-body .spot a:hover {
-  background: #E8641B;
-}
-#about .about-body .contact,
-#about .about-body .person,
-#about .about-body .open-source,
-#about .about-body .work-experience,
-#about .about-body .education,
-#about .about-body .awards,
-#about .about-body .technical {
-  margin-top: 3em;
-}
-#about .about-body .contact h2,
-#about .about-body .person h2,
-#about .about-body .open-source h2,
-#about .about-body .work-experience h2,
-#about .about-body .education h2,
-#about .about-body .awards h2,
-#about .about-body .technical h2 {
-  color: #424242;
-  font-family: GothicCustom, 'Arial Narrow', sans-serif;
-}
-#about .about-body .contact ul,
-#about .about-body .person ul,
-#about .about-body .open-source ul,
-#about .about-body .work-experience ul,
-#about .about-body .education ul,
-#about .about-body .awards ul,
-#about .about-body .technical ul {
-  font-size: 1.4rem;
-  font-family: Verdana, Microsoft YaHei, sans-serif;
-  color: #796A66;
-}
-#about .about-body .contact ul li,
-#about .about-body .person ul li,
-#about .about-body .open-source ul li,
-#about .about-body .work-experience ul li,
-#about .about-body .education ul li,
-#about .about-body .awards ul li,
-#about .about-body .technical ul li {
-  margin-top: .3em;
-}
-#about .about-body .contact ul li a,
-#about .about-body .person ul li a,
-#about .about-body .open-source ul li a,
-#about .about-body .work-experience ul li a,
-#about .about-body .education ul li a,
-#about .about-body .awards ul li a,
-#about .about-body .technical ul li a {
-  color: #796A66;
-}
-#about .about-body .social {
-  margin: 30px 0 100px 0;
-}
-#about .about-body .social img,
-#about .about-body .social svg {
-  width: 46px;
-  height: 46px;
-  margin-left: 16px;
-}
-#about .about-body .social img {
-  -webkit-border-radius: 23px;
-  -moz-border-radius: 23px;
-  border-radius: 23px;
-}
-#about .about-body h1 {
-  font-size: 2rem;
-  color: #343434;
-  padding: 0;
-  margin-bottom: 0;
-  font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
-  letter-spacing: 0.15em;
-}
-#about .about-body h2 {
-  font-size: 1.5rem;
-  color: #666666;
-  padding: 0;
-  margin-top: 7px;
-  text-shadow: 1px 1px #CCC;
-}
-
 #archives .foot-wrapper {
   margin-left: 218px;
 }
@@ -368,6 +235,139 @@
 }
 #archives .archive-article-list .article-item .article-footer .read-more a i {
   margin-left: 7px;
+}
+
+#about .about-head {
+  width: 66.6667%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+#about .about-head .image {
+  position: fixed;
+  background: url('/resources/image/about_me.jpg') no-repeat #EEEEEE;
+  top: 45px;
+  bottom: 0;
+  width: 60%;
+  background-size: cover;
+  background-position-x: 80%;
+}
+#about .about-body {
+  width: 31%;
+  float: right;
+  word-wrap: break-word;
+  padding-right: 3%;
+  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin-bottom: 2em;
+}
+#about .about-body .spot {
+  margin-top: 3em;
+}
+#about .about-body .spot a {
+  text-decoration: none;
+  display: inline-block;
+  height: 40px;
+  background: #DF611A;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  line-height: 40px;
+  padding: 0 15px;
+  position: relative;
+  width: 180px;
+  color: #FFF;
+  border: 1px solid #DF611A;
+}
+#about .about-body .spot a i {
+  font-size: 2.1rem;
+  margin-right: .2em;
+  position: absolute;
+  line-height: 38px;
+  left: 17px;
+}
+#about .about-body .spot a span {
+  position: absolute;
+  left: 46px;
+  line-height: 42px;
+}
+#about .about-body .spot a:hover {
+  background: #E8641B;
+}
+#about .about-body .contact,
+#about .about-body .person,
+#about .about-body .open-source,
+#about .about-body .work-experience,
+#about .about-body .education,
+#about .about-body .awards,
+#about .about-body .technical {
+  margin-top: 3em;
+}
+#about .about-body .contact h2,
+#about .about-body .person h2,
+#about .about-body .open-source h2,
+#about .about-body .work-experience h2,
+#about .about-body .education h2,
+#about .about-body .awards h2,
+#about .about-body .technical h2 {
+  color: #424242;
+  font-family: GothicCustom, 'Arial Narrow', sans-serif;
+}
+#about .about-body .contact ul,
+#about .about-body .person ul,
+#about .about-body .open-source ul,
+#about .about-body .work-experience ul,
+#about .about-body .education ul,
+#about .about-body .awards ul,
+#about .about-body .technical ul {
+  font-size: 1.4rem;
+  font-family: Verdana, Microsoft YaHei, sans-serif;
+  color: #796A66;
+}
+#about .about-body .contact ul li,
+#about .about-body .person ul li,
+#about .about-body .open-source ul li,
+#about .about-body .work-experience ul li,
+#about .about-body .education ul li,
+#about .about-body .awards ul li,
+#about .about-body .technical ul li {
+  margin-top: .3em;
+}
+#about .about-body .contact ul li a,
+#about .about-body .person ul li a,
+#about .about-body .open-source ul li a,
+#about .about-body .work-experience ul li a,
+#about .about-body .education ul li a,
+#about .about-body .awards ul li a,
+#about .about-body .technical ul li a {
+  color: #796A66;
+}
+#about .about-body .social {
+  margin: 30px 0 100px 0;
+}
+#about .about-body .social img,
+#about .about-body .social svg {
+  width: 46px;
+  height: 46px;
+  margin-left: 16px;
+}
+#about .about-body .social img {
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+}
+#about .about-body h1 {
+  font-size: 2rem;
+  color: #343434;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: proxima-nova-1, proxima-nova-2, Tahoma, Helvetica, Verdana, sans-serif;
+  letter-spacing: 0.15em;
+}
+#about .about-body h2 {
+  font-size: 1.5rem;
+  color: #666666;
+  padding: 0;
+  margin-top: 7px;
+  text-shadow: 1px 1px #CCC;
 }
 
 #article .article-content {
