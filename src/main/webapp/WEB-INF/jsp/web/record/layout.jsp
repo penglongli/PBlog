@@ -19,5 +19,7 @@
             </div>
         </div>
     </div>
+    <span class="record-top"></span>
+    <span class="record-bottom"></span>
 </div>
 <%@ include file="../include/footer.jsp"%>

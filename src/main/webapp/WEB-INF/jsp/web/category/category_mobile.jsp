@@ -18,7 +18,7 @@
 <div id="Wrapper">
     <%@ include file="../include/index_mobile_header.jsp"%>
     <div id="Content">
-        <div class="archive-header"><i class="icon-ok-sign"></i>分类统计：<span>${num}类</span></div>
+        <div class="archive-header"><i class="fa fa-check-circle" aria-hidden="true"></i>分类统计：<span>${num}类</span></div>
         <div class="archive-title">文章分类</div>
         <div class="archive-timeline">
             <div class="timeline-left">

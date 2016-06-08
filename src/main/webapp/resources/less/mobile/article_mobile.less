@@ -11,6 +11,7 @@
 h1, h2, h3 {
   font-family: GothicCustom, 'Arial Narrow', sans-serif;
   text-shadow: 1px 1px #CCC;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -19,7 +20,6 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-  margin-top: 2em;
 }
 
 pre code {
@@ -34,19 +34,40 @@ pre code {
   line-height: 1.6;
   text-align: justify;
   word-break: break-all;
+  margin-bottom: 3em;
 
-  ul {
+  ul, ol {
     padding: 0;
-    margin-left: 3em;
+    margin: 0 0 0 2em;
 
     li {
       margin-top: .05em;
     }
   }
 
+  table {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    text-align: center;
+
+    td {
+      border: 1px solid silver;
+      border-collapse: collapse;
+      padding: 3px 10px;
+    }
+  }
+
   em {
     font-style: normal;
     color: #5F9F4D;
+  }
+
+  blockquote {
+    font-size: 1rem;
+    border-left: 3px solid #C1272D;
+    background: #F1F1F1;
+    padding: 0.2em 0.6em;
+    margin: 0;
   }
 
   a {

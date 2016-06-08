@@ -1,9 +1,9 @@
 
 #record {
-  padding-top: 40px;
+  position: relative;
   min-height: 600px;
-  background: url("/resources/image/day_content_backgrund.jpg");
-  background-size: cover;
+  background: url("/resources/image/record_background.png") repeat;
+  padding: 40px 0 223px 0;
 
   .record-content {
     width: 55%;
@@ -50,7 +50,7 @@
           margin-top: 40px;
 
           .daily-title {
-            font-size: 18px;
+            font-size: 19px;
 
             .time {
               float: left;
@@ -67,18 +67,50 @@
           }
 
           .daily-content {
-            margin-left: 65px;
+            margin: 10px 0 0 65px;
             color: #675050;
-            padding-bottom: 40px;
-            font-size: 13.4px;
-            line-height: 0.9;
+            padding-bottom: 5px;
+            font-size: 14px;
+            line-height: 24px;
+            width: 525px;
+
+            p {
+              margin: 0;
+              padding: 0;
+            }
 
             a {
               color: #675050;
+              font-family: Consolas, serif;
+            }
+
+            img {
+              max-width: 100%;
+              margin-top: 10px;
             }
           }
         }
       }
     }
+  }
+
+  .record-top {
+    position: absolute;
+    background: url("/resources/image/record_background_top.png");
+    width: 200px;
+    height: 215px;
+    display: inline-block;
+    right: 26px;
+    top: 14px;
+  }
+
+  .record-bottom {
+    position: absolute;
+    background: url("/resources/image/record_background_bottom.png");
+    width: 552px;
+    height: 186px;
+    display: inline-block;
+    left: 130px;
+    bottom: 25px;
   }
 }

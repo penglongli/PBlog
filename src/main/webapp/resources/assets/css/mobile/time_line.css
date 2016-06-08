@@ -155,6 +155,7 @@ body {
   margin: 0;
   background: #FFF;
   padding-top: 1em;
+  min-height: 10em;
 }
 .archive-timeline .timeline-left {
   font-size: 1rem;
@@ -192,6 +193,7 @@ body {
   margin-left: 5%;
 }
 .archive-timeline .timeline-right .right-item {
+  height: auto;
   margin-top: 40px;
   padding-bottom: 2.5em;
   border-bottom: 1px solid #ECECEC;

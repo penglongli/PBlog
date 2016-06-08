@@ -45,7 +45,7 @@
                     </div>
                     <div style="clear: both"></div>
                     <div class="time-line"></div>
-                    <input class="daily-record-md" value="${recordInfo.content}" type="hidden" />
+                    <textarea class="daily-record-md" style="display: none;">${recordInfo.content}</textarea>
                 </div>
             </c:forEach>
         </div>
@@ -56,8 +56,8 @@
 <script type="text/javascript">
     $(".daily").each(function (index) {
         var recordHtml = marked($(this).find(".daily-record-md").val());
-        $(this).delay(index * 1000).find(".daily-record-content").html(recordHtml);
-        $(this).delay(index * 1000).fadeIn("fast");
+        $(this).delay(index * 200).find(".daily-record-content").html(recordHtml);
+        $(this).delay(index * 300).fadeIn("slow");
     });
 </script>
 </body>

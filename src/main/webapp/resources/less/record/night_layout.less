@@ -1,9 +1,8 @@
 
 #record {
   padding-top: 40px;
-  min-height: 800px;
-  background: url("/resources/image/night_content_background.jpg");
-  background-size: cover;
+  min-height: 600px;
+  background: #2F2D2D;
   border-bottom: 1px solid #000;
 
   .record-content {
@@ -19,7 +18,7 @@
       background: url("/resources/image/clock.png") no-repeat;
       background-position-y: 3px;
       background-size: 50px 50px;
-      color: #FFF;
+      color: #8A8888;
     }
 
     .main {
@@ -48,10 +47,10 @@
         }
 
         .daily {
-          margin-top: 40px;
+          padding-bottom: 40px;
 
           .daily-title {
-            font-size: 18px;
+            font-size: 19px;
 
             .time {
               float: left;
@@ -67,14 +66,32 @@
           }
 
           .daily-content {
-            margin-left: 65px;
-            color: #CECECE;
-            padding-bottom: 40px;
+            font-size: 14px;
+            color: #8A8888;
+            font-family: Microsoft Yahei, serif;
+            line-height: 24px;
+            margin: 15px 0 0 65px;
+            width: 530px;
+
+            p {
+              margin: 0;
+              padding: 0;
+            }
 
             a {
-              color: #CECECE;
+              color: #AAAAAA;
+              font-family: Consolas, serif;
+            }
+
+            img {
+              max-width: 100%;
+              margin-top: 10px;
             }
           }
+        }
+
+        .daily:first-child {
+          margin-top: 40px;
         }
       }
     }

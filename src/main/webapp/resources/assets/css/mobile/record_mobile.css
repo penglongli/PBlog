@@ -197,6 +197,10 @@ body {
 .record-list .daily .daily-record .daily-record-content {
   margin-top: 10px;
 }
+.record-list .daily .daily-record .daily-record-content img {
+  width: 100%;
+  margin-top: 10px;
+}
 .record-list .daily .daily-record p {
   margin: 5px 0 0 0;
 }

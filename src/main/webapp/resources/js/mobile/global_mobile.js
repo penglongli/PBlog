@@ -81,7 +81,7 @@ function timeLineInitial(){
         var rightHeight = $rightItem.eq(i).outerHeight();
 
         $($leftItem[i]).css({"height": rightHeight + 40});
-        $($rightItem[i]).delay(i * 500).fadeIn("slow");
-        $($leftItem[i]).delay(i * 500).fadeIn("slow");
+        $($rightItem[i]).fadeIn("slow");
+        $($leftItem[i]).fadeIn("slow");
     }
 }
