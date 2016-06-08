@@ -1,0 +1,225 @@
+body {
+  font-size: 16px;
+  font-family: 'Times New Roman', 'Microsoft YaHei', serif;
+  word-break: break-all;
+  background: #525659;
+}
+.clear-fix {
+  clear: both;
+}
+a {
+  color: #000;
+  font-size: 17px;
+}
+.long-line {
+  position: absolute;
+  display: block;
+  width: 690px;
+  height: 2px;
+  top: 32px;
+  left: 58px;
+  background: #943634;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  left: 22px;
+}
+.subtitle {
+  position: absolute;
+  left: 62px;
+  font-size: 19px;
+  color: #943634;
+  font-weight: 600;
+  top: 2px;
+}
+.detail-list {
+  position: absolute;
+  top: 44px;
+  left: 58px;
+  right: 49px;
+  line-height: 1.6;
+}
+#top {
+  position: fixed;
+  background: #323639;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0;
+  height: 50px;
+  box-shadow: 0 1px 1px #232526;
+  font-size: 16px;
+  color: #F1F1F1;
+  z-index: 99;
+}
+#top .top-title {
+  line-height: 50px;
+  display: block;
+  text-align: center;
+}
+#top .top-download {
+  position: absolute;
+  top: 9px;
+  right: 40px;
+  display: inline-block;
+  line-height: 32px;
+  color: #6A6A6A;
+  background: #F2F2F2;
+  padding: 0 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#wrapper {
+  width: 800px;
+  min-height: 500px;
+  background: #FFF;
+  margin: 70px auto;
+}
+.header {
+  width: 690px;
+  margin-left: 50px;
+}
+.header .header-title {
+  padding-top: 34px;
+}
+.header .header-title .author-name {
+  font-size: 28px;
+}
+.header .header-title .author-intro {
+  font-size: 16px;
+}
+.header .header-list .header-left {
+  float: left;
+}
+.header .header-list .header-left ul {
+  padding-left: 10px;
+}
+.header .header-list .header-right {
+  float: right;
+}
+.header .header-list ul {
+  line-height: 1.7;
+}
+.person-info {
+  position: relative;
+  min-height: 130px;
+}
+.person-info .icon {
+  background: url('/resources/image/resume/person_info_icon.png') no-repeat;
+}
+.person-info .detail-list .info-left {
+  float: left;
+}
+.person-info .detail-list .info-right {
+  float: right;
+}
+.person-info .detail-list span {
+  display: block;
+}
+.pro-skill {
+  position: relative;
+  min-height: 156px;
+}
+.pro-skill .icon {
+  background: url('/resources/image/resume/pro_skill_icon.png') no-repeat;
+}
+.pro-skill ul {
+  padding: 0;
+  margin: 0;
+}
+.work-experience {
+  position: relative;
+  min-height: 805px;
+}
+.work-experience .icon {
+  background: url('/resources/image/resume/work_experience_icon.png') no-repeat;
+}
+.work-experience .detail-list .company {
+  margin-top: 25px;
+}
+.work-experience .detail-list .company h2 {
+  font-family: 'Times New Roman', SongTi, serif;
+  font-size: 20px;
+  margin: 0;
+}
+.work-experience .detail-list .company .tools {
+  display: block;
+  margin-bottom: 16px;
+}
+.work-experience .detail-list .company .project-title {
+  font-weight: bold;
+  padding-left: 24px;
+  font-size: 17px;
+  background: url("/resources/image/resume/li_icon.png") no-repeat;
+  -ms-background-position-y: 8px;
+  background-position-y: 8px;
+}
+.work-experience .detail-list .company .project-intro {
+  margin: 2px 0 8px 0;
+  text-indent: 2em;
+}
+.work-experience .detail-list .company .project-intro p {
+  margin-top: 0;
+}
+.work-experience .detail-list .company .project-intro p:first-child {
+  margin: 0;
+}
+.work-experience .detail-list .company span {
+  display: block;
+}
+.work-experience .detail-list .company:first-child {
+  margin-top: 0;
+}
+.open-source {
+  position: relative;
+  min-height: 270px;
+}
+.open-source .icon {
+  background: url('/resources/image/resume/open_source_icon.png') no-repeat;
+}
+.open-source .detail-list ul {
+  padding: 0;
+  margin: 0;
+}
+.open-source .detail-list .source-name {
+  font-weight: bold;
+  font-size: 19px;
+}
+.open-source .detail-list .source-url {
+  display: block;
+}
+.honor-eva {
+  min-height: 270px;
+}
+.honor-eva .honor-reward {
+  float: left;
+  width: 350px;
+  position: relative;
+}
+.honor-eva .honor-reward .icon {
+  background: url('/resources/image/resume/honor_reward_icon.png') no-repeat;
+}
+.honor-eva .honor-reward .short-line {
+  width: 276px;
+}
+.honor-eva .honor-reward .detail-list {
+  right: 0;
+}
+.honor-eva .self-evaluation {
+  float: right;
+  width: 460px;
+  position: relative;
+}
+.honor-eva .self-evaluation .icon {
+  background: url('/resources/image/resume/self_evaluation_icon.png') no-repeat;
+}
+.honor-eva .self-evaluation .short-line {
+  width: 350px;
+}
+.honor-eva ul {
+  padding: 0;
+  margin: 0;
+}

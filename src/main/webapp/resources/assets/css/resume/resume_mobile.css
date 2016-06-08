@@ -1,0 +1,117 @@
+html {
+  font-size: 14px;
+}
+body {
+  font-size: 1rem;
+  font-family: Arial, 'Microsoft YaHei', serif;
+  word-break: break-all;
+  background: #FFF;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+ul {
+  padding: 0 0 0 2em;
+  margin: 0;
+}
+#top {
+  font-size: 1.2rem;
+  background: #323639;
+  height: 2.5em;
+}
+#top a {
+  color: #FFF;
+  text-decoration: none;
+  line-height: 2.3em;
+}
+#top a .top-download {
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+#top .top-title {
+  display: none;
+}
+#wrapper a {
+  color: #42A5F5;
+  text-decoration: none;
+}
+.header {
+  margin-top: 0.5em;
+}
+.header .author-name {
+  font-size: 1.4rem;
+}
+.header .header-list {
+  margin-top: 0.8em;
+}
+.subtitle {
+  font-size: 1.2rem;
+  display: block;
+  color: #943634;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.person-info {
+  margin-top: 1em;
+}
+.person-info .detail-list {
+  padding-left: 1.5em;
+}
+.person-info .detail-list span {
+  display: block;
+}
+.pro-skill {
+  margin-top: 1em;
+}
+.work-experience {
+  margin-top: 1em;
+}
+.work-experience .company {
+  margin-top: 1em;
+}
+.work-experience .company h2 {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+.work-experience .company .tools {
+  display: block;
+  margin-bottom: 0.5em;
+  text-indent: 0;
+}
+.work-experience .company .project-title {
+  font-size: 1.1rem;
+  display: block;
+  padding-left: 0.5em;
+  background: url("/resources/image/resume/li_icon.png") no-repeat;
+  background-position-y: 0.4em;
+  background-position-x: 0.35em;
+  -webkit-background-size: 0.6em;
+  background-size: 0.6em;
+  font-weight: 600;
+}
+.work-experience .company span {
+  display: block;
+  text-indent: 1em;
+}
+.work-experience .company p {
+  margin: 0;
+}
+.work-experience .company:first-child {
+  margin-top: 0;
+}
+.open-source {
+  margin-top: 1em;
+}
+.open-source .source-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.honor-reward {
+  margin-top: 1em;
+}
+.self-evaluation {
+  margin: 1em 0 3em 0;
+}
