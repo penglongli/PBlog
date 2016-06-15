@@ -4,10 +4,13 @@ var less = require('gulp-less');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var clean = require('gulp-clean');
 var minifycss = require('gulp-minify-css');
+var rev = require('gulp-rev');
+var revCollector = require('gulp-rev-collector');
 
-var resourceDir = 'src/main/webapp/resources/';
-
+var resourceDir = 'src/main/webapp/resources';
+var viewDir = 'src/main/webapp/WEB-INF/jsp/';
 var src = {
     js: resourceDir + '/js/*.js',
     jsController: resourceDir + '/js/controllers/*.js',
@@ -16,7 +19,8 @@ var src = {
 
 var dist = {
     js: resourceDir + '/assets/js/',
-    css: resourceDir + '/assets/css/'
+    css: resourceDir + '/assets/css/',
+    rev: resourceDir + '/assets/rev/'
 };
 
 //编译less文件
@@ -26,30 +30,47 @@ gulp.task('less', function () {
         .pipe(gulp.dest(dist.css));
 });
 
+gulp.task('cleanCss', function () {
+    return gulp.src(dist.css + '*-pc-main-*.css')
+        .pipe(clean());
+});
+
 //合并压缩PC端夜间模式css文件
-gulp.task('combinePcNightCss', ['less'], function () {
-    gulp.src([
+gulp.task('combinePcNightCss', ['less', 'cleanCss'], function () {
+    return gulp.src([
             resourceDir + 'assets/plugins/loading-bar.css',   //进度条样式
             dist.css + '*/night_*.css'
         ])
         .pipe(concat('night-pc-main.css'))
-        .pipe(gulp.dest(dist.css))
-        .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
-        .pipe(gulp.dest(dist.css));
+        .pipe(rev())
+        .pipe(gulp.dest(dist.css))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest(dist.rev))
 });
 
 //合并压缩PC端日间模式css文件
-gulp.task('combinePcDayCss', ['less'], function () {
-    gulp.src([
+gulp.task('combinePcDayCss',['less', 'combinePcNightCss'], function () {
+    return gulp.src([
             resourceDir + 'assets/plugins/loading-bar.css',   //进度条样式
             dist.css + '*/day_*.css'
         ])
         .pipe(concat('day-pc-main.css'))
-        .pipe(gulp.dest(dist.css))
-        .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
-        .pipe(gulp.dest(dist.css));
+        .pipe(rev())
+        .pipe(gulp.dest(dist.css))
+        .pipe(rev.manifest(dist.rev + 'rev-manifest.json', {
+            merge: true,
+            base: dist.rev
+        }))
+        .pipe(gulp.dest(dist.rev));
+});
+
+//重写视图，执行css替换
+gulp.task('revTask', ['combinePcDayCss'], function () {
+    gulp.src([dist.rev + '*.json', viewDir + 'web/home.jsp'])
+        .pipe(revCollector())
+        .pipe(gulp.dest(viewDir + 'web'));
 });
 
 /**
@@ -91,5 +112,4 @@ gulp.task('combineJs', function () {
 });
 
 
-gulp.task('default', ['less', 'combinePcNightCss', 'combinePcDayCss', 'combinePluginJs',
-    'combineOwnJs', 'combineJs']);
+gulp.task('default', ['revTask', 'combinePluginJs', 'combineOwnJs', 'combineJs']);

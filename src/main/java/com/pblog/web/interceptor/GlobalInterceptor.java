@@ -54,7 +54,7 @@ public class GlobalInterceptor implements HandlerInterceptor{
         //设置模式，默认设置为夜间模式
         HttpSession session = request.getSession();
         if(session.getAttribute("mo") == null) {
-            request.getSession().setAttribute("mo", "night");
+            request.getSession().setAttribute("mo", "1"); //夜间模式
         }
 
         return true;

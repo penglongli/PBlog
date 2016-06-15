@@ -54,6 +54,7 @@
   color: #424242;
   font-family: "Open Sans", "Noto Sans", "Noto Sans CJK SC", "Microsoft Yahei", sans-serif;
   line-height: 1.6;
+  text-indent: 2em;
 }
 #article .article-content .content-body img {
   max-width: 100%;
@@ -87,6 +88,10 @@
   position: fixed;
   right: 0;
   top: 50px;
+}
+#article .article-content ul,
+#article .article-content ol {
+  text-indent: 0;
 }
 #article .article-content .nav-list ul {
   margin: 0;
@@ -124,7 +129,7 @@
 }
 #article .article-content h1 {
   color: #D2D8BA;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 2.6rem;
   text-shadow: 1px 1px #CCC;
   font-family: GothicCustom, 'Arial Narrow', sans-serif;
@@ -132,10 +137,12 @@
 #article .article-content h2 {
   text-shadow: 1px 1px #CCC;
   font-family: GothicCustom, 'Arial Narrow', sans-serif;
+  text-indent: 0;
 }
 #article .article-content h3 {
   text-shadow: 1px 1px #CCC;
   font-family: GothicCustom, 'Arial Narrow', sans-serif;
+  text-indent: 0;
 }
 #article .article-content a {
   color: #42A5F5;

@@ -14,9 +14,9 @@ public class GlobalController {
     public String switchModel(@RequestParam(value = "mo")Integer mo, HttpServletRequest request,
                               Model model) {
         if(mo == 1) {
-            request.getSession().setAttribute("mo", "night");
+            request.getSession().setAttribute("mo", "1"); //夜间模式
         } else {
-            request.getSession().setAttribute("mo", "day");
+            request.getSession().setAttribute("mo", "2"); //日间模式
         }
 
         return "redirect:/";
